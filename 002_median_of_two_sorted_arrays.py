@@ -34,4 +34,4 @@ class Solution:
         elif A[startA + pa - 1] > B[startB + pb - 1]:
             return self.getMedian(A, startA, endA, B, startB + pb, endB, k - pb)
         else:
-            return A[pa - 1]
+            return A[startA + pa - 1]
