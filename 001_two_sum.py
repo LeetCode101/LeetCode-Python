@@ -6,8 +6,9 @@ class Solution:
     def twoSum(self, num, target):
         mapping = {}
         
+        # If num1 is in the array, then (target - num1) must be also in the array
         for index, value in enumerate(num):
-            if value in mapping:
-                return (mapping[value] + 1, index + 1)
+            if target - value in mapping:
+                return (mapping[target - value] + 1, index + 1)
             else:
-                mapping[target - value] = index
+                mapping[value] = index
