@@ -4,34 +4,34 @@
 class Solution:
     # @return a float
     def findMedianSortedArrays(self, A, B):
-        lenA = len(A)
-        lenB = len(B)
-        total = lenA + lenB
+        length_a = len(A)
+        length_b = len(B)
+        total = length_a + length_b
         
         if total & 1:
-            return self.getMedian(A, 0, lenA - 1, B, 0, lenB - 1, total / 2 + 1)
+            return self.getMedian(A, 0, length_a - 1, B, 0, length_b - 1, total / 2 + 1)
         else:
-            return (self.getMedian(A, 0, lenA - 1, B, 0, lenB - 1, total / 2) + self.getMedian(A, 0, lenA - 1, B, 0, lenB - 1, total / 2 + 1)) / 2.0  
+            return (self.getMedian(A, 0, length_a - 1, B, 0, length_b - 1, total / 2) + self.getMedian(A, 0, length_a - 1, B, 0, length_b - 1, total / 2 + 1)) / 2.0  
             
-    def getMedian(self, A, startA, endA, B, startB, endB, k):
-        m = endA - startA + 1
-        n = endB - startB + 1
+    def getMedian(self, A, start_a, end_a, B, start_b, end_b, k):
+        length_a = end_a - start_a + 1
+        length_b = end_b - start_b + 1
         
-        if m > n:
-            return self.getMedian(B, startB, endB, A, startA, endA, k)
+        if length_a > length_b:
+            return self.getMedian(B, start_b, end_b, A, start_a, end_a, k)
         
-        if m == 0:
+        if length_a == 0:
             return B[k - 1]
         
         if k == 1:
-            return min(A[startA], B[startB])
+            return min(A[start_a], B[start_b])
         
-        pa = min(k / 2, m)
+        pa = min(k / 2, length_a)
         pb = k - pa
         
-        if A[startA + pa - 1] < B[startB + pb - 1]:
-            return self.getMedian(A, startA + pa, endA, B, startB, endB, k - pa)
-        elif A[startA + pa - 1] > B[startB + pb - 1]:
-            return self.getMedian(A, startA, endA, B, startB + pb, endB, k - pb)
+        if A[start_a + pa - 1] < B[start_b + pb - 1]:
+            return self.getMedian(A, start_a + pa, end_a, B, start_b, end_b, k - pa)
+        elif A[start_a + pa - 1] > B[start_b + pb - 1]:
+            return self.getMedian(A, start_a, end_a, B, start_b + pb, end_b, k - pb)
         else:
-            return A[startA + pa - 1]
+            return A[start_a + pa - 1]
