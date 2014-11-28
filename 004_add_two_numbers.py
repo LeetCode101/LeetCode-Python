@@ -15,7 +15,6 @@ class Solution:
         head = new
         l1, l2 = l1.next, l2.next
         
-        
         while l1 and l2:
             next = ListNode(self.calculate_node_value(remain, l1, l2))
             new.next = next
@@ -28,7 +27,6 @@ class Solution:
             new = next
             l1 = l1.next
             
-        
         while l2:
             next = ListNode(self.calculate_node_value(remain, l2))
             new.next = next
@@ -53,5 +51,3 @@ class Solution:
         remain.val = total / 10
             
         return total % 10
-            
-            
