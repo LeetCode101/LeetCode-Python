@@ -10,44 +10,33 @@
 class Solution:
     # @return a ListNode
     def addTwoNumbers(self, l1, l2):
+        node, head = None, None
         remain = ListNode(0)
-        new = ListNode(self.calculate_node_value(remain, l1, l2))
-        head = new
-        l1, l2 = l1.next, l2.next
         
-        while l1 and l2:
-            next = ListNode(self.calculate_node_value(remain, l1, l2))
-            new.next = next
-            new = next
-            l1, l2 = l1.next, l2.next
+        while l1 or l2:
+            total = 0
             
-        while l1:
-            next = ListNode(self.calculate_node_value(remain, l1))
-            new.next = next
-            new = next
-            l1 = l1.next
+            if l1:
+                total += l1.val
+                l1 = l1.next
+                
+            if l2:
+                total += l2.val
+                l2 = l2.next
+                
+            total += remain.val
+            remain.val = total / 10
             
-        while l2:
-            next = ListNode(self.calculate_node_value(remain, l2))
-            new.next = next
-            new = next
-            l2 = l2.next
+            if node:
+                node.next = ListNode(total % 10)
+                node = node.next
+            else:
+                node = ListNode(total % 10)
+                
+            if not head:
+                head = node
             
-        if remain.val != 0:
-            next = ListNode(remain.val)
-            new.next = next
-            new = next
+        if remain.val == 1:
+            node.next = ListNode(1)
         
         return head
-    
-    def calculate_node_value(self, remain, *nodes):
-        total = 0
-        
-        for node in nodes:
-            total += node.val
-            
-        total += remain.val
-        
-        remain.val = total / 10
-            
-        return total % 10
