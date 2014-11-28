@@ -23,4 +23,3 @@ class Solution:
                 max_length = max(index - start + 1, max_length)
         
         return max_length
-            
