@@ -17,6 +17,8 @@ class Solution:
                     del last_index_of_letter[s[i]]
                     
                 start = last_index_of_letter[value] + 1
+                
+                # Reset last index of current duplicate letter
                 last_index_of_letter[value] = index
             else:
                 last_index_of_letter[value] = index
