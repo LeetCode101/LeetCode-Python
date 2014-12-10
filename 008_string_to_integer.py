@@ -12,17 +12,13 @@ class Solution:
         sign = ''
         integer = 0
         digits = []
-        isNegative = False
         
         if str[0] == '+' or str[0] == '-':
             sign = str[0]
             str = str[1:]
-            isNegative = sign == '-'
-        
-        pattern = re.compile("\d")
         
         for c in str:
-            if re.match(pattern, c):
+            if c >= '0' and c <= '9':
                 digits.append(int(c))
             else:
                 break
@@ -32,7 +28,7 @@ class Solution:
         for i in range(length):
             integer += digits[i] * pow(10, length - 1 - i)
         
-        if isNegative:
+        if sign == '-':
             integer *= -1
         
         INT_MAX = 2147483647
