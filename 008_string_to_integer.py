@@ -11,7 +11,6 @@ class Solution:
         
         sign = ''
         integer = 0
-        digits = []
         
         if str[0] == '+' or str[0] == '-':
             sign = str[0]
@@ -19,14 +18,9 @@ class Solution:
         
         for c in str:
             if c >= '0' and c <= '9':
-                digits.append(int(c))
+                integer = integer * 10 + int(c)
             else:
                 break
-        
-        length = len(digits)
-        
-        for i in range(length):
-            integer += digits[i] * pow(10, length - 1 - i)
         
         if sign == '-':
             integer *= -1
