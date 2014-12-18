@@ -20,12 +20,9 @@ class Solution:
                 pattern = p[j - 1]
                 
                 if pattern == '*':
-                    # s: a, p: ab*
                     if table[i][j - 2]:
                         table[i][j] = True
-                    
-                    # s: ab, p: ab* or s: aa, p: a*
-                    elif self.match(char, p[j - 2]) and (table[i - 1][j - 2] or table[i - 1][j]):
+                    elif self.match(char, p[j - 2]) and table[i - 1][j]:
                         table[i][j] = True
                 else:
                     if self.match(char, pattern) and table[i - 1][j - 1]:
