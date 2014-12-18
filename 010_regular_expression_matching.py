@@ -11,8 +11,8 @@ class Solution:
         table[0][0] = True
         
         for i in range(1, pattern_length + 1):
-            if p[i - 1] == '*':
-                table[0][i] = table[0][i - 2]
+            if p[i - 1] == '*' and table[0][i - 2]:
+                table[0][i] = True
 
         for i in range(1, string_length + 1):
             for j in range(1, pattern_length + 1):
@@ -20,7 +20,12 @@ class Solution:
                 pattern = p[j - 1]
                 
                 if pattern == '*':
-                    if table[i][j - 2] or (self.match(char, p[j - 2]) and (table[i - 1][j - 2] or table[i - 1][j])):
+                    # s: a, p: ab*
+                    if table[i][j - 2]:
+                        table[i][j] = True
+                    
+                    # s: ab, p: ab* or s: aa, p: a*
+                    elif self.match(char, p[j - 2]) and (table[i - 1][j - 2] or table[i - 1][j]):
                         table[i][j] = True
                 else:
                     if self.match(char, pattern) and table[i - 1][j - 1]:
