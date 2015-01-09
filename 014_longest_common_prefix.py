@@ -12,6 +12,7 @@ class Solution:
         
         common, first_str, last_str = '', strs[0], strs[length - 1]
         
+        # The common prefix of the first str and the last str is the longest common prefix of all
         for i in range(len(first_str)):
             if first_str[i] == last_str[i]:
                 common += first_str[i]
