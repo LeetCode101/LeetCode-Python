@@ -23,7 +23,7 @@ class Solution:
                         
                     if diff_current == 0:
                         return min_diff_sum
-                    if diff_current > 0:
+                    elif diff_current > 0:
                         n -= 1
                     else:
                         m += 1
