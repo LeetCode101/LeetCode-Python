@@ -4,10 +4,9 @@
 class Solution:
     # @return an integer
     def threeSumClosest(self, num, target):
-        results = []
         num.sort()
-        length = len(num)
         m, n = 0, 0
+        min_diff_sum, length = 0, len(num)
         diff_abs_so_far, diff_abs_current, diff_current = 2147483647, 0, 0
         
         for i in range(length - 2):
@@ -20,13 +19,13 @@ class Solution:
                     
                     if diff_abs_so_far > diff_abs_current:
                         diff_abs_so_far = diff_abs_current
-                        results = [num[i], num[m], num[n]]
+                        min_diff_sum = sum([num[i], num[m], num[n]])
                         
                     if diff_current == 0:
-                        return sum(results)
+                        return min_diff_sum
                     if diff_current > 0:
                         n -= 1
                     else:
                         m += 1
                 
-        return sum(results)
+        return min_diff_sum
