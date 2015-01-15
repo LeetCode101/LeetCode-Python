@@ -4,8 +4,7 @@
 class Solution:
     # @return a list of strings, [s1, s2]
     def letterCombinations(self, digits):
-        results = []
-        letters = {
+        mapping = {
             '0': '',
             '1': '',
             '2': 'abc',
@@ -18,21 +17,23 @@ class Solution:
             '9': 'wxyz'
         }
         
-        return self.letterCombinationsInternal([letters[digit] for digit in digits if letters[digit] != ''])
+        letters = [mapping[digit] for digit in digits]
+        
+        return self.letterCombinationsInternal(letters)
             
     def letterCombinationsInternal(self, letters):
         length = len(letters)
-        
+            
         if length == 0:
             return ['']
             
         if length == 1:
-            return list(letters[0])
+            return self.string_to_list(letters[0])
         
         results = []
         mid = length / 2 if length & 1 else length / 2 - 1
         
-        left = self.letterCombinationsInternal(letters[0: mid + 1])
+        left = self.letterCombinationsInternal(letters[0:mid + 1])
         right = self.letterCombinationsInternal(letters[mid + 1:])
         
         left_length = len(left)
@@ -43,3 +44,6 @@ class Solution:
                 results.append(left[i] + right[j])
         
         return results
+    
+    def string_to_list(self, string):
+        return list(string) if string != '' else ['']
