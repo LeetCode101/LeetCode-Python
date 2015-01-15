@@ -31,7 +31,7 @@ class Solution:
             return self.string_to_list(letters[0])
         
         results = []
-        mid = length / 2 if length & 1 else length / 2 - 1
+        mid = (length - 1) / 2
         
         left = self.letterCombinationsInternal(letters[0:mid + 1])
         right = self.letterCombinationsInternal(letters[mid + 1:])
