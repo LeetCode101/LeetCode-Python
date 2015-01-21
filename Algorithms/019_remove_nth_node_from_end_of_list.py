@@ -13,7 +13,7 @@ class Solution:
         count = 0
         temp = head
         
-        while temp:
+        while temp is not None:
             count += 1
             temp = temp.next
             
@@ -21,9 +21,9 @@ class Solution:
             return head.next
             
         i = 1
-        temp, prev= head, None
+        temp, prev = head, None
         
-        while temp:
+        while temp is not None:
             if i == count - n + 1:
                 prev.next = temp.next
                 return head
