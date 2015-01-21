@@ -23,29 +23,19 @@ class Solution:
         
         left = self.mergeKLists(lists[0:mid + 1])
         right = self.mergeKLists(lists[mid + 1:])
-
-        if left is None:
-            return right
-            
-        if right is None:
-            return left
         
-        head, next, temp = None, None, None
+        dummy = ListNode(0)
+        next = dummy
         
         while left is not None and right is not None:
             if left.val < right.val:
-                temp = left
+                next.next = left
                 left = left.next
             else:
-                temp = right
+                next.next = right
                 right = right.next
                 
-            if head is None:
-                head = temp
-                next = temp
-            else:
-                next.next = temp
-                next = next.next
+            next = next.next
                 
         if left is not None:
             next.next = left
@@ -53,4 +43,4 @@ class Solution:
         if right is not None:
             next.next = right
             
-        return head
+        return dummy.next
