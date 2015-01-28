@@ -20,29 +20,30 @@ class Solution:
         
         if length < k:
             return head
-            
-        prev_group_head, stack = None, []
+        
+        dummy = ListNode(0)    
+        prev_group_head, prev_group_last= None, None
         
         while length >= k:
-            prev_group_head, head = self.reverse_list(head, k)
-            stack.append(prev_group_head)
             length -= k
+            prev_group_head, temp, head = self.reverse(head, k)
+            
+            if prev_group_last is not None:
+                prev_group_last.next = prev_group_head
+            
+            prev_group_last = temp
+
+            if dummy.next is None:
+                dummy.next = prev_group_head
         
         if head is not None:
-            stack.append(head)
+            prev_group_last.next = head
         
-        head = stack.pop(0)
-        temp = head
-        
-        while len(stack) != 0:
-            while temp.next is not None:
-                temp = temp.next
-            
-            temp.next = stack.pop(0)
-        
-        return head
+        return dummy.next
     
-    def reverse_list(self, head, depth):
+    def reverse(self, head, depth):
+        dummy = ListNode(0)
+        dummy.next = head
         prev, current, temp = None, head, None
         
         while current is not None and depth > 0:
@@ -51,4 +52,4 @@ class Solution:
             current.next = prev
             prev, current = current, temp
         
-        return prev, current
+        return prev, dummy.next, current
