@@ -12,17 +12,13 @@ class Solution:
     # @param k, an integer
     # @return a ListNode
     def reverseKGroup(self, head, k):
-        length, temp = 0, head
-        
-        while temp:
-            length += 1
-            temp = temp.next
+        length = self.length(head)
         
         if length < k:
             return head
         
         dummy = ListNode(0)    
-        prev_group_head, prev_group_last= None, None
+        prev_group_head, prev_group_last, temp = None, None, None
         
         while length >= k:
             length -= k
@@ -53,3 +49,12 @@ class Solution:
             prev, current = current, temp
         
         return prev, dummy.next, current
+    
+    def length(self, head):
+        length, temp = 0, head
+        
+        while temp:
+            length += 1
+            temp = temp.next
+        
+        return length
