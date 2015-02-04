@@ -10,6 +10,7 @@ class Solution:
         if length == 0:
             return num
             
+        i = -1
         max_so_far = num[length - 1]
         
         for i in range(length - 1, -1, -1):
@@ -23,12 +24,10 @@ class Solution:
                         num[i], num[j] = num[j], num[i]
                         break
                 
-                self.reverse(num, i + 1, length - 1)
-                break
-            
-            if i == 0:
-                num.reverse()
-                return num
+                return self.reverse(num, i + 1, length - 1)
+        
+        if i == 0:
+            num.reverse()
         
         return num
     
@@ -38,3 +37,5 @@ class Solution:
             
             start += 1
             end -= 1
+        
+        return num
