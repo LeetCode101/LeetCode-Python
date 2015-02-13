@@ -32,3 +32,4 @@
 | 28 | [Divide Two Integers](https://oj.leetcode.com/problems/divide-two-integers/) | Fast |
 | 29 | [Substring with Concatenation of All Words](https://oj.leetcode.com/problems/substring-with-concatenation-of-all-words/) | **Slow** |
 | 30 | [Next Permutation](https://oj.leetcode.com/problems/next-permutation/) | Fast |
+| 31 | [Longest Valid Parentheses](https://oj.leetcode.com/problems/longest-valid-parentheses/) | Fast |
