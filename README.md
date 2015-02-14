@@ -33,5 +33,5 @@
 | 29 | [Substring with Concatenation of All Words](https://oj.leetcode.com/problems/substring-with-concatenation-of-all-words/) | **Slow** |
 | 30 | [Next Permutation](https://oj.leetcode.com/problems/next-permutation/) | Fast |
 | 31 | [Longest Valid Parentheses](https://oj.leetcode.com/problems/longest-valid-parentheses/) | Fast |
-| 32 | [Search in Rotated Sorted Array](https://oj.leetcode.com/problems/search-in-rotated-sorted-array/) | |
+| 32 | [Search in Rotated Sorted Array](https://oj.leetcode.com/problems/search-in-rotated-sorted-array/) | Fast |
 | 33 | [Search for a Range](https://oj.leetcode.com/problems/search-for-a-range/) | Fast |
