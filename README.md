@@ -36,3 +36,4 @@
 | 32 | [Search in Rotated Sorted Array](https://oj.leetcode.com/problems/search-in-rotated-sorted-array/) | Fast |
 | 33 | [Search for a Range](https://oj.leetcode.com/problems/search-for-a-range/) | Fast |
 | 34 | [Search Insert Position](https://oj.leetcode.com/problems/search-insert-position/) | Fast |
+| 35 | [Valid Sudoku](https://oj.leetcode.com/problems/valid-sudoku/) | Fast |
