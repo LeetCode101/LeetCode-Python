@@ -24,24 +24,21 @@ class Solution:
         
         return True
     
-    def is_valid(self, board, x, y):
+    def is_valid(self, board, row, column):
         # Check row
         for i in range(9):
-            if i != x and board[i][y] == board[x][y]:
+            if i != row and board[i][column] == board[row][column]:
                 return False
         
         # Check column
         for j in range(9):
-            if j != y and board[x][j] == board[x][y]:
+            if j != column and board[row][j] == board[row][column]:
                 return False
         
         # Check sub-grid
-        start_x = x / 3
-        start_y = y / 3
-        
-        for i in range(start_x * 3, 3 * start_x + 3):
-            for j in range(start_y * 3, 3 * start_y + 3):
-                if i != x and j != y and board[i][j] == board[x][y]:
+        for i in range(row / 3 * 3, 3 * (row / 3 + 1)):
+            for j in range(column / 3 * 3, 3 * (column / 3 + 1)):
+                if i != row and j != column and board[i][j] == board[row][column]:
                     return False
         
         return True
