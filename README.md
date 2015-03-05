@@ -39,3 +39,4 @@
 | 35 | [Valid Sudoku](https://oj.leetcode.com/problems/valid-sudoku/) | Fast |
 | 36 | [Sudoku Solver](https://oj.leetcode.com/problems/sudoku-solver/) | **Slow** |
 | 37 | [Count and Say ](https://oj.leetcode.com/problems/count-and-say/) | Fast |
+| 38 | [Combination Sum](https://oj.leetcode.com/problems/combination-sum/) | **Slow** |
