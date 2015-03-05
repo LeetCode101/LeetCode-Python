@@ -40,3 +40,4 @@
 | 36 | [Sudoku Solver](https://oj.leetcode.com/problems/sudoku-solver/) | **Slow** |
 | 37 | [Count and Say ](https://oj.leetcode.com/problems/count-and-say/) | Fast |
 | 38 | [Combination Sum](https://oj.leetcode.com/problems/combination-sum/) | **Slow** |
+| 39 } [Combination Sum II](https://oj.leetcode.com/problems/combination-sum-ii/) | **Slow** |
