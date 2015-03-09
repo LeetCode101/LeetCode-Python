@@ -2,18 +2,18 @@
 ## Performance
 | # | Title | Performance |
 | --- | --- | --- |
-| 1 | [Two Sum](https://oj.leetcode.com/problems/two-sum/) | **Slow** |
-| 2 | [Median of Two Sorted Arrays](https://oj.leetcode.com/problems/median-of-two-sorted-arrays/) | **Slow** |
-| 3 | [Longest Substring Without Repeating Characters](https://oj.leetcode.com/problems/longest-substring-without-repeating-characters/) | **Slow** |
+| 1 | [Two Sum](https://oj.leetcode.com/problems/two-sum/) | Fast |
+| 2 | [Median of Two Sorted Arrays](https://oj.leetcode.com/problems/median-of-two-sorted-arrays/) | Fast |
+| 3 | [Longest Substring Without Repeating Characters](https://oj.leetcode.com/problems/longest-substring-without-repeating-characters/) | Fast |
 | 4 | [Add Two Numbers](https://oj.leetcode.com/problems/add-two-numbers/) | Fast |
 | 5 | [Longest Palindromic Substring](https://oj.leetcode.com/problems/longest-palindromic-substring/) | **Slow** |
-| 6 | [ZigZag Conversion](https://oj.leetcode.com/problems/zigzag-conversion/) | **Slow** |
-| 7 | [Reverse Integer](https://oj.leetcode.com/problems/reverse-integer/) | **Slow** |
-| 8 | [String to Integer (atoi)](https://oj.leetcode.com/problems/string-to-integer-atoi/) | **Slow** |
-| 9 | [Palindrome Number](https://oj.leetcode.com/problems/palindrome-number/) | **Slow** |
-| 10 | [Regular Expression Matching](https://oj.leetcode.com/problems/regular-expression-matching/) | **Slow** |
-| 11 | [Container With Most Water](https://oj.leetcode.com/problems/container-with-most-water/) | **Slow** |
-| 12 | [Integer to Roman](https://oj.leetcode.com/problems/integer-to-roman/) | **Slow** |
+| 6 | [ZigZag Conversion](https://oj.leetcode.com/problems/zigzag-conversion/) | Fast |
+| 7 | [Reverse Integer](https://oj.leetcode.com/problems/reverse-integer/) | Fast |
+| 8 | [String to Integer (atoi)](https://oj.leetcode.com/problems/string-to-integer-atoi/) | Fast |
+| 9 | [Palindrome Number](https://oj.leetcode.com/problems/palindrome-number/) | Fast |
+| 10 | [Regular Expression Matching](https://oj.leetcode.com/problems/regular-expression-matching/) | Fast |
+| 11 | [Container With Most Water](https://oj.leetcode.com/problems/container-with-most-water/) | Fast |
+| 12 | [Integer to Roman](https://oj.leetcode.com/problems/integer-to-roman/) | Fast |
 | 13 | [Roman to Integer](https://oj.leetcode.com/problems/roman-to-integer/) | **Slow** |
 | 14 | [Longest Common Prefix](https://oj.leetcode.com/problems/longest-common-prefix/) | Fast |
 | 15 | [3Sum](https://oj.leetcode.com/problems/3sum/) | Fast |
