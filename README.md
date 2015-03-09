@@ -41,3 +41,4 @@
 | 37 | [Count and Say ](https://oj.leetcode.com/problems/count-and-say/) | Fast |
 | 38 | [Combination Sum](https://oj.leetcode.com/problems/combination-sum/) | **Slow** |
 | 39 | [Combination Sum II](https://oj.leetcode.com/problems/combination-sum-ii/) | **Slow** |
+| 40 | [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | Fast |
