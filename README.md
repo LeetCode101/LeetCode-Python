@@ -42,3 +42,4 @@
 | 38 | [Combination Sum](https://oj.leetcode.com/problems/combination-sum/) | **Slow** |
 | 39 | [Combination Sum II](https://oj.leetcode.com/problems/combination-sum-ii/) | **Slow** |
 | 40 | [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | Fast |
+| 41 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | Fast |
