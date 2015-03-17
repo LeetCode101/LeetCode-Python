@@ -3,9 +3,9 @@
 | # | Title | Performance |
 | --- | --- | --- |
 | 1 | [Two Sum](https://oj.leetcode.com/problems/two-sum/) | Fast |
-| 2 | [Median of Two Sorted Arrays](https://oj.leetcode.com/problems/median-of-two-sorted-arrays/) | Fast |
+| 2 | [Add Two Numbers](https://oj.leetcode.com/problems/add-two-numbers/) | Fast |
 | 3 | [Longest Substring Without Repeating Characters](https://oj.leetcode.com/problems/longest-substring-without-repeating-characters/) | Fast |
-| 4 | [Add Two Numbers](https://oj.leetcode.com/problems/add-two-numbers/) | Fast |
+| 4 | [Median of Two Sorted Arrays](https://oj.leetcode.com/problems/median-of-two-sorted-arrays/) | Fast |
 | 5 | [Longest Palindromic Substring](https://oj.leetcode.com/problems/longest-palindromic-substring/) | **Slow** |
 | 6 | [ZigZag Conversion](https://oj.leetcode.com/problems/zigzag-conversion/) | Fast |
 | 7 | [Reverse Integer](https://oj.leetcode.com/problems/reverse-integer/) | Fast |
@@ -18,29 +18,29 @@
 | 14 | [Longest Common Prefix](https://oj.leetcode.com/problems/longest-common-prefix/) | Fast |
 | 15 | [3Sum](https://oj.leetcode.com/problems/3sum/) | Fast |
 | 16 | [3Sum Closest](https://oj.leetcode.com/problems/3sum-closest/) | Fast |
-| 17 | [4Sum](https://oj.leetcode.com/problems/4sum/) | **Slow** |
-| 18 | [Letter Combinations of a Phone Number](https://oj.leetcode.com/problems/letter-combinations-of-a-phone-number/) | Fast |
+| 17 | [Letter Combinations of a Phone Number](https://oj.leetcode.com/problems/letter-combinations-of-a-phone-number/) | Fast |
+| 18 | [4Sum](https://oj.leetcode.com/problems/4sum/) | **Slow** |
 | 19 | [Remove Nth Node From End of List](https://oj.leetcode.com/problems/remove-nth-node-from-end-of-list/) | Fast |
 | 20 | [Valid Parentheses](https://oj.leetcode.com/problems/valid-parentheses/) | Fast |
-| 21 | [Generate Parentheses](https://oj.leetcode.com/problems/generate-parentheses/) | Fast |
-| 22 | [Merge k Sorted Lists](https://oj.leetcode.com/problems/merge-k-sorted-lists/) | Fast |
-| 23 | [Swap Nodes in Pairs](https://oj.leetcode.com/problems/swap-nodes-in-pairs/) | Fast |
-| 24 | [Reverse Nodes in k-Group](https://oj.leetcode.com/problems/reverse-nodes-in-k-group/) | Fast |
-| 25 | [Remove Duplicates from Sorted Array](https://oj.leetcode.com/problems/remove-duplicates-from-sorted-array/) | Fast |
-| 26 | [Remove Element](https://oj.leetcode.com/problems/remove-element/) | Fast |
-| 27 | [Implement strStr()](https://oj.leetcode.com/problems/implement-strstr/) | Fast |
-| 28 | [Divide Two Integers](https://oj.leetcode.com/problems/divide-two-integers/) | Fast |
-| 29 | [Substring with Concatenation of All Words](https://oj.leetcode.com/problems/substring-with-concatenation-of-all-words/) | **Slow** |
-| 30 | [Next Permutation](https://oj.leetcode.com/problems/next-permutation/) | Fast |
-| 31 | [Longest Valid Parentheses](https://oj.leetcode.com/problems/longest-valid-parentheses/) | Fast |
-| 32 | [Search in Rotated Sorted Array](https://oj.leetcode.com/problems/search-in-rotated-sorted-array/) | Fast |
-| 33 | [Search for a Range](https://oj.leetcode.com/problems/search-for-a-range/) | Fast |
-| 34 | [Search Insert Position](https://oj.leetcode.com/problems/search-insert-position/) | Fast |
-| 35 | [Valid Sudoku](https://oj.leetcode.com/problems/valid-sudoku/) | Fast |
-| 36 | [Sudoku Solver](https://oj.leetcode.com/problems/sudoku-solver/) | **Slow** |
-| 37 | [Count and Say ](https://oj.leetcode.com/problems/count-and-say/) | Fast |
-| 38 | [Combination Sum](https://oj.leetcode.com/problems/combination-sum/) | **Slow** |
-| 39 | [Combination Sum II](https://oj.leetcode.com/problems/combination-sum-ii/) | **Slow** |
-| 40 | [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | Fast |
-| 41 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | Fast |
-| 42 | [Multiply Strings](https://leetcode.com/problems/multiply-strings/) | **Slow** |
+| 22 | [Generate Parentheses](https://oj.leetcode.com/problems/generate-parentheses/) | Fast |
+| 23 | [Merge k Sorted Lists](https://oj.leetcode.com/problems/merge-k-sorted-lists/) | Fast |
+| 24 | [Swap Nodes in Pairs](https://oj.leetcode.com/problems/swap-nodes-in-pairs/) | Fast |
+| 25 | [Reverse Nodes in k-Group](https://oj.leetcode.com/problems/reverse-nodes-in-k-group/) | Fast |
+| 26 | [Remove Duplicates from Sorted Array](https://oj.leetcode.com/problems/remove-duplicates-from-sorted-array/) | Fast |
+| 27 | [Remove Element](https://oj.leetcode.com/problems/remove-element/) | Fast |
+| 28 | [Implement strStr()](https://oj.leetcode.com/problems/implement-strstr/) | Fast |
+| 29 | [Divide Two Integers](https://oj.leetcode.com/problems/divide-two-integers/) | Fast |
+| 30 | [Substring with Concatenation of All Words](https://oj.leetcode.com/problems/substring-with-concatenation-of-all-words/) | **Slow** |
+| 31 | [Next Permutation](https://oj.leetcode.com/problems/next-permutation/) | Fast |
+| 32 | [Longest Valid Parentheses](https://oj.leetcode.com/problems/longest-valid-parentheses/) | Fast |
+| 33 | [Search in Rotated Sorted Array](https://oj.leetcode.com/problems/search-in-rotated-sorted-array/) | Fast |
+| 34 | [Search for a Range](https://oj.leetcode.com/problems/search-for-a-range/) | Fast |
+| 35 | [Search Insert Position](https://oj.leetcode.com/problems/search-insert-position/) | Fast |
+| 36 | [Valid Sudoku](https://oj.leetcode.com/problems/valid-sudoku/) | Fast |
+| 37 | [Sudoku Solver](https://oj.leetcode.com/problems/sudoku-solver/) | **Slow** |
+| 38 | [Count and Say ](https://oj.leetcode.com/problems/count-and-say/) | Fast |
+| 39 | [Combination Sum](https://oj.leetcode.com/problems/combination-sum/) | **Slow** |
+| 40 | [Combination Sum II](https://oj.leetcode.com/problems/combination-sum-ii/) | **Slow** |
+| 41 | [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | Fast |
+| 42 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | Fast |
+| 43 | [Multiply Strings](https://leetcode.com/problems/multiply-strings/) | **Slow** |
