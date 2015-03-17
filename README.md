@@ -21,6 +21,7 @@
 | 17 | [Letter Combinations of a Phone Number](https://oj.leetcode.com/problems/letter-combinations-of-a-phone-number/) | Fast |
 | 18 | [4Sum](https://oj.leetcode.com/problems/4sum/) | **Slow** |
 | 19 | [Remove Nth Node From End of List](https://oj.leetcode.com/problems/remove-nth-node-from-end-of-list/) | Fast |
+| 21 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Fast |
 | 20 | [Valid Parentheses](https://oj.leetcode.com/problems/valid-parentheses/) | Fast |
 | 22 | [Generate Parentheses](https://oj.leetcode.com/problems/generate-parentheses/) | Fast |
 | 23 | [Merge k Sorted Lists](https://oj.leetcode.com/problems/merge-k-sorted-lists/) | Fast |
