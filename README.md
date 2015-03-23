@@ -46,3 +46,4 @@
 | 42 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | Fast |
 | 43 | [Multiply Strings](https://leetcode.com/problems/multiply-strings/) | **Slow** |
 | 44 | [Wildcard Matching](https://leetcode.com/problems/wildcard-matching/) | Fast |
+| 45 | [Jump Game II](https://leetcode.com/problems/jump-game-ii/) | Fast |
