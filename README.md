@@ -45,3 +45,4 @@
 | 41 | [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | Fast |
 | 42 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | Fast |
 | 43 | [Multiply Strings](https://leetcode.com/problems/multiply-strings/) | **Slow** |
+| 44 | [Wildcard Matching](https://leetcode.com/problems/wildcard-matching/) | Fast |
