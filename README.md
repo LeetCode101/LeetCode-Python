@@ -48,3 +48,4 @@
 | 44 | [Wildcard Matching](https://leetcode.com/problems/wildcard-matching/) | Fast |
 | 45 | [Jump Game II](https://leetcode.com/problems/jump-game-ii/) | Fast |
 | 46 | [Permutations](https://leetcode.com/problems/permutations/) | Fast |
+| 47 | [Permutations II ](https://leetcode.com/problems/permutations-ii/) | Fast |
