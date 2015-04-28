@@ -50,3 +50,4 @@
 | 46 | [Permutations](https://leetcode.com/problems/permutations/) | Fast |
 | 47 | [Permutations II ](https://leetcode.com/problems/permutations-ii/) | Fast |
 | 48 | [Rotate Image](https://leetcode.com/problems/rotate-image/) | Fast |
+| 49 | [Anagrams](https://leetcode.com/problems/anagrams/) | Fast |
