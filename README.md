@@ -53,3 +53,4 @@
 | 49 | [Anagrams](https://leetcode.com/problems/anagrams/) | Fast |
 | 50 | [Pow(x, n)](https://leetcode.com/problems/powx-n/) | Fast |
 | 51 | [N-Queens](https://leetcode.com/problems/n-queens/) | **Slow** |
+| 52 | [N-Queens II](https://leetcode.com/problems/n-queens-ii/) | **Slow** |
