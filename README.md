@@ -52,3 +52,4 @@
 | 48 | [Rotate Image](https://leetcode.com/problems/rotate-image/) | Fast |
 | 49 | [Anagrams](https://leetcode.com/problems/anagrams/) | Fast |
 | 50 | [Pow(x, n)](https://leetcode.com/problems/powx-n/) | Fast |
+| 51 | [N-Queens](https://leetcode.com/problems/n-queens/) | **Slow** |
