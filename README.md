@@ -55,3 +55,4 @@
 | 51 | [N-Queens](https://leetcode.com/problems/n-queens/) | **Slow** |
 | 52 | [N-Queens II](https://leetcode.com/problems/n-queens-ii/) | **Slow** |
 | 53 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | Fast |
+| 54 | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | Fast |
