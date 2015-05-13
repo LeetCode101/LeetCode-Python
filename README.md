@@ -57,3 +57,4 @@
 | 53 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | Fast |
 | 54 | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | Fast |
 | 55 | [Jump Game](https://leetcode.com/problems/jump-game/) | Fast |
+| 56 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | Fast |
