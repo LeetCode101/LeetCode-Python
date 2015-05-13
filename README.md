@@ -59,3 +59,4 @@
 | 55 | [Jump Game](https://leetcode.com/problems/jump-game/) | Fast |
 | 56 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | Fast |
 | 57 | [Insert Interval](https://leetcode.com/problems/insert-interval/) | Fast |
+| 58 | [Length of Last Word](https://leetcode.com/problems/length-of-last-word/) | Fast |
