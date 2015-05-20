@@ -63,3 +63,4 @@
 | 59 | [Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/) | Fast |
 | 60 | [Permutation Sequence](https://leetcode.com/problems/permutation-sequence/) | Fast |
 | 61 | [Rotate List](https://leetcode.com/problems/rotate-list/) | Fast |
+| 62 | [Unique Paths](https://leetcode.com/problems/unique-paths/) | Fast |
