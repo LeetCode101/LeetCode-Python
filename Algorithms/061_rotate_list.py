@@ -15,30 +15,21 @@ class Solution:
         if head is None or k == 0:
             return head
             
-        length = 0
+        length = 1
         current = head
-        last = None
         
-        while current is not None:
-            if current.next is None:
-                last = current
-                
+        while current.next is not None:
             current = current.next
             length += 1
         
-        if k % length == 0:
-            return head
+        current.next = head
+        k = length - k % length
             
-        depth = length - k % length
-        current = head
-        prev = None
-        
-        while depth > 0:
-            prev = current
+        while k > 0:
             current = current.next
-            depth -= 1
+            k -= 1
         
-        prev.next = None
-        last.next = head
+        head = current.next
+        current.next = None
         
-        return current
+        return head
