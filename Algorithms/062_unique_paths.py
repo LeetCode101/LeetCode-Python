@@ -14,7 +14,6 @@ class Solution:
         
         for i in range(1, m):
             for j in range(1, n):
-                if paths[i][j] == 0:
-                    paths[i][j] = paths[i - 1][j] + paths[i][j - 1]
+                paths[i][j] = paths[i - 1][j] + paths[i][j - 1]
         
         return paths[m - 1][n - 1]
