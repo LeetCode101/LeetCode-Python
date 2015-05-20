@@ -61,4 +61,4 @@
 | 57 | [Insert Interval](https://leetcode.com/problems/insert-interval/) | Fast |
 | 58 | [Length of Last Word](https://leetcode.com/problems/length-of-last-word/) | Fast |
 | 59 | [Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/) | Fast |
-| 60 | [Permutation Sequence](https://leetcode.com/problemset/algorithms/) | Fast |
+| 60 | [Permutation Sequence](https://leetcode.com/problems/permutation-sequence/) | Fast |
