@@ -67,3 +67,4 @@
 | 63 | [Unique Paths II](https://leetcode.com/problems/unique-paths-ii/) | Fast |
 | 64 | [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/) | Fast |
 | 65 | [Valid Number](https://leetcode.com/problems/valid-number/) | Fast |
+| 66 | [Plus One](https://leetcode.com/problems/plus-one/) | Fast |
