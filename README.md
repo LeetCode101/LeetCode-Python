@@ -70,3 +70,4 @@
 | 66 | [Plus One](https://leetcode.com/problems/plus-one/) | Fast |
 | 67 | [Add Binary](https://leetcode.com/problems/add-binary/) | Fast |
 | 68 | [Text Justification](https://leetcode.com/problems/text-justification/) | Fast |
+| 69 | [Sqrt(x)](https://leetcode.com/problems/sqrtx/) | Fast |
