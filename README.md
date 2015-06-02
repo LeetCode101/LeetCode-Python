@@ -69,3 +69,4 @@
 | 65 | [Valid Number](https://leetcode.com/problems/valid-number/) | Fast |
 | 66 | [Plus One](https://leetcode.com/problems/plus-one/) | Fast |
 | 67 | [Add Binary](https://leetcode.com/problems/add-binary/) | Fast |
+| 68 | [Text Justification](https://leetcode.com/problems/text-justification/) | Fast |
