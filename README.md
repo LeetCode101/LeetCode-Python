@@ -72,3 +72,4 @@
 | 68 | [Text Justification](https://leetcode.com/problems/text-justification/) | Fast |
 | 69 | [Sqrt(x)](https://leetcode.com/problems/sqrtx/) | Fast |
 | 70 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | Fast |
+| 71 | [Simplify Path](https://leetcode.com/problems/simplify-path/) | Fast |
