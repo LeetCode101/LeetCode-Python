@@ -6,27 +6,23 @@ class Solution:
     # @return {string}
     def simplifyPath(self, path):
         i = 0
+        folder = ''
         folders = []
         path_length = len(path)
-        start_index_of_folder = -1
         
         while i < path_length:
             current = path[i]
             
-            if current == '/' and start_index_of_folder != -1:
-                folder = path[start_index_of_folder:i]
-                    
+            if current == '/' and folder != '':
                 self.append_folder(folders, folder)
                         
-                start_index_of_folder = -1
-            elif current != '/' and start_index_of_folder == -1:
-                start_index_of_folder = i
+                folder = ''
+            elif current != '/':
+                folder += current
             
             i += 1
 
-        if start_index_of_folder != -1:
-            folder = path[start_index_of_folder:]
-            
+        if folder != '':
             self.append_folder(folders, folder)
         
         return '/' + '/'.join(folders)
