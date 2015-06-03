@@ -5,8 +5,6 @@ class Solution:
     # @param {string} path
     # @return {string}
     def simplifyPath(self, path):
-        i = 0
-        folder = ''
         folders = []
         paths = path.split('/')
         
