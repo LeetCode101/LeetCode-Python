@@ -36,6 +36,6 @@ class Solution:
             pass
         elif folder == '..':
             if len(folders) > 0:
-                del folders[-1]
+                folders.pop()
         else:
             folders.append(folder)
