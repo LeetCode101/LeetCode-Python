@@ -74,3 +74,4 @@
 | 70 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | Fast |
 | 71 | [Simplify Path](https://leetcode.com/problems/simplify-path/) | Fast |
 | 72 | [Edit Distance](https://leetcode.com/problems/edit-distance/) | Fast |
+| 73 | [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | Fast |
