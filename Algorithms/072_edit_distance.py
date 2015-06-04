@@ -22,7 +22,7 @@ class Solution:
                 # 'a' -> 'abc' + 'b' -> ''
                 possibility1 = table[i - 1][j] + 1
                 
-                # 'ab' -> 'ab' + '' -> ''
+                # 'ab' -> 'ab' + '' -> 'c'
                 possibility2 = table[i][ j - 1] + 1
                 
                 # 'a' -> 'ab' + 'b' -> 'c'
