@@ -76,3 +76,4 @@
 | 72 | [Edit Distance](https://leetcode.com/problems/edit-distance/) | Fast |
 | 73 | [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | Fast |
 | 74 | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) | Fast |
+| 75 | [Sort Colors](https://leetcode.com/problems/sort-colors/) | Fast |
