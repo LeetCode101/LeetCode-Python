@@ -21,7 +21,9 @@ class Solution:
         for i in range(len(board)):
             if self.is_valid(board, i, column):
                 board[i][column] = True
+                
                 self.solve(board, column + 1)
+                
                 board[i][column] = False
     
     def is_valid(self, board, row, column):
