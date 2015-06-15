@@ -79,3 +79,4 @@
 | 75 | [Sort Colors](https://leetcode.com/problems/sort-colors/) | Fast |
 | 76 | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | Fast |
 | 77 | [Combinations](https://leetcode.com/problems/combinations/) | Fast |
+| 78 | [Subsets](https://leetcode.com/problems/subsets/) | Fast |
