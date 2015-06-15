@@ -25,5 +25,7 @@ class Solution:
         
         for i in range(start, n):
             combination.append(nums[i])
+            
             self.combine(n, i + 1, k - 1, combination[:], combinations, nums)
+            
             combination.pop()
