@@ -21,5 +21,7 @@ class Solution:
         
         for i in range(start, n + 1):
             combination.append(i)
+            
             self.combine_internal(n, i + 1, k - 1, combination[:], combinations)
+            
             combination.pop()
