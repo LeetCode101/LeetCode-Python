@@ -14,12 +14,14 @@ class Solution:
             
             if color == 0:
                 self.swap(nums, index_after_red, index_after_white)
+                
                 index_after_red += 1
                 index_after_white += 1
             elif color == 1:
                 index_after_white += 1
             elif color == 2:
                 self.swap(nums, index_after_white, index_before_blue)
+                
                 index_before_blue -= 1
             
     def swap(self, nums, i, j):
