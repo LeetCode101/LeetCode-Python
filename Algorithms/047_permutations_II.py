@@ -27,5 +27,7 @@ class Solution:
                     continue
                 
                 num[j], num[i] = num[i], num[j]
+                
                 self.permuteInternal(num[:], i + 1, max_index, permutations)
+                
                 num[j], num[i] = num[i], num[j]
