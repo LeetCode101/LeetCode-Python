@@ -13,7 +13,9 @@ class Solution:
             group_count = self.factorial(n - 1 - i)
             group_number = int(math.ceil(k * 1.0 / group_count))
             permutation += str(available_numbers[group_number - 1])
+            
             del available_numbers[group_number - 1]
+            
             k -= group_count * (group_number - 1)
         
         return permutation
