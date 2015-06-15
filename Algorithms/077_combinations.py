@@ -14,12 +14,12 @@ class Solution:
         return combinations
     
     def combine_internal(self, n, start, k, combination, combinations):
-        if len(combination) == k:
+        if k == 0:
             combinations.append(combination)
             
             return
         
         for i in range(start, n + 1):
             combination.append(i)
-            self.combine_internal(n, i + 1, k, combination[:], combinations)
+            self.combine_internal(n, i + 1, k - 1, combination[:], combinations)
             combination.pop()
