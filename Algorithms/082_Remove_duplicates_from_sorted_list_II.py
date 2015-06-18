@@ -23,8 +23,8 @@ class Solution:
             duplicate = False
             
             while current.next is not None and prev.next.val == current.next.val:
-                current = current.next
                 duplicate = True
+                current = current.next
             
             if not duplicate:
                 prev = current
