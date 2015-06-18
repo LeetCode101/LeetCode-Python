@@ -18,10 +18,12 @@ class Solution:
         current = head.next
         
         while current is not None:
-            while current is not None and current.val == prev.val:
-                current = current.next
+            if current.val != prev.val:
+                prev.next = current
+                prev = current
+            elif current.next is None and current.val == prev.val:
+                prev.next = None
             
-            prev.next = current
-            prev = current
+            current = current.next
         
         return head
