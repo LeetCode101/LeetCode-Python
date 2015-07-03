@@ -40,9 +40,5 @@ class Solution:
         return max_area
     
     def update_histogram(self, current_row, max_column, matrix, histogram):
-        if current_row == 0:
-            for j in range(max_column):
-                histogram[j] = 1 if matrix[current_row][j] == '1' else 0
-        else:
-            for j in range(max_column):
-                histogram[j] = 1 + histogram[j] if matrix[current_row][j] == '1' else 0
+        for j in range(max_column):
+            histogram[j] = 1 + histogram[j] if matrix[current_row][j] == '1' else 0
