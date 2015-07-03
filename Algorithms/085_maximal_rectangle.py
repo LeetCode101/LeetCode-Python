@@ -11,10 +11,10 @@ class Solution:
         max_area = 0
         row = len(matrix)
         column = len(matrix[0])
-        histogram = []
+        histogram = [0] * column
         
         for i in range(row):
-            histogram = self.create_histogram(i, column, matrix, histogram)
+            self.update_histogram(i, column, matrix, histogram)
             
             max_area = max(max_area, self.largest_rectangle_area(histogram))
         
@@ -39,14 +39,10 @@ class Solution:
         
         return max_area
     
-    def create_histogram(self, current_row, max_column, matrix, prev_histogram):
-        histogram = []
-        
+    def update_histogram(self, current_row, max_column, matrix, histogram):
         if current_row == 0:
             for j in range(max_column):
-                histogram.append(1 if matrix[current_row][j] == '1' else 0)
+                histogram[j] = 1 if matrix[current_row][j] == '1' else 0
         else:
             for j in range(max_column):
-                histogram.append(1 + prev_histogram[j] if matrix[current_row][j] == '1' else 0)
-        
-        return histogram
+                histogram[j] = 1 + histogram[j] if matrix[current_row][j] == '1' else 0
