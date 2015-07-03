@@ -5,8 +5,8 @@ class Solution:
     # @param {integer[]} height
     # @return {integer}
     def largestRectangleArea(self, height):
-        height = height + [0]
         max_area = 0
+        height = height + [0]
         length = len(height)
         index_of_increasing_bar = []
         
