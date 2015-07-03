@@ -11,11 +11,15 @@ class Solution:
         max_area = 0
         row = len(matrix)
         column = len(matrix[0])
+        prev_histogram = []
+        current_histogram = []
         
         for i in range(row):
-            histogram = self.create_histogram(i, column, matrix)
+            current_histogram = self.create_histogram(i, column, matrix, prev_histogram)
             
-            max_area = max(max_area, self.largest_rectangle_area(histogram))
+            prev_histogram = current_histogram
+            
+            max_area = max(max_area, self.largest_rectangle_area(current_histogram))
         
         return max_area
     
@@ -38,21 +42,28 @@ class Solution:
         
         return max_area
     
-    def create_histogram(self, current_row, max_column, matrix):
+    def create_histogram(self, current_row, max_column, matrix, prev_histogram):
         histogram = []
         
-        for j in range(max_column):
-            if matrix[current_row][j] == '1':
-                height = 1
-                
-                for k in range(current_row - 1, -1, -1):
-                    if matrix[k][j] == '1':
-                        height += 1
-                    else:
-                        break
-                
-                histogram.append(height)
-            else:
-                histogram.append(0)
+        if len(prev_histogram) == 0:
+            for j in range(max_column):
+                if matrix[current_row][j] == '1':
+                    height = 1
+                    
+                    for k in range(current_row - 1, -1, -1):
+                        if matrix[k][j] == '1':
+                            height += 1
+                        else:
+                            break
+                    
+                    histogram.append(height)
+                else:
+                    histogram.append(0)
+        else:
+            for j in range(max_column):
+                if matrix[current_row][j] == '1':
+                    histogram.append(1 + prev_histogram[j])
+                else:
+                    histogram.append(0)
         
         return histogram
