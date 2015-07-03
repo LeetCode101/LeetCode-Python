@@ -14,7 +14,8 @@ class Solution:
         histogram = [0] * column
         
         for i in range(row):
-            self.update_histogram(i, column, matrix, histogram)
+            for j in range(column):
+                histogram[j] = 1 + histogram[j] if matrix[i][j] == '1' else 0
             
             max_area = max(max_area, self.largest_rectangle_area(histogram))
         
@@ -38,7 +39,3 @@ class Solution:
             index_of_increasing_bar.append(i)
         
         return max_area
-    
-    def update_histogram(self, current_row, max_column, matrix, histogram):
-        for j in range(max_column):
-            histogram[j] = 1 + histogram[j] if matrix[current_row][j] == '1' else 0
