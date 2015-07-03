@@ -86,4 +86,4 @@
 | 82 | [Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/) | Fast |
 | 83 | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | Fast |
 | 84 | [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) | Fast |
-| 85 | [Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle/) | **Slow** |
+| 85 | [Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle/) | Fast |
