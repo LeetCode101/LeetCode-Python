@@ -87,3 +87,4 @@
 | 83 | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | Fast |
 | 84 | [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) | Fast |
 | 85 | [Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle/) | Fast |
+| 86 | [Partition List](https://leetcode.com/problems/partition-list/) | Fast |
