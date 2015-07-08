@@ -89,3 +89,4 @@
 | 85 | [Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle/) | Fast |
 | 86 | [Partition List](https://leetcode.com/problems/partition-list/) | Fast |
 | 87 | [Scramble String](https://leetcode.com/problems/scramble-string/) | Fast |
+| 88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | Fast |
