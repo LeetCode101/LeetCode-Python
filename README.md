@@ -90,3 +90,4 @@
 | 86 | [Partition List](https://leetcode.com/problems/partition-list/) | Fast |
 | 87 | [Scramble String](https://leetcode.com/problems/scramble-string/) | Fast |
 | 88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | Fast |
+| 89 | [Gray Code](https://leetcode.com/problems/gray-code/) | Fast |
