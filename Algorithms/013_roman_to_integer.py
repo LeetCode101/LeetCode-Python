@@ -4,7 +4,7 @@
 class Solution:
     # @return an integer
     def romanToInt(self, s):
-        r = re.compile('(M*)(CD|CM|D*C*)(XL|XC|L*X*)(IV|IX|V*I*)')
+        r = re.compile('(M*)(CD|CM|D{0,1}C{0,3})(XL|XC|L{0,1}X{0,3})(IV|IX|V{0,1}I{0,3})')
         match = r.search(s)
         group, current_group = match.groups(), ''
         p, integer = 0, 0
