@@ -1,4 +1,4 @@
-# LeetCode
+# LeetCode [![codebeat badge](https://codebeat.co/badges/7ba3a686-a85e-47ea-bbdc-d0ad18547c4d)](https://codebeat.co/projects/github-com-frederick-s-leetcode-master) [![Maintainability](https://api.codeclimate.com/v1/badges/703ca49b2e1ea85e9ec4/maintainability)](https://codeclimate.com/github/Frederick-S/LeetCode/maintainability)
 ## Performance
 | # | Title | Performance |
 | --- | --- | --- |
