@@ -10,3 +10,5 @@ class Solution:
                 return [mapping[target - value], index]
             else:
                 mapping[value] = index
+
+        return [-1, -1]

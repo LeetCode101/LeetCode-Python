@@ -8,3 +8,4 @@ class TestTwoSum(unittest.TestCase):
         target = 9
 
         self.assertListEqual([0, 1], Solution().twoSum(nums, target))
+        self.assertListEqual([-1, -1], Solution().twoSum(nums + [20], 30))
