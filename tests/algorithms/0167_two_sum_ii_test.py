@@ -8,3 +8,4 @@ class TestTwoSum(unittest.TestCase):
 
         self.assertListEqual([1, 2], solution.twoSum([2, 7, 11, 15], 9))
         self.assertListEqual([2, 3], solution.twoSum([5, 25, 75], 100))
+        self.assertListEqual([-1, -1], solution.twoSum([5, 25, 75], 101))
