@@ -18,7 +18,8 @@ class Solution:
 
         return [-1, -1]
 
-    def binary_search(self, nums: List[int], low: int, high: int, target: int):
+    def binary_search(
+            self, nums: List[int], low: int, high: int, target: int) -> int:
         while low <= high:
             middle = (low + high) // 2
 
