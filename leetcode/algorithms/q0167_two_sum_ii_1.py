@@ -26,9 +26,10 @@ class Solution:
             if nums[middle] == target:
                 return middle
             elif nums[middle] < target:
-                return self.binary_search(nums, middle + 1, high, target)
+                low = middle + 1
+            elif middle - 1 >= low and nums[middle - 1] >= target:
+                high = middle - 1
             else:
-                return self.binary_search(nums, low, middle - 1, target) \
-                    if middle - 1 >= low and nums[middle - 1] >= target else -1
+                return -1
 
         return -1
