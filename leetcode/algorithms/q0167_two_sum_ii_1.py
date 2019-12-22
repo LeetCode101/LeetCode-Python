@@ -30,6 +30,6 @@ class Solution:
             elif middle - 1 >= low and nums[middle - 1] >= target:
                 high = middle - 1
             else:
-                return -1
+                return middle
 
         return -1
