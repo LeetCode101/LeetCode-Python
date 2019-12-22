@@ -10,6 +10,6 @@ install:
   - pip install pycodestyle
 script:
   - pycodestyle .
-  - coverage run --source=src setup.py test
+  - coverage run --source=leetcode setup.py test
 after_success:
   - codecov
