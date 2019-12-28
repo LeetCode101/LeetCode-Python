@@ -6,7 +6,7 @@ class Solution:
         high = len(nums) - 1
 
         for index, value in enumerate(nums):
-            # Find the max index j such that
+            # Find the minimum index j such that
             # nums[j] >= target - value for all x in [j, len(nums) - 1]
             j = self.binary_search(nums, index + 1, high, target - value)
 
