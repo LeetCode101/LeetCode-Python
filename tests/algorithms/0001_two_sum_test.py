@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.q0001_two_sum import Solution
+from leetcode.algorithms.p0001_two_sum import Solution
 
 
 class TestTwoSum(unittest.TestCase):
