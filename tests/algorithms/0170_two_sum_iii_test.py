@@ -14,10 +14,14 @@ class TestTwoSum(unittest.TestCase):
         self.assertFalse(two_sum.find(7))
 
     def test_two_sum2(self):
-        two_sum = TwoSum2()
-        two_sum.add(1)
-        two_sum.add(3)
-        two_sum.add(5)
+        two_sum1 = TwoSum2()
+        two_sum1.add(1)
+        two_sum1.add(3)
+        two_sum1.add(5)
+        two_sum2 = TwoSum2()
+        two_sum2.add(0)
+        two_sum2.add(0)
 
-        self.assertTrue(two_sum.find(4))
-        self.assertFalse(two_sum.find(7))
+        self.assertTrue(two_sum1.find(4))
+        self.assertFalse(two_sum1.find(7))
+        self.assertTrue(two_sum2.find(0))
