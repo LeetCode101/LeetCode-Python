@@ -6,9 +6,11 @@ class Solution:
         i, j = 0, len(nums) - 1
 
         while i < j:
-            if nums[i] + nums[j] == target:
+            current_sum = nums[i] + nums[j]
+
+            if current_sum == target:
                 return [i + 1, j + 1]
-            elif nums[i] + nums[j] > target:
+            elif current_sum > target:
                 j -= 1
             else:
                 i += 1

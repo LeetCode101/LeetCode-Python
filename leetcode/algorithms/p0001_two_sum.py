@@ -6,8 +6,10 @@ class Solution:
         mapping = {}
 
         for index, value in enumerate(nums):
-            if target - value in mapping:
-                return [mapping[target - value], index]
+            diff = target - value
+
+            if diff in mapping:
+                return [mapping[diff], index]
             else:
                 mapping[value] = index
 
