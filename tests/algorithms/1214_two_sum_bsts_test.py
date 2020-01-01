@@ -3,8 +3,8 @@ from leetcode.algorithms.p1214_two_sum_bsts import Solution
 from leetcode.algorithms.p1214_two_sum_bsts import TreeNode
 
 
-class TestTwoSum(unittest.TestCase):
-    def test_two_sum(self):
+class TestTwoSumBSTs(unittest.TestCase):
+    def test_two_sum_bsts(self):
         solution = Solution()
         root1 = TreeNode(2)
         root1.left = TreeNode(1)
