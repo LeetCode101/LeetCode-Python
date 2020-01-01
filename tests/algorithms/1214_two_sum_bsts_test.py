@@ -14,3 +14,4 @@ class TestTwoSum(unittest.TestCase):
         root2.right = TreeNode(3)
 
         self.assertTrue(solution.twoSumBSTs(root1, root2, 5))
+        self.assertFalse(solution.twoSumBSTs(root1, root2, 50))
