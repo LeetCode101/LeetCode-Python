@@ -8,3 +8,4 @@ class TestSubarraySumEqualsK(unittest.TestCase):
         solution = Solution1()
 
         self.assertEqual(2, solution.subarraySum([1, 1, 1], 2))
+        self.assertEqual(1, solution.subarraySum([1, 2, 1], 2))
