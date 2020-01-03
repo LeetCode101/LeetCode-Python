@@ -1,5 +1,6 @@
 import unittest
-from leetcode.algorithms.p0560_subarray_sum_equals_k_1 import Solution as Solution1
+from leetcode.algorithms.p0560_subarray_sum_equals_k_1 \
+    import Solution as Solution1
 
 
 class TestSubarraySumEqualsK(unittest.TestCase):
