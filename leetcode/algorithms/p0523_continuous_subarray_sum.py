@@ -11,7 +11,7 @@ class Solution:
             key = sum if k == 0 else sum % k
 
             if key in mapping:
-                if i - mapping[key] > 1:
+                if i - mapping[key] >= 2:
                     return True
             else:
                 mapping[key] = i
