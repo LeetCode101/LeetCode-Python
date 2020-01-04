@@ -8,3 +8,4 @@ class TestContinuousSubarraySum(unittest.TestCase):
 
         self.assertTrue(solution.checkSubarraySum([23, 2, 4, 6, 7], 6))
         self.assertTrue(solution.checkSubarraySum([23, 2, 6, 4, 7], 6))
+        self.assertFalse(solution.checkSubarraySum([23, 2, 6, 4, 7], 9))
