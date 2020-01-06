@@ -1,6 +1,5 @@
 import unittest
-from leetcode.algorithms.p1214_two_sum_bsts import Solution
-from leetcode.algorithms.p1214_two_sum_bsts import TreeNode
+from leetcode.algorithms.p1214_two_sum_bsts import Solution, TreeNode
 
 
 class TestTwoSumBSTs(unittest.TestCase):

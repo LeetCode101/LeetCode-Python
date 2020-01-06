@@ -1,6 +1,5 @@
 import unittest
-from leetcode.algorithms.p0653_two_sum_iv import Solution
-from leetcode.algorithms.p0653_two_sum_iv import TreeNode
+from leetcode.algorithms.p0653_two_sum_iv import Solution, TreeNode
 
 
 class TestTwoSum(unittest.TestCase):
