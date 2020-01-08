@@ -12,7 +12,6 @@ class Solution:
         if current is None:
             return prev
 
-        next = current.next
-        current.next = prev
+        next, current.next = current.next, prev
 
         return self.reverse(current, next)
