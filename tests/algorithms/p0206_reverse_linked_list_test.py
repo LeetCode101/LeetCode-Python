@@ -1,18 +1,18 @@
 import unittest
 from leetcode.algorithms.p0206_reverse_linked_list_1 \
-    import Solution as Solution1, ListNode
+    import Solution as Solution1, ListNode as ListNode1
 from leetcode.algorithms.p0206_reverse_linked_list_2 \
-    import Solution as Solution2
+    import Solution as Solution2, ListNode as ListNode2
 
 
 class TestReverseLinkedList(unittest.TestCase):
     def test_reverse_linked_list1(self):
         solution = Solution1()
-        a = ListNode(1)
-        b = ListNode(2)
-        c = ListNode(3)
-        d = ListNode(4)
-        e = ListNode(5)
+        a = ListNode1(1)
+        b = ListNode1(2)
+        c = ListNode1(3)
+        d = ListNode1(4)
+        e = ListNode1(5)
         d.next = e
         c.next = d
         b.next = c
@@ -24,11 +24,11 @@ class TestReverseLinkedList(unittest.TestCase):
 
     def test_reverse_linked_list2(self):
         solution = Solution2()
-        a = ListNode(1)
-        b = ListNode(2)
-        c = ListNode(3)
-        d = ListNode(4)
-        e = ListNode(5)
+        a = ListNode2(1)
+        b = ListNode2(2)
+        c = ListNode2(3)
+        d = ListNode2(4)
+        e = ListNode2(5)
         d.next = e
         c.next = d
         b.next = c
