@@ -25,4 +25,4 @@ class Solution:
 
         tail_of_reverse_list.next = current
 
-        return old_head if m >= 2 else prev
+        return old_head if tail_of_left is not None else prev
