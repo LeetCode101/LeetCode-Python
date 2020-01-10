@@ -1,6 +1,7 @@
 import unittest
 from leetcode.algorithms.p0092_reverse_linked_list_ii_1 \
     import Solution, ListNode
+from .list_helper import convert_linked_list_to_list
 
 
 class TestReverseLinkedList(unittest.TestCase):
@@ -18,22 +19,12 @@ class TestReverseLinkedList(unittest.TestCase):
 
         self.assertListEqual(
             [1, 4, 3, 2, 5],
-            self.convert_linked_list_to_list(solution.reverseBetween(a, 2, 4)))
+            convert_linked_list_to_list(solution.reverseBetween(a, 2, 4)))
 
         a1 = ListNode(3)
         b1 = ListNode(5)
         a1.next = b1
 
         self.assertListEqual([5, 3],
-                             self.convert_linked_list_to_list(
+                             convert_linked_list_to_list(
                                  solution.reverseBetween(a1, 1, 2)))
-
-    def convert_linked_list_to_list(self, head):
-        list, current = [], head
-
-        while current is not None:
-            list.append(current.val)
-
-            current = current.next
-
-        return list
