@@ -13,11 +13,11 @@ class Solution:
         for i in range(m - 1):
             tail_of_left = tail_of_left.next
 
-        current = tail_of_left.next
+        tail_of_reverse_list = tail_of_left.next
 
         for i in range(m, n):
-            next = current.next
-            current.next = next.next
+            next = tail_of_reverse_list.next
+            tail_of_reverse_list.next = next.next
             next.next, tail_of_left.next = tail_of_left.next, next
 
         return dummy.next
