@@ -14,13 +14,10 @@ class Solution:
             tail_of_left = tail_of_left.next
 
         tail_of_reverse_list = tail_of_left.next
-        prev, current = None, tail_of_left.next
 
-        for i in range(m, n + 1):
-            next, current.next = current.next, prev
-            prev, current = current, next
-
-        tail_of_reverse_list.next = current
-        tail_of_left.next = prev
+        for i in range(m, n):
+            next = tail_of_reverse_list.next
+            tail_of_reverse_list.next = next.next
+            next.next, tail_of_left.next = tail_of_left.next, next
 
         return dummy.next
