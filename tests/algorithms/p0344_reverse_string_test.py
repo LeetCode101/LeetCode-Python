@@ -4,8 +4,8 @@ from leetcode.algorithms.p0344_reverse_string import Solution
 
 class TestReverseString(unittest.TestCase):
     def test_reverse_string(self):
-        s = ['h', 'e', 'l', 'l', 'o']
+        s = list('hello')
         solution = Solution()
         solution.reverseString(s)
 
-        self.assertEqual(['o', 'l', 'l', 'e', 'h'], s)
+        self.assertEqual(list('olleh'), s)
