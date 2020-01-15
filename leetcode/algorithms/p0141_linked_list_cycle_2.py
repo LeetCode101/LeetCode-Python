@@ -12,7 +12,7 @@ class Solution:
             slow = slow.next
             fast = fast.next if fast.next is None else fast.next.next
 
-            if slow is not None and slow == fast:
+            if fast is not None and slow == fast:
                 return True
 
         return False
