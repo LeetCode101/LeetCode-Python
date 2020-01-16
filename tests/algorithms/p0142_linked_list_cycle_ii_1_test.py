@@ -16,3 +16,4 @@ class TestLinkedListCycle(unittest.TestCase):
         d.next = b
 
         self.assertEqual(b, solution.detectCycle(a))
+        self.assertIsNone(solution.detectCycle(ListNode(1)))
