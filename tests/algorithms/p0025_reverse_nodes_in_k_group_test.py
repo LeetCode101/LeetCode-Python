@@ -1,0 +1,22 @@
+import unittest
+from leetcode.algorithms.p0025_reverse_nodes_in_k_group \
+    import Solution, ListNode
+from .list_helper import convert_linked_list_to_list
+
+
+class TestReverseNodesInKGroup(unittest.TestCase):
+    def test_reverse_nodes_in_k_group(self):
+        solution = Solution()
+        a = ListNode(1)
+        b = ListNode(2)
+        c = ListNode(3)
+        d = ListNode(4)
+        e = ListNode(5)
+        d.next = e
+        c.next = d
+        b.next = c
+        a.next = b
+
+        self.assertListEqual(
+            [2, 1, 4, 3, 5],
+            convert_linked_list_to_list(solution.reverseKGroup(a, 2)))
