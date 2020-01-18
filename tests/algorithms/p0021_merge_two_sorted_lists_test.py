@@ -22,3 +22,12 @@ class TestMergeTwoSortedLists(unittest.TestCase):
         self.assertListEqual(
             [1, 1, 2, 3, 4, 4],
             convert_linked_list_to_list(solution.mergeTwoLists(a, d)))
+
+        a = ListNode(2)
+        b = ListNode(3)
+        a.next = b
+
+        self.assertListEqual(
+            [1, 2, 3],
+            convert_linked_list_to_list(
+                solution.mergeTwoLists(a, ListNode(1))))
