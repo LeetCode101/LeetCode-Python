@@ -22,3 +22,7 @@ class TestAddTwoNumbers(unittest.TestCase):
         self.assertListEqual(
             [7, 0, 8],
             convert_linked_list_to_list(solution.addTwoNumbers(a, d)))
+        self.assertListEqual(
+            [0, 1],
+            convert_linked_list_to_list(
+                solution.addTwoNumbers(ListNode(5), ListNode(5))))
