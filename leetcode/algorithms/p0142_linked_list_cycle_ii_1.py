@@ -6,13 +6,13 @@ class ListNode:
 
 class Solution:
     def detectCycle(self, head: ListNode) -> ListNode:
-        mapping, current = set(), head
+        visited, current = set(), head
 
         while current is not None:
-            if current.next is not None and current.next in mapping:
+            if current.next is not None and current.next in visited:
                 return current.next
             else:
-                mapping.add(current)
+                visited.add(current)
 
             current = current.next
 
