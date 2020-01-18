@@ -10,9 +10,9 @@ class TestLinkedListCycle(unittest.TestCase):
         b = ListNode(2)
         c = ListNode(0)
         d = ListNode(-4)
-        c.next = d
-        b.next = c
         a.next = b
+        b.next = c
+        c.next = d
         d.next = a
 
         self.assertTrue(solution.hasCycle(a))

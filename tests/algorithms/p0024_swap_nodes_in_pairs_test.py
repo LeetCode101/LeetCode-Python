@@ -11,9 +11,9 @@ class TestSwapNodesInPairs(unittest.TestCase):
         b = ListNode(2)
         c = ListNode(3)
         d = ListNode(4)
-        c.next = d
-        b.next = c
         a.next = b
+        b.next = c
+        c.next = d
 
         self.assertListEqual(
             [2, 1, 4, 3], convert_linked_list_to_list(solution.swapPairs(a)))

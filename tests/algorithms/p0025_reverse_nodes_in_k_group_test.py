@@ -12,10 +12,10 @@ class TestReverseNodesInKGroup(unittest.TestCase):
         c = ListNode(3)
         d = ListNode(4)
         e = ListNode(5)
-        d.next = e
-        c.next = d
-        b.next = c
         a.next = b
+        b.next = c
+        c.next = d
+        d.next = e
 
         self.assertListEqual(
             [2, 1, 4, 3, 5],
