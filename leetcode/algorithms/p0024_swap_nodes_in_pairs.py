@@ -10,7 +10,7 @@ class Solution:
         dummy.next = head
         prev, current = dummy, dummy.next
 
-        while current is not None and current.next is not None:
+        while current and current.next:
             next = current.next
             current.next, next.next, prev.next = next.next, current, next
             prev, current = current, current.next

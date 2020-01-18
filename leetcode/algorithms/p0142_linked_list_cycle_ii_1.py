@@ -8,8 +8,8 @@ class Solution:
     def detectCycle(self, head: ListNode) -> ListNode:
         visited, current = set(), head
 
-        while current is not None:
-            if current.next is not None and current.next in visited:
+        while current:
+            if current.next and current.next in visited:
                 return current.next
             else:
                 visited.add(current)

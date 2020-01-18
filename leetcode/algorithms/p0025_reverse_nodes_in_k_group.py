@@ -26,7 +26,7 @@ class Solution:
     def get_list_length(self, head: ListNode) -> int:
         count, current = 0, head
 
-        while current is not None:
+        while current:
             count, current = count + 1, current.next
 
         return count

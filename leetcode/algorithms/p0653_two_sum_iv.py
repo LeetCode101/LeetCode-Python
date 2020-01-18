@@ -13,7 +13,7 @@ class Solution:
         return self.find(root, k, set())
 
     def find(self, root: TreeNode, k: int, visited: Set[int]) -> bool:
-        if root is None:
+        if not root:
             return False
 
         if k - root.val in visited:

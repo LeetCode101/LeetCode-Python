@@ -9,7 +9,7 @@ class Solution:
         return self.reverse(None, head)
 
     def reverse(self, prev, current):
-        if current is None:
+        if not current:
             return prev
 
         next, current.next = current.next, prev

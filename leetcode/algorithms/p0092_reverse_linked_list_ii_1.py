@@ -20,9 +20,9 @@ class Solution:
                 next, current.next = current.next, prev
                 prev, current = current, next
 
-        if tail_of_left is not None:
+        if tail_of_left:
             tail_of_left.next = prev
 
         tail_of_reverse_list.next = current
 
-        return old_head if tail_of_left is not None else prev
+        return old_head if tail_of_left else prev

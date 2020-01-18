@@ -18,7 +18,7 @@ class Solution:
         return self.find(root2, target, nums)
 
     def traverse(self, root: TreeNode, nums: Set[int]):
-        if root is None:
+        if not root:
             return
 
         nums.add(root.val)
@@ -27,7 +27,7 @@ class Solution:
         self.traverse(root.right, nums)
 
     def find(self, root: TreeNode, k: int, visited: Set[int]) -> bool:
-        if root is None:
+        if not root:
             return False
 
         if k - root.val in visited:
