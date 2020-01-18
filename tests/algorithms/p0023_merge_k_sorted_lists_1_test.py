@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0023_merge_k_sorted_lists \
+from leetcode.algorithms.p0023_merge_k_sorted_lists_1 \
     import Solution, ListNode
 from .list_helper import convert_linked_list_to_list
 
