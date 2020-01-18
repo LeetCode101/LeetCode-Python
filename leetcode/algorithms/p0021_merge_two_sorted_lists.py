@@ -10,19 +10,20 @@ class Solution:
         prev = dummy
         current1, current2 = l1, l2
 
-        while current1 or current2:
-            new, changed_current = None, None
+        while current1 and current2:
+            new = None
 
-            if current1 and current2:
-                if current1.val <= current2.val:
-                    new, current1 = current1, current1.next
-                else:
-                    new, current2 = current2, current2.next
-            elif current1:
+            if current1.val <= current2.val:
                 new, current1 = current1, current1.next
-            elif current2:
+            else:
                 new, current2 = current2, current2.next
 
             prev.next, prev = new, new
+
+        if current1:
+            prev.next = current1
+
+        if current2:
+            prev.next = current2
 
         return dummy.next
