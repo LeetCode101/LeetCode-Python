@@ -21,3 +21,4 @@ class TestMergeKSortedLists(unittest.TestCase):
             [-1, 5, 6, 10, 11],
             convert_linked_list_to_list(
                 solution.mergeKLists([None, a, None, d])))
+        self.assertIsNone(solution.mergeKLists([]))
