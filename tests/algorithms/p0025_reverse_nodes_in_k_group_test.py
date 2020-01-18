@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0025_reverse_nodes_in_k_group_1 \
+from leetcode.algorithms.p0025_reverse_nodes_in_k_group \
     import Solution, ListNode
 from .list_helper import convert_linked_list_to_list
 
