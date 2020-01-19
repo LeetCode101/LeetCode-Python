@@ -6,15 +6,12 @@ class ListNode:
 
 class Solution:
     def deleteDuplicates(self, head: ListNode) -> ListNode:
-        dummy = ListNode(-1)
-        prev, current = dummy, head
+        current = head
 
-        while current:
-            if prev is not dummy and prev.val == current.val:
-                prev.next = None
+        while current and current.next:
+            if current.val == current.next.val:
+                current.next = current.next.next
             else:
-                prev.next, prev = current, current
+                current = current.next
 
-            current = current.next
-
-        return dummy.next
+        return head
