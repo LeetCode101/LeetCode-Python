@@ -15,13 +15,10 @@ class Solution:
             if current.next and current_value == current.next.val:
                 while current and current.val == current_value:
                     current = current.next
-
-                if not current:
-                    prev.next = None
-
-                    break
             else:
                 prev.next, prev = current, current
                 current = current.next
+
+        prev.next = current
 
         return dummy.next
