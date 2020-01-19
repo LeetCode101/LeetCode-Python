@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0019_remove_nth_node_from_end_of_list \
+from leetcode.algorithms.p0019_remove_nth_node_from_end_of_list_1 \
     import Solution, ListNode
 from .list_helper import convert_linked_list_to_list
 
