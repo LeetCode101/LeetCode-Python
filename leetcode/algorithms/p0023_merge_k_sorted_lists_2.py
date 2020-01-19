@@ -25,11 +25,11 @@ class Solution:
 
         while queue:
             node_wrap = heapq.heappop(queue)
-            prev.next = ListNode(node_wrap.node.val)
+            node = node_wrap.node
+            prev.next = ListNode(node.val)
             prev = prev.next
-            node = node_wrap.node.next
 
-            if node:
-                heapq.heappush(queue, ListNodeWrap(node))
+            if node.next:
+                heapq.heappush(queue, ListNodeWrap(node.next))
 
         return dummy.next
