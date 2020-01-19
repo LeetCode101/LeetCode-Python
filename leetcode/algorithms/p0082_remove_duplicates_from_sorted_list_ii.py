@@ -20,14 +20,8 @@ class Solution:
                     prev.next = None
 
                     break
-
-                if not (current and current.next and current.val == current.next.val):
-                    prev.next = current
-                    prev = current
-                    current = current.next
             else:
-                prev.next = current
-                prev = current
+                prev.next, prev = current, current
                 current = current.next
 
         return dummy.next
