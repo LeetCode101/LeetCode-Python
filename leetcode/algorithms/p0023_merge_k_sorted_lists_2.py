@@ -18,18 +18,18 @@ class ListNodeWrap:
 
 class Solution:
     def mergeKLists(self, lists: List[ListNode]) -> ListNode:
-        queue = [(node.val, ListNodeWrap(node)) for node in lists if node]
+        queue = [ListNodeWrap(node) for node in lists if node]
         heapq.heapify(queue)
         dummy = ListNode(-1)
         prev = dummy
 
         while queue:
-            value, node_wrap = heapq.heappop(queue)
-            prev.next = ListNode(value)
+            node_wrap = heapq.heappop(queue)
+            prev.next = ListNode(node_wrap.node.val)
             prev = prev.next
             node = node_wrap.node.next
 
             if node:
-                heapq.heappush(queue, (node.val, ListNodeWrap(node)))
+                heapq.heappush(queue, ListNodeWrap(node))
 
         return dummy.next
