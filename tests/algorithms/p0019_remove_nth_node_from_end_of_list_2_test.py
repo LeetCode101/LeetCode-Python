@@ -20,3 +20,4 @@ class TestRemoveNthNodeFromEndOfList(unittest.TestCase):
         self.assertListEqual(
             [1, 2, 3, 5],
             convert_linked_list_to_list(solution.removeNthFromEnd(a, 2)))
+        self.assertIsNone(solution.removeNthFromEnd(ListNode(1), 1))
