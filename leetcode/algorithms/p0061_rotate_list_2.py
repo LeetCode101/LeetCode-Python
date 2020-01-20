@@ -16,15 +16,12 @@ class Solution:
             i += 1
             current = current.next
 
-        step = i - k % i
-
-        if step == 0:
-            return head
+        step = i - k % i - 1
 
         current.next = head
         current = head
 
-        for i in range(step - 1):
+        for i in range(step):
             current = current.next
 
         new_head = current.next
