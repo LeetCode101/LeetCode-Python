@@ -23,4 +23,3 @@ class Solution:
         less.next = l2.next
 
         return l1.next
-
