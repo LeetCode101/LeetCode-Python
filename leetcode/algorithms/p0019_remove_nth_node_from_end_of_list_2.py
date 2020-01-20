@@ -9,14 +9,14 @@ class Solution:
         size = 0
         prev, current = head, head
 
-        while current:
-            if size > n:
+        while current.next:
+            if size >= n:
                 prev = prev.next
 
             size += 1
             current = current.next
 
-        if size == n:
+        if size == n - 1:
             return head.next
         else:
             prev.next = prev.next.next
