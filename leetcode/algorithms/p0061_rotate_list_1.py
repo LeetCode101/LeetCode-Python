@@ -26,4 +26,4 @@ class Solution:
         mapping[i].next = head
         mapping[index_to_cut].next = None
 
-        return mapping[min(i, index_to_cut + 1)]
+        return mapping[index_to_cut + 1]
