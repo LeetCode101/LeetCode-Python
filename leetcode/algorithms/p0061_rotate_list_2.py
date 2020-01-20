@@ -9,15 +9,14 @@ class Solution:
         if not head:
             return None
 
-        current = head
         i = 1
+        current = head
 
         while current.next:
             i += 1
             current = current.next
 
         step = i - k % i - 1
-
         current.next = head
         current = head
 
