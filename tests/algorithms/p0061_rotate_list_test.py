@@ -20,3 +20,7 @@ class TestRotateList(unittest.TestCase):
         self.assertListEqual(
             [4, 5, 1, 2, 3],
             convert_linked_list_to_list(solution.rotateRight(a, 2)))
+        self.assertListEqual(
+            [1],
+            convert_linked_list_to_list(solution.rotateRight(ListNode(1), 0)))
+        self.assertIsNone(solution.rotateRight(None, 1))
