@@ -10,11 +10,11 @@ class Solution:
         prev, current = head, head
 
         while current:
+            if size > n:
+                prev = prev.next
+
             size += 1
             current = current.next
-
-            if size > n + 1:
-                prev = prev.next
 
         if size == n:
             return head.next
