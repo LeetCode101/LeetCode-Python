@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0086_partition_list \
+from leetcode.algorithms.p0086_partition_list_1 \
     import Solution, ListNode
 from .list_helper import convert_linked_list_to_list
 
