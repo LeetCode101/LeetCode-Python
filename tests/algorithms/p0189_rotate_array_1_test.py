@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0189_rotate_array import Solution
+from leetcode.algorithms.p0189_rotate_array_1 import Solution
 
 
 class TestRotateArray(unittest.TestCase):
