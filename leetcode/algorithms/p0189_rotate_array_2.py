@@ -1,7 +1,6 @@
 from typing import List
 
 
-# Time Limit Exceeded!
 class Solution:
     def rotate(self, nums: List[int], k: int) -> None:
         step = k % len(nums)
