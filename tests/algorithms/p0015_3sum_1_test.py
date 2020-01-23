@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0015_3sum import Solution
+from leetcode.algorithms.p0015_3sum_1 import Solution
 
 
 class Test3Sum(unittest.TestCase):
