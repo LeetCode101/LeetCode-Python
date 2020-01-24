@@ -19,9 +19,6 @@ class Solution:
         if len(stack_a) != len(stack_b):
             return False
 
-        if len(stack_a) == 0:
-            return True
-
         while len(stack_a) > 0:
             a, b = stack_a.pop(), stack_b.pop()
 
