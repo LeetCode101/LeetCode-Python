@@ -8,3 +8,5 @@ class Test4Sum(unittest.TestCase):
 
         self.assertEqual(
             2, solution.fourSumCount([1, 2], [-2, -1], [-1, 2], [0, 2]))
+        self.assertEqual(
+            4, solution.fourSumCount([1, 2], [-2, -1], [-1, -1], [0, 2]))
