@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0844_backspace_string_compare import Solution
+from leetcode.algorithms.p0844_backspace_string_compare_1 import Solution
 
 
 class TestBackspaceStringCompare(unittest.TestCase):
