@@ -7,6 +7,9 @@ class Solution:
         sums = []
 
         for i in range(0, len(nums) - 2):
+            if nums[i] > 0:
+                break
+
             if i - 1 >= 0 and nums[i] == nums[i - 1]:
                 continue
 
