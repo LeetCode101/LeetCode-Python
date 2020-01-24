@@ -4,7 +4,7 @@ from typing import List
 # Time Limit Exceeded!
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
-        lists = []
+        sums = []
 
         for i, value in enumerate(nums):
             two_sums = self.two_sum(nums, i, -value)
@@ -16,10 +16,10 @@ class Solution:
                     three_sums.append([nums[j] for j in sorted([i] + two_sum)])
 
                 for three_sum in three_sums:
-                    if not self.has_three_sum(lists, three_sum):
-                        lists.append(three_sum)
+                    if not self.has_three_sum(sums, three_sum):
+                        sums.append(three_sum)
 
-        return lists
+        return sums
 
     def two_sum(self, nums: List[int], current_index: int, target: int) \
             -> List[List[int]]:
