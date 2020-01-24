@@ -3,7 +3,7 @@ from leetcode.algorithms.p0015_3sum_1 import Solution
 
 
 class Test3Sum(unittest.TestCase):
-    def test_3_sum(self):
+    def test_3sum(self):
         solution = Solution()
         actual_lists = solution.threeSum([-1, 0, 1, 2, -1, -4])
         expected_lists = [[-1, 0, 1], [-1, -1, 2]]
