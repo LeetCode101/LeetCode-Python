@@ -8,3 +8,4 @@ class TestBackspaceStringCompare(unittest.TestCase):
 
         self.assertTrue(solution.backspaceCompare('ab#c', 'ad#c'))
         self.assertFalse(solution.backspaceCompare('a#c', 'bc'))
+        self.assertFalse(solution.backspaceCompare('a#c', 'b'))
