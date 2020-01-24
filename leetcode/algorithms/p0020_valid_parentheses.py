@@ -11,7 +11,7 @@ class Solution:
             if c in parentheses:
                 stack.append(c)
             else:
-                if len(stack) == 0:
+                if not stack:
                     return False
 
                 left = stack.pop()
@@ -19,4 +19,4 @@ class Solution:
                 if parentheses[left] != c:
                     return False
 
-        return len(stack) == 0
+        return not stack
