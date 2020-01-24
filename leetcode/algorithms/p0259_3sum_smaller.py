@@ -12,9 +12,7 @@ class Solution:
 
             while low < high:
                 if nums[low] + nums[high] < k:
-                    for _ in range(high, low, -1):
-                        count += 1
-
+                    count += high - low
                     low += 1
                 else:
                     high -= 1
