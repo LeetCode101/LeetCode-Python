@@ -22,9 +22,7 @@ class Solution:
         return -1
 
     def min(self, a: int, b: int) -> int:
-        if a == -1 and b == -1:
-            return -1
-        elif a == -1:
+        if a == -1:
             return b
         elif b == -1:
             return a
