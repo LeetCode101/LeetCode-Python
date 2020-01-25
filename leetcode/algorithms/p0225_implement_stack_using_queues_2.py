@@ -3,25 +3,25 @@ from collections import deque
 
 class MyStack:
     def __init__(self):
-        self.stack = deque()
+        self.queue = deque()
 
     def push(self, x: int) -> None:
-        self.stack.append(x)
+        self.queue.append(x)
 
-        for i in range(len(self.stack) - 1):
-            self.stack.append(self.stack.popleft())
+        for i in range(len(self.queue) - 1):
+            self.queue.append(self.queue.popleft())
 
     def pop(self) -> int:
         if self.empty():
             raise Exception('stack is empty')
 
-        return self.stack.popleft()
+        return self.queue.popleft()
 
     def top(self) -> int:
         if self.empty():
             raise Exception('stack is empty')
 
-        return self.stack[0]
+        return self.queue[0]
 
     def empty(self) -> bool:
-        return len(self.stack) == 0
+        return len(self.queue) == 0
