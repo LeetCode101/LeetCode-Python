@@ -17,3 +17,8 @@ class TestSecondMinimumNodeInABinaryTree(unittest.TestCase):
         c.right = e
 
         self.assertEqual(5, solution.findSecondMinimumValue(a))
+
+        b.val = 5
+        c.val = 2
+
+        self.assertEqual(5, solution.findSecondMinimumValue(a))
