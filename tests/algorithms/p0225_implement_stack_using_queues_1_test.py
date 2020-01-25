@@ -2,7 +2,7 @@ import unittest
 from leetcode.algorithms.p0225_implement_stack_using_queues_1 import MyStack
 
 
-class TestImplementStackusingQueues(unittest.TestCase):
+class TestImplementStackUsingQueues(unittest.TestCase):
     def test_implement_stack_using_queues(self):
         stack = MyStack()
         stack.push(1)
