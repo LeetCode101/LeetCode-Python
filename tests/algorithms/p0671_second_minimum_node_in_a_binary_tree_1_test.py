@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0671_second_minimum_node_in_a_binary_tree \
+from leetcode.algorithms.p0671_second_minimum_node_in_a_binary_tree_1 \
     import Solution, TreeNode
 
 
