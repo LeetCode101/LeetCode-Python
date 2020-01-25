@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0230_kth_smallest_element_in_a_bst \
+from leetcode.algorithms.p0230_kth_smallest_element_in_a_bst_1 \
     import Solution, TreeNode
 
 
