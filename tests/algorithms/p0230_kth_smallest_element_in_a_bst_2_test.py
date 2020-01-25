@@ -15,3 +15,4 @@ class TestKthSmallestElementInABST(unittest.TestCase):
         b.right = d
 
         self.assertEqual(1, solution.kthSmallest(a, 1))
+        self.assertEqual(2, solution.kthSmallest(a, 2))
