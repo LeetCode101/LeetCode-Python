@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0225_implement_stack_using_queues import MyStack
+from leetcode.algorithms.p0225_implement_stack_using_queues_1 import MyStack
 
 
 class TestImplementStackusingQueues(unittest.TestCase):
