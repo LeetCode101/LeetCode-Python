@@ -13,15 +13,9 @@ class Solution:
         max_value = max(p.val, q.val)
 
         while current:
-            if current.val == p.val:
-                return p
-
-            if current.val == q.val:
-                return q
-
-            if min_value < current.val < max_value:
-                return current
-            elif min_value > current.val:
+            if min_value > current.val:
                 current = current.right
             elif max_value < current.val:
                 current = current.left
+            else:
+                return current
