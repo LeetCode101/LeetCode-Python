@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0169_majority_element import Solution
+from leetcode.algorithms.p0169_majority_element_1 import Solution
 
 
 class TestMajorityElement(unittest.TestCase):
