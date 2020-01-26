@@ -16,7 +16,6 @@ class Solution:
 
         return result
 
-
     def dfs(self, root: TreeNode, level: int, result: List[List[int]]) -> None:
         if not root:
             return
