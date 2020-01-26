@@ -21,3 +21,7 @@ class TestLowestCommonAncestorOfABinarySearchTree(unittest.TestCase):
 
         self.assertEqual(
             6, solution.lowestCommonAncestor(a, TreeNode(2), TreeNode(8)).val)
+        self.assertEqual(
+            8, solution.lowestCommonAncestor(a, TreeNode(7), TreeNode(9)).val)
+        self.assertEqual(
+            4, solution.lowestCommonAncestor(a, TreeNode(3), TreeNode(5)).val)
