@@ -1,6 +1,6 @@
 class Solution:
     def myPow(self, x: float, n: int) -> float:
-        return self.pow(x, abs(n)) if n >= 0 else self.pow(1 / x, abs(n))
+        return self.pow(x, n) if n >= 0 else self.pow(1 / x, -n)
 
     def pow(self, x: float, n: int) -> float:
         if n == 0:
