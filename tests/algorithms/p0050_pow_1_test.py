@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0050_pow import Solution
+from leetcode.algorithms.p0050_pow_1 import Solution
 
 
 class TestPow(unittest.TestCase):
