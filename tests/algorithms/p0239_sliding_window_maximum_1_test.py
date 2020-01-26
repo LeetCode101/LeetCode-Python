@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0239_sliding_window_maximum import Solution
+from leetcode.algorithms.p0239_sliding_window_maximum_1 import Solution
 
 
 class TestSlidingWindowMaximum(unittest.TestCase):
