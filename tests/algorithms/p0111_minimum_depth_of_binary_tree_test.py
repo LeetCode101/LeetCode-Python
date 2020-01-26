@@ -15,3 +15,4 @@ class TestMinimumDepthOfBinaryTree(unittest.TestCase):
         c.right = TreeNode(7)
 
         self.assertEqual(2, solution.minDepth(a))
+        self.assertEqual(0, solution.minDepth(None))
