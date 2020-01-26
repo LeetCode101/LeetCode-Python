@@ -1,5 +1,6 @@
 import unittest
-from leetcode.algorithms.p0122_best_time_to_buy_and_sell_stock_ii import Solution
+from leetcode.algorithms.p0122_best_time_to_buy_and_sell_stock_ii \
+    import Solution
 
 
 class TestBestTimeToBuyAndSellStock(unittest.TestCase):
