@@ -8,7 +8,7 @@ class Solution:
         result = []
 
         for i, value in enumerate(nums):
-            if i >= k and queue and queue[0] <= i - k:
+            if i >= k and queue[0] <= i - k:
                 queue.popleft()
 
             while queue and nums[queue[-1]] <= value:
