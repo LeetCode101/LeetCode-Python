@@ -10,7 +10,7 @@ class Solution:
         if not root:
             return 0
 
-        left = self.maxDepth(root.left) if root.left else 0
-        right = self.maxDepth(root.right) if root.right else 0
+        left = self.maxDepth(root.left)
+        right = self.maxDepth(root.right)
 
         return max(left, right) + 1
