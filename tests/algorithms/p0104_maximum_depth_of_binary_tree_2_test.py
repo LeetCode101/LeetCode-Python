@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0104_maximum_depth_of_binary_tree \
+from leetcode.algorithms.p0104_maximum_depth_of_binary_tree_2 \
     import Solution, TreeNode
 
 
