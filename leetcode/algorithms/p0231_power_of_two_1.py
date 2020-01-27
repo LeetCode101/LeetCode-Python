@@ -11,5 +11,3 @@ class Solution:
                 return False
 
             n >>= 1
-
-        return True

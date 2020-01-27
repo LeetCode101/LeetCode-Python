@@ -6,6 +6,7 @@ class TestPowerOfTwo(unittest.TestCase):
     def test_power_of_two(self):
         solution = Solution()
 
+        self.assertFalse(solution.isPowerOfTwo(0))
         self.assertTrue(solution.isPowerOfTwo(1))
         self.assertFalse(solution.isPowerOfTwo(3))
         self.assertTrue(solution.isPowerOfTwo(16))
