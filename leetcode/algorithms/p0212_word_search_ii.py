@@ -61,34 +61,42 @@ class Solution:
     def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:
         trie = Trie()
         result = set()
+        rows, columns = len(board), len(board[0])
+        visited = [[False for _ in range(columns)] for _ in range(rows)]
 
         for word in words:
             trie.insert(word)
 
-        for row in range(len(board)):
-            for column in range(len(board[0])):
+        for row in range(rows):
+            for column in range(columns):
                 if trie.startsWith(board[row][column]):
-                    self.dfs(row, column, board, '', trie.root, result)
+                    self.dfs(row, column, board, '',
+                             trie, result, visited)
 
         return list(result)
 
     def dfs(self, row: int, column: int, board: List[List[str]], word: str,
-            root: TrieNode, result: Set[str]) -> None:
-        word += board[row][column]
-        node = root.children[ord(board[row][column]) - 97]
+            trie: Trie, result: Set[str],
+            visited: List[List[bool]]) -> None:
+        if not (0 <= row < len(board) and 0 <= column < len(board[0])):
+            return
 
-        if node.is_end_of_word:
+        if visited[row][column]:
+            return
+
+        word += board[row][column]
+
+        if not trie.startsWith(word):
+            return
+
+        if trie.search(word):
             result.add(word)
 
-        dx, dy = [-1, 1, 0, 0], [0, 0, -1, 1]
-        temp, board[row][column] = board[row][column], '@'
+        visited[row][column] = True
 
-        for i in range(4):
-            x, y = row + dx[i], column + dy[i]
+        self.dfs(row - 1, column, board, word, trie, result, visited)
+        self.dfs(row + 1, column, board, word, trie, result, visited)
+        self.dfs(row, column - 1, board, word, trie, result, visited)
+        self.dfs(row, column + 1, board, word, trie, result, visited)
 
-            if 0 <= x < len(board) and 0 <= y < len(board[0]) \
-                    and board[x][y] != '@' \
-                    and node.children[ord(board[x][y]) - 97]:
-                self.dfs(x, y, board, word, node, result)
-
-        board[row][column] = temp
+        visited[row][column] = False
