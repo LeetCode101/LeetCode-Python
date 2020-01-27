@@ -15,4 +15,4 @@ class TestImplementTrie(unittest.TestCase):
 
         self.assertTrue(trie.search('app'))
         self.assertFalse(trie.search('cat'))
-        self.assertFalse(trie.search('dog'))
+        self.assertFalse(trie.startsWith('dog'))
