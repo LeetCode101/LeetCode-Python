@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0231_power_of_two import Solution
+from leetcode.algorithms.p0231_power_of_two_1 import Solution
 
 
 class TestPowerOfTwo(unittest.TestCase):
