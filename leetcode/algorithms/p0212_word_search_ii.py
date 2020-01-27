@@ -69,9 +69,7 @@ class Solution:
 
         for row in range(rows):
             for column in range(columns):
-                if trie.startsWith(board[row][column]):
-                    self.dfs(row, column, board, '',
-                             trie, result, visited)
+                self.dfs(row, column, board, '', trie, result, visited)
 
         return list(result)
 
