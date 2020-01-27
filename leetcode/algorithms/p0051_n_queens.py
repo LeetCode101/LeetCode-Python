@@ -7,7 +7,8 @@ class Solution:
 
         self.dfs(0, n, set(), set(), set(), [], result)
 
-        return [['.' * i + 'Q' + '.' * (n - i - 1) for i in solution] for solution in result]
+        return [['.' * i + 'Q' + '.' * (n - i - 1) for i in solution]
+                for solution in result]
 
     def dfs(self, row: int, n, columns: Set[int], left_diagonals: Set[int],
             right_diagonals: Set[int], solution: List[int],
