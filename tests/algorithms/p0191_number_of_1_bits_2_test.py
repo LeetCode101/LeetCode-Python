@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0191_number_of_1_bits import Solution
+from leetcode.algorithms.p0191_number_of_1_bits_2 import Solution
 
 
 class TestNumberOf1Bits(unittest.TestCase):
