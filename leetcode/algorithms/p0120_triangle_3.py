@@ -10,6 +10,7 @@ class Solution:
 
         for i in range(len(triangle) - 2, -1, -1):
             for j in range(i + 1):
-                sums[i][j] = triangle[i][j] + min(sums[i + 1][j], sums[i + 1][j + 1])
+                sums[i][j] = triangle[i][j] + \
+                             min(sums[i + 1][j], sums[i + 1][j + 1])
 
         return sums[0][0]
