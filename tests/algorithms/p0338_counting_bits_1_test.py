@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0338_counting_bits import Solution
+from leetcode.algorithms.p0338_counting_bits_1 import Solution
 
 
 class TestCountingBits(unittest.TestCase):
