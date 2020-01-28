@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0120_triangle import Solution
+from leetcode.algorithms.p0120_triangle_2 import Solution
 
 
 class TestTriangle(unittest.TestCase):
