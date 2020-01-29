@@ -1,23 +1,20 @@
 class Solution:
     def reverseWords(self, s: str) -> str:
         words = []
-        i, j = 0, 0
+        i = 0
 
         while i < len(s):
-            while i < len(s) and s[i] == ' ' and s[j] == ' ':
+            while i < len(s) and s[i] == ' ':
                 i += 1
-                j += 1
 
             word = ''
 
-            while j < len(s) and s[j] != ' ':
-                word += s[j]
-                j += 1
+            while i < len(s) and s[i] != ' ':
+                word += s[i]
+                i += 1
 
             if word:
                 words.append(word)
-
-            i = j
 
         low, high = 0, len(words) - 1
 
