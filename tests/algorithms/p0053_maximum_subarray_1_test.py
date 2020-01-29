@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0053_maximum_subarray import Solution
+from leetcode.algorithms.p0053_maximum_subarray_1 import Solution
 
 
 class TestMaximumSubarray(unittest.TestCase):
