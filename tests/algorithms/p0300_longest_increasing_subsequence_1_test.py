@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0300_longest_increasing_subsequence import Solution
+from leetcode.algorithms.p0300_longest_increasing_subsequence_1 import Solution
 
 
 class TestLongestIncreasingSubsequence(unittest.TestCase):
