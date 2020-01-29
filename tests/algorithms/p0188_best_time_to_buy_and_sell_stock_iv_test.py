@@ -9,3 +9,4 @@ class TestBestTimeToBuyAndSellStock(unittest.TestCase):
 
         self.assertEqual(2, solution.maxProfit(2, [2, 4, 1]))
         self.assertEqual(7, solution.maxProfit(2, [3, 2, 6, 5, 0, 3]))
+        self.assertEqual(7, solution.maxProfit(100, [3, 2, 6, 5, 0, 3]))

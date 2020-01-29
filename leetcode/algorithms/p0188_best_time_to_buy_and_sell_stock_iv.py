@@ -5,6 +5,9 @@ class Solution:
     def maxProfit(self, k: int, prices: List[int]) -> int:
         if not prices:
             return 0
+
+        if k >= len(prices) // 2:
+            return self.max_profit_greedy(prices)
         
         profits = [[[0 for _ in range(2)] for _ in range(k + 1)]
                    for _ in range(len(prices))]
@@ -19,3 +22,18 @@ class Solution:
                 profits[i][j][1] = max(profits[i - 1][j][1], profits[i - 1][j][0] - prices[i])
 
         return max([x[0] for x in profits[-1]])
+
+    def max_profit_greedy(self, prices: List[int]) -> int:
+        profit = 0
+        i = 0
+
+        while i < len(prices) - 1:
+            diff = prices[i + 1] - prices[i]
+
+            if diff > 0:
+                profit += diff
+
+            i += 1
+
+        return profit
+
