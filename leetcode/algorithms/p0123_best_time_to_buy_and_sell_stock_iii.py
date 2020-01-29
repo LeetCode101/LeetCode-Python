@@ -1,4 +1,3 @@
-import sys
 from typing import List
 
 
@@ -11,8 +10,8 @@ class Solution:
         profits = [[[0 for _ in range(2)] for _ in range(3)]
                    for _ in range(length)]
         profits[0][0][0], profits[0][0][1] = 0, -prices[0]
-        profits[0][1][0], profits[0][1][1] = -sys.maxsize, -sys.maxsize
-        profits[0][2][0], profits[0][2][1] = -sys.maxsize, -sys.maxsize
+        profits[0][1][0], profits[0][1][1] = 0, -prices[0]
+        profits[0][2][0], profits[0][2][1] = 0, -prices[0]
 
         for i in range(1, length):
             profits[i][0][0] = profits[i - 1][0][0]
