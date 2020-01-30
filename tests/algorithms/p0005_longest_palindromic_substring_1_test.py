@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0005_longest_palindromic_substring import Solution
+from leetcode.algorithms.p0005_longest_palindromic_substring_1 import Solution
 
 
 class TestLongestPalindromicSubstring(unittest.TestCase):
