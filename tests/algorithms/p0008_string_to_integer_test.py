@@ -12,3 +12,4 @@ class TestStringToInteger(unittest.TestCase):
         self.assertEqual(0, solution.myAtoi('words and 987'))
         self.assertEqual(-2147483648, solution.myAtoi('-91283472332'))
         self.assertEqual(2147483647, solution.myAtoi('91283472332'))
+        self.assertEqual(0, solution.myAtoi('aaa'))
