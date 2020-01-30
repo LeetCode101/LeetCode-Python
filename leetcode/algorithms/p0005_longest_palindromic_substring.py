@@ -7,7 +7,7 @@ class Solution:
         for i in range(length):
             dp[i][i] = True
 
-            for j in range(0, i):
+            for j in range(i):
                 dp[j][i] = s[i] == s[j] and (i - j == 1 or dp[j + 1][i - 1])
 
                 if dp[j][i] and i - j > end - start:
