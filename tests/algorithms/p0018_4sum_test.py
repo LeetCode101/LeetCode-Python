@@ -12,7 +12,4 @@ class Test4Sum(unittest.TestCase):
             [-1, 0, 0, 1]
         ]
 
-        self.assertEqual(len(expected_lists), len(actual_lists))
-
-        for i, l in enumerate(actual_lists):
-            self.assertListEqual(sorted(expected_lists[i]), sorted(l))
+        self.assertListEqual(expected_lists, actual_lists)

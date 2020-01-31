@@ -7,8 +7,7 @@ class Test3Sum(unittest.TestCase):
         solution = Solution()
         actual_lists = solution.threeSum([-1, 0, 1, 2, -1, -4])
         expected_lists = [[-1, 0, 1], [-1, -1, 2]]
+        actual_lists = [sorted(x) for x in actual_lists]
+        expected_lists = [sorted(x) for x in expected_lists]
 
-        self.assertEqual(len(expected_lists), len(actual_lists))
-
-        for i, l in enumerate(actual_lists):
-            self.assertListEqual(sorted(expected_lists[i]), sorted(l))
+        self.assertListEqual(expected_lists, actual_lists)

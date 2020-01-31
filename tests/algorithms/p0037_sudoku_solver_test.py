@@ -30,5 +30,4 @@ class TestSudokuSolver(unittest.TestCase):
 
         solution.solveSudoku(sudoku)
 
-        for i in range(len(expected_sudoku)):
-            self.assertListEqual(expected_sudoku[i], sudoku[i])
+        self.assertListEqual(expected_sudoku, sudoku)

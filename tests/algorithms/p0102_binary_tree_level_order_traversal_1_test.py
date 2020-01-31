@@ -20,5 +20,4 @@ class TestBinaryTreeLevelOrderTraversal(unittest.TestCase):
         ]
         actual_lists = solution.levelOrder(a)
 
-        for i in range(len(expected_lists)):
-            self.assertListEqual(expected_lists[i], actual_lists[i])
+        self.assertListEqual(expected_lists, actual_lists)

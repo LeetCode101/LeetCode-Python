@@ -16,5 +16,4 @@ class TestGroupAnagrams(unittest.TestCase):
             ['bat']
         ]
 
-        for i in range(len(expected_lists)):
-            self.assertListEqual(expected_lists[i], actual_lists[i])
+        self.assertListEqual(expected_lists, actual_lists)
