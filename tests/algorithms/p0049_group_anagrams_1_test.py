@@ -18,3 +18,6 @@ class TestGroupAnagrams(unittest.TestCase):
 
         for i in range(len(expected_lists)):
             self.assertListEqual(expected_lists[i], actual_lists[i])
+
+        self.assertListEqual([], solution.groupAnagrams([]))
+        self.assertListEqual([['aa', 'aa']], solution.groupAnagrams(['aa', 'aa']))
