@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0049_group_anagrams import Solution
+from leetcode.algorithms.p0049_group_anagrams_1 import Solution
 
 
 class TestGroupAnagrams(unittest.TestCase):
