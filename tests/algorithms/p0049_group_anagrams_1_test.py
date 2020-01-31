@@ -7,7 +7,9 @@ class TestGroupAnagrams(unittest.TestCase):
         solution = Solution()
         actual_lists = solution.groupAnagrams(
             ['eat', 'tea', 'tan', 'ate', 'nat', 'bat'])
-        actual_lists = list(map(lambda x: sorted(x), actual_lists))
+        actual_lists = sorted(
+            list(map(lambda x: sorted(x), actual_lists)),
+            key=lambda x: len(x), reverse=True)
         expected_lists = [
             ['ate', 'eat', 'tea'],
             ['nat', 'tan'],
