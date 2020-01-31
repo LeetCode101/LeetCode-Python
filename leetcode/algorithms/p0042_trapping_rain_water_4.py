@@ -11,14 +11,14 @@ class Solution:
 
         while i < len(height):
             while stack and height[stack[-1]] < height[i]:
-                top = stack.pop()
+                current = stack.pop()
 
                 if not stack:
                     break
 
                 distance = i - stack[-1] - 1
                 bounded_height = \
-                    min(height[i], height[stack[-1]]) - height[top]
+                    min(height[i], height[stack[-1]]) - height[current]
                 count += distance * bounded_height
 
             stack.append(i)
