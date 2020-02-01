@@ -20,10 +20,6 @@ class Solution:
 
             prev.next, prev = new, new
 
-        if current1:
-            prev.next = current1
-
-        if current2:
-            prev.next = current2
+        prev.next = current1 or current2
 
         return dummy.next
