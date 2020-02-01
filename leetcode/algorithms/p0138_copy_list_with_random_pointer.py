@@ -7,26 +7,22 @@ class Node:
 
 class Solution:
     def copyRandomList(self, head: Node) -> Node:
-        size = 0
         current = head
         dummy = Node(-1)
         prev = dummy
-        original_list_mapping, new_list_mapping = {}, {}
+        old_new_list_mapping = {}
 
         while current:
             prev.next = Node(current.val)
+            old_new_list_mapping[current] = prev.next
             prev = prev.next
-            original_list_mapping[current] = size
-            new_list_mapping[size] = prev
             current = current.next
-            size += 1
 
         current, new_current = head, dummy.next
 
         while current:
             if current.random:
-                random_node_index = original_list_mapping[current.random]
-                new_current.random = new_list_mapping[random_node_index]
+                new_current.random = old_new_list_mapping[current.random]
 
             current, new_current = current.next, new_current.next
 
