@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0160_intersection_of_two_linked_lists \
+from leetcode.algorithms.p0160_intersection_of_two_linked_lists_1 \
     import Solution, ListNode
 
 
