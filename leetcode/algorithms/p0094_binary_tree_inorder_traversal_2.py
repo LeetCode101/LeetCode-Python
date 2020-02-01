@@ -19,10 +19,8 @@ class Solution:
                 stack.append(current)
                 current = current.left
 
-            top = stack.pop()
-            values.append(top.val)
-
-            if top.right:
-                current = top.right
+            current = stack.pop()
+            values.append(current.val)
+            current = current.right
 
         return values
