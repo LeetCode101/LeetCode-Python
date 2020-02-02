@@ -12,11 +12,13 @@ class Solution:
         if not root:
             return root
 
+        next_node = self.search_next(root.next)
+
         if root.left:
-            root.left.next = root.right or self.search_next(root.next)
+            root.left.next = root.right or next_node
 
         if root.right:
-            root.right.next = self.search_next(root.next)
+            root.right.next = next_node
 
         self.connect(root.right)
         self.connect(root.left)
