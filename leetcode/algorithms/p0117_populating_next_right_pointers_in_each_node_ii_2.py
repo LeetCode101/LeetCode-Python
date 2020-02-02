@@ -12,7 +12,7 @@ class Solution:
         if not root:
             return root
 
-        next_node = self.search_next(root.next)
+        next_node = self.find_next(root.next)
 
         if root.left:
             root.left.next = root.right or next_node
@@ -25,7 +25,7 @@ class Solution:
 
         return root
 
-    def search_next(self, root: Node) -> Node:
+    def find_next(self, root: Node) -> Node:
         while root:
             if root.left or root.right:
                 return root.left or root.right
