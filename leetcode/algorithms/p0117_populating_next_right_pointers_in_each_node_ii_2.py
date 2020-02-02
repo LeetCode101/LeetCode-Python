@@ -13,12 +13,21 @@ class Solution:
             return root
 
         if root.left:
-            root.left.next = root.right
+            root.left.next = root.right or self.search_next(root.next)
 
         if root.right:
-            root.right.next = root.next.left if root.next else None
+            root.right.next = self.search_next(root.next)
 
-        self.connect(root.left)
         self.connect(root.right)
+        self.connect(root.left)
+
+        return root
+
+    def search_next(self, root: Node) -> Node:
+        while root:
+            if root.left or root.right:
+                return root.left or root.right
+
+            root = root.next
 
         return root
