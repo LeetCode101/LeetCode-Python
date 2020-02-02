@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0116_populating_next_right_pointers_in_each_node \
+from leetcode.algorithms.p0116_populating_next_right_pointers_in_each_node_1 \
     import Solution, Node
 
 
