@@ -14,7 +14,7 @@ class Solution:
         depth = 0
         levels = []
         queue1 = deque([root]) if root else deque()
-        queue2 = []
+        queue2 = deque()
 
         while queue1 or queue2:
             depth += 1
