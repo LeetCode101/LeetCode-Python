@@ -20,6 +20,7 @@ class TestPopulatingNextRightPointersInEachNode(unittest.TestCase):
         c.right = g
         solution.connect(a)
 
+        self.assertIsNone(solution.connect(None))
         self.assertEqual(b.next, c)
         self.assertEqual(d.next, e)
         self.assertEqual(e.next, g)
