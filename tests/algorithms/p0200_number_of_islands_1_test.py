@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0200_number_of_islands import Solution
+from leetcode.algorithms.p0200_number_of_islands_1 import Solution
 
 
 class TestNumberOfIslands(unittest.TestCase):
