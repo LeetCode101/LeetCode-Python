@@ -7,7 +7,7 @@ class TestRegularExpressionMatching(unittest.TestCase):
         solution = Solution()
 
         self.assertFalse(solution.isMatch('aa', 'a'))
-        self.assertTrue(solution.isMatch('aa', '*'))
+        self.assertFalse(solution.isMatch('aa', '*'))
         self.assertTrue(solution.isMatch('ab', '.*'))
         self.assertTrue(solution.isMatch('aab', 'c*a*b'))
         self.assertFalse(solution.isMatch('mississippi', 'mis*is*p*.'))
