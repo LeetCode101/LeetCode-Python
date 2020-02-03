@@ -14,4 +14,5 @@ class TestCloneGraph(unittest.TestCase):
         c.neighbors = [b, d]
         d.neighbors = [a, c]
 
+        self.assertIsNone(solution.cloneGraph(None))
         self.assertEqual(1, solution.cloneGraph(a).val)
