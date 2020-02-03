@@ -23,12 +23,13 @@ class Solution:
         i = next(j for j in range(inorder_left, inorder_right + 1)
                  if inorder[j] == root_value)
 
+        left_tree_length = i - inorder_left
         root = TreeNode(root_value)
         root.left = self.build(
-            preorder, preorder_left + 1, preorder_left + i - inorder_left,
+            preorder, preorder_left + 1, preorder_left + left_tree_length,
             inorder, inorder_left, i - 1)
         root.right = self.build(
-            preorder, preorder_left + i - inorder_left + 1, preorder_right,
+            preorder, preorder_left + left_tree_length + 1, preorder_right,
             inorder, i + 1, inorder_right)
 
         return root
