@@ -9,7 +9,8 @@ class TestNumberOfIslands(unittest.TestCase):
             ['1', '1', '0', '0', '0'],
             ['1', '1', '0', '0', '0'],
             ['0', '0', '1', '0', '0'],
-            ['0', '0', '0', '1', '1']
+            ['1', '1', '0', '1', '1']
         ]
 
-        self.assertEqual(3, solution.numIslands(grid))
+        self.assertEqual(0, solution.numIslands([]))
+        self.assertEqual(4, solution.numIslands(grid))

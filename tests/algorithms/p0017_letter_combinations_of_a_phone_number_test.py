@@ -8,4 +8,5 @@ class TestLetterCombinationsOfAPhoneNumber(unittest.TestCase):
         solution = Solution()
         expected_lists = ['ad', 'ae', 'af', 'bd', 'be', 'bf', 'cd', 'ce', 'cf']
 
+        self.assertListEqual([], solution.letterCombinations(''))
         self.assertListEqual(expected_lists, solution.letterCombinations('23'))
