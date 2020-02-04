@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0074_search_a_2d_matrix import Solution
+from leetcode.algorithms.p0074_search_a_2d_matrix_2 import Solution
 
 
 class TestSearchA2DMatrix(unittest.TestCase):
@@ -11,5 +11,8 @@ class TestSearchA2DMatrix(unittest.TestCase):
             [23, 30, 34, 50]
         ]
 
+        self.assertFalse(solution.searchMatrix([], 1))
+        self.assertFalse(solution.searchMatrix([[]], 1))
+        self.assertTrue(solution.searchMatrix(matrix, 10))
         self.assertTrue(solution.searchMatrix(matrix, 3))
         self.assertFalse(solution.searchMatrix(matrix, 13))
