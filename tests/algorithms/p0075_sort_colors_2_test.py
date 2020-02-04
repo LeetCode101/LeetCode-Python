@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0075_sort_colors_1 import Solution
+from leetcode.algorithms.p0075_sort_colors_2 import Solution
 
 
 class TestSortColors(unittest.TestCase):
