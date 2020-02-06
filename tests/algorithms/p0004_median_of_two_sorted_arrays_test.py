@@ -8,3 +8,4 @@ class TestMedianOfTwoSortedArrays(unittest.TestCase):
 
         self.assertEqual(2.0, solution.findMedianSortedArrays([1, 3], [2]))
         self.assertEqual(2.5, solution.findMedianSortedArrays([1, 2], [3, 4]))
+        self.assertEqual(2.5, solution.findMedianSortedArrays([3, 4], [1, 2]))
