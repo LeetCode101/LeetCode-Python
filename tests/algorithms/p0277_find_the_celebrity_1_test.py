@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0277_find_the_celebrity import Solution
+from leetcode.algorithms.p0277_find_the_celebrity_1 import Solution
 
 
 class TestFindTheCelebrity(unittest.TestCase):
