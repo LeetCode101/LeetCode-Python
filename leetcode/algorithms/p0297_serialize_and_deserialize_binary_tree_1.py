@@ -13,21 +13,21 @@ class Codec:
     def serialize(self, root):
         encoded = deque()
 
-        self.serialize_internal(root, encoded)
+        self.preorder(root, encoded)
 
         return ','.join(list(encoded))
 
     def deserialize(self, data):
         return self.deserialize_internal(deque(data.split(',')))
 
-    def serialize_internal(self, root: TreeNode, encoded: Deque) -> None:
+    def preorder(self, root: TreeNode, encoded: Deque) -> None:
         if not root:
             encoded.append('')
         else:
             encoded.append(str(root.val))
 
-            self.serialize_internal(root.left, encoded)
-            self.serialize_internal(root.right, encoded)
+            self.preorder(root.left, encoded)
+            self.preorder(root.right, encoded)
 
     def deserialize_internal(self, encoded: Deque) -> TreeNode:
         if encoded[0] == '':

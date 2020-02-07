@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0297_serialize_and_deserialize_binary_tree \
+from leetcode.algorithms.p0297_serialize_and_deserialize_binary_tree_1 \
     import Codec, TreeNode
 
 
