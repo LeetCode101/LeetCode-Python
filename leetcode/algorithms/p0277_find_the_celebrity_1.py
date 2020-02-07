@@ -11,7 +11,7 @@ def knows(a: int, b: int) -> bool:
 
 class Solution:
     def findCelebrity(self, n: int) -> int:
-        possible_celebrityies = []
+        possible_celebrities = []
 
         for i in range(n):
             know_someone = False
@@ -26,9 +26,9 @@ class Solution:
                     break
 
             if not know_someone:
-                possible_celebrityies.append(i)
+                possible_celebrities.append(i)
 
-        for i in possible_celebrityies:
+        for i in possible_celebrities:
             is_celebrity = True
 
             for j in range(n):
