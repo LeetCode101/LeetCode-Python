@@ -1,4 +1,4 @@
-from typing import List, Deque
+from typing import Deque
 from collections import deque
 
 
