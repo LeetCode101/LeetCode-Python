@@ -1,6 +1,6 @@
 import unittest
 from leetcode.algorithms\
-    .p1008_construct_binary_search_tree_from_preorder_traversal import Solution
+    .p1008_construct_binary_search_tree_from_preorder_traversal_1 import Solution
 
 
 class TestConstructBinarySearchTreeFromPreorderTraversal(unittest.TestCase):
