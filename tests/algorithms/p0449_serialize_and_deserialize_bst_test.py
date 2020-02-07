@@ -11,4 +11,5 @@ class TestSerializeAndDeserializeBST(unittest.TestCase):
         codec = Codec()
         encoded = codec.serialize(a)
 
+        self.assertIsNone(codec.deserialize(''))
         self.assertEqual(1, codec.deserialize(encoded).val)
