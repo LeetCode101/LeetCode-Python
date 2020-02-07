@@ -79,9 +79,11 @@ class Solution:
             return self.parse_one_digit(num)
         elif int(num) < 20:
             return self.less_than_20[num]
+        elif num[1] == '0':
+            return self.larger_than_20[num[0]]
         else:
-            return self.larger_than_20[num[0]] + \
-                (' ' + self.less_than_10[num[1]] if num[1] != '0' else '')
+            return self.larger_than_20[num[0]] + ' ' + \
+                   self.less_than_10[num[1]]
 
     def parse_one_digit(self, num: str) -> str:
         return self.less_than_10[num]
