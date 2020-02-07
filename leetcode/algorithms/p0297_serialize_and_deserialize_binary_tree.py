@@ -1,4 +1,5 @@
-from typing import List
+from typing import List, Deque
+from collections import deque
 
 
 class TreeNode(object):
@@ -10,16 +11,16 @@ class TreeNode(object):
 
 class Codec:
     def serialize(self, root):
-        encoded = []
+        encoded = deque()
 
         self.serialize_internal(root, encoded)
 
-        return ','.join(encoded)
+        return ','.join(list(encoded))
 
     def deserialize(self, data):
-        return self.deserialize_internal(data.split(','))
+        return self.deserialize_internal(deque(data.split(',')))
 
-    def serialize_internal(self, root: TreeNode, encoded: List[str]) -> None:
+    def serialize_internal(self, root: TreeNode, encoded: Deque) -> None:
         if not root:
             encoded.append('')
         else:
@@ -28,13 +29,13 @@ class Codec:
             self.serialize_internal(root.left, encoded)
             self.serialize_internal(root.right, encoded)
 
-    def deserialize_internal(self, encoded: List[str]) -> TreeNode:
+    def deserialize_internal(self, encoded: Deque) -> TreeNode:
         if encoded[0] == '':
-            encoded.pop(0)
+            encoded.popleft()
 
             return None
 
-        root_value = int(encoded.pop(0))
+        root_value = int(encoded.popleft())
         root = TreeNode(root_value)
         root.left = self.deserialize_internal(encoded)
         root.right = self.deserialize_internal(encoded)
