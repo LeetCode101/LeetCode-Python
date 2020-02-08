@@ -11,6 +11,7 @@ class TestTheSkylineProblem(unittest.TestCase):
         skyline = [[2, 10], [3, 15], [12, 0],
                    [15, 10], [20, 8], [24, 0]]
 
+        self.assertListEqual([], solution.getSkyline([]))
         self.assertListEqual(skyline, solution.getSkyline(buildings))
         self.assertListEqual(
             [[15, 10], [25, 0]],
