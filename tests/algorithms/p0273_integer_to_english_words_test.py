@@ -8,6 +8,7 @@ class TestIntegerToEnglishWords(unittest.TestCase):
         words = 'One Billion Two Hundred Thirty Four Million Five ' \
                 'Hundred Sixty Seven Thousand Eight Hundred Ninety One'
 
+        self.assertEqual('One Hundred One', solution.numberToWords(101))
         self.assertEqual('One Thousand', solution.numberToWords(1000))
         self.assertEqual('One Thousand One', solution.numberToWords(1001))
         self.assertEqual('Ten', solution.numberToWords(10))
