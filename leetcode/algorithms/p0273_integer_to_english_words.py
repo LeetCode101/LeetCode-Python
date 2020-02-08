@@ -43,36 +43,40 @@ class Solution:
         length = len(number_string)
         i = 0
         words = []
-        groups = {
+        separators = {
             1: '',
-            2: ' Thousand',
-            3: ' Million',
-            4: ' Billion'
+            2: 'Thousand',
+            3: 'Million',
+            4: 'Billion'
         }
 
         while i < length:
             high_digits_length = (length - i) % 3
-            group = math.ceil((length - i) / 3)
+            separator = separators.get(math.ceil((length - i) / 3), '')
             high_digits = number_string[i:i + high_digits_length] \
                 if high_digits_length != 0 else number_string[i:i + 3]
             digits = self.trim_zero(high_digits)
+            word = ''
 
-            if digits:
-                words.append(self.parse_three_digits(digits) +
-                             groups.get(group, ''))
+            if len(digits) == 3:
+                word = self.parse_three_digits(digits)
+            elif len(digits) == 2:
+                word = self.parse_two_digits(digits)
+            elif len(digits) == 1:
+                word = self.parse_one_digit(digits)
+
+            if word:
+                words.append(word + (' ' + separator if separator else ''))
 
             i += len(high_digits)
 
         return ' '.join(words)
 
     def parse_three_digits(self, num: str) -> str:
-        if len(num) == 3:
-            left = int(num[1:])
+        left = int(num[1:])
 
-            return self.parse_one_digit(num[0]) + ' Hundred' + \
-                (' ' + self.parse_two_digits(str(left)) if left != 0 else '')
-        else:
-            return self.parse_two_digits(num)
+        return self.parse_one_digit(num[0]) + ' Hundred' + \
+            (' ' + self.parse_two_digits(str(left)) if left != 0 else '')
 
     def parse_two_digits(self, num: str) -> str:
         if len(num) == 1:
