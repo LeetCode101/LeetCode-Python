@@ -15,27 +15,20 @@ class Solution:
                 if grid[i][j] == '1' and not visited[i][j]:
                     count += 1
 
-                    self.dfs(grid, visited, i, j)
+                    self.dfs(grid, i, j, visited)
 
         return count
 
-    def dfs(self, grid: List[List[str]], visited: List[List[bool]],
-            row: int, column: int) -> None:
+    def dfs(self, grid, row, column, visited):
         m, n = len(grid), len(grid[0])
+
+        if row < 0 or row >= m or column < 0 or column >= n \
+                or grid[row][column] != '1' or visited[row][column]:
+            return
+
         visited[row][column] = True
 
-        if row - 1 >= 0 and grid[row - 1][column] == '1' \
-                and not visited[row - 1][column]:
-            self.dfs(grid, visited, row - 1, column)
-
-        if row + 1 <= m - 1 and grid[row + 1][column] == '1' \
-                and not visited[row + 1][column]:
-            self.dfs(grid, visited, row + 1, column)
-
-        if column - 1 >= 0 and grid[row][column - 1] == '1' \
-                and not visited[row][column - 1]:
-            self.dfs(grid, visited, row, column - 1)
-
-        if column + 1 <= n - 1 and grid[row][column + 1] == '1' \
-                and not visited[row][column + 1]:
-            self.dfs(grid, visited, row, column + 1)
+        self.dfs(grid, row - 1, column, visited)
+        self.dfs(grid, row + 1, column, visited)
+        self.dfs(grid, row, column - 1, visited)
+        self.dfs(grid, row, column + 1, visited)
