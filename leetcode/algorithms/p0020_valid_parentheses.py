@@ -11,12 +11,7 @@ class Solution:
             if c in parentheses:
                 stack.append(c)
             else:
-                if not stack:
-                    return False
-
-                left = stack.pop()
-
-                if parentheses[left] != c:
+                if len(stack) == 0 or parentheses[stack.pop()] != c:
                     return False
 
         return not stack
