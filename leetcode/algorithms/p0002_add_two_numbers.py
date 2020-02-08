@@ -16,19 +16,15 @@ class Solution:
 
             if current1:
                 sum += current1.val
+                current1 = current1.next
 
             if current2:
                 sum += current2.val
+                current2 = current2.next
 
             carry = sum // 10
             prev.next = ListNode(sum % 10)
             prev = prev.next
-
-            if current1:
-                current1 = current1.next
-
-            if current2:
-                current2 = current2.next
 
         if carry != 0:
             prev.next = ListNode(carry)
