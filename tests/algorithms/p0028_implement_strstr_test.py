@@ -9,4 +9,4 @@ class TestImplementStrStr(unittest.TestCase):
         self.assertEqual(0, solution.strStr('hi', ''))
         self.assertEqual(2, solution.strStr('hello', 'll'))
         self.assertEqual(-1, solution.strStr('aaaaa', 'bba'))
-        self.assertEqual(-1, solution.strStr('aaaaa', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab'))
+        self.assertEqual(-1, solution.strStr('aaaaa', 'aaaaaaaaab'))
