@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0003_longest_substring_without_repeating_characters \
+from leetcode.algorithms.p0003_longest_substring_without_repeating_characters_1 \
     import Solution
 
 
