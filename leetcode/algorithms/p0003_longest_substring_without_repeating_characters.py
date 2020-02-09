@@ -5,18 +5,17 @@ class Solution:
             return 0
 
         n = len(s)
-        dp = [[0 for _ in range(n)] for _ in range(n)]
+        dp = [[False for _ in range(n)] for _ in range(n)]
         max_length = 1
 
         for i in range(0, n):
-            dp[i][i] = 1
+            dp[i][i] = True
 
             for j in range(i + 1, n):
-                if s[j] not in set(s[j - dp[i][j - 1]:j]):
-                    dp[i][j] = dp[i][j - 1] + 1
-                else:
-                    dp[i][j] = 1
+                if dp[i][j - 1] and s[j] not in set(s[i:j]):
+                    dp[i][j] = True
 
-                max_length = max(max_length, dp[i][j])
+                if dp[i][j]:
+                    max_length = max(max_length, j - i + 1)
 
         return max_length
