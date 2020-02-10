@@ -1,6 +1,5 @@
 import unittest
-from leetcode.algorithms.p0218_the_skyline_problem \
-    import Solution
+from leetcode.algorithms.p0218_the_skyline_problem import Solution
 
 
 class TestTheSkylineProblem(unittest.TestCase):
