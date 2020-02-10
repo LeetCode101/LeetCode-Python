@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0024_swap_nodes_in_pairs \
+from leetcode.algorithms.p0024_swap_nodes_in_pairs_1 \
     import Solution, ListNode
 from .list_helper import convert_linked_list_to_list
 
