@@ -17,10 +17,7 @@ class Solution:
         for j in range(i, len(s)):
             word += s[j]
 
-            if word in words:
-                found = self.search(s, j + 1, words)
-
-                if found:
-                    return True
+            if word in words and self.search(s, j + 1, words):
+                return True
 
         return False
