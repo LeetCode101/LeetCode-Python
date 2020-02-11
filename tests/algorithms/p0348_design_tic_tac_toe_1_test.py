@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0348_design_tic_tac_toe import TicTacToe
+from leetcode.algorithms.p0348_design_tic_tac_toe_1 import TicTacToe
 
 
 class TestDesignTicTacToe(unittest.TestCase):
