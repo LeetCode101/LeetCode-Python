@@ -15,4 +15,5 @@ class TestCountUnivalueSubtrees(unittest.TestCase):
         b.right = TreeNode(5)
         c.right = TreeNode(5)
 
+        self.assertEqual(0, solution.countUnivalSubtrees(None))
         self.assertEqual(4, solution.countUnivalSubtrees(a))
