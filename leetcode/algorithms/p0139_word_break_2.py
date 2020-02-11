@@ -28,4 +28,4 @@ class Solution:
 
         memo[i] = False
 
-        return memo[i]
+        return False
