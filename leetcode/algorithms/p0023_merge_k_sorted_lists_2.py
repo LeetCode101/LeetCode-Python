@@ -12,7 +12,7 @@ class ListNodeWrap:
     def __init__(self, node: ListNode):
         self.node = node
 
-    def __lt__(self, other):
+    def __lt__(self, other: 'ListNodeWrap'):
         return self.node.val < other.node.val
 
 
