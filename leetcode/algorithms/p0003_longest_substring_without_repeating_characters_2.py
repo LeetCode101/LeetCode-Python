@@ -7,7 +7,12 @@ class Solution:
 
         for j in range(n):
             if s[j] in substring:
-                i = max(substring[s[j]] + 1, i)
+                index = substring[s[j]]
+
+                for k in range(i, index + 1):
+                    del substring[s[k]]
+
+                i = index + 1
 
             max_length = max(max_length, j - i + 1)
             substring[s[j]] = j
