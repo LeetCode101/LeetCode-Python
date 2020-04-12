@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0004_median_of_two_sorted_arrays import Solution
+from leetcode.algorithms.p0004_median_of_two_sorted_arrays_2 import Solution
 
 
 class TestMedianOfTwoSortedArrays(unittest.TestCase):
