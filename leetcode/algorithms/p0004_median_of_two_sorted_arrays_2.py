@@ -6,10 +6,10 @@ class Solution:
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) \
             -> float:
         m, n = len(nums1), len(nums2)
-        left, right = (m + n + 1) // 2, (m + n + 2) // 2
+        k1, k2 = (m + n + 1) // 2, (m + n + 2) // 2
 
-        return (self.find_kth(nums1, 0, nums2, 0, left) +
-                self.find_kth(nums1, 0, nums2, 0, right)) / 2
+        return (self.find_kth(nums1, 0, nums2, 0, k1) +
+                self.find_kth(nums1, 0, nums2, 0, k2)) / 2
 
     def find_kth(self, nums1: List[int], i: int,
                  nums2: List[int], j: int, k: int) -> int:
