@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0487_max_consecutive_ones_ii import Solution
+from leetcode.algorithms.p0487_max_consecutive_ones_ii_2 import Solution
 
 
 class TestMaxConsecutiveOnes(unittest.TestCase):
