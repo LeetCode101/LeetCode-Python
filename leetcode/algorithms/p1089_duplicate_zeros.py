@@ -10,9 +10,9 @@ class Solution:
 
         while i < length:
             if arr[i] == 0 and i + 1 < length:
-                self.shift(arr, i + 1)
-                arr[i + 1] = 0
                 i += 1
+                self.shift(arr, i)
+                arr[i] = 0
 
             i += 1
 
