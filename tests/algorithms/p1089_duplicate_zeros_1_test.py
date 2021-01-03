@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1089_duplicate_zeros import Solution
+from leetcode.algorithms.p1089_duplicate_zeros_1 import Solution
 
 
 class TestDuplicateZeros(unittest.TestCase):
