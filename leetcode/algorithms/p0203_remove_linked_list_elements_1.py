@@ -12,8 +12,10 @@ class Solution:
 
         while current:
             if current.val != val:
-                prev, current = current, current.next
+                prev = current
             else:
-                prev.next, current = current.next, current.next
+                prev.next = current.next
+
+            current = current.next
 
         return dummy.next
