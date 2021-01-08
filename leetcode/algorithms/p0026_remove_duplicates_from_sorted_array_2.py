@@ -9,9 +9,7 @@ class Solution:
         size, length = 0, len(nums)
 
         for i in range(1, length):
-            if nums[i] == nums[size]:
-                continue
-            else:
+            if nums[i] != nums[size]:
                 size += 1
                 nums[size] = nums[i]
 
