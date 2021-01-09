@@ -6,11 +6,11 @@ class Solution:
         if not nums:
             return 0
 
-        size, length = 0, len(nums)
+        tail, length = 0, len(nums)
 
         for i in range(1, length):
-            if nums[i] != nums[size]:
-                size += 1
-                nums[size] = nums[i]
+            if nums[i] != nums[tail]:
+                tail += 1
+                nums[tail] = nums[i]
 
-        return size + 1
+        return tail + 1
