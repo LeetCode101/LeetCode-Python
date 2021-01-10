@@ -35,7 +35,8 @@ class Solution:
                 continue
 
             counts[key] -= 2
-            permutations += self.generate(counts, key + permutation_so_far + key,
+            permutations += self.generate(counts,
+                                          key + permutation_so_far + key,
                                           target_length)
             counts[key] += 2
 
