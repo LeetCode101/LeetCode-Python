@@ -21,6 +21,7 @@ class Solution:
             return []
 
         middle = next(iter(chars)) if len(chars) == 1 else ''
+
         return self.generate(counts, middle, len(s))
 
     def generate(self, counts, permutation_so_far, target_length):
