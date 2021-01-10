@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0267_palindrome_permutation_ii import Solution
+from leetcode.algorithms.p0267_palindrome_permutation_ii_1 import Solution
 
 
 class TestPalindromePermutationII(unittest.TestCase):
