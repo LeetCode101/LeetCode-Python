@@ -7,4 +7,4 @@ class TestPalindromePermutationII(unittest.TestCase):
         solution = Solution()
 
         self.assertListEqual(['abba', 'baab'],
-                             solution.generatePalindromes('aabb'))
+                             sorted(solution.generatePalindromes('aabb')))
