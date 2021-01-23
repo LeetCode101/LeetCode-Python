@@ -8,3 +8,4 @@ class TestValidMountainArray(unittest.TestCase):
 
         self.assertFalse(solution.validMountainArray([2, 1]))
         self.assertTrue(solution.validMountainArray([0, 3, 2, 1]))
+        self.assertFalse(solution.validMountainArray([0, 1, 2, 3, 2, 5]))
