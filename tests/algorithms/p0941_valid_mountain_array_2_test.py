@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0941_valid_mountain_array_1 import Solution
+from leetcode.algorithms.p0941_valid_mountain_array_2 import Solution
 
 
 class TestValidMountainArray(unittest.TestCase):
