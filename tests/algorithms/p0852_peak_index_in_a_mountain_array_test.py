@@ -10,4 +10,5 @@ class TestPeakIndexInAMountainArray(unittest.TestCase):
         self.assertEqual(1, solution.peakIndexInMountainArray([0, 2, 1, 0]))
         self.assertEqual(1, solution.peakIndexInMountainArray([0, 10, 5, 2]))
         self.assertEqual(2, solution.peakIndexInMountainArray([3, 4, 5, 1]))
-        self.assertEqual(2, solution.peakIndexInMountainArray([24, 69, 100, 99, 79, 78, 67, 36, 26, 19]))
+        self.assertEqual(2, solution.peakIndexInMountainArray(
+            [24, 69, 100, 99, 79, 78, 67, 36, 26, 19]))
