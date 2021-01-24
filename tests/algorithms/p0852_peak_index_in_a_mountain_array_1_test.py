@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0852_peak_index_in_a_mountain_array import Solution
+from leetcode.algorithms.p0852_peak_index_in_a_mountain_array_1 import Solution
 
 
 class TestPeakIndexInAMountainArray(unittest.TestCase):
