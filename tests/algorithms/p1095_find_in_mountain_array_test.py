@@ -8,6 +8,8 @@ class TestFindInMountainArray(unittest.TestCase):
         solution = Solution()
 
         self.assertEqual(2, solution.findInMountainArray(
+            2, MountainArray([0, 1, 2, 1])))
+        self.assertEqual(2, solution.findInMountainArray(
             3, MountainArray([1, 2, 3, 4, 5, 3, 1])))
         self.assertEqual(-1, solution.findInMountainArray(
             3, MountainArray([0, 1, 2, 4, 2, 1])))
