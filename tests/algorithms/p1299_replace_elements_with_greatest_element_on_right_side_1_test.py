@@ -1,6 +1,6 @@
 import unittest
 from leetcode.algorithms\
-    .p1299_replace_elements_with_greatest_element_on_right_side import Solution
+    .p1299_replace_elements_with_greatest_element_on_right_side_1 import Solution
 
 
 class TestReplaceElementsWithGreatestElementOnRightSide(unittest.TestCase):
