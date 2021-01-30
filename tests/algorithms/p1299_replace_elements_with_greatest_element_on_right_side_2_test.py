@@ -1,6 +1,6 @@
 import unittest
 from leetcode.algorithms\
-    .p1299_replace_elements_with_greatest_element_on_right_side_1 \
+    .p1299_replace_elements_with_greatest_element_on_right_side_2 \
     import Solution
 
 
