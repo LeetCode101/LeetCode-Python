@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0283_move_zeroes import Solution
+from leetcode.algorithms.p0283_move_zeroes_1 import Solution
 
 
 class TestMoveZeroes(unittest.TestCase):
