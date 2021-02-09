@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0905_sort_array_by_parity import Solution
+from leetcode.algorithms.p0905_sort_array_by_parity_1 import Solution
 
 
 class TestSortArrayByParity(unittest.TestCase):
