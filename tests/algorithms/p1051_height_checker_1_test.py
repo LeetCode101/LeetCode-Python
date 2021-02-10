@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1051_height_checker import Solution
+from leetcode.algorithms.p1051_height_checker_1 import Solution
 
 
 class TestHeightChecker(unittest.TestCase):
