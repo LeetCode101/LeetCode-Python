@@ -12,10 +12,7 @@ class Solution:
             current_counts = {}
 
             for j in range(i, i + len(s1)):
-                if s2[j] in current_counts:
-                    current_counts[s2[j]] += 1
-                else:
-                    current_counts[s2[j]] = 1
+                current_counts[s2[j]] = current_counts.get(s2[j], 0) + 1
 
             if counts == current_counts:
                 return True

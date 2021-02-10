@@ -1,3 +1,4 @@
+import collections
 from typing import List
 
 
@@ -26,13 +27,7 @@ class Solution:
         return list(anagrams.values())
 
     def is_anagram(self, a: str, b: str) -> bool:
-        chars = {}
-
-        for c in a:
-            if c in chars:
-                chars[c] += 1
-            else:
-                chars[c] = 1
+        chars = collections.Counter(a)
 
         for c in b:
             if c not in chars:
