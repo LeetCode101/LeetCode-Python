@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0567_permutation_in_string import Solution
+from leetcode.algorithms.p0567_permutation_in_string_1 import Solution
 
 
 class TestPermutationInString(unittest.TestCase):
