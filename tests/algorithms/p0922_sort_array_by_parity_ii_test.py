@@ -8,3 +8,5 @@ class TestSortArrayByParity(unittest.TestCase):
 
         self.assertListEqual([4, 5, 2, 7], solution.sortArrayByParityII(
             [4, 2, 5, 7]))
+        self.assertListEqual([4, 5, 2, 7], solution.sortArrayByParityII(
+            [4, 5, 2, 7]))
