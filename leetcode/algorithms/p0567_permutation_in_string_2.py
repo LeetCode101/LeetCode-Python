@@ -1,10 +1,10 @@
+import collections
+
+
 class Solution:
     def checkInclusion(self, s1: str, s2: str) -> bool:
-        counts1 = {}
+        counts1 = collections.Counter(s1)
         counts2 = {}
-
-        for c in s1:
-            counts1[c] = counts1.get(c, 0) + 1
 
         for i, c in enumerate(s2):
             counts2[c] = counts2.get(c, 0) + 1
