@@ -7,3 +7,5 @@ class TestPermutationInString(unittest.TestCase):
         solution = Solution()
 
         self.assertTrue(solution.checkInclusion('ab', 'eidbaooo'))
+        self.assertFalse(solution.checkInclusion('ab', 'eidboaoo'))
+        self.assertTrue(solution.checkInclusion('aba', 'eidbaaoo'))
