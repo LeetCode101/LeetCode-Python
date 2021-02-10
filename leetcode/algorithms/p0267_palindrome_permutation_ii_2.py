@@ -12,10 +12,7 @@ class Solution:
             else:
                 chars.add(c)
 
-            if c in counts:
-                counts[c] += 1
-            else:
-                counts[c] = 1
+            counts[c] = counts.get(c, 0) + 1
 
         if len(chars) > 1:
             return []
