@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0119_pascals_triangle_ii import Solution
+from leetcode.algorithms.p0119_pascals_triangle_ii_1 import Solution
 
 
 class TestPascalsTriangle(unittest.TestCase):

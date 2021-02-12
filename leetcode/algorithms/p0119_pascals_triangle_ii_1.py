@@ -6,7 +6,7 @@ class Solution:
         triangle = self.generate(rowIndex + 1)
 
         return triangle[rowIndex]
-    
+
     def generate(self, numRows: int) -> List[List[int]]:
         triangle = []
 
