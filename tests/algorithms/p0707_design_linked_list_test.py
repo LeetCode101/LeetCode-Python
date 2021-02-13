@@ -8,9 +8,25 @@ class TestDesignLinkedList(unittest.TestCase):
         linked_list.addAtHead(1)
         linked_list.addAtTail(3)
         linked_list.addAtIndex(1, 2)
-
         self.assertEqual(2, linked_list.get(1))
 
         linked_list.deleteAtIndex(1)
-
         self.assertEqual(3, linked_list.get(1))
+
+        linked_list.addAtTail(2)
+        self.assertEqual(2, linked_list.get(2))
+
+        linked_list.deleteAtIndex(0)
+        linked_list.deleteAtIndex(0)
+        linked_list.deleteAtIndex(0)
+        linked_list.addAtTail(1)
+        self.assertEqual(1, linked_list.get(0))
+
+        linked_list.addAtIndex(5, 5)
+        linked_list.deleteAtIndex(0)
+        linked_list.addAtIndex(0, 1)
+        self.assertEqual(1, linked_list.get(0))
+
+        linked_list.deleteAtIndex(5)
+        linked_list.deleteAtIndex(0)
+        self.assertEqual(-1, linked_list.get(0))
