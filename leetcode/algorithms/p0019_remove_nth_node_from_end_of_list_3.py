@@ -9,15 +9,15 @@ class Solution:
         step = 0
         dummy = ListNode(-1)
         dummy.next = head
-        prev, current = dummy, head
+        slow, fast = dummy, head
 
-        while current.next:
+        while fast.next:
             if step >= n - 1:
-                prev = prev.next
+                slow = slow.next
 
             step += 1
-            current = current.next
+            fast = fast.next
 
-        prev.next = prev.next.next
+        slow.next = slow.next.next
 
         return dummy.next
