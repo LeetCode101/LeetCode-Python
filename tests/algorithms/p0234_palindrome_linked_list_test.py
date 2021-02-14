@@ -14,3 +14,4 @@ class TestPalindromeLinkedList(unittest.TestCase):
         c.next = d
 
         self.assertTrue(solution.isPalindrome(a))
+        self.assertFalse(solution.isPalindrome(ListNode(1, ListNode(2))))
