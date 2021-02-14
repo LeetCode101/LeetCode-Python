@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0328_odd_even_linked_list import ListNode, Solution
+from leetcode.algorithms.p0328_odd_even_linked_list_1 import ListNode, Solution
 from tests.algorithms.list_helper import convert_linked_list_to_list
 
 
