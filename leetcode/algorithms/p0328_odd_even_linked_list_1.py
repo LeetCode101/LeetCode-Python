@@ -9,8 +9,8 @@ class Solution:
     def oddEvenList(self, head: ListNode) -> ListNode:
         is_odd = True
         current = head
-        odd, head_of_even = ListNode(-1), ListNode(-1)
-        even = head_of_even
+        odd, even_head = ListNode(-1), ListNode(-1)
+        even = even_head
 
         while current:
             if is_odd:
@@ -21,7 +21,7 @@ class Solution:
             is_odd = not is_odd
             current = current.next
 
-        odd.next = head_of_even.next
+        odd.next = even_head.next
         even.next = None
 
         return head
