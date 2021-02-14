@@ -1,6 +1,6 @@
 import unittest
-from leetcode.\
-    algorithms.p0117_populating_next_right_pointers_in_each_node_ii_2 \
+from leetcode.algorithms\
+    .p0117_populating_next_right_pointers_in_each_node_ii_2 \
     import Solution, Node
 
 

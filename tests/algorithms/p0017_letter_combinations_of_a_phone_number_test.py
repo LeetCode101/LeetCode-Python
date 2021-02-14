@@ -1,6 +1,6 @@
 import unittest
-from leetcode\
-    .algorithms.p0017_letter_combinations_of_a_phone_number import Solution
+from leetcode.algorithms\
+    .p0017_letter_combinations_of_a_phone_number import Solution
 
 
 class TestLetterCombinationsOfAPhoneNumber(unittest.TestCase):
