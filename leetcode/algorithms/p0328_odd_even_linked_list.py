@@ -7,18 +7,18 @@ class ListNode:
 
 class Solution:
     def oddEvenList(self, head: ListNode) -> ListNode:
-        i = 1
+        is_odd = True
         current = head
         odd, head_of_even = ListNode(-1), ListNode(-1)
         even = head_of_even
 
         while current:
-            if i & 1 == 1:
+            if is_odd:
                 odd.next, odd = current, current
             else:
                 even.next, even = current, current
 
-            i += 1
+            is_odd = not is_odd
             current = current.next
 
         odd.next = head_of_even.next
