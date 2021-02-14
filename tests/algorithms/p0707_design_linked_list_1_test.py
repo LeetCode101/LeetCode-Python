@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0707_design_linked_list import Node, MyLinkedList
+from leetcode.algorithms.p0707_design_linked_list_1 import Node, MyLinkedList
 
 
 class TestDesignLinkedList(unittest.TestCase):
