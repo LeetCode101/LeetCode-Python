@@ -17,7 +17,8 @@ class Solution:
 
         while current:
             if is_odd:
-                odd_tail.next, current.next, current = current, odd_tail.next, current.next
+                odd_tail.next, current.next, current = \
+                    current, odd_tail.next, current.next
                 odd_tail = odd_tail.next
                 even_tail.next, even_tail = current, current
             else:
