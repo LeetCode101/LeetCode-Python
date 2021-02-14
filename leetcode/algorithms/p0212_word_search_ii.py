@@ -1,5 +1,5 @@
 from typing import List, Set
-from .p0208_implement_trie import Trie
+from leetcode.algorithms.p0208_implement_trie import Trie
 
 
 class Solution:

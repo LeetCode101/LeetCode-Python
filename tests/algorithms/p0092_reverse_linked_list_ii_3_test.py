@@ -1,7 +1,7 @@
 import unittest
 from leetcode.algorithms.p0092_reverse_linked_list_ii_3 \
     import Solution, ListNode
-from .list_helper import convert_linked_list_to_list
+from tests.algorithms.list_helper import convert_linked_list_to_list
 
 
 class TestReverseLinkedList(unittest.TestCase):

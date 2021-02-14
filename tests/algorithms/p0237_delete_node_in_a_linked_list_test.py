@@ -1,7 +1,7 @@
 import unittest
 from leetcode.algorithms.p0237_delete_node_in_a_linked_list import Solution
 from leetcode.algorithms.p0237_delete_node_in_a_linked_list import ListNode
-from .list_helper import convert_linked_list_to_list
+from tests.algorithms.list_helper import convert_linked_list_to_list
 
 
 class DeleteNodeInALinkedList(unittest.TestCase):

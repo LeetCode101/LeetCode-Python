@@ -1,7 +1,7 @@
 import unittest
 from leetcode.algorithms.p0019_remove_nth_node_from_end_of_list_2 \
     import Solution, ListNode
-from .list_helper import convert_linked_list_to_list
+from tests.algorithms.list_helper import convert_linked_list_to_list
 
 
 class TestRemoveNthNodeFromEndOfList(unittest.TestCase):

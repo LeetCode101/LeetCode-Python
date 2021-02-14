@@ -1,7 +1,7 @@
 import unittest
 from leetcode.algorithms.p0025_reverse_nodes_in_k_group \
     import Solution, ListNode
-from .list_helper import convert_linked_list_to_list
+from tests.algorithms.list_helper import convert_linked_list_to_list
 
 
 class TestReverseNodesInKGroup(unittest.TestCase):

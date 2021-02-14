@@ -1,7 +1,7 @@
 import unittest
 from leetcode.algorithms.p0138_copy_list_with_random_pointer \
     import Solution, Node
-from .list_helper import convert_linked_list_to_list
+from tests.algorithms.list_helper import convert_linked_list_to_list
 
 
 class TestCopyListWithRandomPointer(unittest.TestCase):

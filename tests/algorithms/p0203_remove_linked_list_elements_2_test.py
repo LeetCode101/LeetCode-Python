@@ -1,7 +1,7 @@
 import unittest
 from leetcode.algorithms.p0203_remove_linked_list_elements_2 import Solution
 from leetcode.algorithms.p0203_remove_linked_list_elements_2 import ListNode
-from .list_helper import convert_linked_list_to_list
+from tests.algorithms.list_helper import convert_linked_list_to_list
 
 
 class RemoveLinkedListElements(unittest.TestCase):

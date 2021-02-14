@@ -1,7 +1,7 @@
 import unittest
 from leetcode.algorithms.p0002_add_two_numbers \
     import Solution, ListNode
-from .list_helper import convert_linked_list_to_list
+from tests.algorithms.list_helper import convert_linked_list_to_list
 
 
 class TestAddTwoNumbers(unittest.TestCase):

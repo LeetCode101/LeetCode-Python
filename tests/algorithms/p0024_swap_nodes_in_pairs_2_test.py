@@ -1,7 +1,7 @@
 import unittest
 from leetcode.algorithms.p0024_swap_nodes_in_pairs_2 \
     import Solution, ListNode
-from .list_helper import convert_linked_list_to_list
+from tests.algorithms.list_helper import convert_linked_list_to_list
 
 
 class TestSwapNodesInPairs(unittest.TestCase):
