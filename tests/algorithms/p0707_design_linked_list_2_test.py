@@ -30,3 +30,7 @@ class TestDesignLinkedList(unittest.TestCase):
         linked_list.deleteAtIndex(5)
         linked_list.deleteAtIndex(0)
         self.assertEqual(-1, linked_list.get(0))
+
+        linked_list.addAtHead(1)
+        linked_list.addAtHead(2)
+        self.assertEqual(1, linked_list.get(1))
