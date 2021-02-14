@@ -18,3 +18,4 @@ class TestOddEvenLinkedList(unittest.TestCase):
 
         self.assertListEqual([1, 3, 5, 2, 4], convert_linked_list_to_list(
             solution.oddEvenList(a)))
+        self.assertIsNone(solution.oddEvenList(None))
