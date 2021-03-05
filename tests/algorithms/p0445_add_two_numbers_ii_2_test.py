@@ -1,6 +1,6 @@
 import unittest
 from leetcode.algorithms.p0445_add_two_numbers_ii_2 \
-    import Solution, ListNode
+    import ListNode, Solution
 from tests.algorithms.list_helper import convert_linked_list_to_list
 
 

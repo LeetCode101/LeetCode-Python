@@ -1,6 +1,6 @@
 import unittest
 from leetcode.algorithms.p0141_linked_list_cycle_2 \
-    import Solution, ListNode
+    import ListNode, Solution
 
 
 class TestLinkedListCycle(unittest.TestCase):

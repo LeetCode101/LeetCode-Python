@@ -1,6 +1,6 @@
 import unittest
 from leetcode.algorithms.p0092_reverse_linked_list_ii_3 \
-    import Solution, ListNode
+    import ListNode, Solution
 from tests.algorithms.list_helper import convert_linked_list_to_list
 
 
