@@ -15,21 +15,21 @@ class LRUCache:
         self.head.next = self.tail
         self.tail.prev = self.head
 
-    def add_to_head(self, node: Node) -> None:
+    def _add_to_head(self, node: Node) -> None:
         node.prev, node.next = self.head, self.head.next
         self.head.next.prev, self.head.next = node, node
 
-    def remove_node(self, node: Node) -> None:
+    def _remove_node(self, node: Node) -> None:
         node.prev.next, node.next.prev = node.next, node.prev
 
-    def move_to_head(self, node: Node) -> None:
-        self.remove_node(node)
-        self.add_to_head(node)
+    def _move_to_head(self, node: Node) -> None:
+        self._remove_node(node)
+        self._add_to_head(node)
 
-    def pop_tail(self) -> Node:
+    def _pop_tail(self) -> Node:
         tail = self.tail.prev
 
-        self.remove_node(tail)
+        self._remove_node(tail)
 
         return tail
 
@@ -39,7 +39,7 @@ class LRUCache:
 
         node = self.caches[key]
 
-        self.move_to_head(node)
+        self._move_to_head(node)
 
         return node.value
 
@@ -48,14 +48,14 @@ class LRUCache:
             node = self.caches[key]
             node.value = value
 
-            self.move_to_head(node)
+            self._move_to_head(node)
         else:
             new_node = Node(key, value)
 
             self.caches[key] = new_node
-            self.add_to_head(new_node)
+            self._add_to_head(new_node)
 
             if len(self.caches) > self.capacity:
-                tail = self.pop_tail()
+                tail = self._pop_tail()
 
                 self.caches.pop(tail.key)

@@ -3,7 +3,7 @@ from typing import List
 
 class Solution:
     def reverseWords(self, s: List[str]) -> None:
-        self.reverse(s, 0, len(s) - 1)
+        self._reverse(s, 0, len(s) - 1)
 
         start, end = 0, 0
 
@@ -15,11 +15,11 @@ class Solution:
             while end < len(s) and not s[end].isspace():
                 end += 1
 
-            self.reverse(s, start, end - 1)
+            self._reverse(s, start, end - 1)
 
             start = end
 
-    def reverse(self, s: List[str], low: int, high: int) -> None:
+    def _reverse(self, s: List[str], low: int, high: int) -> None:
         while low < high:
             s[low], s[high] = s[high], s[low]
             low += 1

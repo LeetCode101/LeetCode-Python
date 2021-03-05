@@ -7,8 +7,8 @@ class ListNode:
 class Solution:
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) \
             -> ListNode:
-        length_a = self.get_list_length(headA)
-        length_b = self.get_list_length(headB)
+        length_a = self._get_list_length(headA)
+        length_b = self._get_list_length(headB)
         current1, current2 = headA, headB
 
         if length_a > length_b:
@@ -24,7 +24,7 @@ class Solution:
 
         return current1
 
-    def get_list_length(self, head: ListNode) -> int:
+    def _get_list_length(self, head: ListNode) -> int:
         length = 0
 
         while head:

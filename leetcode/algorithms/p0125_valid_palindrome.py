@@ -3,9 +3,9 @@ class Solution:
         low, high = 0, len(s) - 1
 
         while low < high:
-            if not self.is_valid_letter(s[low]):
+            if not self._is_valid_letter(s[low]):
                 low += 1
-            elif not self.is_valid_letter(s[high]):
+            elif not self._is_valid_letter(s[high]):
                 high -= 1
             elif s[low].lower() != s[high].lower():
                 return False
@@ -15,5 +15,5 @@ class Solution:
 
         return True
 
-    def is_valid_letter(self, s: str) -> bool:
+    def _is_valid_letter(self, s: str) -> bool:
         return 'a' <= s <= 'z' or 'A' <= s <= 'Z' or '0' <= s <= '9'

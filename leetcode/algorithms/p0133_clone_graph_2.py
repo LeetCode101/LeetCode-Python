@@ -11,9 +11,9 @@ class Solution:
     def cloneGraph(self, node: Node) -> Node:
         visited = {}
 
-        return self.clone(node, visited)
+        return self._clone(node, visited)
 
-    def clone(self, node: Node, visited: Dict[Node, Node]) -> Node:
+    def _clone(self, node: Node, visited: Dict[Node, Node]) -> Node:
         if not node:
             return node
 
@@ -23,6 +23,6 @@ class Solution:
             return visited[node]
 
         for neighbor in node.neighbors:
-            visited[node].neighbors.append(self.clone(neighbor, visited))
+            visited[node].neighbors.append(self._clone(neighbor, visited))
 
         return visited[node]

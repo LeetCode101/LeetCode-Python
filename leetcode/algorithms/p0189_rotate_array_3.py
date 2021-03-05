@@ -6,11 +6,11 @@ class Solution:
         step = k % len(nums)
         length = len(nums)
 
-        self.reverse(nums, 0, length - 1)
-        self.reverse(nums, 0, step - 1)
-        self.reverse(nums, step, length - 1)
+        self._reverse(nums, 0, length - 1)
+        self._reverse(nums, 0, step - 1)
+        self._reverse(nums, step, length - 1)
 
-    def reverse(self, nums: List[int], low: int, high: int) -> None:
+    def _reverse(self, nums: List[int], low: int, high: int) -> None:
         while low < high:
             nums[low], nums[high] = nums[high], nums[low]
             low += 1

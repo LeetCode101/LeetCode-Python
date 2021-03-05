@@ -3,11 +3,11 @@ from typing import List
 
 class Solution:
     def getRow(self, rowIndex: int) -> List[int]:
-        triangle = self.generate(rowIndex + 1)
+        triangle = self._generate(rowIndex + 1)
 
         return triangle[rowIndex]
 
-    def generate(self, numRows: int) -> List[List[int]]:
+    def _generate(self, numRows: int) -> List[List[int]]:
         triangle = []
 
         for i in range(numRows):

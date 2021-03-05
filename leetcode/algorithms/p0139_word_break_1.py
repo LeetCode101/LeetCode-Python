@@ -6,9 +6,9 @@ class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
         words = set(wordDict)
 
-        return self.search(s, 0, words)
+        return self._search(s, 0, words)
 
-    def search(self, s: str, i: int, words: Set[str]) -> bool:
+    def _search(self, s: str, i: int, words: Set[str]) -> bool:
         if i == len(s):
             return True
 
@@ -17,7 +17,7 @@ class Solution:
         for j in range(i, len(s)):
             word += s[j]
 
-            if word in words and self.search(s, j + 1, words):
+            if word in words and self._search(s, j + 1, words):
                 return True
 
         return False

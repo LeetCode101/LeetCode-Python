@@ -6,9 +6,9 @@ class Solution:
         words = set(wordDict)
         memo = [None] * len(s)
 
-        return self.search(s, 0, words, memo)
+        return self._search(s, 0, words, memo)
 
-    def search(self, s: str, i: int, words: Set[str], memo: List[bool]) \
+    def _search(self, s: str, i: int, words: Set[str], memo: List[bool]) \
             -> bool:
         if i == len(s):
             return True
@@ -21,7 +21,7 @@ class Solution:
         for j in range(i, len(s)):
             word += s[j]
 
-            if word in words and self.search(s, j + 1, words, memo):
+            if word in words and self._search(s, j + 1, words, memo):
                 memo[i] = True
 
                 return True

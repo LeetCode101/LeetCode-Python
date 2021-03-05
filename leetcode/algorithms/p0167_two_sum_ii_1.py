@@ -11,7 +11,7 @@ class Solution:
             Find the minimum index j such that
             nums[j] >= target - value for all x in [j, len(nums) - 1]
             """
-            j = self.binary_search(nums, index + 1, high, target - value)
+            j = self._binary_search(nums, index + 1, high, target - value)
 
             if j == -1:
                 continue
@@ -23,7 +23,7 @@ class Solution:
 
         return [-1, -1]
 
-    def binary_search(
+    def _binary_search(
             self, nums: List[int], low: int, high: int, target: int) -> int:
         while low <= high:
             middle = (low + high) // 2

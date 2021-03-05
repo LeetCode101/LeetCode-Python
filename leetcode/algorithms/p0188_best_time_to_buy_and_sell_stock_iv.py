@@ -7,7 +7,7 @@ class Solution:
             return 0
 
         if k >= len(prices) // 2:
-            return self.max_profit_greedy(prices)
+            return self._max_profit_greedy(prices)
 
         profits = [[[0 for _ in range(2)] for _ in range(k + 1)]
                    for _ in range(len(prices))]
@@ -27,7 +27,7 @@ class Solution:
 
         return max([x[0] for x in profits[-1]])
 
-    def max_profit_greedy(self, prices: List[int]) -> int:
+    def _max_profit_greedy(self, prices: List[int]) -> int:
         profit = 0
         i = 0
 

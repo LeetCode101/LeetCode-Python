@@ -15,13 +15,13 @@ class Solution:
                 return -1
 
         if n1 < n2:
-            return 0 if self.is_all_zero(v2, n) else -1
+            return 0 if self._is_all_zero(v2, n) else -1
         elif n1 > n2:
-            return 0 if self.is_all_zero(v1, n) else 1
+            return 0 if self._is_all_zero(v1, n) else 1
         else:
             return 0
 
-    def is_all_zero(self, v: List[str], i: int) -> bool:
+    def _is_all_zero(self, v: List[str], i: int) -> bool:
         for j in range(i, len(v)):
             if int(v[j]) != 0:
                 return False
