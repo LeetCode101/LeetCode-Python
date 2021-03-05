@@ -3,10 +3,10 @@ from typing import List, Set
 
 class Solution:
     def totalNQueens(self, n: int) -> int:
-        return self.dfs(0, n, set(), set(), set())
+        return self._dfs(0, n, set(), set(), set())
 
-    def dfs(self, row: int, n, columns: Set[int], left_diagonals: Set[int],
-            right_diagonals: Set[int]) -> int:
+    def _dfs(self, row: int, n, columns: Set[int], left_diagonals: Set[int],
+             right_diagonals: Set[int]) -> int:
         if row == n:
             return 1
 
@@ -21,8 +21,8 @@ class Solution:
             left_diagonals.add(row + column)
             right_diagonals.add(row - column)
 
-            count += self.dfs(row + 1, n, columns, left_diagonals,
-                              right_diagonals)
+            count += self._dfs(row + 1, n, columns, left_diagonals,
+                               right_diagonals)
 
             columns.remove(column)
             left_diagonals.remove(row + column)

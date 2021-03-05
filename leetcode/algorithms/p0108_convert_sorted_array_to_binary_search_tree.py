@@ -10,15 +10,15 @@ class TreeNode:
 
 class Solution:
     def sortedArrayToBST(self, nums: List[int]) -> TreeNode:
-        return self.build_tree(nums, 0, len(nums) - 1)
+        return self._build_tree(nums, 0, len(nums) - 1)
 
-    def build_tree(self, nums: List[int], low: int, high: int) -> TreeNode:
+    def _build_tree(self, nums: List[int], low: int, high: int) -> TreeNode:
         if low > high:
             return None
 
         middle = (low + high) // 2
         root = TreeNode(nums[middle])
-        root.left = self.build_tree(nums, low, middle - 1)
-        root.right = self.build_tree(nums, middle + 1, high)
+        root.left = self._build_tree(nums, low, middle - 1)
+        root.right = self._build_tree(nums, middle + 1, high)
 
         return root

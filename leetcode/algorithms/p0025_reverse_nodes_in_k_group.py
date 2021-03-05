@@ -6,7 +6,7 @@ class ListNode:
 
 class Solution:
     def reverseKGroup(self, head: ListNode, k: int) -> ListNode:
-        groups = self.get_list_length(head) // k
+        groups = self._get_list_length(head) // k
         dummy = ListNode(-1)
         dummy.next = head
         tail_of_prev_groups, tail_of_current_group = dummy, dummy.next
@@ -23,7 +23,7 @@ class Solution:
 
         return dummy.next
 
-    def get_list_length(self, head: ListNode) -> int:
+    def _get_list_length(self, head: ListNode) -> int:
         count, current = 0, head
 
         while current:

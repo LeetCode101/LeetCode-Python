@@ -12,11 +12,12 @@ class Solution:
     def levelOrder(self, root: TreeNode) -> List[List[int]]:
         result = []
 
-        self.dfs(root, 1, result)
+        self._dfs(root, 1, result)
 
         return result
 
-    def dfs(self, root: TreeNode, level: int, result: List[List[int]]) -> None:
+    def _dfs(self, root: TreeNode, level: int,
+             result: List[List[int]]) -> None:
         if not root:
             return
 
@@ -25,5 +26,5 @@ class Solution:
 
         result[level - 1].append(root.val)
 
-        self.dfs(root.left, level + 1, result)
-        self.dfs(root.right, level + 1, result)
+        self._dfs(root.left, level + 1, result)
+        self._dfs(root.right, level + 1, result)

@@ -5,14 +5,14 @@ class Solution:
     def solveNQueens(self, n: int) -> List[List[str]]:
         result = []
 
-        self.dfs(0, n, set(), set(), set(), [], result)
+        self._dfs(0, n, set(), set(), set(), [], result)
 
         return [['.' * i + 'Q' + '.' * (n - i - 1) for i in solution]
                 for solution in result]
 
-    def dfs(self, row: int, n, columns: Set[int], left_diagonals: Set[int],
-            right_diagonals: Set[int], solution: List[int],
-            result: List[List[int]]) -> None:
+    def _dfs(self, row: int, n, columns: Set[int], left_diagonals: Set[int],
+             right_diagonals: Set[int], solution: List[int],
+             result: List[List[int]]) -> None:
         if row == n:
             result.append(solution)
 
@@ -27,8 +27,8 @@ class Solution:
             left_diagonals.add(row + column)
             right_diagonals.add(row - column)
 
-            self.dfs(row + 1, n, columns, left_diagonals,
-                     right_diagonals, solution + [column], result)
+            self._dfs(row + 1, n, columns, left_diagonals,
+                      right_diagonals, solution + [column], result)
 
             columns.remove(column)
             left_diagonals.remove(row + column)

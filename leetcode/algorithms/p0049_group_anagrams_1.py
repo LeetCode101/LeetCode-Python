@@ -16,7 +16,7 @@ class Solution:
             found = False
 
             for key, value in anagrams.items():
-                if self.is_anagram(key, strs[i]):
+                if self._is_anagram(key, strs[i]):
                     anagrams[key].append(strs[i])
 
                     found = True
@@ -26,7 +26,7 @@ class Solution:
 
         return list(anagrams.values())
 
-    def is_anagram(self, a: str, b: str) -> bool:
+    def _is_anagram(self, a: str, b: str) -> bool:
         chars = collections.Counter(a)
 
         for c in b:

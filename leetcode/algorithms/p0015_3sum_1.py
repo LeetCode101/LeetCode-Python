@@ -7,7 +7,7 @@ class Solution:
         sums = []
 
         for i, value in enumerate(nums):
-            two_sums = self.two_sum(nums, i, -value)
+            two_sums = self._two_sum(nums, i, -value)
 
             if two_sums:
                 three_sums = []
@@ -16,12 +16,12 @@ class Solution:
                     three_sums.append([nums[j] for j in sorted([i] + two_sum)])
 
                 for three_sum in three_sums:
-                    if not self.has_three_sum(sums, three_sum):
+                    if not self._has_three_sum(sums, three_sum):
                         sums.append(three_sum)
 
         return sums
 
-    def two_sum(self, nums: List[int], current_index: int, target: int) \
+    def _two_sum(self, nums: List[int], current_index: int, target: int) \
             -> List[List[int]]:
         mapping = {}
         two_sums = []
@@ -37,7 +37,7 @@ class Solution:
 
         return two_sums
 
-    def has_three_sum(
+    def _has_three_sum(
             self, three_sums: List[List[int]], three_sum: List[int]) -> bool:
         for sum in three_sums:
             if sorted(sum) == sorted(three_sum):

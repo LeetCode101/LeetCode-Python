@@ -9,9 +9,9 @@ class ListNode:
 
 class Solution:
     def mergeKLists(self, lists: List[ListNode]) -> ListNode:
-        return self.merge(lists, 0, len(lists) - 1)
+        return self._merge(lists, 0, len(lists) - 1)
 
-    def merge(self, lists: List[ListNode], low: int, high: int) -> ListNode:
+    def _merge(self, lists: List[ListNode], low: int, high: int) -> ListNode:
         if low > high:
             return None
 
@@ -20,11 +20,12 @@ class Solution:
 
         middle = (low + high) // 2
         list1, list2 = \
-            self.merge(lists, low, middle), self.merge(lists, middle + 1, high)
+            self._merge(lists, low, middle), \
+            self._merge(lists, middle + 1, high)
 
-        return self.mergeTwoLists(list1, list2)
+        return self._merge_two_lists(list1, list2)
 
-    def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
+    def _merge_two_lists(self, l1: ListNode, l2: ListNode) -> ListNode:
         dummy = ListNode(-1)
         prev = dummy
         current1, current2 = l1, l2

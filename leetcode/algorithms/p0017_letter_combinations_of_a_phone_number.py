@@ -18,12 +18,12 @@ class Solution:
         }
         result = []
 
-        self.search(letters, digits, 0, '', result)
+        self._search(letters, digits, 0, '', result)
 
         return result
 
-    def search(self, letters: Dict[str, str], digits: str,
-               length: int, combination: str, result: List[str]):
+    def _search(self, letters: Dict[str, str], digits: str,
+                length: int, combination: str, result: List[str]):
         if length == len(digits):
             result.append(combination)
 
@@ -32,4 +32,4 @@ class Solution:
         letter = digits[length]
 
         for c in letters[letter]:
-            self.search(letters, digits, length + 1, combination + c, result)
+            self._search(letters, digits, length + 1, combination + c, result)

@@ -3,19 +3,19 @@ from typing import List
 
 class Solution:
     def solveSudoku(self, board: List[List[str]]) -> None:
-        self.solve(board)
+        self._solve(board)
 
-    def solve(self, board: List[List[str]]) -> bool:
+    def _solve(self, board: List[List[str]]) -> bool:
         for row in range(9):
             for column in range(9):
                 if board[row][column] != '.':
                     continue
 
                 for number in range(1, 10):
-                    if self.is_valid(board, row, column, str(number)):
+                    if self._is_valid(board, row, column, str(number)):
                         board[row][column] = str(number)
 
-                        if self.solve(board):
+                        if self._solve(board):
                             return True
                         else:
                             board[row][column] = '.'
@@ -24,8 +24,8 @@ class Solution:
 
         return True
 
-    def is_valid(self, board: List[List[str]], row: int,
-                 column: int, number: str) -> bool:
+    def _is_valid(self, board: List[List[str]], row: int,
+                  column: int, number: str) -> bool:
         for i in range(9):
             if board[i][column] == number:
                 return False

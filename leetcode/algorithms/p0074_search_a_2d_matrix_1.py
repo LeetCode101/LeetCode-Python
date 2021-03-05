@@ -7,16 +7,16 @@ class Solution:
             return False
 
         m, n = len(matrix), len(matrix[0])
-        row = self.binary_search([matrix[x][0] for x in range(m)], target)
+        row = self._binary_search([matrix[x][0] for x in range(m)], target)
 
         if matrix[row][0] == target:
             return True
         else:
-            i = self.binary_search(matrix[row], target)
+            i = self._binary_search(matrix[row], target)
 
             return matrix[row][i] == target
 
-    def binary_search(self, numbers: List[int], target: int) -> int:
+    def _binary_search(self, numbers: List[int], target: int) -> int:
         low, high = 0, len(numbers) - 1
 
         while low <= high:

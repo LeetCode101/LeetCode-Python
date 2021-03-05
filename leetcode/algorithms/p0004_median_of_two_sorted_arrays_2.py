@@ -8,11 +8,11 @@ class Solution:
         m, n = len(nums1), len(nums2)
         k1, k2 = (m + n + 1) // 2, (m + n + 2) // 2
 
-        return (self.find_kth(nums1, 0, nums2, 0, k1) +
-                self.find_kth(nums1, 0, nums2, 0, k2)) / 2
+        return (self._find_kth(nums1, 0, nums2, 0, k1) +
+                self._find_kth(nums1, 0, nums2, 0, k2)) / 2
 
-    def find_kth(self, nums1: List[int], i: int,
-                 nums2: List[int], j: int, k: int) -> int:
+    def _find_kth(self, nums1: List[int], i: int,
+                  nums2: List[int], j: int, k: int) -> int:
         if i >= len(nums1):
             return nums2[j + k - 1]
 
@@ -28,6 +28,6 @@ class Solution:
             else sys.maxsize
 
         if middle_value1 < middle_value2:
-            return self.find_kth(nums1, i + k // 2, nums2, j, k - k // 2)
+            return self._find_kth(nums1, i + k // 2, nums2, j, k - k // 2)
         else:
-            return self.find_kth(nums1, i, nums2, j + k // 2, k - k // 2)
+            return self._find_kth(nums1, i, nums2, j + k // 2, k - k // 2)

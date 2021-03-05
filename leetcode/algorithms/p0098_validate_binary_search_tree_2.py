@@ -8,7 +8,7 @@ class TreeNode:
 class Solution:
     def isValidBST(self, root: TreeNode) -> bool:
         numbers = []
-        self.inorder_traversal(root, numbers)
+        self._inorder_traversal(root, numbers)
 
         for i in range(1, len(numbers)):
             if numbers[i] <= numbers[i - 1]:
@@ -16,12 +16,12 @@ class Solution:
 
         return True
 
-    def inorder_traversal(self, root: TreeNode, numbers):
+    def _inorder_traversal(self, root: TreeNode, numbers):
         if not root:
             return
 
-        self.inorder_traversal(root.left, numbers)
+        self._inorder_traversal(root.left, numbers)
 
         numbers.append(root.val)
 
-        self.inorder_traversal(root.right, numbers)
+        self._inorder_traversal(root.right, numbers)
