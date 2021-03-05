@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0430_flatten_a_multilevel_doubly_linked_list \
+from leetcode.algorithms.p0430_flatten_a_multilevel_doubly_linked_list_1 \
     import Node, Solution
 from tests.algorithms.list_helper import convert_linked_list_to_list
 
