@@ -11,11 +11,11 @@ class Solution:
         while i < length:
             if arr[i] == 0 and i + 1 < length:
                 i += 1
-                self.shift(arr, i)
+                self._shift(arr, i)
                 arr[i] = 0
 
             i += 1
 
-    def shift(self, arr: List[int], i: int) -> None:
+    def _shift(self, arr: List[int], i: int) -> None:
         for j in range(len(arr) - 1, i, -1):
             arr[j] = arr[j - 1]

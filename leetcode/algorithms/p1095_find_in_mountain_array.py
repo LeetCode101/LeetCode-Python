@@ -16,7 +16,7 @@ class MountainArray:
 class Solution:
     def findInMountainArray(self, target: int,
                             mountain_arr: 'MountainArray') -> int:
-        peak = self.find_peak(0, mountain_arr.length() - 1, mountain_arr)
+        peak = self._find_peak(0, mountain_arr.length() - 1, mountain_arr)
 
         if mountain_arr.get(peak) == target:
             return peak
@@ -26,7 +26,7 @@ class Solution:
         return left if left != -1 else self.binary_search(
             peak + 1, mountain_arr.length() - 1, mountain_arr, target, False)
 
-    def find_peak(self, low, high, mountain_arr: 'MountainArray'):
+    def _find_peak(self, low, high, mountain_arr: 'MountainArray'):
         while low < high:
             middle = low + (high - low) // 2
 

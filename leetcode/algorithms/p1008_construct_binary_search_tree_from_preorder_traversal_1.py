@@ -10,9 +10,9 @@ class TreeNode:
 
 class Solution:
     def bstFromPreorder(self, preorder: List[int]) -> TreeNode:
-        return self.build(preorder, 0, len(preorder) - 1)
+        return self._build(preorder, 0, len(preorder) - 1)
 
-    def build(self, preorder: List[int], start: int, end: int) -> TreeNode:
+    def _build(self, preorder: List[int], start: int, end: int) -> TreeNode:
         if start > end:
             return None
 
@@ -22,7 +22,7 @@ class Solution:
             end + 1)
 
         root = TreeNode(root_value)
-        root.left = self.build(preorder, start + 1, right_tree_start - 1)
-        root.right = self.build(preorder, right_tree_start, end)
+        root.left = self._build(preorder, start + 1, right_tree_start - 1)
+        root.right = self._build(preorder, right_tree_start, end)
 
         return root

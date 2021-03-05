@@ -19,11 +19,11 @@ class Solution:
                 word.append(s[i])
                 i += 1
 
-            words += ''.join(self.reverse_word(word))
+            words += ''.join(self._reverse_word(word))
 
         return words
 
-    def reverse_word(self, s: List[str]):
+    def _reverse_word(self, s: List[str]):
         low, high = 0, len(s) - 1
 
         while low < high:

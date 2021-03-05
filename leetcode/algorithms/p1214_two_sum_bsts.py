@@ -13,25 +13,25 @@ class Solution:
             -> bool:
         nums = set()
 
-        self.traverse(root1, nums)
+        self._traverse(root1, nums)
 
-        return self.find(root2, target, nums)
+        return self._find(root2, target, nums)
 
-    def traverse(self, root: TreeNode, nums: Set[int]):
+    def _traverse(self, root: TreeNode, nums: Set[int]):
         if not root:
             return
 
         nums.add(root.val)
 
-        self.traverse(root.left, nums)
-        self.traverse(root.right, nums)
+        self._traverse(root.left, nums)
+        self._traverse(root.right, nums)
 
-    def find(self, root: TreeNode, k: int, visited: Set[int]) -> bool:
+    def _find(self, root: TreeNode, k: int, visited: Set[int]) -> bool:
         if not root:
             return False
 
         if k - root.val in visited:
             return True
 
-        return self.find(root.left, k, visited) or self.find(
+        return self._find(root.left, k, visited) or self._find(
             root.right, k, visited)

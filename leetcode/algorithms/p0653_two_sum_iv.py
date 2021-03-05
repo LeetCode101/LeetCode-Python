@@ -10,9 +10,9 @@ class TreeNode:
 
 class Solution:
     def findTarget(self, root: TreeNode, k: int) -> bool:
-        return self.find(root, k, set())
+        return self._find(root, k, set())
 
-    def find(self, root: TreeNode, k: int, visited: Set[int]) -> bool:
+    def _find(self, root: TreeNode, k: int, visited: Set[int]) -> bool:
         if not root:
             return False
 
@@ -21,5 +21,5 @@ class Solution:
 
         visited.add(root.val)
 
-        return self.find(root.left, k, visited) or self.find(
+        return self._find(root.left, k, visited) or self._find(
             root.right, k, visited)
