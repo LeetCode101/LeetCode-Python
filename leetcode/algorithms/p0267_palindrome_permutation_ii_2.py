@@ -19,9 +19,9 @@ class Solution:
 
         middle = next(iter(chars)) if len(chars) == 1 else ''
 
-        return self.generate(counts, middle, len(s))
+        return self._generate(counts, middle, len(s))
 
-    def generate(self, counts, permutation_so_far, target_length):
+    def _generate(self, counts, permutation_so_far, target_length):
         if len(permutation_so_far) == target_length:
             return [permutation_so_far]
 
@@ -32,9 +32,9 @@ class Solution:
                 continue
 
             counts[key] -= 2
-            permutations += self.generate(counts,
-                                          key + permutation_so_far + key,
-                                          target_length)
+            permutations += self._generate(counts,
+                                           key + permutation_so_far + key,
+                                           target_length)
             counts[key] += 2
 
         return permutations

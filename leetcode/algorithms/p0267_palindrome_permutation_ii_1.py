@@ -23,7 +23,7 @@ class Solution:
             return []
 
         middle = next(iter(chars)) if len(chars) == 1 else ''
-        permutations = self.generate(counts, used_counts)
+        permutations = self._generate(counts, used_counts)
 
         if permutations:
             return [permutation + middle + permutation[::-1]
@@ -31,7 +31,7 @@ class Solution:
         else:
             return [middle] if middle else []
 
-    def generate(self, counts, used_counts):
+    def _generate(self, counts, used_counts):
         permutations = []
 
         for key, count in counts.items():
@@ -39,7 +39,7 @@ class Solution:
                 continue
 
             used_counts[key] += 1
-            rest_permutations = self.generate(counts, used_counts)
+            rest_permutations = self._generate(counts, used_counts)
 
             if not rest_permutations:
                 permutations += [key]

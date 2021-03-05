@@ -8,13 +8,13 @@ class TicTacToe:
         result = 0
 
         if player == 1:
-            result = 1 if self.is_player_win(1, row, col) else 0
+            result = 1 if self._is_player_win(1, row, col) else 0
         elif player == 2:
-            result = 2 if self.is_player_win(2, row, col) else 0
+            result = 2 if self._is_player_win(2, row, col) else 0
 
         return result
 
-    def is_player_win(self, player: int, row: int, column: int) -> bool:
+    def _is_player_win(self, player: int, row: int, column: int) -> bool:
         mark = 'X' if player == 1 else 'O'
         n = len(self.board)
 

@@ -13,9 +13,9 @@ class Solution:
         left_skyline = self.getSkyline(buildings[:middle])
         right_skyline = self.getSkyline(buildings[middle:])
 
-        return self.merge(left_skyline, right_skyline)
+        return self._merge(left_skyline, right_skyline)
 
-    def merge(self, left_skyline, right_skyline):
+    def _merge(self, left_skyline, right_skyline):
         left_height, right_height = 0, 0
         left, right = 0, 0
         result = []

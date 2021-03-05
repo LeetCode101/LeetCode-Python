@@ -9,8 +9,8 @@ class ListNode:
 
 class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
-        stack1, stack2 = self.convert_list_to_stack(l1), \
-                         self.convert_list_to_stack(l2)
+        stack1, stack2 = self._convert_list_to_stack(l1), \
+                         self._convert_list_to_stack(l2)
         prev = None
         carry = 0
 
@@ -33,7 +33,7 @@ class Solution:
 
         return prev
 
-    def convert_list_to_stack(self, head: ListNode) -> List[int]:
+    def _convert_list_to_stack(self, head: ListNode) -> List[int]:
         stack, current = [], head
 
         while current:

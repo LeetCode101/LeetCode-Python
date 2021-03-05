@@ -6,7 +6,7 @@ class ListNode:
 
 class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
-        sum = self.get_list_sum(l1) + self.get_list_sum(l2)
+        sum = self._get_list_sum(l1) + self._get_list_sum(l2)
         numbers = list(str(sum))
         dummy = ListNode(-1)
         prev = dummy
@@ -17,7 +17,7 @@ class Solution:
 
         return dummy.next
 
-    def get_list_sum(self, head: ListNode) -> int:
+    def _get_list_sum(self, head: ListNode) -> int:
         sum, current = 0, head
 
         while current:

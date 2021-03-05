@@ -13,23 +13,23 @@ class Codec:
     def serialize(self, root):
         encoded = deque()
 
-        self.preorder(root, encoded)
+        self._preorder(root, encoded)
 
         return ','.join(list(encoded))
 
     def deserialize(self, data):
-        return self.deserialize_internal(deque(data.split(',')))
+        return self._deserialize(deque(data.split(',')))
 
-    def preorder(self, root: TreeNode, encoded: Deque) -> None:
+    def _preorder(self, root: TreeNode, encoded: Deque) -> None:
         if not root:
             encoded.append('')
         else:
             encoded.append(str(root.val))
 
-            self.preorder(root.left, encoded)
-            self.preorder(root.right, encoded)
+            self._preorder(root.left, encoded)
+            self._preorder(root.right, encoded)
 
-    def deserialize_internal(self, encoded: Deque) -> TreeNode:
+    def _deserialize(self, encoded: Deque) -> TreeNode:
         if encoded[0] == '':
             encoded.popleft()
 
@@ -37,7 +37,7 @@ class Codec:
 
         root_value = int(encoded.popleft())
         root = TreeNode(root_value)
-        root.left = self.deserialize_internal(encoded)
-        root.right = self.deserialize_internal(encoded)
+        root.left = self._deserialize(encoded)
+        root.right = self._deserialize(encoded)
 
         return root

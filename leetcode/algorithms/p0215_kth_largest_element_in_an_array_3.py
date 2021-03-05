@@ -6,7 +6,7 @@ class Solution:
         low, high = 0, len(nums) - 1
 
         while True:
-            p = self.partition(nums, low, high)
+            p = self._partition(nums, low, high)
 
             if p == k - 1:
                 return nums[p]
@@ -15,7 +15,7 @@ class Solution:
             else:
                 low = p + 1
 
-    def partition(self, nums: List[int], low: int, high: int):
+    def _partition(self, nums: List[int], low: int, high: int):
         pivot = (low + high) // 2
         pivot_value = nums[pivot]
         nums[pivot], nums[high] = nums[high], nums[pivot]

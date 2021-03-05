@@ -6,7 +6,7 @@ class ListNode:
 
 class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
-        current1, current2 = self.reverse_list(l1), self.reverse_list(l2)
+        current1, current2 = self._reverse_list(l1), self._reverse_list(l2)
         prev = None
         carry = 0
 
@@ -35,7 +35,7 @@ class Solution:
 
         return prev
 
-    def reverse_list(self, head: ListNode) -> ListNode:
+    def _reverse_list(self, head: ListNode) -> ListNode:
         prev, current = None, head
 
         while current:

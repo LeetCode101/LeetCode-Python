@@ -12,7 +12,7 @@ class Codec:
     def serialize(self, root: TreeNode) -> str:
         encoded = []
 
-        self.preorder(root, encoded)
+        self._preorder(root, encoded)
 
         return ','.join([str(x) for x in encoded])
 
@@ -22,18 +22,18 @@ class Codec:
 
         decoded = list(map(lambda x: int(x), data.split(',')))
 
-        return self.build_tree(decoded, 0, len(decoded) - 1)
+        return self._build_tree(decoded, 0, len(decoded) - 1)
 
-    def preorder(self, root: TreeNode, encoded: List[str]) -> None:
+    def _preorder(self, root: TreeNode, encoded: List[str]) -> None:
         if not root:
             return
 
         encoded.append(root.val)
 
-        self.preorder(root.left, encoded)
-        self.preorder(root.right, encoded)
+        self._preorder(root.left, encoded)
+        self._preorder(root.right, encoded)
 
-    def build_tree(self, preorder: List[int], start: int, end: int) \
+    def _build_tree(self, preorder: List[int], start: int, end: int) \
             -> TreeNode:
         if start > end:
             return None
@@ -44,7 +44,7 @@ class Codec:
             end + 1)
 
         root = TreeNode(root_value)
-        root.left = self.build_tree(preorder, start + 1, right_tree_start - 1)
-        root.right = self.build_tree(preorder, right_tree_start, end)
+        root.left = self._build_tree(preorder, start + 1, right_tree_start - 1)
+        root.right = self._build_tree(preorder, right_tree_start, end)
 
         return root

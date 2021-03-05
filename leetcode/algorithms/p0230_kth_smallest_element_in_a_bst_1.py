@@ -7,12 +7,12 @@ class TreeNode:
 
 class Solution:
     def kthSmallest(self, root: TreeNode, k: int) -> int:
-        nodes = self.traverse(root)
+        nodes = self._traverse(root)
 
         return nodes[k - 1].val
 
-    def traverse(self, root: TreeNode):
+    def _traverse(self, root: TreeNode):
         if not root:
             return []
 
-        return self.traverse(root.left) + [root] + self.traverse(root.right)
+        return self._traverse(root.left) + [root] + self._traverse(root.right)

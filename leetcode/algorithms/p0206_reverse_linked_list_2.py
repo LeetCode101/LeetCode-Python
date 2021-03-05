@@ -6,12 +6,12 @@ class ListNode:
 
 class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
-        return self.reverse(None, head)
+        return self._reverse(None, head)
 
-    def reverse(self, prev, current):
+    def _reverse(self, prev, current):
         if not current:
             return prev
 
         next, current.next = current.next, prev
 
-        return self.reverse(current, next)
+        return self._reverse(current, next)

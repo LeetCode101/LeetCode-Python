@@ -55,15 +55,15 @@ class Solution:
             separator = separators.get(math.ceil((length - i) / 3), '')
             high_digits = number_string[i:i + high_digits_length] \
                 if high_digits_length != 0 else number_string[i:i + 3]
-            digits = self.trim_zero(high_digits)
+            digits = self._trim_zero(high_digits)
             word = ''
 
             if len(digits) == 3:
-                word = self.parse_three_digits(digits)
+                word = self._parse_three_digits(digits)
             elif len(digits) == 2:
-                word = self.parse_two_digits(digits)
+                word = self._parse_two_digits(digits)
             elif len(digits) == 1:
-                word = self.parse_one_digit(digits)
+                word = self._parse_one_digit(digits)
 
             if word:
                 words.append(word + (' ' + separator if separator else ''))
@@ -72,15 +72,15 @@ class Solution:
 
         return ' '.join(words)
 
-    def parse_three_digits(self, num: str) -> str:
+    def _parse_three_digits(self, num: str) -> str:
         left = int(num[1:])
 
-        return self.parse_one_digit(num[0]) + ' Hundred' + \
-            (' ' + self.parse_two_digits(str(left)) if left != 0 else '')
+        return self._parse_one_digit(num[0]) + ' Hundred' + \
+            (' ' + self._parse_two_digits(str(left)) if left != 0 else '')
 
-    def parse_two_digits(self, num: str) -> str:
+    def _parse_two_digits(self, num: str) -> str:
         if len(num) == 1:
-            return self.parse_one_digit(num)
+            return self._parse_one_digit(num)
         elif int(num) < 20:
             return self.less_than_20[num]
         elif num[1] == '0':
@@ -89,10 +89,10 @@ class Solution:
             return self.larger_than_20[num[0]] + ' ' + \
                    self.less_than_10[num[1]]
 
-    def parse_one_digit(self, num: str) -> str:
+    def _parse_one_digit(self, num: str) -> str:
         return self.less_than_10[num]
 
-    def trim_zero(self, num: str) -> str:
+    def _trim_zero(self, num: str) -> str:
         if len(num) == 1:
             return num
 

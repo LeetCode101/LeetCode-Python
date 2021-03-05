@@ -12,7 +12,7 @@ class Trie:
         current = self.root
 
         for c in word:
-            index = self.get_child_index(c)
+            index = self._get_child_index(c)
             child = current.children[index]
 
             if not child:
@@ -26,7 +26,7 @@ class Trie:
         current = self.root
 
         for c in word:
-            index = self.get_child_index(c)
+            index = self._get_child_index(c)
             child = current.children[index]
 
             if not child:
@@ -40,7 +40,7 @@ class Trie:
         current = self.root
 
         for c in prefix:
-            index = self.get_child_index(c)
+            index = self._get_child_index(c)
             child = current.children[index]
 
             if not child:
@@ -50,5 +50,5 @@ class Trie:
 
         return True
 
-    def get_child_index(self, c: str) -> int:
+    def _get_child_index(self, c: str) -> int:
         return ord(c) - 97

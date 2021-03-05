@@ -14,13 +14,13 @@ class Solution:
 
         for row in range(rows):
             for column in range(columns):
-                self.dfs(row, column, board, '', trie, result, visited)
+                self._dfs(row, column, board, '', trie, result, visited)
 
         return list(result)
 
-    def dfs(self, row: int, column: int, board: List[List[str]], word: str,
-            trie: Trie, result: Set[str],
-            visited: List[List[bool]]) -> None:
+    def _dfs(self, row: int, column: int, board: List[List[str]], word: str,
+             trie: Trie, result: Set[str],
+             visited: List[List[bool]]) -> None:
         if not (0 <= row < len(board) and 0 <= column < len(board[0])):
             return
 
@@ -37,9 +37,9 @@ class Solution:
 
         visited[row][column] = True
 
-        self.dfs(row - 1, column, board, word, trie, result, visited)
-        self.dfs(row + 1, column, board, word, trie, result, visited)
-        self.dfs(row, column - 1, board, word, trie, result, visited)
-        self.dfs(row, column + 1, board, word, trie, result, visited)
+        self._dfs(row - 1, column, board, word, trie, result, visited)
+        self._dfs(row + 1, column, board, word, trie, result, visited)
+        self._dfs(row, column - 1, board, word, trie, result, visited)
+        self._dfs(row, column + 1, board, word, trie, result, visited)
 
         visited[row][column] = False

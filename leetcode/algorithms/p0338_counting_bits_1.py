@@ -3,9 +3,9 @@ from typing import List
 
 class Solution:
     def countBits(self, num: int) -> List[int]:
-        return [self.hammingWeight(x) for x in range(num + 1)]
+        return [self._hammingWeight(x) for x in range(num + 1)]
 
-    def hammingWeight(self, n: int) -> int:
+    def _hammingWeight(self, n: int) -> int:
         count = 0
 
         while n > 0:
