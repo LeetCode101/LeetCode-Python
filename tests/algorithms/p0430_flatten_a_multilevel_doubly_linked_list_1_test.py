@@ -40,6 +40,7 @@ class TestFlattenAMultilevelDoublyLinkedList(unittest.TestCase):
         n11.next = n12
         n12.prev = n11
 
-        self.assertListEqual([], convert_linked_list_to_list(solution.flatten(None)))
+        self.assertListEqual([], convert_linked_list_to_list(
+            solution.flatten(None)))
         self.assertListEqual([1, 2, 3, 7, 8, 11, 12, 9, 10, 4, 5, 6],
                              convert_linked_list_to_list(solution.flatten(n1)))
