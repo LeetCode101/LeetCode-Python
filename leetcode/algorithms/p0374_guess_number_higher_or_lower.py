@@ -4,9 +4,9 @@
 # otherwise return 0
 def guess(num: int) -> int:
     if num > 10:
-        return 1
-    elif num < 10:
         return -1
+    elif num < 10:
+        return 1
     else:
         return 0
 
