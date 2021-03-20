@@ -10,11 +10,11 @@ class Solution:
             return None
 
         current = head
-        i, mapping = 0, {}
+        i, index_to_node = 0, {}
 
         while current:
             i += 1
-            mapping[i] = current
+            index_to_node[i] = current
             current = current.next
 
         step = k % i
@@ -23,7 +23,7 @@ class Solution:
             return head
 
         index_to_cut = i - step
-        mapping[i].next = head
-        mapping[index_to_cut].next = None
+        index_to_node[i].next = head
+        index_to_node[index_to_cut].next = None
 
-        return mapping[index_to_cut + 1]
+        return index_to_node[index_to_cut + 1]
