@@ -10,9 +10,9 @@ class Solution:
             value = nums[middle]
 
             if value > target:
-                high -= 1
+                high = middle - 1
             elif value < target:
-                low += 1
+                low = middle + 1
             else:
                 return middle
 
