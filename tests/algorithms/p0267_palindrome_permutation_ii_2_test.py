@@ -2,7 +2,7 @@ import unittest
 from leetcode.algorithms.p0267_palindrome_permutation_ii_2 import Solution
 
 
-class TestPalindromePermutationII(unittest.TestCase):
+class TestPalindromePermutation(unittest.TestCase):
     def test_palindrome_permutation(self):
         solution = Solution()
 
