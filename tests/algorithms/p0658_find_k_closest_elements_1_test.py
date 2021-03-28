@@ -7,6 +7,8 @@ class TestFindKClosestElements(unittest.TestCase):
         solution = Solution()
 
         self.assertListEqual([1, 2, 3, 4], solution.findClosestElements(
+            [-5, 1, 2, 3, 4, 5], 4, 3))
+        self.assertListEqual([1, 2, 3, 4], solution.findClosestElements(
             [1, 2, 3, 4, 5], 4, 3))
         self.assertListEqual([1, 2, 3, 4], solution.findClosestElements(
             [1, 2, 3, 4, 5], 4, -1))
