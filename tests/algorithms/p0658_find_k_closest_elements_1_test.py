@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0658_find_k_closest_elements import Solution
+from leetcode.algorithms.p0658_find_k_closest_elements_1 import Solution
 
 
 class TestFindKClosestElements(unittest.TestCase):
