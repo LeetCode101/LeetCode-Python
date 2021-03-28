@@ -13,14 +13,14 @@ class Solution:
 
             if nums[middle] > nums[low]:
                 if nums[low] <= target < nums[middle]:
-                    high = middle
+                    high = middle - 1
                 else:
                     low = middle + 1
             elif nums[middle] < nums[low]:
                 if nums[middle] < target < nums[low]:
                     low = middle + 1
                 else:
-                    high = middle
+                    high = middle - 1
             else:
                 low += 1
 
