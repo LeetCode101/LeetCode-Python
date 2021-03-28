@@ -1,0 +1,27 @@
+from typing import List
+
+
+class Solution:
+    def search(self, nums: List[int], target: int) -> bool:
+        low, high = 0, len(nums) - 1
+
+        while low <= high:
+            middle = low + (high - low) // 2
+
+            if nums[middle] == target:
+                return True
+
+            if nums[middle] > nums[low]:
+                if nums[low] <= target < nums[middle]:
+                    high = middle
+                else:
+                    low = middle + 1
+            elif nums[middle] < nums[low]:
+                if nums[middle] < target < nums[low]:
+                    low = middle + 1
+                else:
+                    high = middle
+            else:
+                low += 1
+
+        return False
