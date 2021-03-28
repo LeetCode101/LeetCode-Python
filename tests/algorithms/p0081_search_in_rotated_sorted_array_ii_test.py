@@ -8,5 +8,6 @@ class TestSearchInRotatedSortedArray(unittest.TestCase):
         solution = Solution()
 
         self.assertTrue(solution.search([2, 5, 6, 0, 0, 1, 2], 0))
+        self.assertTrue(solution.search([2, 5, 6, 0, 0, 1, 2], 1))
         self.assertFalse(solution.search([2, 5, 6, 0, 0, 1, 2], 3))
         self.assertFalse(solution.search([2, 5, 6, 0, 0, 1, 2], 10))
