@@ -1,6 +1,6 @@
 import unittest
-from leetcode\
-    .algorithms.p0026_remove_duplicates_from_sorted_array_1 import Solution
+from leetcode.algorithms\
+    .p0026_remove_duplicates_from_sorted_array_1 import Solution
 
 
 class TestRemoveDuplicatesFromSortedArray(unittest.TestCase):
