@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0162_find_peak_element import Solution
+from leetcode.algorithms.p0162_find_peak_element_1 import Solution
 
 
 class TestFindPeakElement(unittest.TestCase):
