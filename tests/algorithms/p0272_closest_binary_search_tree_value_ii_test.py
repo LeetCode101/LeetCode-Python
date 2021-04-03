@@ -12,6 +12,7 @@ class TestClosestBinarySearchTreeValue(unittest.TestCase):
         a.left = b
         a.right = c
 
-        self.assertListEqual([4, 3], solution.closestKValues(a, 3.714286, 2))
+        self.assertListEqual([3, 4], sorted(solution.closestKValues(
+            a, 3.714286, 2)))
         self.assertListEqual([1, solution.closestKValues(
             TreeNode(1), 0.000000, 1)])
