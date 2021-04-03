@@ -12,4 +12,5 @@ class TestBinaryTreePreorderTraversal(unittest.TestCase):
         a.left = b
         a.right = c
 
+        self.assertListEqual([], solution.preorderTraversal(None))
         self.assertListEqual([4, 2, 1, 3, 5], solution.preorderTraversal(a))
