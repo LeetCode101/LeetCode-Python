@@ -14,7 +14,7 @@ class Solution:
     def closestKValues(self, root: TreeNode, target: float, k: int) \
             -> List[int]:
         deque = collections.deque([])
-        self._preorder_traversal(root, deque)
+        self._inorder_traversal(root, deque)
 
         while len(deque) > k:
             if abs(deque[0] - target) > abs(deque[-1] - target):
@@ -24,12 +24,12 @@ class Solution:
 
         return list(deque)
 
-    def _preorder_traversal(self, root: TreeNode, deque) -> None:
+    def _inorder_traversal(self, root: TreeNode, deque) -> None:
         if not root:
             return
 
-        self._preorder_traversal(root.left, deque)
+        self._inorder_traversal(root.left, deque)
 
         deque.append(root.val)
 
-        self._preorder_traversal(root.right, deque)
+        self._inorder_traversal(root.right, deque)

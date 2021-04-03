@@ -21,5 +21,6 @@ class Solution:
             return
 
         values.append(root.val)
+
         self._preorder_traversal(root.left, values)
         self._preorder_traversal(root.right, values)

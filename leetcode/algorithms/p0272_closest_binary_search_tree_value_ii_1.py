@@ -13,19 +13,19 @@ class Solution:
     def closestKValues(self, root: TreeNode, target: float, k: int) \
             -> List[int]:
         sorted_values = []
-        self._preorder_traversal(root, sorted_values)
+        self._inorder_traversal(root, sorted_values)
 
         return self._find_closest_elements(sorted_values, k, target)
 
-    def _preorder_traversal(self, root: TreeNode, values: List[int]) -> None:
+    def _inorder_traversal(self, root: TreeNode, values: List[int]) -> None:
         if not root:
             return
 
-        self._preorder_traversal(root.left, values)
+        self._inorder_traversal(root.left, values)
 
         values.append(root.val)
 
-        self._preorder_traversal(root.right, values)
+        self._inorder_traversal(root.right, values)
 
     def _find_closest_elements(self, arr: List[int], k: int, x: float) \
             -> List[int]:
