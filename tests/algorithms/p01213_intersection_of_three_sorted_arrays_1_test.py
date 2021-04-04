@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p01213_intersection_of_three_sorted_arrays \
+from leetcode.algorithms.p01213_intersection_of_three_sorted_arrays_1 \
     import Solution
 
 
