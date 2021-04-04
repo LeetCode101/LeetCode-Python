@@ -9,3 +9,4 @@ class TestSearchInASortedArrayOfUnknownSize(unittest.TestCase):
         array_reader = ArrayReader()
 
         self.assertEqual(4, solution.search(array_reader, 9))
+        self.assertEqual(-1, solution.search(array_reader, 2))
