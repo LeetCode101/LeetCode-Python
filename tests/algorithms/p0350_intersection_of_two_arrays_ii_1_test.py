@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0350_intersection_of_two_arrays_ii import Solution
+from leetcode.algorithms.p0350_intersection_of_two_arrays_ii_1 import Solution
 
 
 class TestIntersectionOfTwoArrays(unittest.TestCase):
