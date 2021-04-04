@@ -11,3 +11,5 @@ class TestFindSmallestLetterGreaterThanTarget(unittest.TestCase):
             ['c', 'f', 'j'], 'a'))
         self.assertEqual('c', solution.nextGreatestLetter(
             ['c', 'f', 'j'], 'k'))
+        self.assertEqual('h', solution.nextGreatestLetter(
+            ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'], 'g'))
