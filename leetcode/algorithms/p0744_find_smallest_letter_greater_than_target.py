@@ -8,13 +8,13 @@ class Solution:
         if letters[-1] <= target:
             return letters[0]
 
-        while low < high:
+        while low <= high:
             middle = low + (high - low) // 2
             letter = letters[middle]
 
             if letter <= target:
                 low += 1
             else:
-                high = middle
+                high = middle - 1
 
-        return letters[high]
+        return letters[low]
