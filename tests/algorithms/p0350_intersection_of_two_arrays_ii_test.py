@@ -7,5 +7,5 @@ class TestIntersectionOfTwoArrays(unittest.TestCase):
         solution = Solution()
 
         self.assertListEqual([2, 2], solution.intersect([1, 2, 2, 1], [2, 2]))
-        self.assertListEqual([4, 9], solution.intersect(
-            [4, 9, 5], [9, 4, 9, 8, 4]))
+        self.assertListEqual([4, 9], sorted(solution.intersect(
+            [4, 9, 5], [9, 4, 9, 8, 4])))
