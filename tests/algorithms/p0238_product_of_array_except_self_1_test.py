@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0238_product_of_array_except_self import Solution
+from leetcode.algorithms.p0238_product_of_array_except_self_1 import Solution
 
 
 class TestProductOfArrayExceptSelf(unittest.TestCase):
