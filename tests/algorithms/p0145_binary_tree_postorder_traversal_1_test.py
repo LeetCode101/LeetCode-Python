@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0145_binary_tree_postorder_traversal \
+from leetcode.algorithms.p0145_binary_tree_postorder_traversal_1 \
     import Solution, TreeNode
 
 
