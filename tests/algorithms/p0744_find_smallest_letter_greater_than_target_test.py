@@ -4,7 +4,7 @@ from leetcode.algorithms.p0744_find_smallest_letter_greater_than_target \
 
 
 class TestFindSmallestLetterGreaterThanTarget(unittest.TestCase):
-    def test_p0744_find_smallest_letter_greater_than_target(self):
+    def test_find_smallest_letter_greater_than_target(self):
         solution = Solution()
 
         self.assertEqual('c', solution.nextGreatestLetter(
