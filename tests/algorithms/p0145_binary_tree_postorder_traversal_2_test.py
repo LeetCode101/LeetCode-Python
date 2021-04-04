@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0145_binary_tree_postorder_traversal_1 \
+from leetcode.algorithms.p0145_binary_tree_postorder_traversal_2 \
     import Solution, TreeNode
 
 
@@ -12,4 +12,5 @@ class TestBinaryTreePostorderTraversal(unittest.TestCase):
         a.left = b
         a.right = c
 
+        self.assertListEqual([], solution.postorderTraversal(None))
         self.assertListEqual([1, 3, 2, 5, 4], solution.postorderTraversal(a))
