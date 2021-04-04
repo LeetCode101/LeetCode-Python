@@ -3,7 +3,7 @@ from leetcode.algorithms.p01213_intersection_of_three_sorted_arrays_2 \
     import Solution
 
 
-class Test(unittest.TestCase):
+class TestIntersectionOfThreeSortedArrays(unittest.TestCase):
     def test_intersection_of_three_sorted_arrays(self):
         solution = Solution()
 
