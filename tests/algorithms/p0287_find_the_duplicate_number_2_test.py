@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0287_find_the_duplicate_number_1 import Solution
+from leetcode.algorithms.p0287_find_the_duplicate_number_2 import Solution
 
 
 class TestFindTheDuplicateNumber(unittest.TestCase):
