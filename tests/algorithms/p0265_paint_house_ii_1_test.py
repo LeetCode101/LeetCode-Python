@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0265_paint_house_ii import Solution
+from leetcode.algorithms.p0265_paint_house_ii_1 import Solution
 
 
 class TestPaintHouse(unittest.TestCase):
