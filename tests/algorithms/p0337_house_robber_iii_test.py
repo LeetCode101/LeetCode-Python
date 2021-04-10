@@ -2,7 +2,7 @@ import unittest
 from leetcode.algorithms.p0337_house_robber_iii import Solution, TreeNode
 
 
-class Test(unittest.TestCase):
+class TestHouseRobber(unittest.TestCase):
     def test_house_robber(self):
         solution = Solution()
         a = TreeNode(3)
