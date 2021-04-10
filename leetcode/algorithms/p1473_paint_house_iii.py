@@ -14,15 +14,20 @@ class Solution:
             if i >= m or k > target:
                 return sys.maxsize
 
-            min_cost = sys.maxsize
+            current_min_cost = sys.maxsize
 
             if houses[i]:
-                min_cost = min(min_cost, dfs(i + 1, k + (houses[i] != p), houses[i]))
+                current_min_cost = min(
+                    current_min_cost,
+                    dfs(i + 1, k + (houses[i] != p), houses[i]))
             else:
                 for color in range(1, n + 1):
-                    min_cost = min(min_cost, cost[i][color - 1] + dfs(i + 1, k + (color != p), color))
+                    current_min_cost = min(
+                        current_min_cost,
+                        cost[i][color - 1] +
+                        dfs(i + 1, k + (color != p), color))
 
-            return min_cost
+            return current_min_cost
 
         min_cost = dfs(0, 0, None)
 
