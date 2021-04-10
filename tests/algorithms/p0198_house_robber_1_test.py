@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0198_house_robber import Solution
+from leetcode.algorithms.p0198_house_robber_1 import Solution
 
 
 class TestHouseRobber(unittest.TestCase):
