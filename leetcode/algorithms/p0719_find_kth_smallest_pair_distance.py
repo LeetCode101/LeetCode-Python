@@ -9,14 +9,14 @@ class Solution:
         while low < high:
             middle = low + (high - low) // 2
 
-            if self._has_k_pair(nums, k, middle):
+            if self._has_k_pairs(nums, k, middle):
                 high = middle
             else:
                 low = middle + 1
 
         return low
 
-    def _has_k_pair(self, nums: List[int], k: int, middle_distance: int) \
+    def _has_k_pairs(self, nums: List[int], k: int, middle_distance: int) \
             -> bool:
         count = 0
         left = 0
