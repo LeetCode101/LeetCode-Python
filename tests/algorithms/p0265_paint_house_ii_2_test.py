@@ -3,7 +3,7 @@ from leetcode.algorithms.p0265_paint_house_ii_2 import Solution
 
 
 class TestPaintHouse(unittest.TestCase):
-    def test_paint_house_ii(self):
+    def test_paint_house(self):
         solution = Solution()
 
         self.assertEqual(0, solution.minCostII([]))
