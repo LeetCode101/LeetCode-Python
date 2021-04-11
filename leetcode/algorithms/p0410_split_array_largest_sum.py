@@ -17,13 +17,17 @@ class Solution:
 
     def _has_more_than_m_groups(self, nums: List[int],
                                 largest_sum: int, m: int) -> bool:
-        count, current = 1, 0
+        current = 0
 
         for num in nums:
-            current += num
+            if current + num > largest_sum:
+                m -= 1
 
-            if current > largest_sum:
+                if m <= 0:
+                    return True
+
                 current = num
-                count += 1
+            else:
+                current += num
 
-        return count > m
+        return False
