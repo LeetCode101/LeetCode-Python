@@ -7,18 +7,23 @@ class Solution:
 
         while low < high:
             middle = low + (high - low) // 2
-            count, current = 1, 0
 
-            for num in nums:
-                current += num
-
-                if current > middle:
-                    current = num
-                    count += 1
-
-            if count > m:
+            if self._has_more_than_m_groups(nums, middle, m):
                 low = middle + 1
             else:
                 high = middle
 
         return low
+
+    def _has_more_than_m_groups(self, nums: List[int], largest_sum: int, m: int) -> bool:
+        count, current = 1, 0
+
+        for num in nums:
+            current += num
+
+            if current > largest_sum:
+                current = num
+                count += 1
+
+        return count > m
+
