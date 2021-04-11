@@ -7,3 +7,4 @@ class TestFindKthSmallestPairDistance(unittest.TestCase):
         solution = Solution()
 
         self.assertEqual(0, solution.smallestDistancePair([1, 3, 1], 1))
+        self.assertEqual(0, solution.smallestDistancePair([1, 30, 1], 1))
