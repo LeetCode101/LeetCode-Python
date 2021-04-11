@@ -16,8 +16,8 @@ class Solution:
 
         return low
 
-    def _has_more_than_k_pairs(self, nums: List[int], k: int, middle_distance: int) \
-            -> bool:
+    def _has_more_than_k_pairs(self, nums: List[int],
+                               k: int, middle_distance: int) -> bool:
         count = 0
         left = 0
 

@@ -15,7 +15,8 @@ class Solution:
 
         return low
 
-    def _has_more_than_m_groups(self, nums: List[int], largest_sum: int, m: int) -> bool:
+    def _has_more_than_m_groups(self, nums: List[int],
+                                largest_sum: int, m: int) -> bool:
         count, current = 1, 0
 
         for num in nums:
@@ -26,4 +27,3 @@ class Solution:
                 count += 1
 
         return count > m
-
