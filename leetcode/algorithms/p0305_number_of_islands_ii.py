@@ -10,7 +10,8 @@ class Solution:
         counts = [0] * len(positions)
 
         for i, position in enumerate(positions):
-            grid[position[0]][position[1]] = '1'
+            row, column = position[0], position[1]
+            grid[row][column] = '1'
             counts[i] = self.num_islands(grid)
 
         return counts
