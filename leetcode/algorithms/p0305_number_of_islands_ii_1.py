@@ -12,11 +12,11 @@ class Solution:
         for i, position in enumerate(positions):
             row, column = position[0], position[1]
             grid[row][column] = '1'
-            counts[i] = self.num_islands(grid)
+            counts[i] = self._num_islands(grid)
 
         return counts
 
-    def num_islands(self, grid: List[List[str]]) -> int:
+    def _num_islands(self, grid: List[List[str]]) -> int:
         count = 0
         m, n = len(grid), len(grid[0])
         visited = [[False for _ in range(n)] for _ in range(m)]
