@@ -28,7 +28,5 @@ class Solution:
 
         visited[row][column] = True
 
-        self._dfs(grid, row - 1, column, visited)
-        self._dfs(grid, row + 1, column, visited)
-        self._dfs(grid, row, column - 1, visited)
-        self._dfs(grid, row, column + 1, visited)
+        for direction in [[-1, 0], [0, -1], [1, 0], [0, 1]]:
+            self._dfs(grid, row + direction[0], column + direction[1], visited)

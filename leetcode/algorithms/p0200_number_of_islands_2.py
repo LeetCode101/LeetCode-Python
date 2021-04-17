@@ -22,25 +22,17 @@ class Solution:
                         cell = queue.popleft()
                         row, column = cell[0], cell[1]
 
-                        if row - 1 >= 0 and grid[row - 1][column] == '1' \
-                                and not visited[row - 1][column]:
-                            queue.append((row - 1, column))
-                            visited[row - 1][column] = True
+                        for direction in [[-1, 0], [0, -1], [1, 0], [0, 1]]:
+                            next_row = row + direction[0]
+                            next_column = column + direction[1]
 
-                        if row + 1 <= m - 1 and grid[row + 1][column] == '1' \
-                                and not visited[row + 1][column]:
-                            queue.append((row + 1, column))
-                            visited[row + 1][column] = True
+                            if next_row < 0 or next_row >= m or next_column < 0 \
+                                    or next_column >= n \
+                                    or grid[next_row][next_column] != '1' \
+                                    or visited[next_row][next_column]:
+                                continue
 
-                        if column - 1 >= 0 and grid[row][column - 1] == '1' \
-                                and not visited[row][column - 1]:
-                            queue.append((row, column - 1))
-                            visited[row][column - 1] = True
-
-                        if column + 1 <= n - 1 \
-                                and grid[row][column + 1] == '1' \
-                                and not visited[row][column + 1]:
-                            queue.append((row, column + 1))
-                            visited[row][column + 1] = True
+                            queue.append((next_row, next_column))
+                            visited[next_row][next_column] = True
 
         return count
