@@ -30,7 +30,8 @@ class Solution:
 
         directions = ['u', 'l', 'd', 'r']
         for i, direction in enumerate([[-1, 0], [0, -1], [1, 0], [0, 1]]):
-            full_path += self._dfs(grid, row + direction[0],
-                                   column + direction[1], visited) + directions[i]
+            path = self._dfs(grid, row + direction[0],
+                             column + direction[1], visited)
+            full_path += path + directions[i]
 
         return full_path + 'c'
