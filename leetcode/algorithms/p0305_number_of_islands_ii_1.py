@@ -11,7 +11,7 @@ class Solution:
 
         for i, position in enumerate(positions):
             row, column = position[0], position[1]
-            grid[row][column] = '1'
+            grid[row][column] = 1
             counts[i] = self._num_islands(grid)
 
         return counts
@@ -23,7 +23,7 @@ class Solution:
 
         for i in range(m):
             for j in range(n):
-                if grid[i][j] == '1' and not visited[i][j]:
+                if grid[i][j] == 1 and not visited[i][j]:
                     count += 1
                     visited[i][j] = True
                     queue = deque([(i, j)])
@@ -39,7 +39,7 @@ class Solution:
                             if next_row < 0 or next_row >= m \
                                     or next_column < 0 \
                                     or next_column >= n \
-                                    or grid[next_row][next_column] != '1' \
+                                    or grid[next_row][next_column] != 1 \
                                     or visited[next_row][next_column]:
                                 continue
 

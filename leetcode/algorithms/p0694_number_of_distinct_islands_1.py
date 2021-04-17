@@ -25,7 +25,6 @@ class Solution:
             return ''
 
         visited[row][column] = True
-        grid[row][column] = 0
         full_path = ''
 
         directions = ['u', 'l', 'd', 'r']
