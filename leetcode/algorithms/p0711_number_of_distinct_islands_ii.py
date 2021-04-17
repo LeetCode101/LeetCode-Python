@@ -16,7 +16,7 @@ class Solution:
                     self._dfs(i, j, grid, visited, path)
                     path = self._normalize(path)
 
-                    if self._is_all_path_variation_valid(path, paths):
+                    if self._is_all_path_variation_unique(path, paths):
                         paths.add(tuple(path))
 
         return len(paths)
@@ -32,30 +32,34 @@ class Solution:
         path.append((row, column))
 
         for direction in [[-1, 0], [0, -1], [1, 0], [0, 1]]:
-            self._dfs(row + direction[0], column + direction[1], grid, visited, path)
+            self._dfs(row + direction[0], column + direction[1],
+                      grid, visited, path)
 
     def _normalize(self, path):
         sorted_path = sorted(path)
 
-        return [(x - sorted_path[0][0], y - sorted_path[0][1]) for x, y in sorted_path]
+        return [(x - sorted_path[0][0], y - sorted_path[0][1])
+                for x, y in sorted_path]
 
-    def _is_all_path_variation_valid(self, path, paths):
-        if tuple(path) in paths or not self._is_rotation_valid(path, paths):
+    def _is_all_path_variation_unique(self, path, paths):
+        if tuple(path) in paths or not self._is_rotation_unique(path, paths):
             return False
 
         horizontal_path = self._normalize([(-x, y) for x, y in path])
 
-        if tuple(horizontal_path) in paths or not self._is_rotation_valid(horizontal_path, paths):
+        if tuple(horizontal_path) in paths \
+                or not self._is_rotation_unique(horizontal_path, paths):
             return False
 
         vertical_path = self._normalize([(x, -y) for x, y in path])
 
-        if tuple(vertical_path) in paths or not self._is_rotation_valid(vertical_path, paths):
+        if tuple(vertical_path) in paths \
+                or not self._is_rotation_unique(vertical_path, paths):
             return False
 
         return True
 
-    def _is_rotation_valid(self, path, paths):
+    def _is_rotation_unique(self, path, paths):
         for i in range(3):
             path = self._normalize([(y, -x) for x, y in path])
 
