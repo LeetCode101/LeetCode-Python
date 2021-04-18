@@ -13,3 +13,6 @@ class TestNumberOfDistinctIslands(unittest.TestCase):
         self.assertEqual(2, solution.numDistinctIslands2(
             [[1, 1, 1, 0, 0], [1, 0, 0, 0, 1],
              [0, 1, 0, 0, 1], [0, 1, 1, 1, 0]]))
+        self.assertEqual(1, solution.numDistinctIslands2(
+            [[0, 1, 1, 1, 0], [0, 1, 0, 0, 0],
+             [0, 0, 0, 0, 1], [0, 0, 1, 1, 1]]))
