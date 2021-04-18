@@ -20,9 +20,6 @@ class Solution:
         return max_area if max_area != 0 else self._max_area_of_island(grid)
 
     def _max_area_of_island(self, grid: List[List[int]]) -> int:
-        if not grid:
-            return 0
-
         max_area = 0
         m, n = len(grid), len(grid[0])
         visited = [[False for _ in range(n)] for _ in range(m)]
