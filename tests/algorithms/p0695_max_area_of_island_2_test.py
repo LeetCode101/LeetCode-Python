@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0695_max_area_of_island import Solution
+from leetcode.algorithms.p0695_max_area_of_island_2 import Solution
 
 
 class TestMaxAreaOfIsland(unittest.TestCase):
