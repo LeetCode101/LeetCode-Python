@@ -10,10 +10,8 @@ environment:
     - PYTHON: "C:\\Python38-x64"
 build: off
 install:
-  - "%PYTHON%\\python.exe -m pip install pycodestyle coveralls"
+  - "%PYTHON%\\python.exe -m pip install pycodestyle"
 before_test:
   - "%PYTHON%\\Scripts\\pycodestyle.exe ."
 test_script:
   - "%PYTHON%\\Scripts\\coverage.exe run --source=leetcode setup.py test"
-after_test:
-  - "%PYTHON%\\Scripts\\coveralls.exe"
