@@ -33,8 +33,7 @@ class Solution:
         visited[row][column] = True
 
         for direction in [[-1, 0], [1, 0], [0, -1], [0, 1]]:
-            if not self._dfs(row + direction[0],
-                                          column + direction[1], grid, visited):
-                closed = False
+            closed &= self._dfs(row + direction[0],
+                                column + direction[1], grid, visited)
 
         return closed
