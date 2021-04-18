@@ -3,6 +3,9 @@ from typing import List
 
 class Solution:
     def numDistinctIslands2(self, grid: List[List[int]]) -> int:
+        if not grid:
+            return 0
+
         paths = set()
         m = len(grid)
         n = len(grid[0])
