@@ -29,6 +29,7 @@ class Solution:
         visited[row][column] = True
 
         for direction in [[-1, 0], [0, -1], [1, 0], [0, 1]]:
-            area += self._dfs(grid, row + direction[0], column + direction[1], visited)
+            area += self._dfs(grid, row + direction[0],
+                              column + direction[1], visited)
 
         return area
