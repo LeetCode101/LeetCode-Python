@@ -7,10 +7,10 @@ python:
   - 3.8
   - 3.9
 install:
-  - pip install codecov
+  - pip install coveralls
   - pip install pycodestyle
 script:
   - pycodestyle .
   - coverage run --source=leetcode setup.py test
 after_success:
-  - codecov
+  - coveralls
