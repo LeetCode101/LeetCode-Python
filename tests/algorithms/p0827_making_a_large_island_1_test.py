@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0827_making_a_large_island import Solution
+from leetcode.algorithms.p0827_making_a_large_island_1 import Solution
 
 
 class TestMakingALargeIsland(unittest.TestCase):
