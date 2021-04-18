@@ -34,7 +34,8 @@ class Solution:
 
                                 continue
 
-                            if visited[next_row][next_column] or grid[next_row][next_column] == 1:
+                            if visited[next_row][next_column] \
+                                    or grid[next_row][next_column] == 1:
                                 continue
 
                             queue.append((next_row, next_column))
