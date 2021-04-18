@@ -9,28 +9,32 @@ class Solution:
         m = len(grid)
         n = len(grid[0])
         count = 0
+        visited = [[False for _ in range(n)] for _ in range(m)]
 
-        for i in range(m):
-            for j in range(n):
-                if grid[i][j] == 0:
-                    count += self._dfs(i, j, grid)
+        for i in range(1, m):
+            for j in range(1, n):
+                if grid[i][j] == 0 and not visited[i][j] \
+                        and self._dfs(i, j, grid, visited):
+                    count += 1
 
         return count
 
-    def _dfs(self, row, column, grid):
+    def _dfs(self, row, column, grid, visited):
         m = len(grid)
         n = len(grid[0])
 
         if row < 0 or row >= m or column < 0 or column >= n:
-            return 0
+            return False
 
-        if grid[row][column] == 1:
+        if grid[row][column] == 1 or visited[row][column]:
             return 1
 
-        grid[row][column] = 1
-        edges = 0
+        closed = True
+        visited[row][column] = True
 
         for direction in [[-1, 0], [1, 0], [0, -1], [0, 1]]:
-            edges += self._dfs(row + direction[0], column + direction[1], grid)
+            if not self._dfs(row + direction[0],
+                                          column + direction[1], grid, visited):
+                closed = False
 
-        return 1 if edges == 4 else 0
+        return closed
