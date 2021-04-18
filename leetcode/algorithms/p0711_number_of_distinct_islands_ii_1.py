@@ -49,14 +49,12 @@ class Solution:
             return False
 
         horizontal_path = self._normalize([(-x, y) for x, y in path])
-
-        if tuple(horizontal_path) in paths \
-                or not self._is_rotation_unique(horizontal_path, paths):
-            return False
-
         vertical_path = self._normalize([(x, -y) for x, y in path])
 
-        if tuple(vertical_path) in paths \
+        if tuple(horizontal_path) in paths or tuple(vertical_path) in paths:
+            return False
+
+        if not self._is_rotation_unique(horizontal_path, paths) \
                 or not self._is_rotation_unique(vertical_path, paths):
             return False
 
