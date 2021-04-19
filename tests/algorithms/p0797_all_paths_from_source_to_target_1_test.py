@@ -1,5 +1,6 @@
 import unittest
-from leetcode.algorithms.p0797_all_paths_from_source_to_target import Solution
+from leetcode.algorithms.p0797_all_paths_from_source_to_target_1 \
+    import Solution
 
 
 class TestAllPathsFromSourceToTarget(unittest.TestCase):
