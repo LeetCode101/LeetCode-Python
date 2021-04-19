@@ -9,9 +9,9 @@ class TestAllPathsFromSourceToTarget(unittest.TestCase):
 
         self.assertListEqual([], solution.allPathsSourceTarget([]))
         self.assertListEqual([[0, 1, 3], [0, 2, 3]],
-                             solution.allPathsSourceTarget(
-                                 [[1, 2], [3], [3], []]))
-        self.assertListEqual([[0, 4], [0, 3, 4], [0, 1, 3, 4],
-                              [0, 1, 2, 3, 4], [0, 1, 4]],
-                             solution.allPathsSourceTarget(
-                                 [[4, 3, 1], [3, 2, 4], [3], [4], []]))
+                             sorted(solution.allPathsSourceTarget(
+                                 [[1, 2], [3], [3], []])))
+        self.assertListEqual(sorted([[0, 4], [0, 3, 4], [0, 1, 3, 4],
+                                     [0, 1, 2, 3, 4], [0, 1, 4]]),
+                             sorted(solution.allPathsSourceTarget(
+                                 [[4, 3, 1], [3, 2, 4], [3], [4], []])))
