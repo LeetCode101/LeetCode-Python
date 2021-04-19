@@ -8,26 +8,25 @@ class Solution:
             return 0
 
         m, n = len(grid), len(grid[0])
-
         max_area = 0
-        island_tag = 100
-        visited = [[False for _ in range(n)] for _ in range(m)]
+        island_index = 0
         areas = collections.Counter()
+        visited = [[False for _ in range(n)] for _ in range(m)]
+        islands = [[-1 for _ in range(n)] for _ in range(m)]
 
         for i in range(m):
             for j in range(n):
                 if grid[i][j] == 0 or visited[i][j]:
                     continue
 
-                island_tag += 1
+                island_index += 1
                 visited[i][j] = True
                 queue = [(i, j)]
 
                 while queue:
                     (row, column) = queue.pop(0)
-                    areas[island_tag] += 1
-                    max_area = max(max_area, areas[island_tag])
-                    grid[row][column] = island_tag
+                    areas[island_index] += 1
+                    islands[row][column] = island_index
 
                     for direction in [[-1, 0], [0, -1], [1, 0], [0, 1]]:
                         next_row = row + direction[0]
@@ -36,12 +35,14 @@ class Solution:
                         if next_row < 0 or next_row >= m \
                                 or next_column < 0 \
                                 or next_column >= n \
-                                or grid[next_row][next_column] == 0 \
+                                or grid[next_row][next_column] != 1 \
                                 or visited[next_row][next_column]:
                             continue
 
                         visited[next_row][next_column] = True
                         queue.append((next_row, next_column))
+
+                max_area = max(max_area, areas[island_index])
 
         for i in range(m):
             for j in range(n):
@@ -49,7 +50,7 @@ class Solution:
                     continue
 
                 area = 1
-                islands = set()
+                neighbour_islands = set()
 
                 for direction in [[-1, 0], [0, -1], [1, 0], [0, 1]]:
                     next_row = i + direction[0]
@@ -60,9 +61,9 @@ class Solution:
                             or next_column >= n:
                         continue
 
-                    islands.add(grid[next_row][next_column])
+                    neighbour_islands.add(islands[next_row][next_column])
 
-                for island in islands:
+                for island in neighbour_islands:
                     area += areas[island]
 
                 max_area = max(max_area, area)
