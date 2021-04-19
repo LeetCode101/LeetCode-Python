@@ -16,35 +16,31 @@ class Solution:
 
         for i in range(m):
             for j in range(n):
-                if grid[i][j] == 0 or visited[i][j]:
-                    continue
+                if grid[i][j] == 1 and not visited[i][j]:
+                    island_index += 1
 
-                island_index += 1
-                visited[i][j] = True
-                queue = [(i, j)]
+                    self._dfs(grid, i, j, visited, island_index,
+                              areas, islands)
 
-                while queue:
-                    (row, column) = queue.pop(0)
-                    areas[island_index] += 1
-                    islands[row][column] = island_index
-
-                    for direction in [[-1, 0], [0, -1], [1, 0], [0, 1]]:
-                        next_row = row + direction[0]
-                        next_column = column + direction[1]
-
-                        if next_row < 0 or next_row >= m \
-                                or next_column < 0 \
-                                or next_column >= n \
-                                or grid[next_row][next_column] != 1 \
-                                or visited[next_row][next_column]:
-                            continue
-
-                        visited[next_row][next_column] = True
-                        queue.append((next_row, next_column))
-
-                max_area = max(max_area, areas[island_index])
+                    max_area = max(max_area, areas[island_index])
 
         return max(max_area, self._get_max_area(m, n, grid, areas, islands))
+
+    def _dfs(self, grid, row, column, visited, island_index, areas, islands):
+        m, n = len(grid), len(grid[0])
+
+        if row < 0 or row >= m or column < 0 or column >= n \
+                or grid[row][column] != 1 or visited[row][column]:
+            return
+
+        visited[row][column] = True
+        areas[island_index] += 1
+        islands[row][column] = island_index
+
+        for direction in [[-1, 0], [0, -1], [1, 0], [0, 1]]:
+            self._dfs(grid, row + direction[0],
+                      column + direction[1], visited,
+                      island_index, areas, islands)
 
     def _get_max_area(self, m, n, grid, areas, islands):
         max_area = 1
