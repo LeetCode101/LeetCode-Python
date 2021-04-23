@@ -29,7 +29,8 @@ class Solution:
 
         area = 1
         visited[row][column] = True
-        has_boundary = row == 0 or row == m - 1 or column == 0 or column == n - 1
+        has_boundary = row == 0 or row == m - 1 \
+                       or column == 0 or column == n - 1
 
         for direction in [[-1, 0], [0, -1], [1, 0], [0, 1]]:
             neighbour_area, neighbour_has_boundary = self._dfs(
