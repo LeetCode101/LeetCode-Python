@@ -29,8 +29,7 @@ class Solution:
 
         area = 1
         visited[row][column] = True
-        has_boundary = row == 0 or row == m - 1 \
-                       or column == 0 or column == n - 1
+        has_boundary = self._is_boundary(m, n, row, column)
 
         for direction in [[-1, 0], [0, -1], [1, 0], [0, 1]]:
             neighbour_area, neighbour_has_boundary = self._dfs(
@@ -40,3 +39,6 @@ class Solution:
             has_boundary = has_boundary or neighbour_has_boundary
 
         return area, has_boundary
+
+    def _is_boundary(self, m, n, row, column):
+        return row == 0 or row == m - 1 or column == 0 or column == n - 1
