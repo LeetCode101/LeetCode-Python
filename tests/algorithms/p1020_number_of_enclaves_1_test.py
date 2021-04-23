@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1020_number_of_enclaves import Solution
+from leetcode.algorithms.p1020_number_of_enclaves_1 import Solution
 
 
 class TestNumberOfEnclaves(unittest.TestCase):
