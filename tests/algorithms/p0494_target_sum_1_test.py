@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0494_target_sum import Solution
+from leetcode.algorithms.p0494_target_sum_1 import Solution
 
 
 class TestTargetSum(unittest.TestCase):
