@@ -9,4 +9,5 @@ class Solution:
         if i == len(nums):
             return 1 if value == target else 0
 
-        return self._dfs(nums, i + 1, value + nums[i], target) + self._dfs(nums, i + 1, value - nums[i], target)
+        return self._dfs(nums, i + 1, value + nums[i], target) + \
+            self._dfs(nums, i + 1, value - nums[i], target)
