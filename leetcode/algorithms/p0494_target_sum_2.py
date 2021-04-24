@@ -7,15 +7,15 @@ class Solution:
 
         return self._dfs(nums, 0, 0, target, memo)
 
-    def _dfs(self, nums, i, value, target, memo):
-        if (i, value) in memo:
-            return memo[(i, value)]
+    def _dfs(self, nums, i, sum_so_far, target, memo):
+        if (i, sum_so_far) in memo:
+            return memo[(i, sum_so_far)]
 
         if i == len(nums):
-            return 1 if value == target else 0
+            return 1 if sum_so_far == target else 0
 
-        count = self._dfs(nums, i + 1, value + nums[i], target, memo) + \
-            self._dfs(nums, i + 1, value - nums[i], target, memo)
-        memo[(i, value)] = count
+        count = self._dfs(nums, i + 1, sum_so_far + nums[i], target, memo) + \
+            self._dfs(nums, i + 1, sum_so_far - nums[i], target, memo)
+        memo[(i, sum_so_far)] = count
 
         return count
