@@ -5,27 +5,31 @@ class Solution:
     def addOperators(self, num: str, target: int) -> List[str]:
         result = []
 
-        for i in range(1, len(num) + 1):
-            if i == 1 or (i > 1 and num[0] != '0'):
-                expression_so_far = num[:i]
-                current_value = int(expression_so_far)
-                last_value = int(expression_so_far)
-
-                self._dfs(num[i:], expression_so_far, current_value, last_value, result, target)
+        self._dfs(num, '', 0, 0, 0, target, result)
 
         return result
 
-    def _dfs(self, num, expression_so_far, current_value, last_value, result, target):
-        if not num:
+    def _dfs(self, num, expression_so_far, current_value,
+             last_digit, position, target, result):
+        if position == len(num):
             if current_value == target:
                 result.append(expression_so_far)
 
-            return
+        for i in range(position, len(num)):
+            if i != position and num[position] == '0':
+                break
 
-        for i in range(1, len(num) + 1):
-            digits = num[:i]
+            digit_str = num[position:i + 1]
+            digit = int(digit_str)
 
-            if i == 1 or (i > 1 and num[0] != '0'):
-                self._dfs(num[i:], expression_so_far + '+' + digits, current_value + int(digits), int(digits), result, target)
-                self._dfs(num[i:], expression_so_far + '-' + digits, current_value - int(digits), -int(digits), result, target)
-                self._dfs(num[i:], expression_so_far + '*' + digits, current_value - last_value + last_value * int(digits), last_value * int(digits), result, target)
+            if position == 0:
+                self._dfs(num, expression_so_far + digit_str, digit,
+                          digit, i + 1, target, result)
+            else:
+                self._dfs(num, expression_so_far + '+' + digit_str,
+                          current_value + digit, digit, i + 1, target, result)
+                self._dfs(num, expression_so_far + '-' + digit_str,
+                          current_value - digit, -digit, i + 1, target, result)
+                self._dfs(num, expression_so_far + '*' + digit_str,
+                          current_value - last_digit + last_digit * digit,
+                          last_digit * digit, i + 1, target, result)
