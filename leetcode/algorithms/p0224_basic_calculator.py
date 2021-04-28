@@ -1,7 +1,7 @@
 class Solution:
     def calculate(self, s: str) -> int:
         result = 0
-        sign = 1
+        last_sign = 1
         stack = []
         i, length = 0, len(s)
 
@@ -9,15 +9,15 @@ class Solution:
             c = s[i]
 
             if c == '+':
-                sign = 1
+                last_sign = 1
             elif c == '-':
-                sign = -1
+                last_sign = -1
             elif c == '(':
                 stack.append(result)
-                stack.append(sign)
+                stack.append(last_sign)
 
                 result = 0
-                sign = 1
+                last_sign = 1
             elif c == ')':
                 prev_sign = stack.pop()
                 prev_result = stack.pop()
@@ -28,7 +28,7 @@ class Solution:
                 while i < len(s) and s[i].isdigit():
                     i += 1
 
-                result += sign * int(s[start:i])
+                result += last_sign * int(s[start:i])
                 i -= 1
 
             i += 1
