@@ -1,6 +1,6 @@
 class Solution:
     def calculate(self, s: str) -> int:
-        last_sign = '+'
+        last_operator = '+'
         stack = []
         digit = 0
 
@@ -9,16 +9,16 @@ class Solution:
                 digit = digit * 10 + int(c)
 
             if c in '+-*/' or i == len(s) - 1:
-                if last_sign == '+':
+                if last_operator == '+':
                     stack.append(digit)
-                elif last_sign == '-':
+                elif last_operator == '-':
                     stack.append(-digit)
-                elif last_sign == '*':
+                elif last_operator == '*':
                     stack.append(stack.pop() * digit)
-                elif last_sign == '/':
+                elif last_operator == '/':
                     stack.append(int(stack.pop() / digit))
 
                 digit = 0
-                last_sign = c
+                last_operator = c
 
         return sum(stack)
