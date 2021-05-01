@@ -8,7 +8,15 @@ class Solution:
         while i < length:
             c = s[i]
 
-            if c == '+':
+            if c.isdigit():
+                start = i
+
+                while i < len(s) and s[i].isdigit():
+                    i += 1
+
+                result += last_sign * int(s[start:i])
+                i -= 1
+            elif c == '+':
                 last_sign = 1
             elif c == '-':
                 last_sign = -1
@@ -22,14 +30,6 @@ class Solution:
                 prev_sign = stack.pop()
                 prev_result = stack.pop()
                 result = prev_result + prev_sign * result
-            elif c != ' ':
-                start = i
-
-                while i < len(s) and s[i].isdigit():
-                    i += 1
-
-                result += last_sign * int(s[start:i])
-                i -= 1
 
             i += 1
 
