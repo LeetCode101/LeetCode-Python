@@ -1,21 +1,17 @@
 class Solution:
     def calculate(self, s: str) -> int:
         result = 0
+        digit = 0
         last_sign = 1
         stack = []
-        i, length = 0, len(s)
 
-        while i < length:
-            c = s[i]
-
+        for i, c in enumerate(s):
             if c.isdigit():
-                start = i
+                digit = digit * 10 + int(c)
 
-                while i < len(s) and s[i].isdigit():
-                    i += 1
-
-                result += last_sign * int(s[start:i])
-                i -= 1
+                if i == len(s) - 1 or not s[i + 1].isdigit():
+                    result += last_sign * digit
+                    digit = 0
             elif c == '+':
                 last_sign = 1
             elif c == '-':
@@ -30,7 +26,5 @@ class Solution:
                 prev_sign = stack.pop()
                 prev_result = stack.pop()
                 result = prev_result + prev_sign * result
-
-            i += 1
 
         return result
