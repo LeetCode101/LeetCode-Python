@@ -2,8 +2,8 @@ class Solution:
     def calculate(self, s: str) -> int:
         last_operator = '+'
         stack = []
-        i, length = 0, len(s)
         digit = 0
+        i, length = 0, len(s)
 
         while i < length:
             c = s[i]
