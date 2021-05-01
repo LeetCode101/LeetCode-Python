@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0394_decode_string import Solution
+from leetcode.algorithms.p0394_decode_string_1 import Solution
 
 
 class TestDecodeString(unittest.TestCase):
