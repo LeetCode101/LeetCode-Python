@@ -8,9 +8,7 @@ class Solution:
         while i < length:
             c = s[i]
 
-            if c == ' ':
-                continue
-            elif c.isdigit():
+            if c.isdigit():
                 digit = digit * 10 + int(c)
             elif c == '(':
                 j = i + 1
