@@ -17,7 +17,7 @@ class Solution:
             c = S[j]
 
             if c.isdigit():
-                total_length /= int(c)
+                total_length //= int(c)
                 K %= total_length
             else:
                 if K == total_length or K == 0:
