@@ -1,21 +1,26 @@
 class Solution:
     def decodeAtIndex(self, S: str, K: int) -> str:
-        current_length = 0
+        total_length = 0
+        i, length = 0, len(S)
 
-        for c in S:
-            if c.isdigit():
-                current_length *= int(c)
-            else:
-                current_length += 1
-
-        for i in range(len(S) - 1, -1, -1):
+        while i < length:
             c = S[i]
+            total_length = total_length * int(c) if c.isdigit() \
+                else total_length + 1
+
+            if K <= total_length:
+                break
+
+            i += 1
+
+        for j in range(i, -1, -1):
+            c = S[j]
 
             if c.isdigit():
-                current_length //= int(c)
-                K %= current_length
+                total_length /= int(c)
+                K %= total_length
             else:
-                if K == 0 or K == current_length:
+                if K == total_length or K == 0:
                     return c
 
-                current_length -= 1
+                total_length -= 1
