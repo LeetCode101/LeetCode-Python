@@ -5,8 +5,10 @@ class Solution:
         for i, c in enumerate(S):
             if c.isdigit():
                 if total_length * int(c) >= K:
-                    return self.decodeAtIndex(
-                        S[0:i], (K - 1) % total_length + 1)
+                    position = total_length if K % total_length == 0 \
+                        else K % total_length
+
+                    return self.decodeAtIndex(S[0:i], position)
 
                 total_length *= int(c)
             else:
