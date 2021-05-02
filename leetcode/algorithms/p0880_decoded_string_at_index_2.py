@@ -10,7 +10,7 @@ class Solution:
 
                 total_length *= int(c)
             else:
-                if total_length == K - 1:
-                    return c
-
                 total_length += 1
+
+                if total_length == K:
+                    return c
