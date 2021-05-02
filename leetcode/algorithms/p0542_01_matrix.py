@@ -32,8 +32,8 @@ class Solution:
             next_row = row + direction[0]
             next_column = column + direction[1]
 
-            if next_row < 0 or next_row >= m or next_column < 0 \
-                    or next_column >= n \
+            if next_row < 0 or next_row >= m \
+                    or next_column < 0 or next_column >= n \
                     or distances[next_row][next_column] <= distance:
                 continue
 
