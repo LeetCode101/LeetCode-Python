@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0880_decoded_string_at_index_1 import Solution
+from leetcode.algorithms.p0880_decoded_string_at_index_2 import Solution
 
 
 class TestDecodedStringAtIndex(unittest.TestCase):
