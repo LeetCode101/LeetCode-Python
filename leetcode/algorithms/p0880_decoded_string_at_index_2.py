@@ -1,25 +1,16 @@
 class Solution:
     def decodeAtIndex(self, S: str, K: int) -> str:
-        n = 0
-        i, length = 0, len(S)
+        total_length = 0
 
-        while i < length:
-            c = S[i]
-            n = n * int(c) if c.isdigit() else n + 1
-
-            if K <= n:
-                break
-
-            i += 1
-
-        for j in range(i, -1, -1):
-            c = S[j]
-
+        for i, c in enumerate(S):
             if c.isdigit():
-                n /= int(c)
-                K %= n
+                if total_length * int(c) >= K:
+                    return self.decodeAtIndex(
+                        S[0:i], (K - 1) % total_length + 1)
+
+                total_length *= int(c)
             else:
-                if K == n or K == 0:
+                if total_length == K - 1:
                     return c
 
-                n -= 1
+                total_length += 1
