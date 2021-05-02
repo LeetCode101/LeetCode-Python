@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0733_flood_fill import Solution
+from leetcode.algorithms.p0733_flood_fill_1 import Solution
 
 
 class TestFloodFill(unittest.TestCase):
