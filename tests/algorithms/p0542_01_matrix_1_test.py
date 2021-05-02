@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0542_01_matrix import Solution
+from leetcode.algorithms.p0542_01_matrix_1 import Solution
 
 
 class Test01Matrix(unittest.TestCase):
