@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0066_plus_one import Solution
+from leetcode.algorithms.p0066_plus_one_1 import Solution
 
 
 class TestPlusOne(unittest.TestCase):
