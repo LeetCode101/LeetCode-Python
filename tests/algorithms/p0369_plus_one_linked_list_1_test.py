@@ -10,5 +10,9 @@ class TestPlusOneLinkedList(unittest.TestCase):
         b = ListNode(9)
         a.next = b
 
+        self.assertListEqual([], convert_linked_list_to_list(
+            solution.plusOne(None)))
+        self.assertListEqual([2], convert_linked_list_to_list(
+            solution.plusOne(ListNode(1))))
         self.assertListEqual([1, 0, 0], convert_linked_list_to_list(
             solution.plusOne(a)))
