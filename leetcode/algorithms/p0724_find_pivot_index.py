@@ -6,14 +6,12 @@ class Solution:
         if not nums:
             return -1
 
-        pivot = 0
         left_sum, all_sum = 0, sum(nums)
 
-        while pivot < len(nums):
-            if all_sum - nums[pivot] - left_sum == left_sum:
-                return pivot
+        for i, n in enumerate(nums):
+            if all_sum - n - left_sum == left_sum:
+                return i
             else:
-                left_sum += nums[pivot]
-                pivot += 1
+                left_sum += n
 
         return -1
