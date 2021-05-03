@@ -10,3 +10,4 @@ class TestLargestNumberAtLeastTwiceOfOthers(unittest.TestCase):
         self.assertEqual(-1, solution.dominantIndex([]))
         self.assertEqual(1, solution.dominantIndex([3, 6, 1, 0]))
         self.assertEqual(-1, solution.dominantIndex([1, 2, 3, 4]))
+        self.assertEqual(-1, solution.dominantIndex([0, 0, 3, 2]))
