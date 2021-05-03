@@ -19,5 +19,6 @@ class Solution:
                     continue
 
                 queue.append(key)
+                visited.add(key)
 
         return len(visited) == len(rooms)
