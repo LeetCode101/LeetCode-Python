@@ -1,5 +1,6 @@
 import unittest
-from leetcode.algorithms.p0747_largest_number_at_least_twice_of_others import Solution
+from leetcode.algorithms.p0747_largest_number_at_least_twice_of_others \
+    import Solution
 
 
 class TestLargestNumberAtLeastTwiceOfOthers(unittest.TestCase):
