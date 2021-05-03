@@ -7,4 +7,5 @@ class TestPlusOne(unittest.TestCase):
         solution = Solution()
 
         self.assertListEqual([], solution.plusOne([]))
+        self.assertListEqual([2], solution.plusOne([1]))
         self.assertListEqual([1, 0, 0], solution.plusOne([9, 9]))
