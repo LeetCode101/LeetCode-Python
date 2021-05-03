@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0724_find_pivot_index import Solution
+from leetcode.algorithms.p0724_find_pivot_index_1 import Solution
 
 
 class TestFindPivotIndex(unittest.TestCase):
