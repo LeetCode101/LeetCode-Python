@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0841_keys_and_rooms import Solution
+from leetcode.algorithms.p0841_keys_and_rooms_1 import Solution
 
 
 class TestKeysAndRooms(unittest.TestCase):
