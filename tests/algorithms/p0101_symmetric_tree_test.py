@@ -12,3 +12,5 @@ class TestSymmetricTree(unittest.TestCase):
         a.right = c
 
         self.assertTrue(solution.isSymmetric(a))
+        self.assertFalse(solution.isSymmetric(TreeNode(1, TreeNode(2), TreeNode(3))))
+        self.assertFalse(solution.isSymmetric(TreeNode(1, TreeNode(2, TreeNode(3)))))
