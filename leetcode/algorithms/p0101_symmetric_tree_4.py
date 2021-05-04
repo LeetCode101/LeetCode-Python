@@ -1,6 +1,3 @@
-from collections import deque
-
-
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -13,12 +10,12 @@ class Solution:
         if not root:
             return True
 
-        queue1 = deque([root.left])
-        queue2 = deque([root.right])
+        stack1 = [root.left]
+        stack2 = [root.right]
 
-        while queue1 and queue2:
-            left = queue1.popleft()
-            right = queue2.popleft()
+        while stack1 and stack2:
+            left = stack1.pop()
+            right = stack2.pop()
 
             if left is None and right is None:
                 continue
@@ -26,10 +23,10 @@ class Solution:
                 if left.val != right.val:
                     return False
 
-                queue1.append(left.left)
-                queue1.append(left.right)
-                queue2.append(right.right)
-                queue2.append(right.left)
+                stack1.append(left.left)
+                stack1.append(left.right)
+                stack2.append(right.right)
+                stack2.append(right.left)
             else:
                 return False
 
