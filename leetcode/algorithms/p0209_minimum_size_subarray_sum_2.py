@@ -13,18 +13,18 @@ class Solution:
 
         for right, n in enumerate(sums):
             if n >= target:
-                left = self._find_left(left, right, sums, target, n)
+                left = self._find_left(left, right, sums, n - target)
                 current_length = right - left + 1
                 min_length = min(min_length, current_length) \
                     if min_length != 0 else current_length
 
         return min_length
 
-    def _find_left(self, left, right, sums, target, n):
+    def _find_left(self, left, right, sums, target):
         while left < right:
             middle = left + (right - left) // 2
 
-            if n - sums[middle] >= target:
+            if sums[middle] <= target:
                 left = middle + 1
             else:
                 right = middle
