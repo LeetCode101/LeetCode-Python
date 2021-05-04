@@ -1,6 +1,6 @@
 import unittest
 from leetcode.algorithms.p0708_insert_into_a_sorted_circular_linked_list \
-    import Node, Solution
+    import Solution, Node
 from tests.algorithms.list_helper import convert_circular_linked_list_to_list
 
 

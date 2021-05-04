@@ -1,6 +1,6 @@
 import unittest
 from leetcode.algorithms.p0061_rotate_list_1 \
-    import ListNode, Solution
+    import Solution, ListNode
 from tests.algorithms.list_helper import convert_linked_list_to_list
 
 

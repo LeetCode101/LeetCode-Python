@@ -1,6 +1,6 @@
 import unittest
 from leetcode.algorithms.p0250_count_univalue_subtrees \
-    import TreeNode, Solution
+    import Solution, TreeNode
 
 
 class TestCountUnivalueSubtrees(unittest.TestCase):

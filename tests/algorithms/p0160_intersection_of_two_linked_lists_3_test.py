@@ -1,6 +1,6 @@
 import unittest
 from leetcode.algorithms.p0160_intersection_of_two_linked_lists_3 \
-    import ListNode, Solution
+    import Solution, ListNode
 
 
 class TestIntersectionOfTwoLinkedLists(unittest.TestCase):
