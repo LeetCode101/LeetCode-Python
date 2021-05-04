@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0101_symmetric_tree import Solution, TreeNode
+from leetcode.algorithms.p0101_symmetric_tree_1 import Solution, TreeNode
 
 
 class TestSymmetricTree(unittest.TestCase):
