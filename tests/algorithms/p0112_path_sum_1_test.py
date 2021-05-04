@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0112_path_sum import Solution, TreeNode
+from leetcode.algorithms.p0112_path_sum_1 import Solution, TreeNode
 
 
 class TestPathSum(unittest.TestCase):
