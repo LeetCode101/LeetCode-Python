@@ -20,11 +20,11 @@ class Solution:
             return None
 
         root_value = preorder[preorder_left]
+        root = TreeNode(root_value)
         i = next(j for j in range(inorder_left, inorder_right + 1)
                  if inorder[j] == root_value)
 
         left_tree_length = i - inorder_left
-        root = TreeNode(root_value)
         root.left = self._build(
             preorder, preorder_left + 1, preorder_left + left_tree_length,
             inorder, inorder_left, i - 1)
