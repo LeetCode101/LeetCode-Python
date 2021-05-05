@@ -21,15 +21,20 @@ class Solution:
 
         root_value = preorder[preorder_left]
         root = TreeNode(root_value)
-        i = next(j for j in range(inorder_left, inorder_right + 1)
-                 if inorder[j] == root_value)
+        inorder_root_index = -1
 
-        left_tree_length = i - inorder_left
+        for i in range(inorder_left, inorder_right + 1):
+            if inorder[i] == root_value:
+                inorder_root_index = i
+
+                break
+
+        left_tree_length = inorder_root_index - inorder_left
         root.left = self._build_tree(
             preorder, preorder_left + 1, preorder_left + left_tree_length,
-            inorder, inorder_left, i - 1)
+            inorder, inorder_left, inorder_root_index - 1)
         root.right = self._build_tree(
             preorder, preorder_left + left_tree_length + 1, preorder_right,
-            inorder, i + 1, inorder_right)
+            inorder, inorder_root_index + 1, inorder_right)
 
         return root
