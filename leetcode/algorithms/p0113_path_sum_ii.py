@@ -24,7 +24,9 @@ class Solution:
                 paths.append(path_so_far + [root.val])
         else:
             if root.left:
-                self._path_sum(root.left, target - root.val, path_so_far + [root.val], paths)
+                self._path_sum(root.left, target - root.val,
+                               path_so_far + [root.val], paths)
 
             if root.right:
-                self._path_sum(root.right, target - root.val, path_so_far + [root.val], paths)
+                self._path_sum(root.right, target - root.val,
+                               path_so_far + [root.val], paths)
