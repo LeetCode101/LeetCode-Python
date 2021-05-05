@@ -13,6 +13,9 @@ class Solution:
         self.max_sum = -sys.maxsize
 
     def maxPathSum(self, root: TreeNode) -> int:
+        if not root:
+            return 0
+
         self._dfs(root)
 
         return self.max_sum

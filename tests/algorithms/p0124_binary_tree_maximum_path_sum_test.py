@@ -12,4 +12,5 @@ class TestBinaryTreeMaximumPathSum(unittest.TestCase):
             TreeNode(20, TreeNode(15), TreeNode(7))
         )
 
+        self.assertEqual(0, solution.maxPathSum(None))
         self.assertEqual(42, solution.maxPathSum(a))
