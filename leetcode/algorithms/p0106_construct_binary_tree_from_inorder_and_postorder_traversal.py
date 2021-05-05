@@ -10,7 +10,8 @@ class TreeNode:
 
 class Solution:
     def buildTree(self, inorder: List[int], postorder: List[int]) -> TreeNode:
-        return self._build_tree(inorder, 0, len(inorder) - 1, postorder, 0, len(postorder) - 1)
+        return self._build_tree(inorder, 0, len(inorder) - 1,
+                                postorder, 0, len(postorder) - 1)
 
     def _build_tree(self, inorder, inorder_start, inorder_end,
                     postorder, postorder_start, postorder_end):
