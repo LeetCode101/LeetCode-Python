@@ -26,16 +26,18 @@ class Solution:
 
         root = TreeNode(pre[pre_start])
 
-        if pre_start != pre_end:
-            left_tree_root_value = pre[pre_start + 1]
-            post_left_tree_root_index = positions[left_tree_root_value]
-            left_tree_size = post_left_tree_root_index - post_start + 1
+        if pre_start == pre_end:
+            return root
 
-            root.left = self._build_tree(
-                pre, pre_start + 1, pre_start + left_tree_size,
-                post, post_start, post_start + left_tree_size - 1, positions)
-            root.right = self._build_tree(
-                pre, pre_start + left_tree_size + 1, pre_end,
-                post, post_start + left_tree_size, post_end - 1, positions)
+        left_tree_root_value = pre[pre_start + 1]
+        post_left_tree_root_index = positions[left_tree_root_value]
+        left_tree_size = post_left_tree_root_index - post_start + 1
+
+        root.left = self._build_tree(
+            pre, pre_start + 1, pre_start + left_tree_size,
+            post, post_start, post_start + left_tree_size - 1, positions)
+        root.right = self._build_tree(
+            pre, pre_start + left_tree_size + 1, pre_end,
+            post, post_start + left_tree_size, post_end - 1, positions)
 
         return root
