@@ -1,6 +1,6 @@
 import unittest
 from leetcode.algorithms \
-    .p0889_construct_binary_tree_from_preorder_and_postorder_traversal \
+    .p0889_construct_binary_tree_from_preorder_and_postorder_traversal_1 \
     import Solution
 
 
