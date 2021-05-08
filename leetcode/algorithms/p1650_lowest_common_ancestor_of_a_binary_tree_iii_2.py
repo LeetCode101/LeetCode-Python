@@ -10,9 +10,8 @@ class Solution:
     def lowestCommonAncestor(self, p: 'Node', q: 'Node') -> 'Node':
         a, b = p, q
 
-        while a and b:
+        while a is not b:
             a = q if a.parent is None else a.parent
             b = p if b.parent is None else b.parent
 
-            if a is b:
-                return a
+        return a
