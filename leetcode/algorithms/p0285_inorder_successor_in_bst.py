@@ -10,16 +10,16 @@ class TreeNode:
 
 class Solution:
     def inorderSuccessor(self, root: 'TreeNode', p: 'TreeNode') -> 'TreeNode':
-        least_greater_than_p = sys.maxsize
-        target = None
+        least_value_greater_than_p = sys.maxsize
+        target_node = None
         current = root
 
         while current:
-            if p.val < current.val < least_greater_than_p:
-                target = current
-                least_greater_than_p = current.val
+            if p.val < current.val < least_value_greater_than_p:
+                target_node = current
+                least_value_greater_than_p = current.val
                 current = current.left
             elif current.val <= p.val:
                 current = current.right
 
-        return target
+        return target_node
