@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0285_inorder_successor_in_bst \
+from leetcode.algorithms.p0285_inorder_successor_in_bst_2 \
     import Solution, TreeNode
 
 
