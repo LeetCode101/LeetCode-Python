@@ -24,4 +24,5 @@ class TestLowestCommonAncestorOfABinaryTree(unittest.TestCase):
         e.left = h
         e.right = i
 
+        self.assertIsNone(solution.lowestCommonAncestor(a, []))
         self.assertEqual(2, solution.lowestCommonAncestor(a, [h, i]).val)
