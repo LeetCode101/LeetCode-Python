@@ -22,7 +22,7 @@ class Solution:
         left = self._lowest_common_ancestor(root.left, p, q)
         right = self._lowest_common_ancestor(root.right, p, q)
 
-        if root == p or root == q:
+        if root.val == p.val or root.val == q.val:
             self.node_found_count += 1
 
             return root
