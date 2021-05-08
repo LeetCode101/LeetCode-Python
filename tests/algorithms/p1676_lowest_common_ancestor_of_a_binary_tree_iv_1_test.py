@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1676_lowest_common_ancestor_of_a_binary_tree_iv \
+from leetcode.algorithms.p1676_lowest_common_ancestor_of_a_binary_tree_iv_1 \
     import Solution, TreeNode
 
 
