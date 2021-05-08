@@ -34,3 +34,4 @@ class TestLowestCommonAncestorOfABinaryTree(unittest.TestCase):
 
         self.assertEqual(3, solution.lowestCommonAncestor(b, c).val)
         self.assertEqual(3, solution.lowestCommonAncestor(b, g).val)
+        self.assertEqual(3, solution.lowestCommonAncestor(g, b).val)
