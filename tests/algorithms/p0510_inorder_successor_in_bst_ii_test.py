@@ -24,3 +24,5 @@ class TestInorderSuccessorInBST(unittest.TestCase):
         f.parent = d
 
         self.assertEqual(5, solution.inorderSuccessor(e).val)
+        self.assertIsNone(solution.inorderSuccessor(c))
+        self.assertEqual(4, solution.inorderSuccessor(b).val)
