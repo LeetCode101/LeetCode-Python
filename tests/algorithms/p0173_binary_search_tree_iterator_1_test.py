@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0173_binary_search_tree_iterator \
+from leetcode.algorithms.p0173_binary_search_tree_iterator_1 \
     import BSTIterator, TreeNode
 
 
