@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0701_insert_into_a_binary_search_tree \
+from leetcode.algorithms.p0701_insert_into_a_binary_search_tree_1 \
     import Solution, TreeNode
 from tests.algorithms.binary_tree_helper import inorder
 
