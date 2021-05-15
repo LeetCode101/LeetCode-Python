@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0219_contains_duplicate_ii import Solution
+from leetcode.algorithms.p0219_contains_duplicate_ii_1 import Solution
 
 
 class TestContainsDuplicate(unittest.TestCase):
