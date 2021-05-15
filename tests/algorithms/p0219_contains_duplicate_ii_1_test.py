@@ -7,4 +7,5 @@ class TestContainsDuplicate(unittest.TestCase):
         solution = Solution()
 
         self.assertTrue(solution.containsNearbyDuplicate([1, 1], 2))
-        self.assertFalse(solution.containsNearbyDuplicate([1, 2, 3, 1, 2, 3], 2))
+        self.assertFalse(solution.containsNearbyDuplicate(
+            [1, 2, 3, 1, 2, 3], 2))
