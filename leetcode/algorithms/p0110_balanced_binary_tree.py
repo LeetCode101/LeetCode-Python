@@ -14,8 +14,8 @@ class Solution:
         right_height = self._get_height(root.right)
 
         return abs(left_height - right_height) <= 1 \
-               and self.isBalanced(root.left) \
-               and self.isBalanced(root.right)
+            and self.isBalanced(root.left) \
+            and self.isBalanced(root.right)
 
     def _get_height(self, root):
         if not root:
