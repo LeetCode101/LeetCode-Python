@@ -10,5 +10,6 @@ class TestConvertSortedListToBinarySearchTree(unittest.TestCase):
         linked_list = ListNode(-10, ListNode(
             -3, ListNode(0, ListNode(5, ListNode(9)))))
 
+        self.assertIsNone(solution.sortedListToBST(None))
         self.assertListEqual([-10, -3, 0, 5, 9], inorder(
             solution.sortedListToBST(linked_list)))
