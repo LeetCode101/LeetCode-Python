@@ -7,18 +7,18 @@ class TreeNode:
 
 class Solution:
     def isBalanced(self, root: TreeNode) -> bool:
-        return self._get_height(root)[1]
+        return self._is_balanced(root)[1]
 
-    def _get_height(self, root):
+    def _is_balanced(self, root):
         if not root:
             return 0, True
 
-        left_height, balanced = self._get_height(root.left)
+        left_height, balanced = self._is_balanced(root.left)
 
         if not balanced:
             return left_height, balanced
 
-        right_height, balanced = self._get_height(root.right)
+        right_height, balanced = self._is_balanced(root.right)
 
         if not balanced:
             return right_height, balanced
