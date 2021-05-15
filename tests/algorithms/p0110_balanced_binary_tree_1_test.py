@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0110_balanced_binary_tree import Solution, TreeNode
+from leetcode.algorithms.p0110_balanced_binary_tree_1 import Solution, TreeNode
 
 
 class TestBalancedBinaryTree(unittest.TestCase):
