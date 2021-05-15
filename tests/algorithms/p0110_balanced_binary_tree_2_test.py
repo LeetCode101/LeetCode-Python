@@ -23,7 +23,24 @@ class TestBalancedBinaryTree(unittest.TestCase):
             ),
             TreeNode(2)
         )
+        root3 = TreeNode(
+            1,
+            TreeNode(
+                1,
+                TreeNode(
+                    2,
+                    TreeNode(
+                        3,
+                        TreeNode(4),
+                        TreeNode(4)
+                    ),
+                    TreeNode(3)
+                )
+            ),
+            TreeNode(2)
+        )
 
         self.assertTrue(solution.isBalanced(None))
         self.assertTrue(solution.isBalanced(root1))
         self.assertFalse(solution.isBalanced(root2))
+        self.assertFalse(solution.isBalanced(root3))
