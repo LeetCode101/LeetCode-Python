@@ -11,10 +11,10 @@ class Solution:
             if i > k:
                 del bst[bisect.bisect_left(bst, nums[i - k - 1])]
 
-            pos1 = bisect.bisect_left(bst, nums[i] - t)
-            pos2 = bisect.bisect_right(bst, nums[i] + t)
+            left = bisect.bisect_left(bst, nums[i] - t)
+            right = bisect.bisect_right(bst, nums[i] + t)
 
-            if pos1 != pos2:
+            if left != right:
                 return True
 
             bisect.insort(bst, n)
