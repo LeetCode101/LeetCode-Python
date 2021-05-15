@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0109_convert_sorted_list_to_binary_search_tree_1 \
+from leetcode.algorithms.p0109_convert_sorted_list_to_binary_search_tree_2 \
     import Solution, ListNode
 from tests.algorithms.binary_tree_helper import inorder
 
