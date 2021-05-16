@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0378_kth_smallest_element_in_a_sorted_matrix \
+from leetcode.algorithms.p0378_kth_smallest_element_in_a_sorted_matrix_1 \
     import Solution
 
 
