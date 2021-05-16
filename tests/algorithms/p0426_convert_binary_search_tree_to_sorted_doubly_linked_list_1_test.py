@@ -1,6 +1,6 @@
 import unittest
 from leetcode.algorithms\
-    .p0426_convert_binary_search_tree_to_sorted_doubly_linked_list \
+    .p0426_convert_binary_search_tree_to_sorted_doubly_linked_list_1 \
     import Solution, Node
 
 
