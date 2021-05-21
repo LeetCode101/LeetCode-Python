@@ -22,12 +22,10 @@ class Node:
     def contains(self, value):
         if self.value == value:
             return True
-        elif self.value > value and self.left:
-            return self.left.contains(value)
-        elif self.value < value and self.right:
-            return self.right.contains(value)
-
-        return False
+        elif self.value > value:
+            return self.left and self.left.contains(value)
+        else:
+            return self.right and self.right.contains(value)
 
     def remove(self, value):
         if self.value == value:
