@@ -138,7 +138,7 @@ class MyHashMap:
                 continue
 
             for n in node.traverse():
-                self.put(n.value, n.key)
+                self.put(n.key, n.value)
 
     def _hash(self, key):
         return key % len(self.nodes)
