@@ -16,16 +16,17 @@ class TestDesignHashSet(unittest.TestCase):
             hash_set.add(i)
 
         self.assertFalse(hash_set.contains(15))
-        self.assertTrue(hash_set.contains(16))
+        self.assertTrue(hash_set.contains(1))
         self.assertTrue(hash_set.contains(34))
 
-        hash_set.add(48)
-        hash_set.remove(32)
         hash_set.remove(1)
         hash_set.remove(16)
+        hash_set.remove(32)
+        hash_set.add(48)
+        hash_set.add(64)
+        hash_set.add(32)
         hash_set.add(16)
-
-        self.assertFalse(hash_set.contains(1))
+        hash_set.remove(48)
 
         for i in range(100):
             hash_set.add(i)
