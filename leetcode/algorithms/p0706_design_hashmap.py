@@ -37,7 +37,9 @@ class Node:
             elif not self.left or not self.right:
                 return self.left or self.right
             else:
-                self.key = self.right._find_min().key
+                min_node = self.right._find_min()
+                self.key = min_node.key
+                self.value = min_node.value
                 self.right = self.right.remove(self.key)
         elif self.key > key and self.left:
             self.left = self.left.remove(key)
