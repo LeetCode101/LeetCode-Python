@@ -23,5 +23,4 @@ class TestDesignHashSet(unittest.TestCase):
         hash_set.remove(1)
         hash_set.add(16)
 
-        self.assertFalse(hash_set.contains(16))
         self.assertFalse(hash_set.contains(1))
