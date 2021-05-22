@@ -22,11 +22,11 @@ class TestDesignHashSet(unittest.TestCase):
         hash_set.remove(1)
         hash_set.remove(16)
         hash_set.remove(32)
-        hash_set.add(48)
-        hash_set.add(64)
         hash_set.add(32)
         hash_set.add(16)
-        hash_set.remove(48)
+        hash_set.add(64)
+        hash_set.add(48)
+        hash_set.remove(32)
 
         for i in range(100):
             hash_set.add(i)
