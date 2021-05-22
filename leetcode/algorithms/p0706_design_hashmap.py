@@ -22,14 +22,6 @@ class Node:
         else:
             self.value = node.value
 
-    def contains(self, key):
-        if self.key == key:
-            return True
-        elif self.key > key:
-            return self.left and self.left.contains(key)
-        else:
-            return self.right and self.right.contains(key)
-
     def get(self, key):
         if self.key == key:
             return self.value
