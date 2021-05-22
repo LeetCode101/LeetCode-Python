@@ -34,8 +34,8 @@ class Node:
             elif not self.left or not self.right:
                 return self.left or self.right
             else:
-                self.value = self.left._find_max().value
-                self.left.remove(self.value)
+                self.value = self.right._find_min().value
+                self.right.remove(self.value)
         elif self.value > value and self.left:
             self.left = self.left.remove(value)
         elif self.value < value and self.right:
@@ -59,11 +59,11 @@ class Node:
 
         return nodes
 
-    def _find_max(self):
+    def _find_min(self):
         current = self
 
-        while current.right:
-            current = current.right
+        while current.left:
+            current = current.left
 
         return current
 
