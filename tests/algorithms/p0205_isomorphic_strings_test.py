@@ -6,6 +6,7 @@ class TestIsomorphicStrings(unittest.TestCase):
     def test_isomorphic_strings(self):
         solution = Solution()
 
+        self.assertFalse(solution.isIsomorphic('a', 'ab'))
         self.assertTrue(solution.isIsomorphic('egg', 'add'))
         self.assertFalse(solution.isIsomorphic('foo', 'bar'))
         self.assertTrue(solution.isIsomorphic('paper', 'title'))
