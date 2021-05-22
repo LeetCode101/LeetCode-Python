@@ -107,7 +107,8 @@ class MyHashMap:
 
     def get(self, key: int) -> int:
         """
-        Returns the value to which the specified key is mapped, or -1 if this map contains no mapping for the key
+        Returns the value to which the specified key is mapped,
+        or -1 if this map contains no mapping for the key
         """
         h = self._hash(key)
 
@@ -118,7 +119,8 @@ class MyHashMap:
 
     def remove(self, key: int) -> None:
         """
-        Removes the mapping of the specified value key if this map contains a mapping for the key
+        Removes the mapping of the specified value key
+        if this map contains a mapping for the key
         """
         h = self._hash(key)
 
