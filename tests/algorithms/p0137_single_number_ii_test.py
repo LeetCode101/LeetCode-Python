@@ -7,4 +7,5 @@ class TestSingleNumber(unittest.TestCase):
         solution = Solution()
 
         self.assertEqual(99, solution.singleNumber([0, 1, 0, 1, 0, 1, 99]))
-        self.assertEqual(-4, solution.singleNumber([-2, -2, 1, 1, 4, 1, 4, 4, -4, -2]))
+        self.assertEqual(-4, solution.singleNumber(
+            [-2, -2, 1, 1, 4, 1, 4, 4, -4, -2]))
