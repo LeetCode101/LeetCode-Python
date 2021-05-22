@@ -11,7 +11,7 @@ class Solution:
             for num in nums:
                 sum += ((num >> i) & 1)
 
-            if sum % 3:
+            if sum % 3 == 1:
                 if i == 31:
                     result -= (1 << 31)
                 else:
