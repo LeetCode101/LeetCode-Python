@@ -13,3 +13,9 @@ class TestDesignHashSet(unittest.TestCase):
         hash_set.remove(1)
 
         self.assertFalse(hash_set.contains(1))
+
+        for i in range(100):
+            hash_set.add(i)
+
+        for i in range(100):
+            self.assertTrue(hash_set.contains(i))
