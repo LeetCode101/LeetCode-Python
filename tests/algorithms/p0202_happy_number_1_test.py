@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0202_happy_number import Solution
+from leetcode.algorithms.p0202_happy_number_1 import Solution
 
 
 class TestHappyNumber(unittest.TestCase):
