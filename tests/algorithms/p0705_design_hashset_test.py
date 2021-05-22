@@ -18,8 +18,10 @@ class TestDesignHashSet(unittest.TestCase):
         self.assertFalse(hash_set.contains(15))
         self.assertTrue(hash_set.contains(16))
 
+        hash_set.add(48)
         hash_set.remove(16)
         hash_set.remove(1)
+        hash_set.add(16)
 
         self.assertFalse(hash_set.contains(16))
         self.assertFalse(hash_set.contains(1))
