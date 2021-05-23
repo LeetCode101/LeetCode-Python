@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0347_top_k_frequent_elements import Solution
+from leetcode.algorithms.p0347_top_k_frequent_elements_1 import Solution
 
 
 class TestTopKFrequentElements(unittest.TestCase):
