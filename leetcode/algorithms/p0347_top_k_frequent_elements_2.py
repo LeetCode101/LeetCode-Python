@@ -13,10 +13,12 @@ class Solution:
         topK = []
 
         for i in range(len(nums), -1, -1):
-            if len(topK) == k:
+            left_size = k - len(topK)
+
+            if left_size <= 0:
                 break
 
             if bucket[i]:
-                topK += bucket[i]
+                topK += bucket[i][:min(len(bucket[i]), left_size)]
 
         return topK
