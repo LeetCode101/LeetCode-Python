@@ -10,15 +10,15 @@ class Solution:
         for n, frequency in frequencies.items():
             bucket[frequency].append(n)
 
-        topK = []
+        top_k = []
 
         for i in range(len(nums), -1, -1):
-            left_size = k - len(topK)
+            left_size = k - len(top_k)
 
             if left_size <= 0:
                 break
 
             if bucket[i]:
-                topK += bucket[i][:min(len(bucket[i]), left_size)]
+                top_k += bucket[i][:min(len(bucket[i]), left_size)]
 
-        return topK
+        return top_k
