@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0692_top_k_frequent_words import Solution
+from leetcode.algorithms.p0692_top_k_frequent_words_1 import Solution
 
 
 class TestTopKFrequentWords(unittest.TestCase):
