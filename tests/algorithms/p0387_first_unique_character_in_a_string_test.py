@@ -10,3 +10,4 @@ class TestFirstUniqueCharacterInAString(unittest.TestCase):
         self.assertEqual(0, solution.firstUniqChar('leetcode'))
         self.assertEqual(2, solution.firstUniqChar('loveleetcode'))
         self.assertEqual(-1, solution.firstUniqChar('aabb'))
+        self.assertEqual(0, solution.firstUniqChar('abc'))
