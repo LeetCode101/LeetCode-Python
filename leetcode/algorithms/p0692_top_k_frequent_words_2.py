@@ -14,9 +14,6 @@ class Word:
 
         return self.frequency < other.frequency
 
-    def __eq__(self, other):
-        return self.word == other.word and self.frequency == other.cout
-
 
 class Solution:
     def topKFrequent(self, words: List[str], k: int) -> List[str]:
