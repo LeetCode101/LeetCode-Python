@@ -10,3 +10,16 @@ class TestMinimumIndexSumOfTwoLists(unittest.TestCase):
             ['Shogun', 'Tapioca Express', 'Burger King', 'KFC'],
             ['Piatti', 'The Grill at Torrey Pines',
              'Hungry Hunter Steakhouse', 'Shogun']))
+        self.assertListEqual(['Shogun'], solution.findRestaurant(
+            ['Shogun', 'Tapioca Express', 'Burger King', 'KFC'],
+            ['KFC', 'Shogun', 'Burger King']))
+        self.assertListEqual(
+            ['KFC', 'Burger King', 'Tapioca Express', 'Shogun'],
+            solution.findRestaurant(
+                ['Shogun', 'Tapioca Express', 'Burger King', 'KFC'],
+                ['KFC', 'Burger King', 'Tapioca Express', 'Shogun']))
+        self.assertListEqual(
+            ['KFC', 'Burger King', 'Tapioca Express', 'Shogun'],
+            solution.findRestaurant(
+                ['Shogun', 'Tapioca Express', 'Burger King', 'KFC'],
+                ['KNN', 'KFC', 'Burger King', 'Tapioca Express', 'Shogun']))
