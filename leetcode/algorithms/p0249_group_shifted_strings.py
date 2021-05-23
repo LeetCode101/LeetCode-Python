@@ -9,7 +9,7 @@ class Solution:
             key = ()
 
             for i in range(len(s) - 1):
-                diff = 26 + ord(s[i + 1]) - ord(s[i])
+                diff = ord(s[i + 1]) - ord(s[i])
                 key += (diff % 26,)
 
             mapping[key] = mapping.get(key, []) + [s]
