@@ -12,3 +12,4 @@ class TestInsertDeleteGetRandomO1DuplicatesAllowed(unittest.TestCase):
         self.assertTrue(randomized_collection.insert(2))
         self.assertTrue(randomized_collection.getRandom() in [1, 2])
         self.assertTrue(randomized_collection.remove(1))
+        self.assertFalse(randomized_collection.remove(3))
