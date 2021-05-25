@@ -37,7 +37,7 @@ class RandomizedCollection:
 
         if self.position[last]:
             self.position[last].add(i)
-            self.position[last].discard(len(self.values) - 1)
+            self.position[last].remove(len(self.values) - 1)
 
         self.values.pop()
 
