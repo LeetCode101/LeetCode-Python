@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0559_maximum_depth_of_n_ary_tree_1 \
+from leetcode.algorithms.p0559_maximum_depth_of_n_ary_tree_2 \
     import Solution, Node
 
 
