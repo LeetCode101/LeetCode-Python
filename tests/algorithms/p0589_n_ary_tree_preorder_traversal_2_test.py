@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0589_n_ary_tree_preorder_traversal_1 \
+from leetcode.algorithms.p0589_n_ary_tree_preorder_traversal_2 \
     import Solution, Node
 
 
