@@ -16,16 +16,16 @@ class Solution:
             return []
 
         values = collections.deque([])
-        queue = [root]
+        stack = [root]
 
-        while queue:
-            node = queue.pop()
+        while stack:
+            node = stack.pop()
             values.appendleft(node.val)
 
             if node.left:
-                queue.append(node.left)
+                stack.append(node.left)
 
             if node.right:
-                queue.append(node.right)
+                stack.append(node.right)
 
         return list(values)
