@@ -16,5 +16,7 @@ class TestSerializeAndDeserializeNAryTree(unittest.TestCase):
         )
         encoded = codec.serialize(root)
 
+        self.assertEqual('', codec.serialize(None))
+        self.assertIsNone(codec.deserialize(''))
         self.assertEqual('1,3,5,,6,,,2,,4,,', encoded)
         self.assertEqual(1, codec.deserialize(encoded).val)

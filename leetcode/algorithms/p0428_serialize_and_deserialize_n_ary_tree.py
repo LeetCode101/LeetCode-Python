@@ -44,9 +44,6 @@ class Codec:
         encoded.append('')
 
     def _deserialize(self, encoded):
-        if not encoded:
-            return None
-
         root_value = int(encoded.popleft())
         root = Node(root_value, [])
 
