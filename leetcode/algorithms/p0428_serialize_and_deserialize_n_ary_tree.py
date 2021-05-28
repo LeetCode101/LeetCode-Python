@@ -26,28 +26,34 @@ class Codec:
         :type data: str
         :rtype: Node
         """
+        if not data:
+            return None
+
         return self._deserialize(deque(data.split(',')))
 
     def _preorder(self, root, encoded):
+        if not root:
+            return ''
+
         encoded.append(str(root.val))
 
         if root.children:
-            encoded.append(str(len(root.children)))
-
             for child in root.children:
                 self._preorder(child, encoded)
-        else:
-            encoded.append('0')
+
+        encoded.append('')
 
     def _deserialize(self, encoded):
+        if not encoded:
+            return None
+
         root_value = int(encoded.popleft())
-        children_size = int(encoded.popleft())
-        root = Node(root_value)
+        root = Node(root_value, [])
 
-        if children_size == 0:
-            return root
+        while encoded[0] != '':
+            child = self._deserialize(encoded)
+            root.children.append(child)
 
-        root.children = [self._deserialize(encoded)
-                         for _ in range(children_size)]
+        encoded.popleft()
 
         return root
