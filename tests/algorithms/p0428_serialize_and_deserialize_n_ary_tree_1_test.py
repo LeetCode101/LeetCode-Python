@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0428_serialize_and_deserialize_n_ary_tree \
+from leetcode.algorithms.p0428_serialize_and_deserialize_n_ary_tree_1 \
     import Codec, Node
 
 
