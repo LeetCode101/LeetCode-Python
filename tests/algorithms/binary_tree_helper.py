@@ -11,5 +11,7 @@ def _inorder(root, values):
         return values
 
     _inorder(root.left, values)
+
     values.append(root.val)
+    
     _inorder(root.right, values)
