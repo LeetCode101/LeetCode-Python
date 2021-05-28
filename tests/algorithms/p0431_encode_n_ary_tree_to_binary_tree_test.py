@@ -17,5 +17,7 @@ class TestEncodeNAryTreeToBinaryTree(unittest.TestCase):
         )
         binary_tree = codec.encode(root)
 
+        self.assertIsNone(codec.encode(None))
+        self.assertIsNone(codec.decode(None))
         self.assertListEqual([5, 6, 3, 2, 4, 1], inorder(binary_tree))
         self.assertEqual(1, codec.decode(binary_tree).val)
