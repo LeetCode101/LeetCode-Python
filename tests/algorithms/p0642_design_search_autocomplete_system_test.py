@@ -1,5 +1,6 @@
 import unittest
-from leetcode.algorithms.p0642_design_search_autocomplete_system import AutocompleteSystem
+from leetcode.algorithms.p0642_design_search_autocomplete_system \
+    import AutocompleteSystem
 
 
 class TestDesignSearchAutocompleteSystem(unittest.TestCase):
