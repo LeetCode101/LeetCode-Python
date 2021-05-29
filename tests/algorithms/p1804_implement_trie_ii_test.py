@@ -17,6 +17,7 @@ class TestImplementTrie(unittest.TestCase):
         self.assertEqual(1, trie.countWordsStartingWith('app'))
 
         trie.erase('apple')
+        trie.erase('abc')
 
         self.assertEqual(0, trie.countWordsEqualTo('apple'))
         self.assertEqual(0, trie.countWordsStartingWith('app'))
