@@ -48,6 +48,6 @@ class Solution:
             path += c
 
             if current.end_of_word:
-                return path
+                break
 
-        return ''
+        return path if current.end_of_word else ''
