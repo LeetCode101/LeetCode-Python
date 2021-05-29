@@ -45,7 +45,7 @@ class Codec:
             return None
 
         encoded = deque(data.split(','))
-        root = Node(encoded.popleft(), [])
+        root = Node(int(encoded.popleft()), [])
         queue = deque([root])
 
         while queue and encoded:
