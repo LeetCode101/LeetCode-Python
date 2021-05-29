@@ -13,3 +13,4 @@ class TestMapSumPairs(unittest.TestCase):
         map_sum.insert('apple', 2)
 
         self.assertEqual(4, map_sum.sum('a'))
+        self.assertEqual(0, map_sum.sum('aaa'))
