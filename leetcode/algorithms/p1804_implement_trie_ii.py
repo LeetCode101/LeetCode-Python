@@ -1,7 +1,7 @@
 class TrieNode:
     def __init__(self):
         self.count = 0
-        self.end = 0
+        self.word_count = 0
         self.children = {}
 
 
@@ -19,7 +19,7 @@ class Trie:
             current = current.children[c]
             current.count += 1
 
-        current.end += 1
+        current.word_count += 1
 
     def countWordsEqualTo(self, word: str) -> int:
         current = self.root
@@ -30,7 +30,7 @@ class Trie:
 
             current = current.children[c]
 
-        return current.end
+        return current.word_count
 
     def countWordsStartingWith(self, prefix: str) -> int:
         current = self.root
@@ -57,4 +57,4 @@ class Trie:
             if current.count == 0:
                 prev.children.pop(c)
 
-        current.end -= 1
+        current.word_count -= 1
