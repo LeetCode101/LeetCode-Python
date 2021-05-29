@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0208_implement_trie import Trie
+from leetcode.algorithms.p0208_implement_trie_2 import Trie
 
 
 class TestImplementTrie(unittest.TestCase):
