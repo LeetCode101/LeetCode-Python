@@ -6,7 +6,7 @@ class TrieNode:
         self.end_of_word = False
         self.children = {}
         self.index = -1
-        self.possible_positions = []
+        self.palindrome_ends_at = []
 
 
 class Solution:
@@ -35,13 +35,13 @@ class Solution:
                 current.children[c] = TrieNode()
 
             if self._is_palindrome(word, 0, i):
-                current.possible_positions.append(index)
+                current.palindrome_ends_at.append(index)
 
             current = current.children[c]
 
         current.end_of_word = True
         current.index = index
-        current.possible_positions.append(index)
+        current.palindrome_ends_at.append(index)
 
     def _search(self, root, index, word, result):
         current = root
@@ -56,7 +56,7 @@ class Solution:
 
             current = current.children[c]
 
-        for j in current.possible_positions:
+        for j in current.palindrome_ends_at:
             if index != j:
                 result.append([index, j])
 
