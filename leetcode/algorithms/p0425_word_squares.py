@@ -32,7 +32,7 @@ class Solution:
         current.end_of_word = True
         current.word = word
 
-    def _search(self, root, prefix, candidates):
+    def _search_prefix(self, root, prefix, candidates):
         current = root
 
         if current.end_of_word:
@@ -47,7 +47,7 @@ class Solution:
             current = current.children[c]
 
         for child in current.children.values():
-            self._search(child, '', candidates)
+            self._search_prefix(child, '', candidates)
 
     def _word_squares(self, root, size, words, result):
         if len(words) == size:
@@ -58,7 +58,7 @@ class Solution:
         candidates = []
         prefix = ''.join([word[len(words)] for word in words])
 
-        self._search(root, prefix, candidates)
+        self._search_prefix(root, prefix, candidates)
 
         for candidate in candidates:
             self._word_squares(root, size, words + [candidate], result)
