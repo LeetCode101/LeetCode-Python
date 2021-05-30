@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0344_reverse_string import Solution
+from leetcode.algorithms.p0344_reverse_string_1 import Solution
 
 
 class TestReverseString(unittest.TestCase):
