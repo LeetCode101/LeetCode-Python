@@ -6,7 +6,7 @@ class Solution:
         self._reverse(s, 0, len(s) - 1)
 
     def _reverse(self, s, low, high):
-        if low > high:
+        if low >= high:
             return
 
         s[low], s[high] = s[high], s[low]
