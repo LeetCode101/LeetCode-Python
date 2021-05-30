@@ -10,6 +10,9 @@ class TrieNode:
 
 class Solution:
     def wordSquares(self, words: List[str]) -> List[List[str]]:
+        if not words or not words[0]:
+            return []
+
         root = TrieNode()
         result = []
 

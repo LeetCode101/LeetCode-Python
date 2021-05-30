@@ -6,6 +6,7 @@ class TestWordSquares(unittest.TestCase):
     def test_word_squares(self):
         solution = Solution()
 
+        self.assertListEqual([], solution.wordSquares([]))
         self.assertListEqual(
             sorted([['ball', 'area', 'lead', 'lady'],
                     ['wall', 'area', 'lead', 'lady']]),
