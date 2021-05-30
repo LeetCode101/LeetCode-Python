@@ -47,7 +47,7 @@ class Solution:
         current = root
 
         for j, c in enumerate(word):
-            if current.index >= 0 and current.index != index \
+            if current.end_of_word and current.index != index \
                     and self._is_palindrome(word, j, len(word) - 1):
                 result.append([index, current.index])
 
