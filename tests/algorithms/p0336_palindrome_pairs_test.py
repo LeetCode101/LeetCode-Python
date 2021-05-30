@@ -14,3 +14,6 @@ class TestPalindromePairs(unittest.TestCase):
         self.assertListEqual(
             sorted([[0, 1], [1, 0]]),
             sorted(solution.palindromePairs(['bat', 'tab', 'cat'])))
+        self.assertListEqual(
+            [[0, 1], [1, 0]],
+            sorted(solution.palindromePairs(['a', ''])))
