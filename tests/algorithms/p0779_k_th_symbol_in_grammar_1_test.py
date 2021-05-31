@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0779_k_th_symbol_in_grammar import Solution
+from leetcode.algorithms.p0779_k_th_symbol_in_grammar_1 import Solution
 
 
 class TestKthSymbolInGrammar(unittest.TestCase):
