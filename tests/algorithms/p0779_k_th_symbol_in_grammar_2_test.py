@@ -10,3 +10,4 @@ class TestKthSymbolInGrammar(unittest.TestCase):
         self.assertEqual(0, solution.kthGrammar(2, 1))
         self.assertEqual(1, solution.kthGrammar(2, 2))
         self.assertEqual(0, solution.kthGrammar(3, 1))
+        self.assertEqual(0, solution.kthGrammar(30, 434991989))
