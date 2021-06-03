@@ -10,3 +10,6 @@ class TestSortAnArray(unittest.TestCase):
             [0, 0, 1, 1, 2, 5], solution.sortArray([5, 1, 1, 2, 0, 0]))
         self.assertListEqual(
             [1, 2, 3, 4, 5, 6], solution.sortArray([3, 2, 1, 6, 5, 4]))
+        self.assertListEqual(
+            sorted([-4, 0, 7, 4, 9, -5, -1, 0, -7, -1]),
+            solution.sortArray([-4, 0, 7, 4, 9, -5, -1, 0, -7, -1]))
