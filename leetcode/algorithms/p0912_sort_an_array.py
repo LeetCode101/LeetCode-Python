@@ -18,6 +18,9 @@ class Solution:
         self._merge(nums, low, middle, high)
 
     def _merge(self, nums, low, middle, high):
+        if nums[middle] <= nums[middle + 1]:
+            return 
+
         left = low
         right = middle + 1
         merged = []
