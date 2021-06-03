@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0912_sort_an_array import Solution
+from leetcode.algorithms.p0912_sort_an_array_1 import Solution
 
 
 class TestSortAnArray(unittest.TestCase):
