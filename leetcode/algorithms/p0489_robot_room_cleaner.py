@@ -46,9 +46,6 @@ class Solution:
         self._dfs(robot, 0, 0, 0, 1, set())
 
     def _dfs(self, robot, x, y, direction_x, direction_y, visited):
-        if (x, y) in visited:
-            return
-
         robot.clean()
         visited.add((x, y))
 
