@@ -57,11 +57,11 @@ class Solution:
                 self._dfs(robot, neighbour_x, neighbour_y,
                           direction_x, direction_y, visited)
 
-                robot.turnLeft()
-                robot.turnLeft()
+                robot.turnRight()
+                robot.turnRight()
                 robot.move()
-                robot.turnRight()
-                robot.turnRight()
+                robot.turnLeft()
+                robot.turnLeft()
 
-            robot.turnLeft()
-            direction_x, direction_y = -direction_y, direction_x
+            robot.turnRight()
+            direction_x, direction_y = direction_y, -direction_x
