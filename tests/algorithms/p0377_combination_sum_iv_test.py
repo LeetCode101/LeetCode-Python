@@ -6,5 +6,4 @@ class TestCombinationSum(unittest.TestCase):
     def test_combination_sum(self):
         solution = Solution()
 
-        # self.assertEqual(7, solution.combinationSum4([1, 2, 3], 4))
-        self.assertEqual(1, solution.combinationSum4([4, 2, 1], 28))
+        self.assertEqual(7, solution.combinationSum4([1, 2, 3], 4))
