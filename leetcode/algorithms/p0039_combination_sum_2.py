@@ -11,9 +11,7 @@ class Solution:
         return result
 
     def _dfs(self, candidates, start, target, combination, result):
-        if target < 0:
-            return
-        elif target == 0:
+        if target == 0:
             result.append(combination)
 
             return
