@@ -23,4 +23,5 @@ class Solution:
             new_candidates = set(candidates)
             new_candidates.remove(n)
 
-            self._combine(k - 1, n, new_candidates, combination[:] + [n], result)
+            self._combine(k - 1, n, new_candidates,
+                          combination[:] + [n], result)
