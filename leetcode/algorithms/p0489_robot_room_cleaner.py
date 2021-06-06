@@ -5,7 +5,12 @@ class Robot:
         self.column = column
         self.direction_x = 0
         self.direction_y = 1
-        self.cleaned = set()
+        self.uncleaned = set()
+
+        for i in range(len(grid)):
+            for j in range(len(grid[0])):
+                if grid[i][j] == 1:
+                    self.uncleaned.add((i, j))
 
     def move(self):
         """
@@ -51,7 +56,10 @@ class Robot:
        :rtype void
        """
         if self.grid[self.row][self.column] == 1:
-            self.cleaned.add((self.row, self.column))
+            self.uncleaned.remove((self.row, self.column))
+
+    def room_cleaned(self):
+        return len(self.uncleaned) == 0
 
 
 class Solution:

@@ -14,3 +14,5 @@ class TestRobotRoomCleaner(unittest.TestCase):
         ]
         robot = Robot(grid, 1, 3)
         solution.cleanRoom(robot)
+
+        self.assertTrue(robot.room_cleaned())
