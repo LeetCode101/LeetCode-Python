@@ -15,7 +15,6 @@ class Solution:
 
             return
 
-        for i in range(start, end + 1):
-
+        for i in range(start, end - k + 2):
             self._combine(k - 1, i + 1, end,
                           combination[:] + [i], result)
