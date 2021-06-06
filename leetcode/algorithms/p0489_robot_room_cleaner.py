@@ -27,14 +27,14 @@ class Robot:
         else:
             return False
 
-
     def turnLeft(self):
         """
        Robot will stay in the same cell after calling turnLeft/turnRight.
        Each turn will be 90 degrees.
        :rtype void
        """
-        self.direction_x, self.direction_y = -self.direction_y, self.direction_x
+        self.direction_x, self.direction_y = \
+            -self.direction_y, self.direction_x
 
     def turnRight(self):
         """
@@ -42,7 +42,8 @@ class Robot:
        Each turn will be 90 degrees.
        :rtype void
        """
-        self.direction_x, self.direction_y = self.direction_y, -self.direction_x
+        self.direction_x, self.direction_y = \
+            self.direction_y, -self.direction_x
 
     def clean(self):
         """
