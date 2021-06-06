@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0077_combinations import Solution
+from leetcode.algorithms.p0077_combinations_1 import Solution
 
 
 class TestCombinations(unittest.TestCase):
