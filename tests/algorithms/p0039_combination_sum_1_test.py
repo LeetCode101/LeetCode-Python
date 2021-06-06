@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0039_combination_sum import Solution
+from leetcode.algorithms.p0039_combination_sum_1 import Solution
 
 
 class TestCombinationSum(unittest.TestCase):
