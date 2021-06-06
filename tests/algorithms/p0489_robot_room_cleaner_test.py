@@ -13,3 +13,4 @@ class TestRobotRoomCleaner(unittest.TestCase):
             [1, 1, 1, 1, 1, 1, 1, 1]
         ]
         robot = Robot(grid, 1, 3)
+        solution.cleanRoom(robot)

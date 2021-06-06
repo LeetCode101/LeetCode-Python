@@ -3,6 +3,9 @@ class Robot:
         self.grid = grid
         self.row = row
         self.column = column
+        self.direction_x = 0
+        self.direction_y = 1
+        self.cleaned = set()
 
     def move(self):
         """
@@ -11,7 +14,19 @@ class Robot:
        robot stays in the current cell.
        :rtype bool
        """
-        pass
+        next_row = self.row + self.direction_y
+        next_column = self.column + self.direction_x
+
+        if 0 <= next_row < len(self.grid) \
+                and 0 <= next_column < len(self.grid[0]) \
+                and self.grid[next_row][next_column] == 1:
+            self.row = next_row
+            self.column = next_column
+
+            return True
+        else:
+            return False
+
 
     def turnLeft(self):
         """
@@ -19,7 +34,7 @@ class Robot:
        Each turn will be 90 degrees.
        :rtype void
        """
-        pass
+        self.direction_x, self.direction_y = -self.direction_y, self.direction_x
 
     def turnRight(self):
         """
@@ -27,14 +42,15 @@ class Robot:
        Each turn will be 90 degrees.
        :rtype void
        """
-        pass
+        self.direction_x, self.direction_y = self.direction_y, -self.direction_x
 
     def clean(self):
         """
        Clean the current cell.
        :rtype void
        """
-        pass
+        if self.grid[self.row][self.column] == 1:
+            self.cleaned.add((self.row, self.column))
 
 
 class Solution:
