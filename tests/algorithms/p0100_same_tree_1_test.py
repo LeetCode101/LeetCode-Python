@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0100_same_tree import Solution, TreeNode
+from leetcode.algorithms.p0100_same_tree_1 import Solution, TreeNode
 
 
 class TestSameTree(unittest.TestCase):
