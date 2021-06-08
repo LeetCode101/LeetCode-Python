@@ -12,3 +12,4 @@ class TestSameTree(unittest.TestCase):
 
         self.assertTrue(solution.isSameTree(a, b))
         self.assertFalse(solution.isSameTree(c, d))
+        self.assertFalse(solution.isSameTree(TreeNode(1), TreeNode(2)))
