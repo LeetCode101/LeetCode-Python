@@ -8,7 +8,7 @@ class TestBinaryTreeVerticalOrderTraversal(unittest.TestCase):
         solution = Solution()
         root = TreeNode(
             3,
-            TreeNode(9, TreeNode(4), TreeNode(1)),
+            TreeNode(9, TreeNode(4), TreeNode(0)),
             TreeNode(8, TreeNode(1), TreeNode(7))
         )
 
