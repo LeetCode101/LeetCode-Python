@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0268_missing_number import Solution
+from leetcode.algorithms.p0268_missing_number_1 import Solution
 
 
 class TestMissingNumber(unittest.TestCase):
