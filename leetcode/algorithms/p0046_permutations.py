@@ -5,7 +5,7 @@ class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
         permutations = []
 
-        self._permute(len(nums), set(nums), [], permutations)
+        self._permute(len(nums), nums, [], permutations)
 
         return permutations
 
@@ -15,8 +15,6 @@ class Solution:
 
             return
 
-        for n in nums:
-            new_nums = set(nums)
-            new_nums.remove(n)
-
-            self._permute(count - 1, new_nums, permutation + [n], permutations)
+        for i, n in enumerate(nums):
+            self._permute(count - 1, nums[0:i] + nums[i + 1:],
+                          permutation + [n], permutations)
