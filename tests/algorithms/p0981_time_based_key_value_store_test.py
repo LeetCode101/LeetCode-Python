@@ -11,6 +11,7 @@ class TestTimeBasedKeyValueStore(unittest.TestCase):
         self.assertEqual('bar', time_map.get('foo', 3))
 
         time_map.set('foo', 'bar2', 4)
+        time_map.set('foo', 'bar3', 6)
 
         self.assertEqual('bar2', time_map.get('foo', 4))
         self.assertEqual('bar2', time_map.get('foo', 5))
