@@ -28,7 +28,7 @@ class Vector2D:
 
     def _get_next_row(self, vec, row):
         for i in range(row, len(vec)):
-            if vec[row]:
+            if vec[i]:
                 return i
 
         return -1
