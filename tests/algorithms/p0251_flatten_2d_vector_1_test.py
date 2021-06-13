@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0251_flatten_2d_vector import Vector2D
+from leetcode.algorithms.p0251_flatten_2d_vector_1 import Vector2D
 
 
 class TestFlatten2DVector(unittest.TestCase):
