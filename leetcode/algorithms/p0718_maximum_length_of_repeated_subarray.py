@@ -8,14 +8,12 @@ class Solution:
 
         m, n = len(nums1), len(nums2)
         max_length = 0
-        dp = [[0 for _ in range(n + 1)] for _ in range(m + 1)]
+        dp = [[0 for _ in range(n)] for _ in range(m)]
 
-        for i in range(m + 1):
-            for j in range(n + 1):
-                if i == 0 or j == 0:
-                    dp[i][j] = 0
-                elif nums1[i - 1] == nums2[j - 1]:
-                    dp[i][j] = 1 + dp[i - 1][j - 1]
+        for i in range(m):
+            for j in range(n):
+                if nums1[i] == nums2[j]:
+                    dp[i][j] = dp[i - 1][j - 1] + 1 if i >= 1 and j >= 1 else 1
                     max_length = max(max_length, dp[i][j])
 
         return max_length
