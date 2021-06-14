@@ -7,7 +7,8 @@ class Solution:
         self.accumulated_weight_sum = [i for i in w]
 
         for i in range(1, len(w)):
-            self.accumulated_weight_sum[i] += self.accumulated_weight_sum[i - 1]
+            self.accumulated_weight_sum[i] += \
+                self.accumulated_weight_sum[i - 1]
 
     def pickIndex(self) -> int:
         low, high = 0, len(self.accumulated_weight_sum) - 1
