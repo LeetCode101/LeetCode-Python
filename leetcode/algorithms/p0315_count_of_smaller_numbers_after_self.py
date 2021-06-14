@@ -7,7 +7,7 @@ class TreeNode:
         self.value = value
         self.left = left
         self.right = right
-        self.count = 1
+        self.count = 0
 
 
 class Solution:
@@ -32,7 +32,7 @@ class Solution:
             prev = current
 
             if current.value < value:
-                count += current.count
+                count += current.count + 1
                 current = current.right
             else:
                 current.count += 1
