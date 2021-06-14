@@ -1,4 +1,4 @@
-from random import randrange
+from random import randint
 from typing import List
 
 
@@ -12,7 +12,7 @@ class Solution:
 
     def pickIndex(self) -> int:
         low, high = 0, len(self.accumulated_weight_sum) - 1
-        target = randrange(self.accumulated_weight_sum[-1]) + 1
+        target = randint(1, self.accumulated_weight_sum[-1])
 
         while low < high:
             middle = low + (high - low) // 2
