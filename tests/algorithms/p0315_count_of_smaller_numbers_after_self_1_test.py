@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0315_count_of_smaller_numbers_after_self \
+from leetcode.algorithms.p0315_count_of_smaller_numbers_after_self_1 \
     import Solution
 
 
