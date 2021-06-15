@@ -1,6 +1,6 @@
 class Solution:
     def minRemoveToMakeValid(self, s: str) -> str:
-        removed = []
+        removed_right_parentheses = []
         left_parentheses = []
 
         for i, c in enumerate(s):
@@ -8,15 +8,15 @@ class Solution:
                 left_parentheses.append(i)
             elif c == ')':
                 if not left_parentheses:
-                    removed.append(i)
+                    removed_right_parentheses.append(i)
                 else:
                     left_parentheses.pop()
 
-        all_removed = set(removed + left_parentheses)
+        removed = set(left_parentheses + removed_right_parentheses)
         valid_string = []
 
         for i, c in enumerate(s):
-            if i not in all_removed:
+            if i not in removed:
                 valid_string.append(c)
 
         return ''.join(valid_string)
