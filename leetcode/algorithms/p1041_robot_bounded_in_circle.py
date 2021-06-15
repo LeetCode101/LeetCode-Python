@@ -11,4 +11,4 @@ class Solution:
             elif instruction == 'R':
                 dx, dy = dy, -dx
 
-        return (x == 0 and y == 0) or (dx, dy) != (0, 1)
+        return (dx, dy) != (0, 1) or (x == 0 and y == 0)
