@@ -1,7 +1,7 @@
 class Solution:
     def minRemoveToMakeValid(self, s: str) -> str:
-        removed_right_parentheses = []
         left_parentheses = []
+        removed_right_parentheses = []
 
         for i, c in enumerate(s):
             if c == '(':
