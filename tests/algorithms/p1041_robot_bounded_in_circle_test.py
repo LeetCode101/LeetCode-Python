@@ -9,3 +9,4 @@ class TestRobotBoundedInCircle(unittest.TestCase):
         self.assertTrue(solution.isRobotBounded('GGLLGG'))
         self.assertFalse(solution.isRobotBounded('GG'))
         self.assertTrue(solution.isRobotBounded('GL'))
+        self.assertTrue(solution.isRobotBounded('GR'))
