@@ -21,18 +21,22 @@ class Solution:
                 dp[i] += dp[i - 1]
 
             if '*' in two_digits:
+                count = 0
+
                 if two_digits[1].isdigit():
                     if int(two_digits[1]) <= 6:
-                        dp[i] += dp[i - 2] * 2 if i >= 2 else 2
+                        count = 2
                     else:
-                        dp[i] += dp[i - 2] if i >= 2 else 1
+                        count = 1
                 elif two_digits[0].isdigit():
                     if two_digits[0] == '1':
-                        dp[i] += dp[i - 2] * 9 if i >= 2 else 9
+                        count = 9
                     elif two_digits[0] == '2':
-                        dp[i] += dp[i - 2] * 6 if i >= 2 else 6
+                        count = 6
                 else:
-                    dp[i] += dp[i - 2] * 15 if i >= 2 else 15
+                    count = 15
+
+                dp[i] += dp[i - 2] * count if i >= 2 else count
             elif 10 <= int(two_digits) <= 26:
                 dp[i] += dp[i - 2] if i >= 2 else 1
 
