@@ -15,8 +15,8 @@ class Solution:
             column_sum = [0] * column
 
             for j in range(i, row):
-                for k in range(column):
-                    column_sum[k] += matrix[j][k]
+                for c in range(column):
+                    column_sum[c] += matrix[j][c]
 
                 max_sum = max(max_sum, self._max_sum(column_sum, k))
 
