@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0639_decode_ways_ii import Solution
+from leetcode.algorithms.p0639_decode_ways_ii_1 import Solution
 
 
 class TestDecodeWays(unittest.TestCase):
