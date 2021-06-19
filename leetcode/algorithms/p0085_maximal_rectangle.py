@@ -19,15 +19,21 @@ class Solution:
         return max_area
 
     def _get_max_area(self, heights):
-        stack = [-1]
+        stack = []
         max_area = 0
+        length = len(heights)
+        i = 0
 
-        for i in range(len(heights)):
-            while heights[i] < heights[stack[-1]]:
-                height = heights[stack.pop()]
-                width = i - 1 - stack[-1]
-                max_area = max(max_area, height * width)
+        while i <= length:
+            current_height = 0 if i == length else heights[i]
 
-            stack.append(i)
+            if not stack or current_height >= heights[stack[-1]]:
+                stack.append(i)
+                i += 1
+            else:
+                top = stack.pop()
+                width = i if not stack else i - 1 - stack[-1]
+                current_area = heights[top] * width
+                max_area = max(max_area, current_area)
 
         return max_area
