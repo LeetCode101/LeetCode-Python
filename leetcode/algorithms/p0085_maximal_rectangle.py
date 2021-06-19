@@ -7,7 +7,7 @@ class Solution:
             return 0
 
         m, n = len(matrix), len(matrix[0])
-        heights = [0] * (n + 1)
+        heights = [0] * n
         max_area = 0
 
         for i in range(m):
