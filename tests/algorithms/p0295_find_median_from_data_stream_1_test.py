@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0295_find_median_from_data_stream import MedianFinder
+from leetcode.algorithms.p0295_find_median_from_data_stream_1 import MedianFinder
 
 
 class TestFindMedianFromDataStream(unittest.TestCase):
