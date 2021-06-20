@@ -2,6 +2,7 @@ import sys
 from typing import List
 
 
+# Time Limit Exceeded!
 class Solution:
     def ladderLength(self, beginWord: str, endWord: str, wordList: List[str]) \
             -> int:
@@ -21,7 +22,8 @@ class Solution:
 
             if self._is_one_letter_diff(begin_word, word):
                 visited.add(word)
-                min_length = min(min_length, self._dfs(word, end_word, word_list, length + 1, visited))
+                min_length = min(min_length, self._dfs(
+                    word, end_word, word_list, length + 1, visited))
                 visited.remove(word)
 
         return min_length
