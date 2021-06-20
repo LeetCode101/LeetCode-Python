@@ -24,7 +24,8 @@ class File:
         if self.is_file:
             return [self.name]
         else:
-            return sorted(list(map(lambda f: f.name, list(self.files.values()))))
+            return sorted(list(map(lambda f: f.name,
+                                   list(self.files.values()))))
 
 
 class FileSystem:
