@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0829_consecutive_numbers_sum import Solution
+from leetcode.algorithms.p0829_consecutive_numbers_sum_1 import Solution
 
 
 class TestConsecutiveNumbersSum(unittest.TestCase):

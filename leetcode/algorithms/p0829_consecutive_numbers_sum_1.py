@@ -1,3 +1,4 @@
+# Time Limit Exceeded!
 class Solution:
     def consecutiveNumbersSum(self, n: int) -> int:
         sums = set()
