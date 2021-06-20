@@ -27,11 +27,10 @@ class Solution:
         return min_length
 
     def _is_one_letter_diff(self, a, b):
-        letters = set(list(a))
         count = 0
 
-        for c in b:
-            if c not in letters:
+        for i in range(len(a)):
+            if a[i] != b[i]:
                 count += 1
 
             if count > 1:
