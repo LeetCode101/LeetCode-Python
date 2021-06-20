@@ -9,7 +9,7 @@ class Node:
 class LRUCache:
     def __init__(self, capacity: int):
         self.capacity = capacity
-        self.caches = {}
+        self.node_cache = {}
         self.head = Node(-1, -1)
         self.tail = Node(-1, -1)
         self.head.next = self.tail
@@ -34,28 +34,28 @@ class LRUCache:
         return tail
 
     def get(self, key: int) -> int:
-        if key not in self.caches:
+        if key not in self.node_cache:
             return -1
 
-        node = self.caches[key]
+        node = self.node_cache[key]
 
         self._move_to_head(node)
 
         return node.value
 
     def put(self, key: int, value: int) -> None:
-        if key in self.caches:
-            node = self.caches[key]
+        if key in self.node_cache:
+            node = self.node_cache[key]
             node.value = value
 
             self._move_to_head(node)
         else:
             new_node = Node(key, value)
 
-            self.caches[key] = new_node
+            self.node_cache[key] = new_node
             self._append_head(new_node)
 
-            if len(self.caches) > self.capacity:
+            if len(self.node_cache) > self.capacity:
                 tail = self._pop_tail()
 
-                self.caches.pop(tail.key)
+                self.node_cache.pop(tail.key)
