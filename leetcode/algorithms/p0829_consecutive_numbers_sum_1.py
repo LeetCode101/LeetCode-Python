@@ -5,8 +5,8 @@ class Solution:
         sum_so_far = 0
         count = 0
 
-        for i in range(n):
-            sum_so_far += i + 1
+        for i in range(1, n + 1):
+            sum_so_far += i
 
             if sum_so_far == n:
                 count += 1
