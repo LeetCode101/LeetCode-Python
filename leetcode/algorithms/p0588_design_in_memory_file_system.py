@@ -41,6 +41,19 @@ class FileSystem:
         return file.ls() if file else []
 
     def mkdir(self, path: str) -> None:
+        self._make(path, False)
+
+    def addContentToFile(self, filePath: str, content: str) -> None:
+        file = self._make(filePath, True)
+        file.content += content
+
+    def readContentFromFile(self, filePath: str) -> str:
+        file = self.root.search(filePath)
+
+        return file.content if file else ''
+
+
+    def _make(self, path, is_file):
         paths = path.split('/')
         file = self.root
 
@@ -53,23 +66,6 @@ class FileSystem:
 
             file = files[name]
 
-    def addContentToFile(self, filePath: str, content: str) -> None:
-        paths = filePath.split('/')
-        file = self.root
+        file.is_file = is_file
 
-        for i in range(1, len(paths)):
-            files = file.files
-            name = paths[i]
-
-            if name not in files:
-                file.files[name] = File(name)
-
-            file = files[name]
-
-        file.is_file = True
-        file.content += content
-
-    def readContentFromFile(self, filePath: str) -> str:
-        file = self.root.search(filePath)
-
-        return file.content if file else ''
+        return file
