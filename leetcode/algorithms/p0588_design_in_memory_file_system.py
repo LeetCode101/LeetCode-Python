@@ -52,7 +52,6 @@ class FileSystem:
 
         return file.content if file else ''
 
-
     def _make(self, path, is_file):
         paths = path.split('/')
         file = self.root
