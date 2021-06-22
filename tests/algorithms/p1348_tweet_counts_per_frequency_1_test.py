@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1348_tweet_counts_per_frequency import TweetCounts
+from leetcode.algorithms.p1348_tweet_counts_per_frequency_1 import TweetCounts
 
 
 class TestTweetCountsPerFrequency(unittest.TestCase):
