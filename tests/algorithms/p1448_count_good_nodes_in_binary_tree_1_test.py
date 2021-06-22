@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1448_count_good_nodes_in_binary_tree \
+from leetcode.algorithms.p1448_count_good_nodes_in_binary_tree_1 \
     import Solution, TreeNode
 
 
