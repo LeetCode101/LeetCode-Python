@@ -13,9 +13,6 @@ class Solution:
         return self._dfs(root, root.val)
 
     def _dfs(self, root, max_so_far):
-        if not root:
-            return 0
-
         count = 1 if root.val >= max_so_far else 0
 
         if root.left:

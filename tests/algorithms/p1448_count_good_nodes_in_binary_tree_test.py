@@ -12,4 +12,5 @@ class TestCountGoodNodesInBinaryTree(unittest.TestCase):
             TreeNode(4, TreeNode(1), TreeNode(5))
         )
 
+        self.assertEqual(0, solution.goodNodes(None))
         self.assertEqual(4, solution.goodNodes(root))
