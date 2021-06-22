@@ -9,3 +9,4 @@ class TestValidPalindrome(unittest.TestCase):
         self.assertTrue(solution.validPalindrome('aba'))
         self.assertTrue(solution.validPalindrome('abca'))
         self.assertFalse(solution.validPalindrome('abc'))
+        self.assertTrue(solution.validPalindrome('deeee'))
