@@ -10,7 +10,10 @@ class Solution:
             miss_match_count = n - 1
 
             for j in range(n):
-                if i != j and not self._is_sub_sequence(strs[i], strs[j]):
+                if i == j:
+                    continue
+
+                if not self._is_sub_sequence(strs[i], strs[j]):
                     miss_match_count -= 1
 
             if miss_match_count == 0:
