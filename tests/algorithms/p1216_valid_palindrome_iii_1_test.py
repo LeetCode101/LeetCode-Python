@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1216_valid_palindrome_iii import Solution
+from leetcode.algorithms.p1216_valid_palindrome_iii_1 import Solution
 
 
 class TestValidPalindrome(unittest.TestCase):
