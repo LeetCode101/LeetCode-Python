@@ -11,8 +11,7 @@ class Solution:
             dp[i][i] = 0
 
             for j in range(i + 1, n):
-                if s[i] == s[j] and (s[i] != chars[i][j - 1]
-                                     or s[i] != chars[i + 1][j]):
+                if s[i] == s[j] and s[i] != chars[i + 1][j - 1]:
                     dp[i][j] = dp[i + 1][j - 1] + 2
                     chars[i][j] = s[i]
                 else:
