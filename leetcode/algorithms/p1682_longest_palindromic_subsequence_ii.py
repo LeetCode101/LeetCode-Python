@@ -8,8 +8,6 @@ class Solution:
         chars = [[''] * n for _ in range(n)]
 
         for i in range(n - 1, -1, -1):
-            dp[i][i] = 0
-
             for j in range(i + 1, n):
                 if s[i] == s[j] and s[i] != chars[i + 1][j - 1]:
                     dp[i][j] = dp[i + 1][j - 1] + 2
