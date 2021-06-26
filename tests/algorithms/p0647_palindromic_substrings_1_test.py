@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0647_palindromic_substrings import Solution
+from leetcode.algorithms.p0647_palindromic_substrings_1 import Solution
 
 
 class TestPalindromicSubstrings(unittest.TestCase):
