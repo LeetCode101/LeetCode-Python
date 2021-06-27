@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0062_unique_paths import Solution
+from leetcode.algorithms.p0062_unique_paths_1 import Solution
 
 
 class TestUniquePaths(unittest.TestCase):
