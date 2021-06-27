@@ -18,3 +18,5 @@ class TestTweetCountsPerFrequency(unittest.TestCase):
 
         self.assertListEqual([4], tweet_counts.getTweetCountsPerFrequency(
             'hour', 'tweet3', 0, 210))
+        self.assertListEqual([4], tweet_counts.getTweetCountsPerFrequency(
+            'day', 'tweet3', 0, 210))
