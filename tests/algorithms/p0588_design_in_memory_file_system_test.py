@@ -13,3 +13,5 @@ class TestDesignInMemoryFileSystem(unittest.TestCase):
 
         self.assertListEqual(['a'], file_system.ls('/'))
         self.assertEqual('hello', file_system.readContentFromFile('/a/b/c/d'))
+        self.assertListEqual([], file_system.ls('/m/q'))
+        self.assertListEqual(['d'], file_system.ls('/a/b/c/d'))
