@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0055_jump_game import Solution
+from leetcode.algorithms.p0055_jump_game_1 import Solution
 
 
 class TestJumpGame(unittest.TestCase):

@@ -9,8 +9,6 @@ class Solution:
     def _dfs(self, nums, start):
         if start == len(nums):
             return True
-        elif start > len(nums):
-            return False
 
         for step in range(nums[start]):
             if self._dfs(nums, start + step + 1):
