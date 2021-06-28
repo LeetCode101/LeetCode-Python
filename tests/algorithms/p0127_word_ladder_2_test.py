@@ -10,3 +10,4 @@ class TestWordLadder(unittest.TestCase):
             'lost', 'miss', ['most', 'mist', 'miss', 'lost', 'fist', 'fish']))
         self.assertEqual(5, solution.ladderLength(
             'hit', 'cog', ['hot', 'dot', 'dog', 'lot', 'log', 'cog']))
+        self.assertEqual(0, solution.ladderLength('a', 'b', []))
