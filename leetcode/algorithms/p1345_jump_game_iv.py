@@ -19,18 +19,18 @@ class Solution:
         while queue:
             steps, i = queue.popleft()
 
+            if i < 0 or i >= len(arr) or i in visited:
+                continue
+
             if i == n - 1:
                 return steps
 
-            for neighbour in [i - 1, i + 1]:
-                if 0 <= neighbour < n and neighbour not in visited:
-                    visited.add(n)
-                    queue.append((steps + 1, neighbour))
+            visited.add(i)
+            queue.append((steps + 1, i + 1))
+            queue.append((steps + 1, i - 1))
 
             if arr[i] in positions:
                 for neighbour in positions[arr[i]]:
-                    if neighbour not in visited:
-                        visited.add(neighbour)
-                        queue.append((steps + 1, neighbour))
+                    queue.append((steps + 1, neighbour))
 
                 positions.pop(arr[i])
