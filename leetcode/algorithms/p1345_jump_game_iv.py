@@ -4,6 +4,9 @@ from typing import List
 
 class Solution:
     def minJumps(self, arr: List[int]) -> int:
+        if not arr:
+            return 0
+
         n = len(arr)
         positions = collections.defaultdict(list)
 
@@ -32,5 +35,3 @@ class Solution:
                         queue.append((steps + 1, neighbour))
 
                 visited_groups.add(arr[i])
-
-        return False
