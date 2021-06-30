@@ -15,7 +15,6 @@ class Solution:
 
         queue = collections.deque([(0, 0)])
         visited = set()
-        visited_groups = set()
 
         while queue:
             steps, i = queue.popleft()
@@ -28,10 +27,10 @@ class Solution:
                     visited.add(n)
                     queue.append((steps + 1, neighbour))
 
-            if arr[i] not in visited_groups:
+            if arr[i] in positions:
                 for neighbour in positions[arr[i]]:
                     if neighbour not in visited:
                         visited.add(neighbour)
                         queue.append((steps + 1, neighbour))
 
-                visited_groups.add(arr[i])
+                positions.pop(arr[i])
