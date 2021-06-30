@@ -3,9 +3,9 @@ from typing import List
 
 class Solution:
     def canReach(self, arr: List[int], start: int) -> bool:
-        return self._bfs(arr, start, set())
+        return self._dfs(arr, start, set())
 
-    def _bfs(self, arr, start, visited):
+    def _dfs(self, arr, start, visited):
         if start < 0 or start >= len(arr) or start in visited:
             return False
 
@@ -14,5 +14,5 @@ class Solution:
 
         visited.add(start)
 
-        return self._bfs(arr, start + arr[start], visited) \
-            or self._bfs(arr, start - arr[start], visited)
+        return self._dfs(arr, start + arr[start], visited) \
+            or self._dfs(arr, start - arr[start], visited)
