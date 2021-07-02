@@ -17,6 +17,6 @@ class Solution:
                 heapq.heappop(heap)
 
             max_score = -(-nums[i] + heap[0][0])
-            heapq.heappush(heap, (max_score, i))
+            heapq.heappush(heap, (-max_score, i))
 
         return max_score
