@@ -9,11 +9,11 @@ class Solution:
 
         n = len(nums)
         dp = [-sys.maxsize] * n
-        dp[-1] = nums[-1]
-        max_score = dp[-1]
+        dp[0] = nums[0]
 
-        for i in range(n - 1, -1, -1):
-            dp[i] = nums[i] + max(dp[i + 1:i + k + 1], default=0)
-            max_score = max(max_score, dp[i])
+        for i in range(1, n):
+            for j in range(max(i - k, 0), i):
+                dp[i] = max(dp[i], dp[j] + nums[i])
 
-        return max_score
+        return dp[-1]
+
