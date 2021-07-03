@@ -12,7 +12,8 @@ class Solution:
             graph[prerequisite].append(course)
             degrees[course] += 1
 
-        queue = collections.deque([course for course, degree in enumerate(degrees) if degree == 0])
+        queue = collections.deque(
+            [course for course, degree in enumerate(degrees) if degree == 0])
 
         while queue:
             course = queue.popleft()
