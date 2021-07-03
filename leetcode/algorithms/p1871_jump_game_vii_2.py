@@ -7,6 +7,8 @@ class Solution:
             return False
 
         n = len(s)
+        dp = [False] * n
+        dp[0] = True
         queue = deque([0])
 
         for i in range(1, n):
@@ -14,6 +16,7 @@ class Solution:
                 queue.popleft()
 
             if s[i] == '0' and queue and queue[0] <= i - minJump:
+                dp[i] = True
                 queue.append(i)
 
-        return len(queue) > 0 and queue[-1] == n - 1
+        return dp[-1]
