@@ -2,6 +2,7 @@ import collections
 from typing import List
 
 
+# Time Limit Exceeded!
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) \
             -> bool:
