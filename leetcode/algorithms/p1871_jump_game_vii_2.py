@@ -15,7 +15,7 @@ class Solution:
             if queue and queue[0] < i - maxJump:
                 queue.popleft()
 
-            if s[i] == '0' and queue and queue[0] <= i - minJump:
+            if s[i] == '0' and queue and i - queue[0] >= minJump:
                 dp[i] = True
                 queue.append(i)
 
