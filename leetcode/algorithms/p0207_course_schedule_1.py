@@ -8,8 +8,8 @@ class Solution:
         dependency = collections.defaultdict(list)
         finished = set()
 
-        for prerequisite in prerequisites:
-            dependency[prerequisite[0]].append(prerequisite[1])
+        for course, prerequisite in prerequisites:
+            dependency[course].append(prerequisite)
 
         for i in range(numCourses):
             if not self._can_finish(i, dependency, set(), finished):
