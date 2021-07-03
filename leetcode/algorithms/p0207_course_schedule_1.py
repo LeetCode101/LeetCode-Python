@@ -3,7 +3,8 @@ from typing import List
 
 
 class Solution:
-    def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
+    def canFinish(self, numCourses: int, prerequisites: List[List[int]]) \
+            -> bool:
         mapping = collections.defaultdict(list)
         finished = set()
 
@@ -27,7 +28,8 @@ class Solution:
 
         if course in mapping:
             for prerequisite in mapping[course]:
-                if not self._can_finish(prerequisite, mapping, visited, finished):
+                if not self._can_finish(prerequisite, mapping,
+                                        visited, finished):
                     return False
 
         finished.add(course)
