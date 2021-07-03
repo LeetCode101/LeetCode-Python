@@ -11,7 +11,7 @@ class Solution:
         dp[0] = True
         queue = deque([0])
 
-        for i in range(1, n):
+        for i in range(minJump, n):
             if queue and queue[0] < i - maxJump:
                 queue.popleft()
 
