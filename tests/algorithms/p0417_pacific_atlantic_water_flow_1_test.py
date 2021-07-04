@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0417_pacific_atlantic_water_flow import Solution
+from leetcode.algorithms.p0417_pacific_atlantic_water_flow_1 import Solution
 
 
 class TestPacificAtlanticWaterFlow(unittest.TestCase):
