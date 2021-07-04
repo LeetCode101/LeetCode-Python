@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0210_course_schedule_ii import Solution
+from leetcode.algorithms.p0210_course_schedule_ii_1 import Solution
 
 
 class TestCourseSchedule(unittest.TestCase):
