@@ -10,7 +10,7 @@ class Solution:
         if not root:
             return 0
 
-        return self._dfs(root, root.val, 1)
+        return self._dfs(root, root.val, 0)
 
     def _dfs(self, root, prev_value, length_so_far):
         if not root:
