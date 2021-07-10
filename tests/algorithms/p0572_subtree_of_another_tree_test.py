@@ -16,6 +16,17 @@ class TestSubtreeOfAnotherTree(unittest.TestCase):
             TreeNode(1),
             TreeNode(2)
         )
+        root2 = TreeNode(
+            3,
+            TreeNode(4, TreeNode(1)),
+            TreeNode(5, TreeNode(2))
+        )
+        sub_root2 = TreeNode(
+            3,
+            TreeNode(1),
+            TreeNode(2)
+        )
 
         self.assertFalse(solution.isSubtree(root, None))
         self.assertTrue(solution.isSubtree(root, sub_root))
+        self.assertFalse(solution.isSubtree(root2, sub_root2))
