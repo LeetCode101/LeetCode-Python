@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0549_binary_tree_longest_consecutive_sequence_ii \
+from leetcode.algorithms.p0549_binary_tree_longest_consecutive_sequence_ii_1 \
     import Solution, TreeNode
 
 
