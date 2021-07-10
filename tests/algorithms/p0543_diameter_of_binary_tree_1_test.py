@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0543_diameter_of_binary_tree \
+from leetcode.algorithms.p0543_diameter_of_binary_tree_1 \
     import Solution, TreeNode
 
 
