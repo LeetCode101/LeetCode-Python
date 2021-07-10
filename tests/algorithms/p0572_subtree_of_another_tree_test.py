@@ -17,4 +17,5 @@ class TestSubtreeOfAnotherTree(unittest.TestCase):
             TreeNode(2)
         )
 
+        self.assertFalse(solution.isSubtree(root, None))
         self.assertTrue(solution.isSubtree(root, sub_root))
