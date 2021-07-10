@@ -13,4 +13,4 @@ class TestMostFrequentSubtreeSum(unittest.TestCase):
         )
 
         self.assertListEqual([], solution.findFrequentTreeSum(None))
-        self.assertEqual([], solution.findFrequentTreeSum(root))
+        self.assertEqual([2], solution.findFrequentTreeSum(root))
