@@ -11,5 +11,11 @@ class TestBinaryTreeLongestConsecutiveSequence(unittest.TestCase):
             TreeNode(1),
             TreeNode(3)
         )
+        root2 = TreeNode(
+            2,
+            TreeNode(3),
+            TreeNode(1)
+        )
 
         self.assertEqual(3, solution.longestConsecutive(root))
+        self.assertEqual(3, solution.longestConsecutive(root2))
