@@ -2,9 +2,6 @@ from typing import List
 
 
 class Solution:
-    def __init__(self):
-        self.max_gold = 0
-
     def getMaximumGold(self, grid: List[List[int]]) -> int:
         if not grid or not grid[0]:
             return 0
