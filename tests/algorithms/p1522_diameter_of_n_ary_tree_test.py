@@ -14,4 +14,5 @@ class TestDiameterOfNAryTree(unittest.TestCase):
             ]
         )
 
+        self.assertEqual(0, solution.diameter(None))
         self.assertEqual(3, solution.diameter(root))
