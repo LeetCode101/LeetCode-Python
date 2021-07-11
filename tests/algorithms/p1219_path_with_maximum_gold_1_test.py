@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1219_path_with_maximum_gold import Solution
+from leetcode.algorithms.p1219_path_with_maximum_gold_1 import Solution
 
 
 class TestPathWithMaximumGold(unittest.TestCase):
