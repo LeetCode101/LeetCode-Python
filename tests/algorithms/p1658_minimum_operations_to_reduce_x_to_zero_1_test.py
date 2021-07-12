@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1658_minimum_operations_to_reduce_x_to_zero \
+from leetcode.algorithms.p1658_minimum_operations_to_reduce_x_to_zero_1 \
     import Solution
 
 
