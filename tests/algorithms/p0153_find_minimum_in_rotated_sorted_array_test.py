@@ -1,6 +1,6 @@
 import unittest
-from leetcode.algorithms.\
-    p0153_find_minimum_in_rotated_sorted_array import Solution
+from leetcode.algorithms\
+    .p0153_find_minimum_in_rotated_sorted_array import Solution
 
 
 class TestFindMinimumInRotatedSortedArray(unittest.TestCase):
