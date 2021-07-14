@@ -24,7 +24,10 @@ class Solution:
                 min_left_size = min(
                     min_left_size, i - sum_mapping[sum_so_far - target])
 
-            if sum_so_far + target in sum_mapping and min_left_size != sys.maxsize:
-                min_length = min(min_length, sum_mapping[sum_so_far + target] - i + min_left_size)
+            if sum_so_far + target in sum_mapping \
+                    and min_left_size != sys.maxsize:
+                current_length = sum_mapping[sum_so_far + target] - i \
+                                 + min_left_size
+                min_length = min(min_length, current_length)
 
         return -1 if min_length == sys.maxsize else min_length
