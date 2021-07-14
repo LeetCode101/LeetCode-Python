@@ -1,6 +1,6 @@
 import unittest
 from leetcode.algorithms\
-    .p1477_find_two_non_overlapping_sub_arrays_each_with_target_sum \
+    .p1477_find_two_non_overlapping_sub_arrays_each_with_target_sum_1 \
     import Solution
 
 
