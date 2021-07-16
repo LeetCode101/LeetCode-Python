@@ -4,7 +4,7 @@ from typing import List
 
 class Solution:
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
-        best = [sys.maxsize] * len(arr)
+        dp = [sys.maxsize] * len(arr)
         sum_so_far, best_so_far = 0, sys.maxsize
         min_length, start = sys.maxsize, 0
 
@@ -16,12 +16,12 @@ class Solution:
                 start += 1
 
             if sum_so_far == target:
-                if start > 0 and best[start - 1] != sys.maxsize:
+                if start > 0 and dp[start - 1] != sys.maxsize:
                     min_length = min(min_length,
-                                     best[start - 1] + i - start + 1)
+                                     dp[start - 1] + i - start + 1)
 
                 best_so_far = min(best_so_far, i - start + 1)
 
-            best[i] = best_so_far
+            dp[i] = best_so_far
 
         return min_length if min_length != sys.maxsize else -1
