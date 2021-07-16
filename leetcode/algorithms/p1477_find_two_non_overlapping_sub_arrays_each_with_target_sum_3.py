@@ -16,11 +16,13 @@ class Solution:
                 start += 1
 
             if sum_so_far == target:
+                current_window_length = i - start + 1
+
                 if start > 0 and dp[start - 1] != sys.maxsize:
                     min_length = min(min_length,
-                                     dp[start - 1] + i - start + 1)
+                                     dp[start - 1] + current_window_length)
 
-                best_so_far = min(best_so_far, i - start + 1)
+                best_so_far = min(best_so_far, current_window_length)
 
             dp[i] = best_so_far
 
