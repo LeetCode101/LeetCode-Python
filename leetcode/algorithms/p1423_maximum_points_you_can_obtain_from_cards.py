@@ -13,16 +13,15 @@ class Solution:
         if max_window_length <= 0:
             return total_sum
 
-        while end < len(cardPoints):
+        for end in range(len(cardPoints)):
             sum_so_far += cardPoints[end]
             current_window_length = end - start + 1
 
-            if current_window_length == max_window_length:
-                min_score = min(min_score, sum_so_far)
-            elif current_window_length > max_window_length:
-                sum_so_far -= cardPoints[start]
-                start += 1
+            if current_window_length >= max_window_length:
+                if current_window_length > max_window_length:
+                    sum_so_far -= cardPoints[start]
+                    start += 1
 
-            end += 1
+                min_score = min(min_score, sum_so_far)
 
         return total_sum - min_score
