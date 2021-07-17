@@ -17,11 +17,12 @@ class Solution:
             sum_so_far += cardPoints[end]
             current_window_length = end - start + 1
 
-            if current_window_length >= max_window_length:
-                if current_window_length > max_window_length:
-                    sum_so_far -= cardPoints[start]
-                    start += 1
+            if current_window_length < max_window_length:
+                continue
+            elif current_window_length > max_window_length:
+                sum_so_far -= cardPoints[start]
+                start += 1
 
-                min_score = min(min_score, sum_so_far)
+            min_score = min(min_score, sum_so_far)
 
         return total_sum - min_score
