@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0438_find_all_anagrams_in_a_string import Solution
+from leetcode.algorithms.p0438_find_all_anagrams_in_a_string_1 import Solution
 
 
 class TestFindAllAnagramsInAString(unittest.TestCase):

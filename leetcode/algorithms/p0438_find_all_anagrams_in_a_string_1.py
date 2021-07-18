@@ -1,6 +1,7 @@
 from typing import List
 
 
+# Memory Limit Exceeded!
 class Solution:
     def findAnagrams(self, s: str, p: str) -> List[int]:
         if len(s) < len(p):
