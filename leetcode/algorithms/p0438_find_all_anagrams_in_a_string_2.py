@@ -10,22 +10,23 @@ class Solution:
         start, end, n = 0, 0, len(s)
         positions = []
         counter = collections.Counter(p)
+        current_counter = collections.defaultdict(int)
 
-        while end < n:
-            c = s[end]
+        for end, c in enumerate(s):
+            current_counter[c] += 1
+            current_length = end - start + 1
 
-            if counter[c] > 0:
-                counter[c] -= 1
+            if current_length < len(p):
+                continue
+            elif current_length > len(p):
+                current_counter[s[start]] -= 1
 
-                if end - start + 1 == len(p):
-                    positions.append(start)
+                if current_counter[s[start]] == 0:
+                    current_counter.pop(s[start])
 
-                end += 1
-            elif start == end:
                 start += 1
-                end += 1
-            else:
-                counter[s[start]] += 1
-                start += 1
+
+            if current_counter == counter:
+                positions.append(start)
 
         return positions
