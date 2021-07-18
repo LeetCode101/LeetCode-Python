@@ -8,7 +8,7 @@ class Solution:
         min_window = ''
         min_window_length = sys.maxsize
         start = 0
-        count = 0
+        count = len(t)
 
         for end, c in enumerate(s):
             if c not in counter:
@@ -17,9 +17,9 @@ class Solution:
             counter[c] -= 1
 
             if counter[c] >= 0:
-                count += 1
+                count -= 1
 
-            while count == len(t):
+            while count == 0:
                 if end - start + 1 < min_window_length:
                     min_window_length = end - start + 1
                     min_window = s[start:end + 1]
@@ -28,7 +28,7 @@ class Solution:
                     counter[s[start]] += 1
 
                     if counter[s[start]] > 0:
-                        count -= 1
+                        count += 1
 
                 start += 1
 
