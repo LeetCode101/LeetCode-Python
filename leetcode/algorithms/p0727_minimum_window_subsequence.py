@@ -1,23 +1,29 @@
+import sys
+
+
 class Solution:
     def minWindow(self, s1: str, s2: str) -> str:
-        m, n = len(s2), len(s1)
-        dp = [[0] * (n + 1) for _ in range(m + 1)]
+        m, n = len(s1), len(s2)
+        dp = [[-1] * n for _ in range(m)]
 
-        for i in range(n + 1):
-            dp[0][i] = i + 1
+        for i in range(m):
+            if s1[i] == s2[0]:
+                dp[i][0] = i
 
-        for i in range(1, m + 1):
-            for j in range(1, n + 1):
-                if s2[i - 1] == s1[j - 1]:
-                    dp[i][j] = dp[i - 1][j - 1]
-                else:
-                    dp[i][j] = dp[i][j - 1]
+        for j in range(1, n):
+            start = -1
 
-        start, min_length = 0, n + 1
+            for i in range(m):
+                if s1[i] == s2[j]:
+                    dp[i][j] = start
 
-        for i in range(1, n + 1):
-            if dp[m][i] != 0 and i - dp[m][i] + 1 < min_length:
-                start = dp[m][i] - 1
-                min_length = i - dp[m][i] + 1
+                start = max(start, dp[i][j - 1])
 
-        return '' if min_length == n + 1 else s1[start:start + min_length]
+        min_length, start = sys.maxsize, -1
+
+        for i in range(m):
+            if i - dp[i][n - 1] + 1 < min_length and dp[i][n - 1] != -1:
+                min_length = i - dp[i][n - 1] + 1
+                start = dp[i][n - 1]
+
+        return s1[start:start + min_length] if start != -1 else ''
