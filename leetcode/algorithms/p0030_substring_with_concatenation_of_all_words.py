@@ -11,7 +11,9 @@ class Solution:
 
         for end in range(len(words) * word_length - 1, len(s)):
             for i in range(len(words)):
-                word = s[start + i * word_length: start + (i + 1) * word_length]
+                word_start, word_end = start + i * word_length, \
+                                       start + (i + 1) * word_length
+                word = s[word_start:word_end]
                 current_words.append(word)
 
             if sorted(current_words) == sorted_words:
