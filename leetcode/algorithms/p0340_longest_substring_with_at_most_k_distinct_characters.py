@@ -13,15 +13,15 @@ class Solution:
             chars.add(c)
             counter[c] += 1
 
-            if len(chars) <= k:
-                max_length = max(max_length, end - start + 1)
-            else:
-                while counter[c] > 0:
-                    if s[start] == c:
-                        counter[c] -= 1
+            if len(chars) > k:
+                while start < len(s) and len(chars) > k:
+                    counter[s[start]] -= 1
+
+                    if counter[s[start]] == 0:
+                        chars.remove(s[start])
 
                     start += 1
 
-                chars.remove(c)
+            max_length = max(max_length, end - start + 1)
 
         return max_length
