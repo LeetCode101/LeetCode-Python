@@ -2,6 +2,7 @@ import collections
 import sys
 
 
+# Time Limit Exceeded!
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
         min_window = ''
