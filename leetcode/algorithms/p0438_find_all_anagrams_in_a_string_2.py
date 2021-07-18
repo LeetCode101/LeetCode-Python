@@ -7,7 +7,7 @@ class Solution:
         if len(s) < len(p):
             return []
 
-        start, end, n = 0, 0, len(s)
+        start = 0
         positions = []
         counter = collections.Counter(p)
         current_counter = collections.defaultdict(int)
