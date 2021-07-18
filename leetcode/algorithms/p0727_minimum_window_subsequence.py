@@ -22,8 +22,13 @@ class Solution:
         min_length, start = sys.maxsize, -1
 
         for i in range(m):
-            if i - dp[i][n - 1] + 1 < min_length and dp[i][n - 1] != -1:
-                min_length = i - dp[i][n - 1] + 1
+            if dp[i][n - 1] == -1:
+                continue
+
+            current_length = i - dp[i][n - 1] + 1
+
+            if current_length < min_length:
+                min_length = current_length
                 start = dp[i][n - 1]
 
         return s1[start:start + min_length] if start != -1 else ''
