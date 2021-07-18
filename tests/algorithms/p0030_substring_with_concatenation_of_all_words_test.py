@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0030_substring_with_concatenation_of_all_words_1 \
+from leetcode.algorithms.p0030_substring_with_concatenation_of_all_words \
     import Solution
 
 
