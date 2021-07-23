@@ -1,6 +1,7 @@
 import unittest
 from leetcode.algorithms\
-    .p1358_number_of_substrings_containing_all_three_characters_1 import Solution
+    .p1358_number_of_substrings_containing_all_three_characters_1 \
+    import Solution
 
 
 class TestNumberOfSubstringsContainingAllThreeCharacters(unittest.TestCase):
