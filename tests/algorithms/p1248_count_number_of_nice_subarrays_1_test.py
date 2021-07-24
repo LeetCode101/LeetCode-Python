@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1248_count_number_of_nice_subarrays import Solution
+from leetcode.algorithms.p1248_count_number_of_nice_subarrays_1 import Solution
 
 
 class TestCountNumberOfNiceSubarrays(unittest.TestCase):
