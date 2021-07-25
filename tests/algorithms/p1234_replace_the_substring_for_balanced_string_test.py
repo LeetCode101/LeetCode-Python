@@ -1,5 +1,6 @@
 import unittest
-from leetcode.algorithms.p1234_replace_the_substring_for_balanced_string import Solution
+from leetcode.algorithms.p1234_replace_the_substring_for_balanced_string \
+    import Solution
 
 
 class TestReplaceTheSubstringForBalancedString(unittest.TestCase):
