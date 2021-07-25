@@ -1,5 +1,6 @@
 import unittest
-from leetcode.algorithms.p0424_longest_repeating_character_replacement import Solution
+from leetcode.algorithms.p0424_longest_repeating_character_replacement \
+    import Solution
 
 
 class TestLongestRepeatingCharacterReplacement(unittest.TestCase):
