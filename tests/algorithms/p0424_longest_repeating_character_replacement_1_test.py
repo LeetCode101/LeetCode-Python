@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0424_longest_repeating_character_replacement \
+from leetcode.algorithms.p0424_longest_repeating_character_replacement_1 \
     import Solution
 
 
