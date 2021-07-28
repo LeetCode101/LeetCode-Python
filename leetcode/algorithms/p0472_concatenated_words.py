@@ -23,7 +23,4 @@ class Solution:
             if prefix in words and self._dfs(suffix, words):
                 return True
 
-            if suffix in words and self._dfs(prefix, words):
-                return True
-
         return False
