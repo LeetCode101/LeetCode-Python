@@ -1,0 +1,2 @@
+lint:
+	pycodestyle . --exclude=venv
