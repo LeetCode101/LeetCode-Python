@@ -1,6 +1,5 @@
 import bisect
 import collections
-import sys
 from typing import List
 
 
