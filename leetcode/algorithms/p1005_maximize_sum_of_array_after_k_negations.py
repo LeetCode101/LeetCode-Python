@@ -14,7 +14,7 @@ class Solution:
         if k & 1 == 1:
             target = i
 
-            if i > 0 and abs(sorted_nums[i - 1]) < abs(sorted_nums[i]):
+            if i > 0 and sorted_nums[i - 1] < sorted_nums[i]:
                 target = i - 1
 
             sorted_nums[target] = -sorted_nums[target]
