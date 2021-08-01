@@ -12,3 +12,5 @@ class TestMaximizeSumOfArrayAfterKNegations(unittest.TestCase):
         self.assertEqual(5, solution.largestSumAfterKNegations([4, 2, 3], 1))
         self.assertEqual(13, solution.largestSumAfterKNegations(
             [2, -3, -1, 5, -4], 2))
+        self.assertEqual(53, solution.largestSumAfterKNegations(
+            [8, -7, -3, -9, 1, 9, -6, -9, 3], 8))
