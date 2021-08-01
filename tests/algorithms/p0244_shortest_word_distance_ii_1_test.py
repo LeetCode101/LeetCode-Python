@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0244_shortest_word_distance_ii import WordDistance
+from leetcode.algorithms.p0244_shortest_word_distance_ii_1 import WordDistance
 
 
 class TestShortestWordDistance(unittest.TestCase):
