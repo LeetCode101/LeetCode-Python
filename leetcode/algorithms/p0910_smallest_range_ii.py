@@ -7,8 +7,8 @@ class Solution:
         min_score = sorted_nums[-1] - sorted_nums[0]
 
         for i in range(len(sorted_nums) - 1):
-            big = max(sorted_nums[-1], sorted_nums[i] + 2 * k)
-            small = min(sorted_nums[i + 1], sorted_nums[0] + 2 * k)
+            big = max(sorted_nums[i] + k, sorted_nums[-1] - k)
+            small = min(sorted_nums[i + 1] - k, sorted_nums[0] + k)
             min_score = min(min_score, big - small)
 
         return min_score
