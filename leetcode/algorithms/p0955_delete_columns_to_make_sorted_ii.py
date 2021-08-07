@@ -19,7 +19,7 @@ class Solution:
                     break
                 elif strs[j][i] < strs[j + 1][i] and not in_order[j]:
                     current_in_order[j] = True
-            
+
             if not removed:
                 in_order = current_in_order
 
