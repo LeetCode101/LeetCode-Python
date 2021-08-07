@@ -1,5 +1,6 @@
 import unittest
-from leetcode.algorithms.p1570_dot_product_of_two_sparse_vectors import SparseVector
+from leetcode.algorithms.p1570_dot_product_of_two_sparse_vectors \
+    import SparseVector
 
 
 class TestDotProductOfTwoSparseVectors(unittest.TestCase):
