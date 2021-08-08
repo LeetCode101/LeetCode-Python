@@ -23,7 +23,8 @@ class Solution:
                     j += 1
                     length2 += 1
 
-                if (length1 == length2) or (length1 >= 3 and length2 < length1):
+                if (length1 == length2) or \
+                        (length1 >= 3 and length2 < length1):
                     i += 1
                     j += 1
                 else:

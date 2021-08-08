@@ -7,7 +7,7 @@ class TestExpressiveWords(unittest.TestCase):
         solution = Solution()
 
         self.assertEqual(0, solution.expressiveWords('abcd', ['abc']))
-        self.assertEqual(1, solution.expressiveWords('heeellooo', 
+        self.assertEqual(1, solution.expressiveWords('heeellooo',
                                                      ['hello', 'hi', 'helo']))
-        self.assertEqual(3, solution.expressiveWords('zzzzzyyyyy', 
+        self.assertEqual(3, solution.expressiveWords('zzzzzyyyyy',
                                                      ['zzyy', 'zy', 'zyy']))
