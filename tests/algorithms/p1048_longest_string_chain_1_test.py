@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1048_longest_string_chain import Solution
+from leetcode.algorithms.p1048_longest_string_chain_1 import Solution
 
 
 class TestLongestStringChain(unittest.TestCase):
