@@ -6,7 +6,8 @@ class TestSentenceSimilarity(unittest.TestCase):
     def test_sentence_similarity(self):
         solution = Solution()
 
-        self.assertTrue(solution.areSentencesSimilar(['a'], ['b'], [['a', 'b']]))
+        self.assertTrue(solution.areSentencesSimilar(
+            ['a'], ['b'], [['a', 'b']]))
         self.assertFalse(solution.areSentencesSimilar(['a'], ['b'], []))
         self.assertFalse(solution.areSentencesSimilar(['a'], ['a', 'b'], []))
         self.assertTrue(solution.areSentencesSimilar(
