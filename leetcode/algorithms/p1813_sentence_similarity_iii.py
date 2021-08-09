@@ -14,9 +14,11 @@ class Solution:
         if i == len(words1):
             return True
 
-        for k in range(j, len(words2)):
+        for k in range(len(words2) - 1, j - 1, -1):
             if words1[i] == words2[k]:
                 j = k
+
+                break
 
         while i < len(words1) and j < len(words2) and words1[i] == words2[j]:
             i += 1
