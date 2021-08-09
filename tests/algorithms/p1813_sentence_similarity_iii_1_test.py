@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1813_sentence_similarity_iii import Solution
+from leetcode.algorithms.p1813_sentence_similarity_iii_1 import Solution
 
 
 class TestSentenceSimilarity(unittest.TestCase):
