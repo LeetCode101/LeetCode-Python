@@ -18,10 +18,8 @@ class Solution:
             word1 = sentence1[i]
             word2 = sentence2[i]
 
-            if word1 == word2 or word1 in similarities[word2] \
-                    or word2 in similarities[word1]:
-                continue
-            else:
+            if word1 != word2 and word1 not in similarities[word2] \
+                    and word2 not in similarities[word1]:
                 return False
 
         return True
