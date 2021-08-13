@@ -6,5 +6,6 @@ class TestNextGreaterElement(unittest.TestCase):
     def test_next_greater_element(self):
         solution = Solution()
 
+        self.assertEqual(234161457, solution.nextGreaterElement(234157641))
         self.assertEqual(21, solution.nextGreaterElement(12))
         self.assertEqual(-1, solution.nextGreaterElement(21))
