@@ -12,7 +12,7 @@ class Solution:
             i -= 1
 
         if i == 0:
-            nums.sort()
+            nums.reverse()
 
             return
 
