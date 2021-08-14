@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1019_next_greater_node_in_linked_list \
+from leetcode.algorithms.p1019_next_greater_node_in_linked_list_1 \
     import Solution, ListNode
 
 
