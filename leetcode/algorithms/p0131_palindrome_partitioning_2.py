@@ -20,14 +20,16 @@ class Solution:
             is_cached, palindrome = cache.get((start, end), (False, ''))
 
             if is_cached and palindrome:
-                self._search(s, end + 1, partition + [s[start:end + 1]], result, cache)
+                self._search(s, end + 1, partition + [s[start:end + 1]],
+                             result, cache)
             elif not is_cached:
                 is_palindrome = self._is_palindrome(s, start, end)
                 palindrome = s[start:end + 1] if is_palindrome else ''
                 cache[(start, end)] = (True, palindrome)
 
                 if is_palindrome:
-                    self._search(s, end + 1, partition + [palindrome], result, cache)
+                    self._search(s, end + 1, partition + [palindrome],
+                                 result, cache)
 
     def _is_palindrome(self, s, low, high):
         while low < high and s[low] == s[high]:
