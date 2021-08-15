@@ -29,9 +29,9 @@ class Solution:
 
         cut = sys.maxsize
 
-        for j in range(i + 1, len(s) - k + 2):
-            current_cut = self._dfs(s, j, k - 1, cache) \
-                          + self._cost(s, i, j - 1)
+        for j in range(i, len(s) - k + 1):
+            current_cut = self._dfs(s, j + 1, k - 1, cache) \
+                          + self._cost(s, i, j)
             cut = min(cut, current_cut)
 
         cache[(i, k)] = cut
