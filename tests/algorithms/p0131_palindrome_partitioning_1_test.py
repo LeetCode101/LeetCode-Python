@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0131_palindrome_partitioning import Solution
+from leetcode.algorithms.p0131_palindrome_partitioning_1 import Solution
 
 
 class TestPalindromePartitioning(unittest.TestCase):
