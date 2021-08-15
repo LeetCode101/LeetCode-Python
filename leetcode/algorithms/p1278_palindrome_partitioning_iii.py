@@ -5,35 +5,35 @@ class Solution:
     def palindromePartition(self, s: str, k: int) -> int:
         return self._dfs(s, 0, k, {})
 
-    def _cost(self, s, i, j):
+    def _cost(self, s, start, end):
         cost = 0
 
-        while i < j:
-            if s[i] != s[j]:
+        while start < end:
+            if s[start] != s[end]:
                 cost += 1
 
-            i += 1
-            j -= 1
+            start += 1
+            end -= 1
 
         return cost
 
-    def _dfs(self, s, i, k, cache):
-        if (i, k) in cache:
-            return cache[(i, k)]
+    def _dfs(self, s, start, k, cache):
+        if (start, k) in cache:
+            return cache[(start, k)]
 
-        if len(s) - i == k:
+        if len(s) - start == k:
             return 0
 
         if k == 1:
-            return self._cost(s, i, len(s) - 1)
+            return self._cost(s, start, len(s) - 1)
 
         cut = sys.maxsize
 
-        for j in range(i, len(s) - k + 1):
-            current_cut = self._dfs(s, j + 1, k - 1, cache) \
-                          + self._cost(s, i, j)
+        for end in range(start, len(s) - k + 1):
+            current_cut = self._dfs(s, end + 1, k - 1, cache) \
+                          + self._cost(s, start, end)
             cut = min(cut, current_cut)
 
-        cache[(i, k)] = cut
+        cache[(start, k)] = cut
 
         return cut
