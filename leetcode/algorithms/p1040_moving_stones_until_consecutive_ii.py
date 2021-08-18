@@ -13,10 +13,12 @@ class Solution:
             while sorted_stones[j] - sorted_stones[i] >= n:
                 i += 1
 
-            if j - i + 1 == n - 1 \
+            stone_size = j - i + 1
+
+            if stone_size == n - 1 \
                     and sorted_stones[j] - sorted_stones[i] + 1 == n - 1:
                 low = min(low, 2)
             else:
-                low = min(low, n - (j - i + 1))
+                low = min(low, n - stone_size)
 
         return [low, high]
