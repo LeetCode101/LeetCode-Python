@@ -1,5 +1,6 @@
 import unittest
-from leetcode.algorithms.p1040_moving_stones_until_consecutive_ii import Solution
+from leetcode.algorithms.p1040_moving_stones_until_consecutive_ii \
+    import Solution
 
 
 class TestMovingStonesUntilConsecutive(unittest.TestCase):
