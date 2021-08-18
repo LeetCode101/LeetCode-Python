@@ -10,11 +10,11 @@ class Solution:
                    sorted_stones[-2] - sorted_stones[0] + 1 - (n - 1))
 
         for j in range(n):
-            while sorted_stones[j] - sorted_stones[i] + 1 > n:
+            while sorted_stones[j] - sorted_stones[i] >= n:
                 i += 1
 
             if j - i + 1 == n - 1 \
-                    and sorted_stones[j] - sorted_stones[i] == j - i:
+                    and sorted_stones[j] - sorted_stones[i] + 1 == n - 1:
                 low = min(low, 2)
             else:
                 low = min(low, n - (j - i + 1))
