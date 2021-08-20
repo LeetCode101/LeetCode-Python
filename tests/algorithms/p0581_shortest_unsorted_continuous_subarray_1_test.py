@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0581_shortest_unsorted_continuous_subarray \
+from leetcode.algorithms.p0581_shortest_unsorted_continuous_subarray_1 \
     import Solution
 
 
