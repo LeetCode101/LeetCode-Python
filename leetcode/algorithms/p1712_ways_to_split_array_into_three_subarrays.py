@@ -14,13 +14,14 @@ class Solution:
         for i in range(len(nums) - 2):
             j = max(j, i + 1)
 
-            while j < len(nums) - 1 and prefix_sum[i] > prefix_sum[j] - prefix_sum[i]:
+            while j < len(nums) - 1 and prefix_sum[i] \
+                    > prefix_sum[j] - prefix_sum[i]:
                 j += 1
 
             k = max(k, j)
 
-            while k < len(nums) - 1 \
-                    and prefix_sum[k] - prefix_sum[i] <= prefix_sum[-1] - prefix_sum[k]:
+            while k < len(nums) - 1 and prefix_sum[k] - prefix_sum[i] \
+                    <= prefix_sum[-1] - prefix_sum[k]:
                 k += 1
 
             count = (count + k - j) % 1000000007
