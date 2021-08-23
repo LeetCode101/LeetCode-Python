@@ -7,7 +7,9 @@ class Solution:
         result = []
         stack = []
 
-        for position, speed in cars[::-1]:
+        for i in range(len(cars) - 1, -1, -1):
+            position, speed = cars[i]
+
             while stack and (
                     speed <= stack[-1][1]
                     or self._get_collide_time(stack, position, speed)
