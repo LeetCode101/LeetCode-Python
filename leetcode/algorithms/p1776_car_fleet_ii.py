@@ -4,7 +4,7 @@ from typing import List
 
 class Solution:
     def getCollisionTimes(self, cars: List[List[int]]) -> List[float]:
-        result = []
+        result = [-1] * len(cars)
         stack = []
 
         for i in range(len(cars) - 1, -1, -1):
@@ -18,13 +18,11 @@ class Solution:
 
             if not stack:
                 stack.append((position, speed, math.inf))
-                result.append(-1)
+                result[i] = -1
             else:
                 collide_time = self._get_collide_time(stack, position, speed)
                 stack.append((position, speed, collide_time))
-                result.append(collide_time)
-
-        result.reverse()
+                result[i] = collide_time
 
         return result
 
