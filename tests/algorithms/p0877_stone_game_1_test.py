@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0877_stone_game import Solution
+from leetcode.algorithms.p0877_stone_game_1 import Solution
 
 
 class TestStoneGame(unittest.TestCase):
