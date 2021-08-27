@@ -11,20 +11,20 @@ class Solution:
 
         return self._dfs(prefix_sum, 1, 0, memo)
 
-    def _dfs(self, prefix_sum, m, p, memo):
-        if p + 2 * m >= len(prefix_sum):
-            return prefix_sum[p]
+    def _dfs(self, prefix_sum, m, i, memo):
+        if i + 2 * m >= len(prefix_sum):
+            return prefix_sum[i]
 
-        if memo[p][m] > 0:
-            return memo[p][m]
+        if memo[i][m] > 0:
+            return memo[i][m]
 
         result = 0
 
-        for i in range(1, 2 * m + 1):
-            take = prefix_sum[p] - prefix_sum[p + i]
-            result = max(result, take + prefix_sum[p + i] -
-                         self._dfs(prefix_sum, max(i, m), p + i, memo))
+        for j in range(1, 2 * m + 1):
+            take = prefix_sum[i] - prefix_sum[i + j]
+            result = max(result, take + prefix_sum[i + j] -
+                         self._dfs(prefix_sum, max(j, m), i + j, memo))
 
-        memo[p][m] = result
+        memo[i][m] = result
 
         return result
