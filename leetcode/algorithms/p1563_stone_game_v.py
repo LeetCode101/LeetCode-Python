@@ -12,11 +12,11 @@ class Solution:
         return self._dfs(0, n - 1, prefix_sum, {})
 
     def _dfs(self, start, end, prefix_sum, memo):
-        if (start, end) in memo:
-            return memo[(start, end)]
-
         if start == end:
             return 0
+
+        if (start, end) in memo:
+            return memo[(start, end)]
 
         max_score = 0
 
