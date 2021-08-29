@@ -15,7 +15,14 @@ class Solution:
 
         for i in range(n - 1, -1, -1):
             for j in range(i + 1, n):
-                dp[i][j] = max(prefix_sum[j] - prefix_sum[i + 1] - dp[i + 1][j],
-                               prefix_sum[j - 1] - prefix_sum[i] - dp[i][j - 1])
+                take_left = self._get_sum(prefix_sum, i + 1, j) - dp[i + 1][j]
+                take_right = self._get_sum(prefix_sum, i, j - 1) - dp[i][j - 1]
+                dp[i][j] = max(take_left, take_right)
 
         return dp[0][-1]
+
+    def _get_sum(self, prefix_sum, i, j):
+        if i == 0:
+            return prefix_sum[j]
+        else:
+            return prefix_sum[j] - prefix_sum[i - 1]
