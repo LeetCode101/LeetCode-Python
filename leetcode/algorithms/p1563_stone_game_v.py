@@ -6,8 +6,8 @@ class Solution:
         n = len(stoneValue)
         prefix_sum = [i for i in stoneValue]
 
-        for i in range(n - 1, -1, -1):
-            prefix_sum[i] += prefix_sum[i + 1] if i + 1 < n else 0
+        for i in range(1, n):
+            prefix_sum[i] += prefix_sum[i - 1]
 
         return self._dfs(0, n - 1, prefix_sum, {})
 
@@ -23,8 +23,8 @@ class Solution:
         for i in range(start, end):
             left_start, left_end = start, i
             right_start, right_end = i + 1, end
-            left_sum = prefix_sum[start] - prefix_sum[i + 1]
-            right_sum = prefix_sum[i + 1] - (prefix_sum[end + 1] if end + 1 < len(prefix_sum) else 0)
+            left_sum = prefix_sum[left_end] - (prefix_sum[left_start - 1] if left_start - 1 >= 0 else 0)
+            right_sum = prefix_sum[right_end] - prefix_sum[right_start - 1]
             score = 0
 
             if 2 * min(left_sum, right_sum) <= max_score:
