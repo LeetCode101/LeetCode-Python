@@ -27,7 +27,7 @@ class Solution:
             right_sum = prefix_sum[i + 1] - (prefix_sum[end + 1] if end + 1 < len(prefix_sum) else 0)
             score = 0
 
-            if i > start and 2 * min(left_sum, right_sum) < max_score:
+            if 2 * min(left_sum, right_sum) <= max_score:
                 continue
             elif left_sum > right_sum:
                 score = right_sum + self._dfs(right_start, right_end, prefix_sum, memo)
