@@ -1,4 +1,3 @@
-import sys
 from typing import List
 
 
@@ -19,7 +18,7 @@ class Solution:
         if start == end:
             return 0
 
-        max_score = -sys.maxsize
+        max_score = 0
 
         for i in range(start, end):
             left_start, left_end = start, i
@@ -39,10 +38,7 @@ class Solution:
                 right_score = right_sum + self._dfs(right_start, right_end, prefix_sum, memo)
                 score = max(left_score, right_score)
 
-            if i > start:
-                max_score = max(max_score, score)
-            else:
-                max_score = score
+            max_score = max(max_score, score)
 
         memo[(start, end)] = max_score
 
