@@ -3,7 +3,8 @@ from typing import List
 
 class Solution:
     def stoneGameVI(self, aliceValues: List[int], bobValues: List[int]) -> int:
-        scores = [(aliceValues[i] + bobValues[i], i) for i in range(len(aliceValues))]
+        scores = [(aliceValues[i] + bobValues[i], i)
+                  for i in range(len(aliceValues))]
         scores.sort(reverse=True)
 
         alice_score, bob_score = 0, 0
