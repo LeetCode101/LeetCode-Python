@@ -22,24 +22,27 @@ class Solution:
         max_score = -sys.maxsize
 
         for i in range(start, end):
-            left = [start, i]
-            right = [i + 1, end]
+            left_start, left_end = start, i
+            right_start, right_end = i + 1, end
             left_sum = prefix_sum[start] - prefix_sum[i + 1]
             right_sum = prefix_sum[i + 1] - (prefix_sum[end + 1] if end + 1 < len(prefix_sum) else 0)
+            score = 0
 
             if i > start and 2 * min(left_sum, right_sum) < max_score:
                 continue
-            if left_sum > right_sum:
-                value = right_sum + self._dfs(right[0], right[1], prefix_sum, memo)
+            elif left_sum > right_sum:
+                score = right_sum + self._dfs(right_start, right_end, prefix_sum, memo)
             elif right_sum > left_sum:
-                value = left_sum + self._dfs(left[0], left[1], prefix_sum, memo)
+                score = left_sum + self._dfs(left_start, left_end, prefix_sum, memo)
             else:
-                value = max(left_sum + self._dfs(left[0], left[1], prefix_sum, memo), right_sum + self._dfs(right[0], right[1], prefix_sum, memo))
+                left_score = left_sum + self._dfs(left_start, left_end, prefix_sum, memo)
+                right_score = right_sum + self._dfs(right_start, right_end, prefix_sum, memo)
+                score = max(left_score, right_score)
 
             if i > start:
-                max_score = max(max_score, value)
+                max_score = max(max_score, score)
             else:
-                max_score = value
+                max_score = score
 
         memo[(start, end)] = max_score
 
