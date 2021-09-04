@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0769_max_chunks_to_make_sorted import Solution
+from leetcode.algorithms.p0769_max_chunks_to_make_sorted_1 import Solution
 
 
 class TestMaxChunksToMakeSorted(unittest.TestCase):
