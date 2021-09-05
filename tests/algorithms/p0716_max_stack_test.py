@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0716_max_stack_1 import MaxStack
+from leetcode.algorithms.p0716_max_stack import MaxStack
 
 
 class TestMaxStack(unittest.TestCase):
