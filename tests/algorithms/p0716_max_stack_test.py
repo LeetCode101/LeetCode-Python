@@ -14,3 +14,10 @@ class TestMaxStack(unittest.TestCase):
         self.assertEqual(1, max_stack.top())
         self.assertEqual(5, max_stack.peekMax())
         self.assertEqual(5, max_stack.popMax())
+        self.assertEqual(1, max_stack.pop())
+
+        max_stack.push(1)
+        max_stack.push(5)
+        max_stack.push(2)
+
+        self.assertEqual(5, max_stack.popMax())
