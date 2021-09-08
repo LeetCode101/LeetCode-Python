@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0907_sum_of_subarray_minimums import Solution
+from leetcode.algorithms.p0907_sum_of_subarray_minimums_1 import Solution
 
 
 class TestSumOfSubarrayMinimums(unittest.TestCase):
