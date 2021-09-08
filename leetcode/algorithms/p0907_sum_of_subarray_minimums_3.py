@@ -13,7 +13,7 @@ class Solution:
         for i in range(n):
             while stack and arr[stack[-1]] > arr[i]:
                 index = stack.pop()
-                result += arr[index] * (i - index) * (index - stack[-1]) % mod
+                result += arr[index] * (index - stack[-1]) * (i - index) % mod
                 result %= mod
 
             stack.append(i)
