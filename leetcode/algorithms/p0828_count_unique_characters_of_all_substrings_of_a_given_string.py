@@ -12,11 +12,17 @@ class Solution:
                 prev_duplicate_letters = dp[i][j - 1][2]
 
                 if s[j] in prev_unique_letters:
-                    dp[i][j] = [prev_unique_count - 1, prev_unique_letters - {s[j]}, prev_duplicate_letters | {s[j]}]
+                    dp[i][j] = [prev_unique_count - 1,
+                                prev_unique_letters - {s[j]},
+                                prev_duplicate_letters | {s[j]}]
                 elif s[j] in prev_duplicate_letters:
-                    dp[i][j] = [prev_unique_count, prev_unique_letters, prev_duplicate_letters]
+                    dp[i][j] = [prev_unique_count,
+                                prev_unique_letters,
+                                prev_duplicate_letters]
                 else:
-                    dp[i][j] = [prev_unique_count + 1, prev_unique_letters | {s[j]}, prev_duplicate_letters]
+                    dp[i][j] = [prev_unique_count + 1,
+                                prev_unique_letters | {s[j]},
+                                prev_duplicate_letters]
 
         count = 0
 
