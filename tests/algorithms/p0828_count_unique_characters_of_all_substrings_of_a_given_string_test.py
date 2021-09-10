@@ -5,7 +5,7 @@ from leetcode.algorithms\
 
 
 class TestCountUniqueCharactersOfAllSubstringsOfAGivenString(
-    unittest.TestCase):
+        unittest.TestCase):
     def test_count_unique_characters_of_all_substrings_of_a_given_string(self):
         solution = Solution()
 
