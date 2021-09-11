@@ -1,6 +1,6 @@
 import unittest
 from leetcode.algorithms\
-    .p0828_count_unique_characters_of_all_substrings_of_a_given_string \
+    .p0828_count_unique_characters_of_all_substrings_of_a_given_string_1 \
     import Solution
 
 
