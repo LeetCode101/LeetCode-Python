@@ -10,9 +10,11 @@ class Solution:
 
             if ugly == dp[ugly_2] * 2:
                 ugly_2 += 1
-            elif ugly == dp[ugly_3] * 3:
+
+            if ugly == dp[ugly_3] * 3:
                 ugly_3 += 1
-            elif ugly == dp[ugly_5] * 5:
+
+            if ugly == dp[ugly_5] * 5:
                 ugly_5 += 1
 
         return dp[-1]
