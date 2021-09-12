@@ -7,4 +7,4 @@ class Solution:
             while n % i == 0:
                 n //= i
 
-        return n <= 1
+        return n == 1
