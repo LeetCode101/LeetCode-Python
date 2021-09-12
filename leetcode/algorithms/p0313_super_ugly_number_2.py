@@ -1,6 +1,7 @@
 from typing import List
 
 
+# Time Limit Exceeded!
 class Solution:
     def nthSuperUglyNumber(self, n: int, primes: List[int]) -> int:
         dp = [0] * n
