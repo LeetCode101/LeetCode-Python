@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0313_super_ugly_number import Solution
+from leetcode.algorithms.p0313_super_ugly_number_1 import Solution
 
 
 class TestSuperUglyNumber(unittest.TestCase):
