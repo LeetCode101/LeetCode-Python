@@ -8,5 +8,5 @@ class TestUglyNumber(unittest.TestCase):
 
         self.assertTrue(solution.isUgly(6))
         self.assertTrue(solution.isUgly(8))
-        self.assertTrue(solution.isUgly(14))
+        self.assertFalse(solution.isUgly(14))
         self.assertTrue(solution.isUgly(1))
