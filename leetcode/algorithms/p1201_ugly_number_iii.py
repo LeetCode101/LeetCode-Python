@@ -12,8 +12,9 @@ class Solution:
 
         while left <= right:
             middle = left + (right - left) // 2
-            count = middle // a + middle // b + middle // c - middle // lcm_ab \
-                    - middle // lcm_ac - middle // lcm_bc + middle // lcm_abc
+            count = middle // a + middle // b + middle // c \
+                - middle // lcm_ab - middle // lcm_ac - middle // lcm_bc \
+                + middle // lcm_abc
 
             if count == n:
                 if middle % a == 0 or middle % b == 0 or middle % c == 0:
