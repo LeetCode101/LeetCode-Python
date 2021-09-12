@@ -6,7 +6,7 @@ class Solution:
         ugly_numbers = [1]
         heapq.heapify(ugly_numbers)
         ugly = 1
-        visited = {1}
+        visited = set()
 
         for _ in range(n):
             ugly = heapq.heappop(ugly_numbers)
