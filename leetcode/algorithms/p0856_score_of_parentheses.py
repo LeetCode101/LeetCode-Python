@@ -6,7 +6,14 @@ class Solution:
             if c == '(':
                 stack.append(score)
                 score = 0
+
+                continue
+
+            if score == 0:
+                score = 1
             else:
-                score += stack.pop() + max(score, 1)
+                score *= 2
+
+            score += stack.pop()
 
         return score
