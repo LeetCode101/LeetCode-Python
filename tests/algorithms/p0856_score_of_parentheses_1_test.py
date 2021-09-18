@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0856_score_of_parentheses import Solution
+from leetcode.algorithms.p0856_score_of_parentheses_1 import Solution
 
 
 class TestScoreOfParentheses(unittest.TestCase):
