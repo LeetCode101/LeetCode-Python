@@ -5,8 +5,14 @@ class Solution:
     def findPeakGrid(self, mat: List[List[int]]) -> List[int]:
         row, column = len(mat), len(mat[0])
         i, j = 0, column - 1
+        visited = set()
 
         while 0 <= i < row and 0 <= j < column:
+            if (i, j) in visited:
+                break
+
+            visited.add((i, j))
+
             up = -1 if i - 1 < 0 else mat[i - 1][j]
             down = -1 if i + 1 >= row else mat[i + 1][j]
             left = -1 if j - 1 < 0 else mat[i][j - 1]
