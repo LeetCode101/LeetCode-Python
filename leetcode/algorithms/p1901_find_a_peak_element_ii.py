@@ -13,7 +13,8 @@ class Solution:
             right = -1 if j + 1 >= column else mat[i][j + 1]
             current = mat[i][j]
 
-            if current > up and current > down and current > left and current > right:
+            if current > up and current > down \
+                    and current > left and current > right:
                 return [i, j]
 
             max_value = max(up, down, left, right)
