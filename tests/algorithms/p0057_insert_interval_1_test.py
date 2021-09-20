@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0057_insert_interval import Solution
+from leetcode.algorithms.p0057_insert_interval_1 import Solution
 
 
 class TestInsertInterval(unittest.TestCase):
