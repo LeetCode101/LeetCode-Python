@@ -9,12 +9,24 @@ class Solution:
         result = [-1] * n
 
         for i, interval in enumerate(sorted_intervals):
-            j = i + 1
-
-            while j < n and interval[0][1] > sorted_intervals[j][0][0]:
-                j += 1
+            end = interval[0][1]
+            j = self._binary_search(sorted_intervals, i + 1, n - 1, end)
 
             if j < n:
                 result[interval[1]] = sorted_intervals[j][1]
 
         return result
+
+    def _binary_search(self, intervals, low, high, target):
+        while low <= high:
+            middle = low + (high - low) // 2
+            start, end = intervals[middle][0]
+
+            if start == target:
+                return middle
+            elif start > target:
+                high = middle - 1
+            else:
+                low = middle + 1
+
+        return low
