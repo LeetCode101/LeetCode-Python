@@ -4,7 +4,8 @@ from typing import List
 class Solution:
     def findRightInterval(self, intervals: List[List[int]]) -> List[int]:
         n = len(intervals)
-        sorted_intervals = [(interval, i) for i, interval in enumerate(intervals)]
+        sorted_intervals = [(interval, i) for i, interval
+                            in enumerate(intervals)]
         sorted_intervals = sorted(sorted_intervals, key=lambda x: x[0][0])
         result = [-1] * n
 
