@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1272_remove_interval import Solution
+from leetcode.algorithms.p1272_remove_interval_1 import Solution
 
 
 class TestRemoveInterval(unittest.TestCase):
