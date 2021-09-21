@@ -10,7 +10,7 @@ class Solution:
 
         for i, interval in enumerate(sorted_intervals):
             end = interval[0][1]
-            j = self._binary_search(sorted_intervals, i + 1, n - 1, end)
+            j = self._binary_search(sorted_intervals, i, n - 1, end)
 
             if j < n:
                 result[interval[1]] = sorted_intervals[j][1]
