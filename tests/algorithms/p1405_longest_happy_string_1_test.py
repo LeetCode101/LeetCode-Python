@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1405_longest_happy_string import Solution
+from leetcode.algorithms.p1405_longest_happy_string_1 import Solution
 
 
 class TestLongestHappyString(unittest.TestCase):
