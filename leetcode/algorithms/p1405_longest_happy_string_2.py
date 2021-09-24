@@ -4,7 +4,8 @@ import heapq
 class Solution:
     def longestDiverseString(self, a: int, b: int, c: int) -> str:
         result = []
-        counts = [(-count, char) for count, char in [(a, 'a'), (b, 'b'), (c, 'c')] if count > 0]
+        counts = [(-count, char) for count, char in
+                  [(a, 'a'), (b, 'b'), (c, 'c')] if count > 0]
         heapq.heapify(counts)
 
         while len(counts) > 1:
