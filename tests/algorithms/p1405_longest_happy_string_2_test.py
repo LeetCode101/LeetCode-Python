@@ -7,5 +7,5 @@ class TestLongestHappyString(unittest.TestCase):
         solution = Solution()
 
         self.assertEqual('ccaccbcc', solution.longestDiverseString(1, 1, 7))
-        self.assertEqual('aabbc', solution.longestDiverseString(2, 2, 1))
+        self.assertEqual('ababc', solution.longestDiverseString(2, 2, 1))
         self.assertEqual('aabaa', solution.longestDiverseString(7, 1, 0))

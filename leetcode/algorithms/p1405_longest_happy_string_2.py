@@ -4,27 +4,27 @@ import heapq
 class Solution:
     def longestDiverseString(self, a: int, b: int, c: int) -> str:
         result = []
-        counts = [(-a, 'a'), (-b, 'b'), (-c, 'c')]
+        counts = [(-count, char) for count, char in [(a, 'a'), (b, 'b'), (c, 'c')] if count > 0]
         heapq.heapify(counts)
 
         while len(counts) > 1:
-            c1, l1 = heapq.heappop(counts)
-            c2, l2 = heapq.heappop(counts)
+            count1, char1 = heapq.heappop(counts)
+            count2, char2 = heapq.heappop(counts)
 
-            if c1 == c2:
-                result.extend([l1, l2])
-                c1 += 1
-                c2 += 1
+            if count1 == count2:
+                result.extend([char1, char2])
+                count1 += 1
+                count2 += 1
             else:
-                result.extend([l1, l1, l2])
-                c1 += 2
-                c2 += 1
+                result.extend([char1, char1, char2])
+                count1 += 2
+                count2 += 1
 
-            if c1 < 0:
-                heapq.heappush(counts, (c1, l1))
+            if count1 < 0:
+                heapq.heappush(counts, (count1, char1))
 
-            if c2 < 0:
-                heapq.heappush(counts, (c2, l2))
+            if count2 < 0:
+                heapq.heappush(counts, (count2, char2))
 
         if counts:
             count, char = heapq.heappop(counts)
