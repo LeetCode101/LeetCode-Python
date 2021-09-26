@@ -8,3 +8,4 @@ class TestReorganizeString(unittest.TestCase):
 
         self.assertEqual('aba', solution.reorganizeString('aab'))
         self.assertEqual('', solution.reorganizeString('aaab'))
+        self.assertEqual('abab', solution.reorganizeString('aabb'))
