@@ -8,3 +8,4 @@ class TestStringWithoutAAAOrBBB(unittest.TestCase):
 
         self.assertEqual('aabaa', solution.strWithout3a3b(4, 1))
         self.assertEqual('bba', solution.strWithout3a3b(1, 2))
+        self.assertEqual('abab', solution.strWithout3a3b(2, 2))
