@@ -10,3 +10,5 @@ class TestValidParenthesisString(unittest.TestCase):
         self.assertTrue(solution.checkValidString('(*)'))
         self.assertTrue(solution.checkValidString('(*))'))
         self.assertFalse(solution.checkValidString(')'))
+        self.assertTrue(solution.checkValidString('(*'))
+        self.assertFalse(solution.checkValidString('*('))
