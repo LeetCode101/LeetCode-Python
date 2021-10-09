@@ -9,3 +9,4 @@ class TestFirstMissingPositive(unittest.TestCase):
         self.assertEqual(3, solution.firstMissingPositive([1, 2, 0]))
         self.assertEqual(2, solution.firstMissingPositive([3, 4, -1, 1]))
         self.assertEqual(1, solution.firstMissingPositive([7, 8, 9, 11, 12]))
+        self.assertEqual(3, solution.firstMissingPositive([1, 2]))
