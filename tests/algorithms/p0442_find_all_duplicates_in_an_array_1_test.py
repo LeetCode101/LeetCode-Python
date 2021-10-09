@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0442_find_all_duplicates_in_an_array import Solution
+from leetcode.algorithms.p0442_find_all_duplicates_in_an_array_1 import Solution
 
 
 class TestFindAllDuplicatesInAnArray(unittest.TestCase):
