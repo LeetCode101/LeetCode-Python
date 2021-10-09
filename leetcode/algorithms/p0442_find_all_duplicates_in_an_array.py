@@ -1,16 +1,15 @@
-import collections
 from typing import List
 
 
 class Solution:
     def findDuplicates(self, nums: List[int]) -> List[int]:
-        counter = collections.defaultdict(int)
+        numbers = set()
         duplicates = []
 
         for n in nums:
-            if counter[n] == 1:
+            if n in numbers:
                 duplicates.append(n)
             else:
-                counter[n] = 1
+                numbers.add(n)
 
         return duplicates
