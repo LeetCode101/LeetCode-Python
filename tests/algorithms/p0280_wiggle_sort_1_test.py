@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0280_wiggle_sort import Solution
+from leetcode.algorithms.p0280_wiggle_sort_1 import Solution
 
 
 class TestWiggleSort(unittest.TestCase):
