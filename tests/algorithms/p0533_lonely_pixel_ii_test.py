@@ -12,3 +12,8 @@ class TestLonelyPixel(unittest.TestCase):
              ['W', 'W', 'B', 'W', 'B', 'W']], 3))
         self.assertEqual(0, solution.findBlackPixel(
             [['W', 'W', 'B'], ['W', 'W', 'B'], ['W', 'W', 'B']], 1))
+        self.assertEqual(9, solution.findBlackPixel(
+            [['W', 'B', 'W', 'B', 'B', 'W'], ['B', 'W', 'B', 'W', 'W', 'B'],
+             ['W', 'B', 'W', 'B', 'B', 'W'], ['B', 'W', 'B', 'W', 'W', 'B'],
+             ['W', 'W', 'W', 'B', 'B', 'W'],
+             ['B', 'W', 'B', 'W', 'W', 'B']], 3))
