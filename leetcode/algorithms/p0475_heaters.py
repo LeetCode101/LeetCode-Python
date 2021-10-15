@@ -16,6 +16,7 @@ class Solution:
             elif i == n:
                 radius = max(radius, abs(house - sorted_heaters[i - 1]))
             else:
-                radius = max(radius, min(abs(house - sorted_heaters[i - 1]), abs(house - sorted_heaters[i])))
+                radius = max(radius, min(abs(house - sorted_heaters[i - 1]),
+                                         abs(house - sorted_heaters[i])))
 
         return radius
