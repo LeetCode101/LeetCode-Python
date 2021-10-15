@@ -12,9 +12,9 @@ class Solution:
             i = bisect.bisect_left(sorted_heaters, house)
 
             if i == 0:
-                radius = max(radius, abs(house - sorted_heaters[i]))
+                radius = max(radius, abs(house - sorted_heaters[0]))
             elif i == n:
-                radius = max(radius, abs(house - sorted_heaters[i - 1]))
+                radius = max(radius, abs(house - sorted_heaters[-1]))
             else:
                 radius = max(radius, min(abs(house - sorted_heaters[i - 1]),
                                          abs(house - sorted_heaters[i])))
