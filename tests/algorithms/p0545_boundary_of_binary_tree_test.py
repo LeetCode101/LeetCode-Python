@@ -28,9 +28,14 @@ class TestBoundaryOfBinaryTree(unittest.TestCase):
             TreeNode(2)
         )
         root4 = TreeNode(1)
+        root5 = TreeNode(
+            1,
+            TreeNode(2, None, TreeNode(3))
+        )
 
         self.assertListEqual([1, 2, 4, 7, 8, 9, 10, 6, 3],
                              solution.boundaryOfBinaryTree(root1))
         self.assertListEqual([1, 2], solution.boundaryOfBinaryTree(root2))
         self.assertListEqual([1, 2], solution.boundaryOfBinaryTree(root3))
         self.assertListEqual([1], solution.boundaryOfBinaryTree(root4))
+        self.assertListEqual([1, 2, 3], solution.boundaryOfBinaryTree(root5))
