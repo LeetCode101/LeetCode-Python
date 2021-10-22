@@ -6,7 +6,7 @@ from leetcode.algorithms.p0545_boundary_of_binary_tree \
 class TestBoundaryOfBinaryTree(unittest.TestCase):
     def test_boundary_of_binary_tree(self):
         solution = Solution()
-        root = TreeNode(
+        root1 = TreeNode(
             1,
             TreeNode(
                 2,
@@ -18,6 +18,12 @@ class TestBoundaryOfBinaryTree(unittest.TestCase):
                 TreeNode(6, TreeNode(9), TreeNode(10))
             )
         )
+        root2 = TreeNode(
+            1,
+            None,
+            TreeNode(2)
+        )
 
         self.assertListEqual([1, 2, 4, 7, 8, 9, 10, 6, 3],
-                             solution.boundaryOfBinaryTree(root))
+                             solution.boundaryOfBinaryTree(root1))
+        self.assertListEqual([1, 2], solution.boundaryOfBinaryTree(root2))
