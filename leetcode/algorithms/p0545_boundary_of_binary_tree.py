@@ -28,10 +28,7 @@ class Solution:
         while not self._is_leaf(node):
             order.append(node.val)
 
-            if node.left:
-                node = node.left
-            else:
-                node = node.right
+            node = node.left or node.right
 
         return order
 
@@ -44,10 +41,7 @@ class Solution:
         while not self._is_leaf(node):
             order.append(node.val)
 
-            if node.right:
-                node = node.right
-            else:
-                node = node.left
+            node = node.right or node.left
 
         return order[::-1]
 
