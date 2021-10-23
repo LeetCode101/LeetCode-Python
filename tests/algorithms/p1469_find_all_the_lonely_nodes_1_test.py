@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1469_find_all_the_lonely_nodes \
+from leetcode.algorithms.p1469_find_all_the_lonely_nodes_1 \
     import Solution, TreeNode
 
 
