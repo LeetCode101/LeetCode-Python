@@ -10,14 +10,14 @@ class Solution:
         for i, id in enumerate(pid):
             parent_to_children[ppid[i]].append(id)
 
-        processes = [kill]
-        queue = collections.deque(parent_to_children[kill])
+        processes = []
+        stack = [kill]
 
-        while queue:
-            process = queue.popleft()
+        while stack:
+            process = stack.pop()
             processes.append(process)
 
             for child in parent_to_children[process]:
-                queue.append(child)
+                stack.append(child)
 
         return processes
