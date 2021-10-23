@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0582_kill_process import Solution
+from leetcode.algorithms.p0582_kill_process_1 import Solution
 
 
 class TestKillProcess(unittest.TestCase):
