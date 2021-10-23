@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0965_univalued_binary_tree_1 \
+from leetcode.algorithms.p0965_univalued_binary_tree_2 \
     import Solution, TreeNode
 
 
