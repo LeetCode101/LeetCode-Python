@@ -13,13 +13,19 @@ class Solution:
         if not root:
             return True
 
-        return self._dfs(root, root.val)
+        stack = [root]
+        value = root.val
 
-    def _dfs(self, root, value):
-        if not root:
-            return True
+        while stack:
+            node = stack.pop()
 
-        if root.val != value:
-            return False
+            if node.val != value:
+                return False
 
-        return self._dfs(root.left, value) and self._dfs(root.right, value)
+            if node.left:
+                stack.append(node.left)
+
+            if node.right:
+                stack.append(node.right)
+
+        return True
