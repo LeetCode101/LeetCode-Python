@@ -20,7 +20,8 @@ class Solution:
         while queue:
             node = queue.popleft()
 
-            if (node.left and not node.right) or (node.right and not node.left):
+            if (node.left and not node.right) \
+                    or (node.right and not node.left):
                 nodes.append(node.left.val if node.left else node.right.val)
 
             if node.left:
