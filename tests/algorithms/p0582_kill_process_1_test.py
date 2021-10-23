@@ -6,7 +6,6 @@ class TestKillProcess(unittest.TestCase):
     def test_kill_process(self):
         solution = Solution()
 
-
         self.assertListEqual([1, 2, 3, 4, 5], solution.killProcess(
             [1, 2, 3, 4, 5], [0, 1, 1, 3, 3], 1))
         self.assertListEqual([5, 10], solution.killProcess(
