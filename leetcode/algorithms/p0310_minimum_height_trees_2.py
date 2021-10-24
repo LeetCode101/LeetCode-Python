@@ -7,31 +7,31 @@ class Solution:
         if len(edges) == 0:
             return [n - 1]
 
-        parent_to_children = collections.defaultdict(list)
+        neighbours = collections.defaultdict(list)
 
         for edge in edges:
-            parent_to_children[edge[0]].append(edge[1])
-            parent_to_children[edge[1]].append(edge[0])
+            neighbours[edge[0]].append(edge[1])
+            neighbours[edge[1]].append(edge[0])
 
         queue = []
 
-        for parent, children in parent_to_children.items():
-            if len(children) == 1:
-                queue.append(parent)
+        for node, neighbour in neighbours.items():
+            if len(neighbour) == 1:
+                queue.append(node)
 
-        while queue and len(parent_to_children) > 2:
+        while queue and len(neighbours) > 2:
             nodes = []
 
             while queue:
                 node = queue.pop()
-                child = parent_to_children[node][0]
-                parent_to_children[child].remove(node)
+                neighbour = neighbours[node][0]
+                neighbours[neighbour].remove(node)
 
-                if len(parent_to_children[child]) == 1:
-                    nodes.append(child)
+                if len(neighbours[neighbour]) == 1:
+                    nodes.append(neighbour)
 
-                del parent_to_children[node]
+                del neighbours[node]
 
             queue = nodes[:]
 
-        return list(parent_to_children.keys())
+        return list(neighbours.keys())
