@@ -2,6 +2,7 @@ import collections
 from typing import List
 
 
+# Time Limit Exceeded!
 class Solution:
     def findMinHeightTrees(self, n: int, edges: List[List[int]]) -> List[int]:
         parent_to_children = collections.defaultdict(list)
