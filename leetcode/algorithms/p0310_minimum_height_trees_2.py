@@ -13,25 +13,22 @@ class Solution:
             neighbours[edge[0]].append(edge[1])
             neighbours[edge[1]].append(edge[0])
 
-        queue = []
+        queue = collections.deque()
 
         for node, neighbour in neighbours.items():
             if len(neighbour) == 1:
                 queue.append(node)
 
-        while queue and len(neighbours) > 2:
-            nodes = []
+        while queue and n > 2:
+            size = len(queue)
+            n -= size
 
-            while queue:
-                node = queue.pop()
-                neighbour = neighbours[node][0]
+            for _ in range(size):
+                node = queue.popleft()
+                neighbour = neighbours[node].pop()
                 neighbours[neighbour].remove(node)
 
                 if len(neighbours[neighbour]) == 1:
-                    nodes.append(neighbour)
+                    queue.append(neighbour)
 
-                del neighbours[node]
-
-            queue = nodes[:]
-
-        return list(neighbours.keys())
+        return list(queue)
