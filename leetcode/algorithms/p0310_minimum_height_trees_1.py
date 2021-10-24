@@ -22,7 +22,7 @@ class Solution:
             while queue:
                 height += 1
                 size = len(queue)
-                
+
                 if height > min_height:
                     break
 
