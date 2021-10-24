@@ -11,7 +11,7 @@ class Solution:
             if sorted_people[low] + sorted_people[high] <= limit:
                 low += 1
                 high -= 1
-            elif sorted_people[high] <= limit:
+            else:
                 high -= 1
 
             count += 1
