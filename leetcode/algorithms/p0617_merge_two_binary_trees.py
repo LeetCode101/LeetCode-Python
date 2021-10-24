@@ -28,10 +28,8 @@ class Solution:
             root1.right = right
 
             return root1
-        elif root2:
+        else:
             root2.left = left
             root2.right = right
 
             return root2
-        else:
-            return None
