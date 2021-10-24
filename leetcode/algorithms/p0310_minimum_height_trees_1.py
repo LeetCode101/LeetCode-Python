@@ -5,11 +5,11 @@ from typing import List
 # Time Limit Exceeded!
 class Solution:
     def findMinHeightTrees(self, n: int, edges: List[List[int]]) -> List[int]:
-        parent_to_children = collections.defaultdict(list)
+        neighbours = collections.defaultdict(list)
 
         for edge in edges:
-            parent_to_children[edge[0]].append(edge[1])
-            parent_to_children[edge[1]].append(edge[0])
+            neighbours[edge[0]].append(edge[1])
+            neighbours[edge[1]].append(edge[0])
 
         min_height = n
         result = []
@@ -30,9 +30,9 @@ class Solution:
                     node = queue.popleft()
                     visited.add(node)
 
-                    for child in parent_to_children[node]:
-                        if child not in visited:
-                            queue.append(child)
+                    for neighbour in neighbours[node]:
+                        if neighbour not in visited:
+                            queue.append(neighbour)
 
             if height == min_height:
                 result.append(i)
