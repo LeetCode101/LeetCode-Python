@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0310_minimum_height_trees import Solution
+from leetcode.algorithms.p0310_minimum_height_trees_1 import Solution
 
 
 class TestMinimumHeightTrees(unittest.TestCase):
