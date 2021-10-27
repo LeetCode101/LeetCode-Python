@@ -8,7 +8,7 @@ class Solution:
 
         for i in range(m):
             for j in range(n):
-                found = self._paint(grid, i, j)
+                found = self._paint(grid, i, j) > 0
 
                 if found:
                     break
