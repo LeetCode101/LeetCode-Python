@@ -21,18 +21,24 @@ class Solution:
         while True:
             for i in range(m):
                 for j in range(n):
-                    if grid[i][j] == color and (self._expand(grid, i - 1, j, color) or self._expand(grid, i, j - 1, color) or self._expand(grid, i + 1, j, color) or self._expand(grid, i, j + 1, color)):
+                    if grid[i][j] == color and (
+                            self._expand(grid, i - 1, j, color)
+                            or self._expand(grid, i, j - 1, color)
+                            or self._expand(grid, i + 1, j, color)
+                            or self._expand(grid, i, j + 1, color)):
                         return color - 2
 
             color += 1
 
     def _paint(self, grid, i, j):
-        if i < 0 or j < 0 or i == len(grid) or j == len(grid[0]) or grid[i][j] != 1:
+        if i < 0 or j < 0 or i == len(grid) or j == len(grid[0]) \
+                or grid[i][j] != 1:
             return 0
 
         grid[i][j] = 2
 
-        return 1 + self._paint(grid, i + 1, j) + self._paint(grid, i - 1, j) + self._paint(grid, i, j + 1) + self._paint(grid, i, j - 1)
+        return 1 + self._paint(grid, i + 1, j) + self._paint(grid, i - 1, j) \
+            + self._paint(grid, i, j + 1) + self._paint(grid, i, j - 1)
 
     def _expand(self, grid, i, j, color):
         if i < 0 or j < 0 or i == len(grid) or j == len(grid[0]):
