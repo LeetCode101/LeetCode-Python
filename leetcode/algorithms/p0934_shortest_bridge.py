@@ -21,12 +21,12 @@ class Solution:
         while True:
             for i in range(m):
                 for j in range(n):
-                    if grid[i][j] == color and (
-                            self._expand(grid, i - 1, j, color)
-                            or self._expand(grid, i, j - 1, color)
-                            or self._expand(grid, i + 1, j, color)
-                            or self._expand(grid, i, j + 1, color)):
-                        return color - 2
+                    if grid[i][j] != color:
+                        continue
+
+                    for dx, dy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+                        if self._expand(grid, i + dy, j + dx, color):
+                            return color - 2
 
             color += 1
 
