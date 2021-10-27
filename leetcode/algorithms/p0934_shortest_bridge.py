@@ -3,17 +3,18 @@ from typing import List
 
 class Solution:
     def shortestBridge(self, grid: List[List[int]]) -> int:
-        found = False
         i = 0
+        found = False
 
-        while not found and i < len(grid):
-            j = 0
-
-            while not found and j < len(grid[0]):
+        for i in range(len(grid)):
+            for j in range(len(grid[0])):
                 found = self._paint(grid, i, j)
-                j += 1
 
-            i += 1
+                if found:
+                    break
+
+            if found:
+                break
 
         color = 2
 
