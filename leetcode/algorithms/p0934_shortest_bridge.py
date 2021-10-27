@@ -3,11 +3,11 @@ from typing import List
 
 class Solution:
     def shortestBridge(self, grid: List[List[int]]) -> int:
-        i = 0
         found = False
+        m, n = len(grid), len(grid[0])
 
-        for i in range(len(grid)):
-            for j in range(len(grid[0])):
+        for i in range(m):
+            for j in range(n):
                 found = self._paint(grid, i, j)
 
                 if found:
@@ -19,8 +19,8 @@ class Solution:
         color = 2
 
         while True:
-            for i in range(len(grid)):
-                for j in range(len(grid)):
+            for i in range(m):
+                for j in range(m):
                     if grid[i][j] == color and (self._expand(grid, i - 1, j, color) or self._expand(grid, i, j - 1, color) or self._expand(grid, i + 1, j, color) or self._expand(grid, i, j + 1, color)):
                         return color - 2
 
