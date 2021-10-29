@@ -11,7 +11,6 @@ class TreeNode:
 class Solution:
     def isCousins(self, root: Optional[TreeNode], x: int, y: int) -> bool:
         stack = [(root, 0, None)]
-        count = 2
         prev_parent = None
         prev_depth = -1
 
@@ -30,3 +29,5 @@ class Solution:
 
             if node.right:
                 stack.append((node.right, depth + 1, node))
+
+        return False
