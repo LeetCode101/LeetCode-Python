@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0863_all_nodes_distance_k_in_binary_tree \
+from leetcode.algorithms.p0863_all_nodes_distance_k_in_binary_tree_1 \
     import Solution, TreeNode
 
 
