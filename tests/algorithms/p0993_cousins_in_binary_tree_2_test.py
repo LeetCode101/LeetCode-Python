@@ -1,5 +1,6 @@
 import unittest
-from leetcode.algorithms.p0993_cousins_in_binary_tree_2 import Solution, TreeNode
+from leetcode.algorithms.p0993_cousins_in_binary_tree_2 \
+    import Solution, TreeNode
 
 
 class TestCousinsInBinaryTree(unittest.TestCase):

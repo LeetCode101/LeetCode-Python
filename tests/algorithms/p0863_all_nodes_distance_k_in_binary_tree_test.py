@@ -1,5 +1,6 @@
 import unittest
-from leetcode.algorithms.p0863_all_nodes_distance_k_in_binary_tree import Solution, TreeNode
+from leetcode.algorithms.p0863_all_nodes_distance_k_in_binary_tree \
+    import Solution, TreeNode
 
 
 class TestAllNodesDistanceKInBinaryTree(unittest.TestCase):
@@ -18,5 +19,6 @@ class TestAllNodesDistanceKInBinaryTree(unittest.TestCase):
         c.right = TreeNode(4)
         a.right = c
 
-        self.assertListEqual([], solution.distanceK(TreeNode(1), TreeNode(2), 1))
+        self.assertListEqual([], solution.distanceK(
+            TreeNode(1), TreeNode(2), 1))
         self.assertListEqual([7, 4, 1], solution.distanceK(root1, a, 2))
