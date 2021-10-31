@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0865_smallest_subtree_with_all_the_deepest_nodes \
+from leetcode.algorithms.p0865_smallest_subtree_with_all_the_deepest_nodes_1 \
     import Solution, TreeNode
 
 
