@@ -27,6 +27,9 @@ class Solution:
             if node.right:
                 stack.append((node.right, depth + 1, paths + [node]))
 
+        if len(candidates[0]) == 1:
+            return candidates[0][0]
+
         for i in range(len(candidates[0])):
             for j in range(1, len(candidates)):
                 if candidates[j][i] != candidates[j - 1][i]:
