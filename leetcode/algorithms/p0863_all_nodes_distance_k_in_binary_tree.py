@@ -39,9 +39,6 @@ class Solution:
         return result
 
     def _get_parents(self, root, parent, parents):
-        if not root:
-            return
-
         parents[root] = parent
 
         if root.left:
