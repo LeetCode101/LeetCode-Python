@@ -13,6 +13,13 @@ class TestSmallestSubtreeWithAllTheDeepestNodes(unittest.TestCase):
             TreeNode(1, TreeNode(0), TreeNode(8))
         )
         root2 = TreeNode(1)
+        b = TreeNode(2)
+        root3 = TreeNode(
+            0,
+            TreeNode(1, None, b),
+            TreeNode(3)
+        )
 
+        self.assertEqual(b, solution.subtreeWithAllDeepest(root3))
         self.assertEqual(a, solution.subtreeWithAllDeepest(root1))
         self.assertEqual(root2, solution.subtreeWithAllDeepest(root2))
