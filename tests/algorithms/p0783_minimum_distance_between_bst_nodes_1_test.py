@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0783_minimum_distance_between_bst_nodes \
+from leetcode.algorithms.p0783_minimum_distance_between_bst_nodes_1 \
     import Solution, TreeNode
 
 
