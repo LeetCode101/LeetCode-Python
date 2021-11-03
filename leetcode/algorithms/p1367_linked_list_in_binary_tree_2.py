@@ -23,7 +23,8 @@ class Solution:
         if self._dfs(head, root):
             return True
 
-        return self.isSubPath(head, root.left) or self.isSubPath(head, root.right)
+        return self.isSubPath(head, root.left) \
+            or self.isSubPath(head, root.right)
 
     def _dfs(self, head, root):
         if not head:
@@ -35,4 +36,5 @@ class Solution:
         if head.val != root.val:
             return False
 
-        return self._dfs(head.next, root.left) or self._dfs(head.next, root.right)
+        return self._dfs(head.next, root.left) \
+            or self._dfs(head.next, root.right)
