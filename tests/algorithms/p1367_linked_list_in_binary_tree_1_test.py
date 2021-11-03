@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1367_linked_list_in_binary_tree \
+from leetcode.algorithms.p1367_linked_list_in_binary_tree_1 \
     import Solution, TreeNode, ListNode
 
 
