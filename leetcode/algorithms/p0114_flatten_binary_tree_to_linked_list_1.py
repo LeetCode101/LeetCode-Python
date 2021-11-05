@@ -22,8 +22,6 @@ class Solution:
             nodes[i - 1].right = nodes[i]
             nodes[i - 1].left = None
 
-        return root
-
     def _preorder(self, root, nodes):
         if not root:
             return
