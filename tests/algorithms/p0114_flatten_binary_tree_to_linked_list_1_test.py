@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0114_flatten_binary_tree_to_linked_list \
+from leetcode.algorithms.p0114_flatten_binary_tree_to_linked_list_1 \
     import Solution, TreeNode
 from tests.algorithms.binary_tree_helper import preorder
 
