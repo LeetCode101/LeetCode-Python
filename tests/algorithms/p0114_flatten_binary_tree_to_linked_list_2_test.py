@@ -13,6 +13,7 @@ class TestFlattenBinaryTreeToLinkedList(unittest.TestCase):
             TreeNode(5, None, TreeNode(6))
         )
 
+        solution.flatten(None)
         solution.flatten(root1)
 
         self.assertListEqual([1, 2, 3, 4, 5, 6], preorder(root1))
