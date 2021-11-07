@@ -12,4 +12,5 @@ class TestAverageOfLevelsInBinaryTree(unittest.TestCase):
             TreeNode(20, TreeNode(15), TreeNode(7))
         )
 
+        self.assertListEqual([], solution.averageOfLevels(None))
         self.assertListEqual([3, 14.5, 11], solution.averageOfLevels(root1))
