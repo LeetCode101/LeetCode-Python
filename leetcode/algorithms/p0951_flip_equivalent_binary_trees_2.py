@@ -35,18 +35,20 @@ class Solution:
             if right1:
                 stack1.append(right1)
 
-            if self._equal(left1, left2):
+            if self._equal(left1, left2) and self._equal(right1, right2):
                 if left2:
                     stack2.append(left2)
 
                 if right2:
                     stack2.append(right2)
+            elif self._equal(left1, right2) and self._equal(right1, left2):
+                if right2:
+                    stack2.append(right2)
+
+                if left2:
+                    stack2.append(left2)
             else:
-                if right2:
-                    stack2.append(right2)
-
-                if left2:
-                    stack2.append(left2)
+                return False
 
         return not stack1 and not stack2
 
