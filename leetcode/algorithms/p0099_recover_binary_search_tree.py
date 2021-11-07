@@ -18,15 +18,17 @@ class Solution:
         self._inorder(root, nodes)
 
         for i in range(len(nodes) - 1):
-            if nodes[i].val > nodes[i + 1].val:
-                j = i + 1
+            if nodes[i].val <= nodes[i + 1].val:
+                continue
 
-                while j < len(nodes) and nodes[i].val > nodes[j].val:
-                    j += 1
+            j = i + 1
 
-                nodes[i].val, nodes[j - 1].val = nodes[j - 1].val, nodes[i].val
+            while j < len(nodes) and nodes[i].val > nodes[j].val:
+                j += 1
 
-                break
+            nodes[i].val, nodes[j - 1].val = nodes[j - 1].val, nodes[i].val
+
+            break
 
     def _inorder(self, root, nodes):
         if not root:
