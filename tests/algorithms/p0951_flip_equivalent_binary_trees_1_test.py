@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0951_flip_equivalent_binary_trees \
+from leetcode.algorithms.p0951_flip_equivalent_binary_trees_1 \
     import Solution, TreeNode
 
 
