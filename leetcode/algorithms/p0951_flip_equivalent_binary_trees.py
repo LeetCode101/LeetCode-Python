@@ -18,7 +18,7 @@ class Solution:
             if self._equal(root1.left, root2.left) and self._equal(root1.right, root2.right):
                 return self.flipEquiv(root1.left, root2.left) and self.flipEquiv(root1.right, root2.right)
             elif self._equal(root1.left, root2.right) and self._equal(root1.right, root2.left):
-                return self.flipEquiv(root1.left, root2.right) and self._equal(root1.right, root2.left)
+                return self.flipEquiv(root1.left, root2.right) and self.flipEquiv(root1.right, root2.left)
             else:
                 return False
         else:
