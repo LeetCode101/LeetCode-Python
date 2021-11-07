@@ -51,5 +51,6 @@ class TestFlipEquivalentBinaryTrees(unittest.TestCase):
             TreeNode(4)
         )
 
+        self.assertFalse(solution.flipEquiv(TreeNode(1), TreeNode(2)))
         self.assertTrue(solution.flipEquiv(root1, root2))
         self.assertFalse(solution.flipEquiv(root3, root4))
