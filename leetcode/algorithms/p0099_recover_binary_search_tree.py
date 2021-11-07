@@ -19,11 +19,12 @@ class Solution:
 
         for i in range(len(nodes) - 1):
             if nodes[i].val > nodes[i + 1].val:
-                for j in range(i + 1, len(nodes)):
-                    if nodes[i].val <= nodes[j].val:
-                        nodes[i].val, nodes[j - 1].val = nodes[j - 1].val, nodes[i].val
+                j = i + 1
 
-                        break
+                while j < len(nodes) and nodes[i].val > nodes[j].val:
+                    j += 1
+
+                nodes[i].val, nodes[j - 1].val = nodes[j - 1].val, nodes[i].val
 
                 break
 
