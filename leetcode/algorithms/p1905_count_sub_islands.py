@@ -26,13 +26,13 @@ class Solution:
                 if visited[i][j] or grid[i][j] == 0:
                     continue
 
-                queue = collections.deque([(i, j)])
                 island = set()
+                queue = collections.deque([(i, j)])
+                visited[i][j] = True
 
                 while queue:
                     row, column = queue.popleft()
                     island.add((row, column))
-                    visited[row][column] = True
 
                     for dx, dy in [(-1, 0), (1, 0), (0, 1), (0, -1)]:
                         next_row = row + dx
@@ -45,6 +45,7 @@ class Solution:
                             continue
 
                         queue.append((next_row, next_column))
+                        visited[next_row][next_column] = True
 
                 islands.append(island)
 
