@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1905_count_sub_islands import Solution
+from leetcode.algorithms.p1905_count_sub_islands_1 import Solution
 
 
 class TestCountSubIslands(unittest.TestCase):
