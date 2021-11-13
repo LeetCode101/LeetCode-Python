@@ -15,13 +15,13 @@ class Solution:
 
                 visited[i][j] = True
                 queue = collections.deque([(i, j)])
-                top_left_x, top_left_y = i, j
-                bottom_right_x, bottom_right_y = i, j
+                top_left_row, top_left_column = i, j
+                bottom_right_row, bottom_right_column = i, j
 
                 while queue:
                     row, column = queue.popleft()
-                    bottom_right_x = max(bottom_right_x, row)
-                    bottom_right_y = max(bottom_right_y, column)
+                    bottom_right_row = max(bottom_right_row, row)
+                    bottom_right_column = max(bottom_right_column, column)
 
                     for dx, dy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
                         next_row = row + dx
@@ -36,7 +36,7 @@ class Solution:
                         queue.append((next_row, next_column))
                         visited[next_row][next_column] = True
 
-                result.append([top_left_x, top_left_y,
-                               bottom_right_x, bottom_right_y])
+                result.append([top_left_row, top_left_column,
+                               bottom_right_row, bottom_right_column])
 
         return result
