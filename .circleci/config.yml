@@ -30,6 +30,12 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Install pycodestyle
+          command: pip install pycodestyle
+      - run:
+          name: Lint
+          command: make lint
+      - run:
           name: Run tests
           # This assumes pytest is installed via the install-package step above
           command: python setup.py test
