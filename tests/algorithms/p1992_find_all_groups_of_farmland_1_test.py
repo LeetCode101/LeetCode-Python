@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1992_find_all_groups_of_farmland import Solution
+from leetcode.algorithms.p1992_find_all_groups_of_farmland_1 import Solution
 
 
 class TestFindAllGroupsOfFarmland(unittest.TestCase):
