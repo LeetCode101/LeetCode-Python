@@ -13,7 +13,8 @@ class Solution:
                     continue
 
                 top_left_row, top_left_column = i, j
-                bottom_right_row, bottom_right_column = self._dfs(land, i, j, visited)
+                bottom_right_row, bottom_right_column = \
+                    self._dfs(land, i, j, visited)
 
                 result.append([top_left_row, top_left_column,
                                bottom_right_row, bottom_right_column])
