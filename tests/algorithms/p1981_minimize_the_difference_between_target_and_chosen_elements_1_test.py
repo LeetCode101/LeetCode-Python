@@ -1,6 +1,6 @@
 import unittest
 from leetcode.algorithms\
-    .p1981_minimize_the_difference_between_target_and_chosen_elements \
+    .p1981_minimize_the_difference_between_target_and_chosen_elements_1 \
     import Solution
 
 
