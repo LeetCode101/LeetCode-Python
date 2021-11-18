@@ -5,7 +5,7 @@ from leetcode.algorithms\
 
 
 class TestMinimizeTheDifferenceBetweenTargetAndChosenElements(
-    unittest.TestCase):
+        unittest.TestCase):
     def test_minimize_the_difference_between_target_and_chosen_elements(self):
         solution = Solution()
 
