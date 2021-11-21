@@ -15,4 +15,4 @@ class Solution:
                 dp[i][j] = max([dp[i - 1][k] + points[i][j] - abs(j - k)
                                 for k in range(n)])
 
-        return max(dp[m - 1])
+        return max(dp[-1])
