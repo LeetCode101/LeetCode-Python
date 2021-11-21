@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1937_maximum_number_of_points_with_cost \
+from leetcode.algorithms.p1937_maximum_number_of_points_with_cost_1 \
     import Solution
 
 
