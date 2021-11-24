@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0376_wiggle_subsequence import Solution
+from leetcode.algorithms.p0376_wiggle_subsequence_1 import Solution
 
 
 class TestWiggleSubsequence(unittest.TestCase):
