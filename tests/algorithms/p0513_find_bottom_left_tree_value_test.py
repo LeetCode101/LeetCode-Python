@@ -1,5 +1,6 @@
 import unittest
-from leetcode.algorithms.p0513_find_bottom_left_tree_value import Solution, TreeNode
+from leetcode.algorithms.p0513_find_bottom_left_tree_value \
+    import Solution, TreeNode
 
 
 class TestFindBottomLeftTreeValue(unittest.TestCase):
