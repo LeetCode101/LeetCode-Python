@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1026_maximum_difference_between_node_and_ancestor \
+from leetcode.algorithms.p1026_maximum_difference_between_node_and_ancestor_1 \
     import Solution, TreeNode
 
 
