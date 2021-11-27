@@ -10,8 +10,8 @@ class TreeNode:
 
 class Solution:
     def maxAncestorDiff(self, root: Optional[TreeNode]) -> int:
-        max_left = self._find_max(root.left, root.val, root.val)
-        max_right = self._find_max(root.right, root.val, root.val)
+        max_left = self._find_max(root, root.val, root.val)
+        max_right = self._find_max(root, root.val, root.val)
 
         return max(max_left, max_right)
 
