@@ -16,9 +16,6 @@ class Solution:
         return max(max_left, max_right)
 
     def _find_max(self, root, min_value, max_value):
-        if not root:
-            return abs(min_value - max_value)
-
         min_value = min(root.val, min_value)
         max_value = max(root.val, max_value)
 
