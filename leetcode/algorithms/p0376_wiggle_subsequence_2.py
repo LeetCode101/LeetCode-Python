@@ -8,6 +8,7 @@ class Solution:
         negative = [0] * n
         postive[0] = 1
         negative[0] = 1
+        max_length = 1
 
         for i in range(1, n):
             postive[i] = postive[i - 1]
@@ -19,4 +20,6 @@ class Solution:
             elif diff > 0:
                 postive[i] = max(postive[i], 1 + negative[i])
 
-        return max(max(postive), max(negative))
+            max_length = max(postive[i], negative[i], max_length)
+
+        return max_length
