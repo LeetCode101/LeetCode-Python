@@ -9,7 +9,7 @@ class Solution:
             root_x = self._get_root(roots, x)
             root_y = self._get_root(roots, y)
 
-            if root_x == root_y and root_x != 0:
+            if root_x == root_y:
                 return [x, y]
 
             roots[root_x] = root_y
