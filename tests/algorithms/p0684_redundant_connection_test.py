@@ -6,6 +6,7 @@ class TestRedundantConnection(unittest.TestCase):
     def test_redundant_connection(self):
         solution = Solution()
 
+        self.assertListEqual([], solution.findRedundantConnection([]))
         self.assertListEqual([2, 3], solution.findRedundantConnection(
             [[1, 2], [1, 3], [2, 3]]))
         self.assertListEqual([1, 4], solution.findRedundantConnection(
