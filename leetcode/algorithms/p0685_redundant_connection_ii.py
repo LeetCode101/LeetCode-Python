@@ -14,7 +14,7 @@ class Solution:
 
             parents[b] = a
 
-        roots = list(range(len(edges) + 1))
+        roots = [0] * (len(edges) + 1)
 
         for a, b in edges:
             if [a, b] == candidate2:
@@ -33,7 +33,7 @@ class Solution:
         return candidate2
 
     def _get_root(self, roots, x):
-        while roots[x] != x:
+        while roots[x] != 0:
             x = roots[x]
 
         return x
