@@ -28,13 +28,12 @@ class Solution:
                 else:
                     return candidate1
 
-            roots[root_a] = roots[root_b]
+            roots[root_a] = root_b
 
         return candidate2
 
     def _get_root(self, roots, x):
         while roots[x] != x:
-            roots[x] = roots[roots[x]]
             x = roots[x]
 
-        return roots[x]
+        return x
