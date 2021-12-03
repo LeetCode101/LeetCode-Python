@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1038_binary_search_tree_to_greater_sum_tree \
+from leetcode.algorithms.p1038_binary_search_tree_to_greater_sum_tree_1 \
     import Solution, TreeNode
 from tests.algorithms.binary_tree_helper import inorder
 
