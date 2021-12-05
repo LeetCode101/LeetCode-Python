@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0938_range_sum_of_bst import Solution, TreeNode
+from leetcode.algorithms.p0938_range_sum_of_bst_1 import Solution, TreeNode
 
 
 class TestRangeSumOfBST(unittest.TestCase):
