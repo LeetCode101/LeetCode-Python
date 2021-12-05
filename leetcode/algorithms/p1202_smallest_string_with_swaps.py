@@ -15,8 +15,8 @@ class Solution:
             root = self._get_root(roots, i)
             mapping[root].append(s[i])
 
-        for key in mapping.keys():
-            mapping[key].sort(reverse=True)
+        for root in mapping.keys():
+            mapping[root].sort(reverse=True)
 
         result = []
 
