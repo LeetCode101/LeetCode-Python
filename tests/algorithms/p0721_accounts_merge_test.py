@@ -1,0 +1,16 @@
+import unittest
+from leetcode.algorithms.p0721_accounts_merge import Solution
+
+
+class TestAccountsMerge(unittest.TestCase):
+    def test_accounts_merge(self):
+        solution = Solution()
+
+        self.assertListEqual(
+            [['John', 'john00@mail.com', 'john_newyork@mail.com',
+              'johnsmith@mail.com'],
+             ['Mary', 'mary@mail.com'], ['John', 'johnnybravo@mail.com']],
+            solution.accountsMerge(
+                [['John', 'johnsmith@mail.com', 'john_newyork@mail.com'],
+                 ['John', 'johnsmith@mail.com', 'john00@mail.com'],
+                 ['Mary', 'mary@mail.com'], ['John', 'johnnybravo@mail.com']]))
