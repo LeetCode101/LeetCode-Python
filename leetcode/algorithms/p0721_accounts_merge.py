@@ -29,8 +29,8 @@ class Solution:
 
         components = collections.defaultdict(list)
 
-        for root in roots:
-            components[self._get_root(roots, root)].append(root)
+        for i, root in enumerate(roots):
+            components[self._get_root(roots, root)].append(i)
 
         for root, nodes in components.items():
             mails = sorted([number_to_mail[i] for i in nodes])
