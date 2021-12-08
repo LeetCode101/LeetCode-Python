@@ -4,18 +4,21 @@ from typing import List
 
 class Solution:
     def accountsMerge(self, accounts: List[List[str]]) -> List[List[str]]:
-        mails = []
+        mails = set()
         result = []
         mail_to_person = {}
 
         for account in accounts:
             for i in range(1, len(account)):
-                mails.append(account[i])
-                mail_to_person[account[i]] = account[0]
+                mail = account[i]
+                mails.add(mail)
+                mail_to_person[mail] = account[0]
 
-        mail_to_number = {mails[i]: i for i in range(len(mails))}
-        number_to_mail = {i: mails[i] for i in range(len(mails))}
-        roots = list(range(len(mails)))
+        mails = list(mails)
+        n = len(mails)
+        mail_to_number = {mails[i]: i for i in range(n)}
+        number_to_mail = {i: mails[i] for i in range(n)}
+        roots = list(range(n))
 
         for account in accounts:
             for i in range(2, len(account)):
