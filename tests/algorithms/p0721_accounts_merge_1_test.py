@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0721_accounts_merge import Solution
+from leetcode.algorithms.p0721_accounts_merge_1 import Solution
 
 
 class TestAccountsMerge(unittest.TestCase):
