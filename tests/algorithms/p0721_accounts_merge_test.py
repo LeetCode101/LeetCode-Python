@@ -14,4 +14,4 @@ class TestAccountsMerge(unittest.TestCase):
                 [['John', 'johnsmith@mail.com', 'john_newyork@mail.com'],
                  ['John', 'johnsmith@mail.com', 'john00@mail.com'],
                  ['Mary', 'mary@mail.com'], ['John', 'johnnybravo@mail.com']]),
-                key=lambda x: x[0]))
+                key=lambda x: (x[0], x[1])))
