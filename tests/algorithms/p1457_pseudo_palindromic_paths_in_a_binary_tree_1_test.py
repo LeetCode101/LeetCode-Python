@@ -1,4 +1,3 @@
-import socket
 import unittest
 from leetcode.algorithms.p1457_pseudo_palindromic_paths_in_a_binary_tree_1 \
     import Solution, TreeNode
