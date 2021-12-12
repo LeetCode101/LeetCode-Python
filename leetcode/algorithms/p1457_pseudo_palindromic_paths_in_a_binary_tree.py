@@ -9,6 +9,7 @@ class TreeNode:
         self.right = right
 
 
+# Time Limit Exceeded!
 class Solution:
     def pseudoPalindromicPaths(self, root: Optional[TreeNode]) -> int:
         if not root:
