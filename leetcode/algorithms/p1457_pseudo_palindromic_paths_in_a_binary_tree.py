@@ -40,12 +40,10 @@ class Solution:
         counter = collections.Counter(values)
 
         for count in counter.values():
-            if count == 1:
+            if count & 1 == 1:
                 if has_odd:
                     return False
 
                 has_odd = True
-            elif count != 2:
-                return False
 
         return True
