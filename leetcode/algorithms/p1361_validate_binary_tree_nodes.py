@@ -24,7 +24,7 @@ class Solution:
             components[self._get_root(roots, i)].append(i)
 
         for root in list(components.keys()):
-            if not self._is_tree_valid(components[root], parents):
+            if not self._is_tree_valid(n, components[root], parents):
                 components.pop(root)
 
         return len(components) == 1
@@ -42,7 +42,10 @@ class Solution:
 
         roots[root_a] = root_b
 
-    def _is_tree_valid(self, nodes, parents):
+    def _is_tree_valid(self, n, nodes, parents):
+        if n != len(nodes):
+            return False
+
         has_root = False
 
         for i in nodes:
