@@ -50,10 +50,7 @@ class Solution:
 
         for i in nodes:
             if not parents[i]:
-                if has_root:
-                    return False
-                else:
-                    has_root = True
+                has_root = True
             elif len(parents[i]) > 1:
                 return False
 
