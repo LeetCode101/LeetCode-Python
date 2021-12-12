@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1361_validate_binary_tree_nodes import Solution
+from leetcode.algorithms.p1361_validate_binary_tree_nodes_1 import Solution
 
 
 class TestValidateBinaryTreeNodes(unittest.TestCase):
