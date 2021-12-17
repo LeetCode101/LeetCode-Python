@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0261_graph_valid_tree import Solution
+from leetcode.algorithms.p0261_graph_valid_tree_1 import Solution
 
 
 class TestGraphValidTree(unittest.TestCase):
