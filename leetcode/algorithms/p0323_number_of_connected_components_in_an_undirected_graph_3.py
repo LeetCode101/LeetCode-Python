@@ -14,14 +14,15 @@ class Solution:
         visited = set()
 
         for i in range(n):
-            if self._dfs(neighbours, visited, i):
+            if i not in visited:
+                self._dfs(neighbours, visited, i)
                 count += 1
 
-        return count + n - len(visited)
+        return count
 
     def _dfs(self, neighbours, visited, i):
         if i not in neighbours:
-            return False
+            return
 
         for neighbour in neighbours.pop(i):
             if neighbour in visited:
@@ -30,5 +31,3 @@ class Solution:
             visited.add(neighbour)
 
             self._dfs(neighbours, visited, neighbour)
-
-        return True
