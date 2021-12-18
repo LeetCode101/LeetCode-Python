@@ -1,6 +1,6 @@
 import unittest
 from leetcode.algorithms \
-    .p0323_number_of_connected_components_in_an_undirected_graph \
+    .p0323_number_of_connected_components_in_an_undirected_graph_1 \
     import Solution
 
 
