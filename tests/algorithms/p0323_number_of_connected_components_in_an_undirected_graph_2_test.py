@@ -9,6 +9,8 @@ class TestNumberOfConnectedComponentsInAnUndirectedGraph(unittest.TestCase):
         solution = Solution()
 
         self.assertEqual(2, solution.countComponents(
+            4, [[2, 3], [1, 2], [1, 3]]))
+        self.assertEqual(2, solution.countComponents(
             5, [[0, 1], [1, 2], [3, 4]]))
         self.assertEqual(1, solution.countComponents(
             5, [[0, 1], [1, 2], [2, 3], [3, 4]]))
