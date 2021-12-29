@@ -23,7 +23,9 @@ class Solution:
             while k < n and text[k] == c:
                 k += 1
 
-            max_length = max(max_length, k - start - 1 if k - start - 1 == counts[c] else k - start)
+            current_length = k - start - 1 \
+                if k - start - 1 == counts[c] else k - start
+            max_length = max(max_length, current_length)
             start = j
 
         return max_length
