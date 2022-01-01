@@ -8,17 +8,19 @@ class Solution:
         elif pattern[0] in mapping:
             matched = mapping[pattern[0]]
 
-            if len(matched) > len(s) or s[:len(matched)] != matched:
+            if s[:len(matched)] != matched:
                 return False
 
             if self._match(pattern[1:], s[len(matched):], mapping):
                 return True
         else:
             for i in range(1, len(s) + 1):
-                if s[:i] in mapping.values():
+                candidate = s[:i]
+
+                if candidate in mapping.values():
                     continue
 
-                mapping[pattern[0]] = s[:i]
+                mapping[pattern[0]] = candidate
 
                 if self._match(pattern[1:], s[i:], mapping):
                     return True
