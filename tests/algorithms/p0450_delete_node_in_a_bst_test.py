@@ -16,11 +16,6 @@ class TestDeleteNodeInABST(unittest.TestCase):
             TreeNode(2, TreeNode(1), TreeNode(4, TreeNode(3))),
             TreeNode(6, None, TreeNode(7))
         )
-        root3 = TreeNode(
-            5,
-            TreeNode(2, TreeNode(1), TreeNode(4, TreeNode(3))),
-            TreeNode(6, None, TreeNode(7))
-        )
 
         self.assertIsNone(solution.deleteNode(None, 1))
         self.assertListEqual([1, 3, 4, 5, 6, 7],

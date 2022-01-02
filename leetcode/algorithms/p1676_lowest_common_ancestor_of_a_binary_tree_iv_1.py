@@ -1,3 +1,6 @@
+from typing import List
+
+
 class TreeNode:
     def __init__(self, x):
         self.val = x
@@ -7,7 +10,7 @@ class TreeNode:
 
 # Time Limit Exceeded!
 class Solution:
-    def lowestCommonAncestor(self, root: 'TreeNode', nodes: 'List[TreeNode]') \
+    def lowestCommonAncestor(self, root: 'TreeNode', nodes: List[TreeNode]) \
             -> 'TreeNode':
         return self._divide_and_conquer(root, nodes, 0, len(nodes) - 1)
 

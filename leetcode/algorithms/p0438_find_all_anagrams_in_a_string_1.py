@@ -11,7 +11,7 @@ class Solution:
 
         self._get_anagrams(p, len(p), '', anagrams)
 
-        start, n = 0, len(s)
+        start = 0
         chars_so_far = ''
         positions = []
 

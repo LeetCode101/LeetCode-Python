@@ -1,3 +1,6 @@
+from typing import List
+
+
 class TreeNode:
     def __init__(self, x):
         self.val = x
@@ -6,7 +9,7 @@ class TreeNode:
 
 
 class Solution:
-    def lowestCommonAncestor(self, root: 'TreeNode', nodes: 'List[TreeNode]') \
+    def lowestCommonAncestor(self, root: 'TreeNode', nodes: List[TreeNode]) \
             -> 'TreeNode':
         return self._lowest_common_ancestor(root, set(nodes))
 

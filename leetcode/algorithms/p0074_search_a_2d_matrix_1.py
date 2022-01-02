@@ -6,7 +6,7 @@ class Solution:
         if not matrix or not matrix[0]:
             return False
 
-        m, n = len(matrix), len(matrix[0])
+        m = len(matrix)
         row = self._binary_search([matrix[x][0] for x in range(m)], target)
 
         if matrix[row][0] == target:
