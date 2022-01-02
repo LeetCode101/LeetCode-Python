@@ -24,8 +24,8 @@ class Solution:
             return
 
         if current_depth < depth - 1:
-            self._dfs(root.left, value, current_depth + 1, depth)
-            self._dfs(root.right, value, current_depth + 1, depth)
+            self._dfs(root.left, value, depth, current_depth + 1)
+            self._dfs(root.right, value, depth, current_depth + 1)
         else:
             root.left = TreeNode(value, root.left)
             root.right = TreeNode(value, None, root.right)
