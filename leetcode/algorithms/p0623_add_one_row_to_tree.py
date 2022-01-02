@@ -15,7 +15,7 @@ class Solution:
         if depth == 1:
             return TreeNode(val, root)
 
-        queue = collections.deque([(root, None)])
+        queue = collections.deque([root])
         current_depth = 0
 
         while queue:
@@ -24,19 +24,19 @@ class Solution:
 
             if current_depth + 1 == depth:
                 for _ in range(size):
-                    node, parent = queue.popleft()
+                    node = queue.popleft()
                     node.left = TreeNode(val, node.left)
                     node.right = TreeNode(val, None, node.right)
 
                 return root
 
             for _ in range(size):
-                node, parent = queue.popleft()
+                node = queue.popleft()
 
                 if node.left:
-                    queue.append((node.left, node))
+                    queue.append(node.left)
 
                 if node.right:
-                    queue.append((node.right, node))
+                    queue.append(node.right)
 
         return root
