@@ -1,2 +1,2 @@
 lint:
-	pycodestyle . --exclude=venv
+	flake8 leetcode tests
