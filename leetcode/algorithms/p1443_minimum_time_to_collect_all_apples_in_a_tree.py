@@ -10,7 +10,7 @@ class Solution:
             neighbours[x].append(y)
             neighbours[y].append(x)
 
-        return max(self._dfs(0, neighbours, set(), hasApple) - 2, 0)
+        return self._dfs(0, neighbours, set(), hasApple)
 
     def _dfs(self, node, neighbours, visited, has_apple):
         if node in visited:
@@ -22,7 +22,7 @@ class Solution:
         for neighbour in neighbours[node]:
             seconds += self._dfs(neighbour, neighbours, visited, has_apple)
 
-        if seconds > 0:
+        if (seconds > 0 or has_apple[node]) and node != 0:
             return seconds + 2
-
-        return 2 if has_apple[node] else 0
+        else:
+            return seconds
