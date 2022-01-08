@@ -15,7 +15,7 @@ class Solution:
             result.append(label)
             level_max = 2 ** level - 1
             level_min = 2 ** (level - 1)
-            label = int((level_max + level_min - label) / 2)
+            label = (level_max + level_min - label) // 2
             level -= 1
 
         return result[::-1]
