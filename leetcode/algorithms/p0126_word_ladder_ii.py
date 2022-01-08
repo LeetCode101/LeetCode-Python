@@ -7,14 +7,16 @@ class Solution:
     def findLadders(self, beginWord: str, endWord: str, wordList: List[str]) \
             -> List[List[str]]:
         words = set(wordList)
-        visited = set()
-        queue = collections.deque([(beginWord, 1, [beginWord])])
+        queue = collections.deque([(beginWord, 1, set(), [beginWord])])
         letters = string.ascii_lowercase
         result = []
         min_length = len(wordList)
 
+        if endWord not in words:
+            return []
+
         while queue:
-            word, length, words_so_far = queue.popleft()
+            word, length, visited, words_so_far = queue.popleft()
 
             if word == endWord:
                 if length < min_length:
@@ -30,7 +32,6 @@ class Solution:
                     new_word = word[:i] + c + word[i + 1:]
 
                     if new_word in words and new_word not in visited:
-                        queue.append((new_word, length + 1, words_so_far + [new_word]))
-                        visited.add(new_word)
+                        queue.append((new_word, length + 1, visited | {new_word}, words_so_far + [new_word]))
 
         return result
