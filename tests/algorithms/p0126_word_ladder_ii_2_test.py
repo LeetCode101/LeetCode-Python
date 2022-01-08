@@ -7,9 +7,9 @@ class TestWordLadder(unittest.TestCase):
         solution = Solution()
 
         self.assertListEqual(
-            [['hit', 'hot', 'dot', 'dog', 'cog'],
-             ['hit', 'hot', 'lot', 'log', 'cog']],
-            solution.findLadders(
-                'hit', 'cog', ['hot', 'dot', 'dog', 'lot', 'log', 'cog']))
+            sorted([['hit', 'hot', 'dot', 'dog', 'cog'],
+                    ['hit', 'hot', 'lot', 'log', 'cog']]),
+            sorted(solution.findLadders(
+                'hit', 'cog', ['hot', 'dot', 'dog', 'lot', 'log', 'cog'])))
         self.assertListEqual([], solution.findLadders(
             'hit', 'cog', ['hot', 'dot', 'dog', 'lot', 'log']))
