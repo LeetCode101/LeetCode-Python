@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1104_path_in_zigzag_labelled_binary_tree import Solution
+from leetcode.algorithms.p1104_path_in_zigzag_labelled_binary_tree_1 import Solution
 
 
 class TestPathInZigzagLabelledBinaryTree(unittest.TestCase):

@@ -3,6 +3,7 @@ import math
 from typing import List
 
 
+# Time Limit Exceeded!
 class Solution:
     def pathInZigZagTree(self, label: int) -> List[int]:
         queue = collections.deque([(1, [1])])
