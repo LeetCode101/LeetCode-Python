@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0897_increasing_order_search_tree \
+from leetcode.algorithms.p0897_increasing_order_search_tree_1 \
     import Solution, TreeNode
 from tests.algorithms.binary_tree_helper import inorder
 
