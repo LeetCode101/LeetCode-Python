@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0126_word_ladder_ii import Solution
+from leetcode.algorithms.p0126_word_ladder_ii_1 import Solution
 
 
 class TestWordLadder(unittest.TestCase):

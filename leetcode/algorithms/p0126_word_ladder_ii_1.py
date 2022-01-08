@@ -33,6 +33,8 @@ class Solution:
                     new_word = word[:i] + c + word[i + 1:]
 
                     if new_word in words and new_word not in visited:
-                        queue.append((new_word, length + 1, visited | {new_word}, words_so_far + [new_word]))
+                        queue.append((new_word, length + 1,
+                                      visited | {new_word},
+                                      words_so_far + [new_word]))
 
         return result
