@@ -1,6 +1,6 @@
 import unittest
-from leetcode.algorithms.p0255_verify_preorder_sequence_in_binary_search_tree_1 \
-    import Solution
+from leetcode.algorithms\
+    .p0255_verify_preorder_sequence_in_binary_search_tree_1 import Solution
 
 
 class TestVerifyPreorderSequenceInBinarySearchTree(unittest.TestCase):

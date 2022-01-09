@@ -5,7 +5,8 @@ from typing import List
 # Time Limit Exceeded!
 class Solution:
     def verifyPreorder(self, preorder: List[int]) -> bool:
-        return self._verify(preorder, 0, len(preorder) - 1, -sys.maxsize, sys.maxsize)
+        return self._verify(preorder, 0, len(preorder) - 1,
+                            -sys.maxsize, sys.maxsize)
 
     def _verify(self, preorder, start, end, min_value, max_value):
         if start > end:
