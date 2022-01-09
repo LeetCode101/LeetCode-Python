@@ -25,4 +25,4 @@ class Solution:
         current_avg = current_sum / current_count
 
         return current_sum, current_count, \
-               max(left_avg_max, right_avg_max, current_avg)
+            max(left_avg_max, right_avg_max, current_avg)
