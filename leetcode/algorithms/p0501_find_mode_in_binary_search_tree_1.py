@@ -28,23 +28,18 @@ class Solution:
             node = stack.pop()
             current_value = node.val
 
-            if prev_value == current_value:
+            if prev_value is not None and prev_value == current_value:
                 current_length += 1
             else:
-                if max_length == current_length:
-                    result.append(prev_value)
-                elif max_length < current_length:
-                    max_length = current_length
-                    result = [prev_value]
-
                 current_length = 1
+
+            if max_length == current_length:
+                result.append(current_value)
+            elif max_length < current_length:
+                max_length = current_length
+                result = [current_value]
 
             prev_value = current_value
             current = node.right
-
-        if max_length == current_length:
-            result.append(prev_value)
-        elif max_length < current_length:
-            result = [prev_value]
 
         return result
