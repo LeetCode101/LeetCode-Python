@@ -1,5 +1,6 @@
 import unittest
-from leetcode.algorithms.p0501_find_mode_in_binary_search_tree_2 import Solution, TreeNode
+from leetcode.algorithms.p0501_find_mode_in_binary_search_tree_2 \
+    import Solution, TreeNode
 
 
 class TestFindModeInBinarySearchTree(unittest.TestCase):
