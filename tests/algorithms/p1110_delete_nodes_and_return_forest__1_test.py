@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1110_delete_nodes_and_return_forest \
+from leetcode.algorithms.p1110_delete_nodes_and_return_forest_1 \
     import Solution, TreeNode
 
 
