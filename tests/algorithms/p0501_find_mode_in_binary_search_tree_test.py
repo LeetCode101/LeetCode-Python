@@ -11,4 +11,5 @@ class TestFindModeInBinarySearchTree(unittest.TestCase):
             TreeNode(2, TreeNode(2))
         )
 
+        self.assertListEqual([], solution.findMode(None))
         self.assertListEqual([2], solution.findMode(root))

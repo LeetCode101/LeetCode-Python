@@ -10,6 +10,9 @@ class TreeNode:
 
 class Solution:
     def findMode(self, root: Optional[TreeNode]) -> List[int]:
+        if not root:
+            return []
+
         result = []
         max_length = 0
         current_length = 0
