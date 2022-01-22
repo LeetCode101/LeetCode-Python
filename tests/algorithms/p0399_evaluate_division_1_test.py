@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0399_evaluate_division import Solution
+from leetcode.algorithms.p0399_evaluate_division_1 import Solution
 
 
 class TestEvaluateDivision(unittest.TestCase):
