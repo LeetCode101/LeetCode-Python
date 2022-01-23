@@ -25,7 +25,6 @@ class Solution:
     def _dfs(self, rows, columns, x, y, visited):
         stack = [(x, y)]
         count = 0
-
         visited.add((x, y))
 
         while stack:
