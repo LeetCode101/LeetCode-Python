@@ -28,6 +28,7 @@ class Solution:
         visited.add((x, y))
 
         while stack:
+            count += 1
             row, column = stack.pop()
 
             for next_row, next_column in rows.pop(row, []):
@@ -39,7 +40,5 @@ class Solution:
                 if (next_row, next_column) not in visited:
                     stack.append((next_row, next_column))
                     visited.add((next_row, next_column))
-
-            count += 1
 
         return count
