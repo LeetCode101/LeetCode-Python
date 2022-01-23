@@ -18,7 +18,7 @@ class Solution:
             if (x, y) in visited:
                 continue
 
-            count += self._dfs(rows, columns, x, y, visited) - 1
+            count += self._dfs(rows, columns, x, y, visited)
 
         return count
 
@@ -26,6 +26,8 @@ class Solution:
         stack = [(x, y)]
         count = 0
 
+        visited.add((x, y))
+        
         while stack:
             row, column = stack.pop()
 
