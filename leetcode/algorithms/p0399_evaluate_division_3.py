@@ -18,11 +18,11 @@ class Solution:
             if x not in neighbours:
                 result.append(-1)
             else:
-                result.append(self._dfs(neighbours, x, y))
+                result.append(self._bfs(neighbours, x, y))
 
         return result
 
-    def _dfs(self, neighbours, start, end):
+    def _bfs(self, neighbours, start, end):
         queue = collections.deque([(start, 1)])
         visited = set()
 
