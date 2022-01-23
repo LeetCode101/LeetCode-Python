@@ -4,14 +4,10 @@ from typing import List
 
 class Solution:
     def removeStones(self, stones: List[List[int]]) -> int:
-        max_row = 0
-        max_column = 0
         rows = collections.defaultdict(set)
         columns = collections.defaultdict(set)
 
         for x, y in stones:
-            max_row = max(max_row, x + 1)
-            max_column = max(max_column, y + 1)
             rows[x].add((x, y))
             columns[y].add((x, y))
 
