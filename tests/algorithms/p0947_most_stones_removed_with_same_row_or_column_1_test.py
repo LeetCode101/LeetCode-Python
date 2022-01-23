@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0947_most_stones_removed_with_same_row_or_column \
+from leetcode.algorithms.p0947_most_stones_removed_with_same_row_or_column_1 \
     import Solution
 
 
