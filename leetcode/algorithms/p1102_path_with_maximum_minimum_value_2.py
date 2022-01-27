@@ -22,13 +22,13 @@ class Solution:
                     self._union(roots, row * n + column,
                                 next_row * n + next_column)
 
-            if self._find_parent(roots, 0) == \
-                    self._find_parent(roots, m * n - 1):
+            if self._find_root(roots, 0) == \
+                    self._find_root(roots, m * n - 1):
                 return grid[row][column]
 
         return -1
 
-    def _find_parent(self, roots, x):
+    def _find_root(self, roots, x):
         while roots[x] != x:
             roots[x] = roots[roots[x]]
             x = roots[x]
@@ -36,8 +36,8 @@ class Solution:
         return roots[x]
 
     def _union(self, roots, x, y):
-        root_x, root_y = self._find_parent(roots, x), \
-                         self._find_parent(roots, y)
+        root_x, root_y = self._find_root(roots, x), \
+                         self._find_root(roots, y)
 
         if root_x != root_y:
             roots[root_x] = root_y
