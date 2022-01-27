@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1102_path_with_maximum_minimum_value import Solution
+from leetcode.algorithms.p1102_path_with_maximum_minimum_value_1 import Solution
 
 
 class TestPathWithMaximumMinimumValue(unittest.TestCase):
