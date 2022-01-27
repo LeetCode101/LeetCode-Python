@@ -17,10 +17,13 @@ class Solution:
             for dx, dy in direction:
                 next_row, next_column = row + dx, column + dy
 
-                if 0 <= next_row < m and 0 <= next_column < n and visited[next_row][next_column]:
-                    self._union(roots, row * n + column, next_row * n + next_column)
+                if 0 <= next_row < m and 0 <= next_column < n \
+                        and visited[next_row][next_column]:
+                    self._union(roots, row * n + column,
+                                next_row * n + next_column)
 
-            if self._find_parent(roots, 0) == self._find_parent(roots, m * n - 1):
+            if self._find_parent(roots, 0) == \
+                    self._find_parent(roots, m * n - 1):
                 return grid[row][column]
 
         return -1
