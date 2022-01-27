@@ -29,8 +29,9 @@ class Solution:
         return -1
 
     def _find_parent(self, roots, x):
-        if roots[x] != x:
-            roots[x] = self._find_parent(roots, roots[x])
+        while roots[x] != x:
+            roots[x] = roots[roots[x]]
+            x = roots[x]
 
         return roots[x]
 
