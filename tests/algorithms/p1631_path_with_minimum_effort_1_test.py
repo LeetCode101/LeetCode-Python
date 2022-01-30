@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1631_path_with_minimum_effort import Solution
+from leetcode.algorithms.p1631_path_with_minimum_effort_1 import Solution
 
 
 class TestPathWithMinimumEffort(unittest.TestCase):
