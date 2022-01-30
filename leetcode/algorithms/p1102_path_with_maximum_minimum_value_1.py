@@ -13,6 +13,7 @@ class Solution:
         while heap:
             score, row, column = heapq.heappop(heap)
             max_score = min(max_score, -score)
+            visited[row][column] = True
 
             if row == m - 1 and column == n - 1:
                 break
@@ -25,6 +26,5 @@ class Solution:
                         and not visited[next_row][next_column]:
                     heapq.heappush(heap, (-grid[next_row][next_column],
                                           next_row, next_column))
-                    visited[next_row][next_column] = True
 
         return max_score
