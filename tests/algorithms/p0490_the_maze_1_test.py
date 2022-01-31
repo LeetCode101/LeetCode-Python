@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0490_the_maze import Solution
+from leetcode.algorithms.p0490_the_maze_1 import Solution
 
 
 class TestTheMaze(unittest.TestCase):
