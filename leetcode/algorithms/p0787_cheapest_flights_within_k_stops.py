@@ -7,7 +7,7 @@ class Solution:
     def findCheapestPrice(self, n: int, flights: List[List[int]],
                           src: int, dst: int, k: int) -> int:
         graph = collections.defaultdict(list)
-        visited = collections.defaultdict(lambda: sys.maxsize)
+        prices = collections.defaultdict(lambda: sys.maxsize)
 
         for x, y, price in flights:
             graph[x].append((y, price))
@@ -21,10 +21,10 @@ class Solution:
                 continue
 
             for neighbour, price in graph[node]:
-                if cost + price > visited[neighbour]:
+                if cost + price > prices[neighbour]:
                     continue
                 else:
-                    visited[neighbour] = cost + price
+                    prices[neighbour] = cost + price
                     queue.append((neighbour, jumps + 1, cost + price))
 
-        return visited[dst] if visited[dst] != sys.maxsize else -1
+        return prices[dst] if prices[dst] != sys.maxsize else -1
