@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0994_rotting_oranges_ import Solution
+from leetcode.algorithms.p0994_rotting_oranges_1 import Solution
 
 
 class TestRottingOranges(unittest.TestCase):
