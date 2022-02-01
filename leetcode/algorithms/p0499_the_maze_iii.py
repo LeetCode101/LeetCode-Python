@@ -17,7 +17,8 @@ class Solution:
             if row == hole[0] and column == hole[1]:
                 return path
 
-            for dx, dy, direction in [(0, -1, 'l'), (-1, 0, 'u'), (0, 1, 'r'), (1, 0, 'd')]:
+            for dx, dy, direction in [(0, -1, 'l'), (-1, 0, 'u'),
+                                      (0, 1, 'r'), (1, 0, 'd')]:
                 next_row = row
                 next_column = column
                 jumps = 0
@@ -35,8 +36,11 @@ class Solution:
                 current_distance = distance + jumps
 
                 if distances[next_row][next_column][0] == -1 \
-                        or (current_distance, path + direction) < distances[next_row][next_column]:
-                    distances[next_row][next_column] = (current_distance, current_path)
-                    heapq.heappush(heap, (current_distance, current_path, next_row, next_column))
+                        or distances[next_row][next_column] \
+                        > (current_distance, current_path):
+                    distances[next_row][next_column] = \
+                        (current_distance, current_path)
+                    heapq.heappush(heap, (current_distance, current_path,
+                                          next_row, next_column))
 
         return 'impossible'
