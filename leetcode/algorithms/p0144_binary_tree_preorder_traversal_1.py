@@ -12,6 +12,7 @@ class TreeNode:
 class Solution:
     def preorderTraversal(self, root: TreeNode) -> List[int]:
         values = []
+
         self._preorder_traversal(root, values)
 
         return values
