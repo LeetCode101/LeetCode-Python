@@ -28,6 +28,7 @@ class Solution:
             visited.add(node)
 
             for neighbour in graph[node]:
-                queue.append(neighbour)
+                if neighbour not in visited:
+                    queue.append(neighbour)
 
         return False
