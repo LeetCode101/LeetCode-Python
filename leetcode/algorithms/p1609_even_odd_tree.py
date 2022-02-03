@@ -29,9 +29,11 @@ class Solution:
                 node = queue.popleft()
 
                 if prev is not None:
-                    if self._is_odd(level) and (self._is_odd(node.val) or prev <= node.val):
+                    if self._is_odd(level) and (
+                            self._is_odd(node.val) or prev <= node.val):
                         return False
-                    elif self._is_even(level) and (self._is_even(node.val) or prev >= node.val):
+                    elif self._is_even(level) and (
+                            self._is_even(node.val) or prev >= node.val):
                         return False
 
                 prev = node.val
