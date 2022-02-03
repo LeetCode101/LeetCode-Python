@@ -53,4 +53,3 @@ class Solution:
 
     def _is_even(self, value):
         return not self._is_odd(value)
-
