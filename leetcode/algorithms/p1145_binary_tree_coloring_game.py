@@ -12,17 +12,11 @@ class TreeNode:
 class Solution:
     def btreeGameWinningMove(self, root: Optional[TreeNode], n: int, x: int) \
             -> bool:
-        if root.val == x:
-            left_count = self._count(n, root.left)
-            right_count = self._count(n, root.right)
-
-            return left_count != right_count
-
         current = root
-        stack = [current]
+        stack = [(current, None)]
 
         while current:
-            node = stack.pop()
+            node, parent = stack.pop()
 
             if node.val == x:
                 current = node
@@ -30,15 +24,17 @@ class Solution:
                 break
 
             if node.left:
-                stack.append(node.left)
+                stack.append((node.left, node))
 
             if node.right:
-                stack.append(node.right)
+                stack.append((node.right, node))
 
         sub_tree_count = self._count(n, current)
-        sub_tree_left_count = self._count(n, current.left) if current.left else 0
-        sub_tree_right_count = self._count(n, current.right) if current.right else 0
-        max_count = max(sub_tree_left_count, sub_tree_right_count, n - sub_tree_count)
+        sub_tree_left_count = self._count(n, current.left) \
+            if current.left else 0
+        sub_tree_right_count = sub_tree_count - sub_tree_left_count - 1
+        max_count = max(n - sub_tree_count,
+                        sub_tree_left_count, sub_tree_right_count)
 
         return max_count >= n / 2
 
