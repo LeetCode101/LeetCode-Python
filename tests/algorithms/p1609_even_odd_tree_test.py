@@ -20,3 +20,4 @@ class TestEvenOddTree(unittest.TestCase):
 
         self.assertTrue(solution.isEvenOddTree(None))
         self.assertTrue(solution.isEvenOddTree(root))
+        self.assertFalse(solution.isEvenOddTree(TreeNode(2)))

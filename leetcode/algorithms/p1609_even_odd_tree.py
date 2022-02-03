@@ -22,19 +22,17 @@ class Solution:
             size = len(queue)
             prev = None
 
-            if size == 1 and ((self._is_odd(level) and self._is_odd(queue[0].val)) or (not self._is_odd(level) and not self._is_odd(queue[0].val))):
+            if size == 1 and level & 1 == queue[0].val & 1:
                 return False
 
             for _ in range(size):
                 node = queue.popleft()
 
                 if prev is not None:
-                    if self._is_odd(level):
-                        if self._is_odd(node.val) or prev <= node.val:
-                            return False
-                    else:
-                        if not self._is_odd(node.val) or prev >= node.val:
-                            return False
+                    if self._is_odd(level) and (self._is_odd(node.val) or prev <= node.val):
+                        return False
+                    elif self._is_even(level) and (self._is_even(node.val) or prev >= node.val):
+                        return False
 
                 prev = node.val
 
@@ -50,3 +48,7 @@ class Solution:
 
     def _is_odd(self, value):
         return value & 1 == 1
+
+    def _is_even(self, value):
+        return not self._is_odd(value)
+
