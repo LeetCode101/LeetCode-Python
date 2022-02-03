@@ -12,9 +12,7 @@ class Solution:
 
         for occurrence in occurrences.values():
             if occurrence[0] == 1:
-                if min_position == -1:
-                    min_position = occurrence[1]
-                elif min_position > occurrence[1]:
+                if min_position == -1 or min_position > occurrence[1]:
                     min_position = occurrence[1]
 
         return min_position
