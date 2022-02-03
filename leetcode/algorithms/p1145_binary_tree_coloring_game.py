@@ -13,10 +13,10 @@ class Solution:
     def btreeGameWinningMove(self, root: Optional[TreeNode], n: int, x: int) \
             -> bool:
         current = root
-        stack = [(current, None)]
+        stack = [current]
 
         while current:
-            node, parent = stack.pop()
+            node = stack.pop()
 
             if node.val == x:
                 current = node
@@ -24,10 +24,10 @@ class Solution:
                 break
 
             if node.left:
-                stack.append((node.left, node))
+                stack.append(node.left)
 
             if node.right:
-                stack.append((node.right, node))
+                stack.append(node.right)
 
         sub_tree_count = self._count(n, current)
         sub_tree_left_count = self._count(n, current.left) \
