@@ -11,9 +11,9 @@ class Solution:
             graph[x].append(y)
             graph[y].append(x)
 
-        return self._dfs(graph, source, destination, set())
+        return self._bfs(graph, source, destination, set())
 
-    def _dfs(self, graph, source, destination, visited):
+    def _bfs(self, graph, source, destination, visited):
         queue = collections.deque([source])
 
         while queue:
