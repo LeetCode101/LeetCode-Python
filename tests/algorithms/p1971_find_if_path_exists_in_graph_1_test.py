@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1971_find_if_path_exists_in_graph import Solution
+from leetcode.algorithms.p1971_find_if_path_exists_in_graph_1 import Solution
 
 
 class TestFindIfPathExistsInGraph(unittest.TestCase):
