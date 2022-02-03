@@ -22,9 +22,6 @@ class Solution:
             if node == destination:
                 return True
 
-            if node in visited:
-                continue
-
             visited.add(node)
 
             for neighbour in graph[node]:
