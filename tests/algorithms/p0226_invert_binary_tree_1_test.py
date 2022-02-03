@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0226_invert_binary_tree import Solution, TreeNode
+from leetcode.algorithms.p0226_invert_binary_tree_1 import Solution, TreeNode
 from tests.algorithms.binary_tree_helper import preorder
 
 
