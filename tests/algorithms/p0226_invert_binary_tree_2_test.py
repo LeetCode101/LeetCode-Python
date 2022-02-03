@@ -12,5 +12,6 @@ class TestInvertBinaryTree(unittest.TestCase):
             TreeNode(7, TreeNode(6), TreeNode(9))
         )
 
+        self.assertListEqual([], preorder(solution.invertTree(None)))
         self.assertListEqual([4, 7, 9, 6, 2, 3, 1], preorder(
             solution.invertTree(root)))
