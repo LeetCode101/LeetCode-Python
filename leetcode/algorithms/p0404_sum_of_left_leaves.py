@@ -21,7 +21,8 @@ class Solution:
             for _ in range(size):
                 node, parent = queue.popleft()
 
-                if parent and node is parent.left and not node.left and not node.right:
+                if parent and node is parent.left \
+                        and not node.left and not node.right:
                     sum += node.val
 
                 if node.left:
