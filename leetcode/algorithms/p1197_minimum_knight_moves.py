@@ -1,11 +1,11 @@
 import collections
 
 
+# Time Limit Exceeded!
 class Solution:
     def minKnightMoves(self, x: int, y: int) -> int:
         visited = set()
         queue = collections.deque([(0, 0, 0)])
-        x, y = abs(x), abs(y)
 
         while queue:
             row, column, distance = queue.popleft()
