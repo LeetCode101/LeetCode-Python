@@ -13,7 +13,7 @@ class Solution:
             if row == x and column == y:
                 return distance
 
-            for dx, dy in [(1, 2), (2, 1), (1, -2), (2, -1), (-1, 2), (-2, 1)]:
+            for dx, dy in [(1, 2), (2, 1), (1, -2), (2, -1), (-1, 2), (-2, 1), (-2, 1), (-1, 2)]:
                 next_row = row + dx
                 next_column = column + dy
 
