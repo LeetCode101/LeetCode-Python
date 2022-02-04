@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1197_minimum_knight_moves import Solution
+from leetcode.algorithms.p1197_minimum_knight_moves_1 import Solution
 
 
 class TestMinimumKnightMoves(unittest.TestCase):
