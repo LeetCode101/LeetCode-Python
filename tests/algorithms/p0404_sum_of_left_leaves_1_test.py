@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0404_sum_of_left_leaves import Solution, TreeNode
+from leetcode.algorithms.p0404_sum_of_left_leaves_1 import Solution, TreeNode
 
 
 class TestSumOfLeftLeaves(unittest.TestCase):
