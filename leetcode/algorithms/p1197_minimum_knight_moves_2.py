@@ -21,7 +21,7 @@ class Solution:
                 if (next_row, next_column) in visited:
                     continue
 
-                if next_row < -1 or next_column < -1:
+                if next_row < -2 or next_column < -2:
                     continue
 
                 visited.add((next_row, next_column))
