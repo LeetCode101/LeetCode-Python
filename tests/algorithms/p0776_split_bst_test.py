@@ -11,5 +11,5 @@ class TestSplitBST(unittest.TestCase):
             TreeNode(6, TreeNode(5), TreeNode(7))
         )
 
-        self.assertListEqual([4, 2], list(map(lambda x: x.val,
+        self.assertListEqual([2, 4], list(map(lambda x: x.val,
                                               solution.splitBST(root, 2))))
