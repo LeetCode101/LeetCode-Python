@@ -16,12 +16,12 @@ class Solution:
             return [None, None]
 
         if root.val <= target:
-            split = self.splitBST(root.right, target)
-            root.right = split[0]
+            left, right = self.splitBST(root.right, target)
+            root.right = left
 
-            return [root, split[1]]
+            return [root, right]
         else:
-            split = self.splitBST(root.left, target)
-            root.left = split[1]
+            left, right = self.splitBST(root.left, target)
+            root.left = right
 
-            return [split[0], root]
+            return [left, root]
