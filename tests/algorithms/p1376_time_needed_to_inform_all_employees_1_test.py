@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1376_time_needed_to_inform_all_employees \
+from leetcode.algorithms.p1376_time_needed_to_inform_all_employees_1 \
     import Solution
 
 
