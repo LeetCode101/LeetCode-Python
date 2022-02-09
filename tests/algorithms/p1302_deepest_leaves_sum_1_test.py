@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1302_deepest_leaves_sum import Solution, TreeNode
+from leetcode.algorithms.p1302_deepest_leaves_sum_1 import Solution, TreeNode
 
 
 class TestDeepestLeavesSum(unittest.TestCase):
