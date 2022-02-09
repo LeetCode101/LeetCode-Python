@@ -19,4 +19,5 @@ class TestDeepestLeavesSum(unittest.TestCase):
             )
         )
 
+        self.assertEqual(0, solution.deepestLeavesSum(None))
         self.assertEqual(15, solution.deepestLeavesSum(root))
