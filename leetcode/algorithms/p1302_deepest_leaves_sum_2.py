@@ -21,9 +21,6 @@ class Solution:
         return level_sum[-1]
 
     def _dfs(self, root, level, level_sum):
-        if not root:
-            return
-
         if level == len(level_sum):
             level_sum.append(0)
 
