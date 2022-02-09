@@ -31,20 +31,22 @@ class Solution:
                 parent_map[node.right] = node
 
         queue = collections.deque([target])
-        visited = set()
+        visited = {target.val}
 
         while queue:
             node = queue.popleft()
-            visited.add(node.val)
 
             if not node.left and not node.right:
                 return node.val
 
             if node.left and node.left.val not in visited:
                 queue.append(node.left)
+                visited.add(node.left.val)
 
             if node.right and node.right.val not in visited:
                 queue.append(node.right)
+                visited.add(node.right.val)
 
             if parent_map[node] and parent_map[node].val not in visited:
                 queue.append(parent_map[node])
+                visited.add(parent_map[node].val)
