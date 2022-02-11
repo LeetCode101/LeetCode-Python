@@ -11,5 +11,6 @@ class TestBinaryTreePaths(unittest.TestCase):
             TreeNode(3)
         )
 
+        self.assertListEqual([], solution.binaryTreePaths(None))
         self.assertListEqual(['1->3', '1->2->5'],
                              solution.binaryTreePaths(root))
