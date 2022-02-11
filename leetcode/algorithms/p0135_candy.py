@@ -3,7 +3,8 @@ from typing import List
 
 class Solution:
     def candy(self, ratings: List[int]) -> int:
-        sorted_ratings = sorted([(rating, i) for i, rating in enumerate(ratings)])
+        sorted_ratings = sorted([(rating, i) for i, rating
+                                 in enumerate(ratings)])
         n = len(ratings)
         candies = [0] * n
 
