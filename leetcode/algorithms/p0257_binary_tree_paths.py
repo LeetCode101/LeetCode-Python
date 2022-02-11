@@ -16,19 +16,19 @@ class Solution:
             return []
 
         result = []
-        queue = collections.deque([(root, [])])
+        queue = collections.deque([(root, '')])
 
         while queue:
             node, path = queue.popleft()
-            new_path = path + [str(node.val)]
+            new_path = path + str(node.val)
 
             if not node.left and not node.right:
-                result.append('->'.join(new_path))
+                result.append(path + str(node.val))
 
             if node.left:
-                queue.append((node.left, new_path))
+                queue.append((node.left, new_path + '->'))
 
             if node.right:
-                queue.append((node.right, new_path))
+                queue.append((node.right, new_path + '->'))
 
         return result
