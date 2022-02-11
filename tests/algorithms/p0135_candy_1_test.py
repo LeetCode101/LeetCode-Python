@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0135_candy import Solution
+from leetcode.algorithms.p0135_candy_1 import Solution
 
 
 class TestCandy(unittest.TestCase):
