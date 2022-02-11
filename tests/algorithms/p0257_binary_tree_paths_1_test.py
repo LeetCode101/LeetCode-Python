@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0257_binary_tree_paths import Solution, TreeNode
+from leetcode.algorithms.p0257_binary_tree_paths_1 import Solution, TreeNode
 
 
 class TestBinaryTreePaths(unittest.TestCase):
