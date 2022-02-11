@@ -9,8 +9,10 @@ class Solution:
 
         while i < length and n > 0:
             flower = flowers[i]
-            left_ok = i - 1 < 0 or (i - 1 >= 0 and flowers[i - 1] == 0)
-            right_ok = i + 1 == length or (i + 1 < length and flowers[i + 1] == 0)
+            left_ok = i - 1 < 0 or \
+                (i - 1 >= 0 and flowers[i - 1] == 0)
+            right_ok = i + 1 == length or \
+                (i + 1 < length and flowers[i + 1] == 0)
 
             if flower != 1 and left_ok and right_ok:
                 n -= 1
