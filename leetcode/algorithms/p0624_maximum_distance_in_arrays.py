@@ -19,15 +19,10 @@ class Solution:
                 max_array_index = i
 
         for i in range(n):
-            if i == min_array_index:
-                continue
+            if i != min_array_index:
+                max_1 = max(max_1, abs(min_value - arrays[i][-1]))
 
-            max_1 = max(max_1, abs(min_value - arrays[i][-1]))
-
-        for i in range(n):
-            if i == max_array_index:
-                continue
-
-            max_2 = max(max_2, abs(arrays[i][0] - max_value))
+            if i != max_array_index:
+                max_2 = max(max_2, abs(arrays[i][0] - max_value))
 
         return max(max_1, max_2)
