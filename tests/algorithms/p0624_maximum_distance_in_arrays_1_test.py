@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0624_maximum_distance_in_arrays import Solution
+from leetcode.algorithms.p0624_maximum_distance_in_arrays_1 import Solution
 
 
 class TestMaximumDistanceInArrays(unittest.TestCase):
