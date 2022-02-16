@@ -17,3 +17,5 @@ class TestMaximumNumberOfEventsThatCanBeAttended(unittest.TestCase):
         self.assertEqual(3, solution.maxEvents([[1, 2], [2, 3], [3, 4]]))
         self.assertEqual(4, solution.maxEvents(
             [[1, 2], [2, 3], [3, 4], [1, 2]]))
+        self.assertEqual(3, solution.maxEvents(
+            [[1, 2], [1, 2], [1, 6], [1, 2], [1, 2]]))
