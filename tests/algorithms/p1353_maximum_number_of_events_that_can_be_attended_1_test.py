@@ -1,6 +1,6 @@
 import unittest
-from leetcode.algorithms.p1353_maximum_number_of_events_that_can_be_attended_1 \
-    import Solution
+from leetcode.algorithms\
+    .p1353_maximum_number_of_events_that_can_be_attended_1 import Solution
 
 
 class TestMaximumNumberOfEventsThatCanBeAttended(unittest.TestCase):
