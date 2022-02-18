@@ -2,30 +2,29 @@ import heapq
 from typing import List
 
 
+# Time Limit Exceeded!
 class Solution:
     def maxEvents(self, events: List[List[int]]) -> int:
         if not events:
             return 0
 
-        heap = []
-        count = 0
-        i, n = 0, len(events)
-        sorted_events = sorted(events, key=lambda x: x[0])
-        day = 0
+        heap = [(start, end) for start, end in events]
+        heapq.heapify(heap)
+        prev, _ = heapq.heappop(heap)
+        count = 1
 
-        while i < n or heap:
-            if not heap:
-                day = sorted_events[i][0]
+        while heap:
+            while heap and heap[0][0] <= prev <= heap[0][1]:
+                start, end = heapq.heappop(heap)
+                if prev + 1 <= end:
+                    heapq.heappush(heap, (prev + 1, end))
 
-            while i < n and sorted_events[i][0] <= day:
-                heapq.heappush(heap, sorted_events[i][1])
-                i += 1
+            if heap:
+                start, end = heapq.heappop(heap)
+                count += 1 if prev < end else 0
+                prev = start
 
-            heapq.heappop(heap)
-            count += 1
-            day += 1
-
-            while heap and heap[0] < day:
+            while heap and heap[0][1] < prev:
                 heapq.heappop(heap)
 
         return count
