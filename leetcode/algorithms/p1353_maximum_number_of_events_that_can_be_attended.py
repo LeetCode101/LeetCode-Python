@@ -16,6 +16,7 @@ class Solution:
         while heap:
             while heap and heap[0][0] <= prev <= heap[0][1]:
                 start, end = heapq.heappop(heap)
+
                 if prev + 1 <= end:
                     heapq.heappush(heap, (prev + 1, end))
 
@@ -23,8 +24,5 @@ class Solution:
                 start, end = heapq.heappop(heap)
                 count += 1 if prev < end else 0
                 prev = start
-
-            while heap and heap[0][1] < prev:
-                heapq.heappop(heap)
 
         return count
