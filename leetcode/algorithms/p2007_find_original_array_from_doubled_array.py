@@ -5,7 +5,7 @@ from typing import List
 class Solution:
     def findOriginalArray(self, changed: List[int]) -> List[int]:
         counter = collections.Counter(changed)
-        keys = sorted(counter.keys(), key=abs)
+        keys = sorted(counter.keys())
         result = []
         zeros = counter[0]
 
