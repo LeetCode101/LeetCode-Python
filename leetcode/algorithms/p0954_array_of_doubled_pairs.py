@@ -5,9 +5,9 @@ from typing import List
 class Solution:
     def canReorderDoubled(self, arr: List[int]) -> bool:
         counter = collections.Counter(arr)
-        keys = sorted(counter.keys())
+        keys = sorted(counter.keys(), key=abs)
 
-        for n in sorted(keys, key=lambda x: abs(x)):
+        for n in keys:
             if counter[n] > counter[2 * n]:
                 return False
 
