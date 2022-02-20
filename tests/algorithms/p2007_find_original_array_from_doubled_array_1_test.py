@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p2007_find_original_array_from_doubled_array \
+from leetcode.algorithms.p2007_find_original_array_from_doubled_array_1 \
     import Solution
 
 
