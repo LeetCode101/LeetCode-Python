@@ -11,7 +11,7 @@ class Solution:
         for n in keys:
             if n == 0 or counter[n * 2] == 0:
                 continue
-                
+
             if counter[n * 2] >= counter[n]:
                 result.extend([n] * counter[n])
                 counter[n * 2] -= counter[n]
