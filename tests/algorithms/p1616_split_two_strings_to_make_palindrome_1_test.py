@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1616_split_two_strings_to_make_palindrome \
+from leetcode.algorithms.p1616_split_two_strings_to_make_palindrome_1 \
     import Solution
 
 
