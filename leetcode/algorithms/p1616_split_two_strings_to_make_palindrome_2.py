@@ -9,12 +9,15 @@ class Solution:
             low += 1
             high -= 1
 
-        return self._has_palindrome(a, low, high) \
-               or self._has_palindrome(b, low, high)
+        return self._is_palindrome(a, low, high) \
+            or self._is_palindrome(b, low, high)
 
-    def _has_palindrome(self, s, low, high):
-        while low < high and s[low] == s[high]:
+    def _is_palindrome(self, s, low, high):
+        while low < high:
+            if s[low] != s[high]:
+                return False
+
             low += 1
             high -= 1
 
-        return low >= high
+        return True
