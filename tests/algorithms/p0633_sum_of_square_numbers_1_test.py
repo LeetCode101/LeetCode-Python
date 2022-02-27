@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0633_sum_of_square_numbers import Solution
+from leetcode.algorithms.p0633_sum_of_square_numbers_1 import Solution
 
 
 class TestSumOfSquareNumbers(unittest.TestCase):
