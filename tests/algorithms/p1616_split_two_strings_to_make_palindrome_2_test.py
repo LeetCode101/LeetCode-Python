@@ -10,3 +10,5 @@ class TestSplitTwoStringsToMakePalindrome(unittest.TestCase):
         self.assertTrue(solution.checkPalindromeFormation('x', 'y'))
         self.assertFalse(solution.checkPalindromeFormation('xbdef', 'xecab'))
         self.assertTrue(solution.checkPalindromeFormation('ulacfd', 'jizalu'))
+        self.assertTrue(solution.checkPalindromeFormation(
+            'pvhmupgqeltozftlmfjjde', 'yjgpzbezspnnpszebzmhvp'))
