@@ -8,12 +8,19 @@ class Solution:
         count = 0
 
         for i in range(len(num)):
+            if num[i] == permutation[i]:
+                continue
+
             j = i
 
-            while num[i] != permutation[i]:
-                count += 1
+            while num[i] != permutation[j]:
                 j += 1
-                permutation[i], permutation[j] = permutation[j], permutation[i]
+
+            while j > i:
+                permutation[j - 1], permutation[j] = \
+                    permutation[j], permutation[j - 1]
+                j -= 1
+                count += 1
 
         return count
 
