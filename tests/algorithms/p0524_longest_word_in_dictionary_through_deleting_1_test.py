@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0524_longest_word_in_dictionary_through_deleting \
+from leetcode.algorithms.p0524_longest_word_in_dictionary_through_deleting_1 \
     import Solution
 
 
