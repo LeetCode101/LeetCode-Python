@@ -1,12 +1,10 @@
 import math
-import sys
 from typing import List
 
 
 class Solution:
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
-        left, right = 1, max(nums) + 1
-        smallest = sys.maxsize
+        left, right = 1, max(nums)
 
         while left < right:
             middle = left + (right - left) // 2
@@ -16,9 +14,8 @@ class Solution:
                 left = middle + 1
             else:
                 right = middle
-                smallest = min(smallest, middle)
 
-        return smallest
+        return left
 
     def _sum(self, nums, divisor):
         return sum([math.ceil(x / divisor) for x in nums])
