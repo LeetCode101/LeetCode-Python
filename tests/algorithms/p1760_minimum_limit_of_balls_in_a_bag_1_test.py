@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1760_minimum_limit_of_balls_in_a_bag import Solution
+from leetcode.algorithms.p1760_minimum_limit_of_balls_in_a_bag_1 import Solution
 
 
 class TestMinimumLimitOfBallsInABag(unittest.TestCase):
