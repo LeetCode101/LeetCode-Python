@@ -2,6 +2,7 @@ import heapq
 from typing import List
 
 
+# Time Limit Exceeded!
 class Solution:
     def minimumSize(self, nums: List[int], maxOperations: int) -> int:
         left, right = 1, max(nums)
