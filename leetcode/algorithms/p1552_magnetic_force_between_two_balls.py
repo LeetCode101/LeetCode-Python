@@ -17,12 +17,12 @@ class Solution:
 
         return left
 
-    def _count(self, position, basket):
+    def _count(self, position, magnetic_force):
         count = 1
         current = position[0]
 
         for i in range(1, len(position)):
-            if position[i] - current >= basket:
+            if position[i] - current >= magnetic_force:
                 count += 1
                 current = position[i]
 
