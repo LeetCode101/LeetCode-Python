@@ -9,3 +9,5 @@ class TestSellDiminishingValuedColoredBalls(unittest.TestCase):
 
         self.assertEqual(14, solution.maxProfit([2, 5], 4))
         self.assertEqual(19, solution.maxProfit([3, 5], 6))
+        self.assertEqual(373219333, solution.maxProfit(
+            [497978859, 167261111, 483575207, 591815159], 836556809))
