@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1648_sell_diminishing_valued_colored_balls \
+from leetcode.algorithms.p1648_sell_diminishing_valued_colored_balls_1 \
     import Solution
 
 
