@@ -7,13 +7,13 @@ class Solution:
         bound = -1
         mod = 1000000007
 
-        while left <= right:
+        while left < right:
             middle = left + (right - left) // 2
             total = sum(x - middle for x in inventory if x >= middle)
 
             if total <= orders:
                 bound = middle
-                right = middle - 1
+                right = middle
             else:
                 left = middle + 1
 
