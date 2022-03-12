@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p2141_maximum_running_time_of_n_computers \
+from leetcode.algorithms.p2141_maximum_running_time_of_n_computers_1 \
     import Solution
 
 

@@ -2,6 +2,7 @@ import heapq
 from typing import List
 
 
+# Time Limit Exceeded!
 class Solution:
     def maxRunTime(self, n: int, batteries: List[int]) -> int:
         heap = [-x for x in batteries]
