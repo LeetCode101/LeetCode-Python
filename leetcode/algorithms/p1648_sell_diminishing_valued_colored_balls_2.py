@@ -17,7 +17,6 @@ class Solution:
             else:
                 left = middle + 1
 
-        range_sum = lambda x, y: (x + y) * (y - x + 1) // 2
         rest = orders - sum(x - bound for x in inventory if x >= bound)
         profit = 0
 
@@ -26,9 +25,13 @@ class Solution:
                 continue
 
             if rest > 0:
-                profit = (profit + range_sum(bound, x)) % mod
+                profit = (profit + self._range_sum(bound, x)) % mod
                 rest -= 1
             else:
-                profit = (profit + range_sum(bound + 1, x)) % mod
+                profit = (profit + self._range_sum(bound + 1, x)) % mod
 
         return profit
+
+    def _range_sum(self, x, y):
+        return (x + y) * (y - x + 1) // 2
+
