@@ -18,17 +18,13 @@ class Solution:
                 left = middle + 1
 
         rest = orders - sum(x - bound for x in inventory if x >= bound)
-        profit = 0
+        profit = rest * bound
 
         for x in inventory:
             if x < bound:
                 continue
 
-            if rest > 0:
-                profit = (profit + self._range_sum(bound, x)) % mod
-                rest -= 1
-            else:
-                profit = (profit + self._range_sum(bound + 1, x)) % mod
+            profit = (profit + self._range_sum(bound + 1, x)) % mod
 
         return profit
 
