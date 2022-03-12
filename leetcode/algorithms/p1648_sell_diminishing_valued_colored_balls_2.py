@@ -34,4 +34,3 @@ class Solution:
 
     def _range_sum(self, x, y):
         return (x + y) * (y - x + 1) // 2
-
