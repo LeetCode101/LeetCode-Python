@@ -33,4 +33,4 @@ class Solution:
         return profit
 
     def _range_sum(self, x, y):
-        return (x + y) * (y - x + 1) // 2
+        return y * (1 + y) // 2 - (x - 1) * (1 + x - 1) // 2
