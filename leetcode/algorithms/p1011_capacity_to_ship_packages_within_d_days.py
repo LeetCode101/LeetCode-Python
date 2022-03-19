@@ -3,7 +3,7 @@ from typing import List
 
 class Solution:
     def shipWithinDays(self, weights: List[int], days: int) -> int:
-        low, high = 1, sum(weights)
+        low, high = max(weights), sum(weights)
 
         while low < high:
             middle = low + (high - low) // 2
