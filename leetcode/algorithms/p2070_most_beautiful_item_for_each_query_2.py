@@ -7,7 +7,7 @@ class Solution:
         result = [0] * len(queries)
         sorted_items = sorted(items, key=lambda x: x[0])
         sorted_queries = sorted([(x, i) for i, x in enumerate(queries)])
-        prev = -1
+        prev = 0
         max_beauty = 0
 
         for price, i in sorted_queries:
@@ -22,10 +22,7 @@ class Solution:
         return result
 
     def _select_right(self, items, target, start):
-        low, high = 0, len(items) - 1
-
-        if start != -1:
-            low = start
+        low, high = start, len(items) - 1
 
         while low <= high:
             middle = low + (high - low) // 2
