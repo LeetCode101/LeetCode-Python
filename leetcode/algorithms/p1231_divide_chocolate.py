@@ -9,10 +9,10 @@ class Solution:
             middle = low + (high - low) // 2 + 1
             count = self._count(sweetness, middle)
 
-            if count >= k + 1:
-                low = middle
-            else:
+            if count < k + 1:
                 high = middle - 1
+            else:
+                low = middle
 
         return low
 
