@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0774_minimize_max_distance_to_gas_station \
+from leetcode.algorithms.p0774_minimize_max_distance_to_gas_station_1 \
     import Solution
 
 
