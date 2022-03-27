@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1847_closest_room import Solution
+from leetcode.algorithms.p1847_closest_room_1 import Solution
 
 
 class TestClosestRoom(unittest.TestCase):
