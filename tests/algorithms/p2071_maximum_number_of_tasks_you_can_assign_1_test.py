@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p2071_maximum_number_of_tasks_you_can_assign \
+from leetcode.algorithms.p2071_maximum_number_of_tasks_you_can_assign_1 \
     import Solution
 
 
