@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0632_smallest_range_covering_elements_from_k_lists \
+from leetcode.algorithms.p0632_smallest_range_covering_elements_from_k_lists_1 \
     import Solution
 
 
