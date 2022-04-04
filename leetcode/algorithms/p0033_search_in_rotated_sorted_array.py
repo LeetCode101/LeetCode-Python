@@ -10,13 +10,13 @@ class Solution:
 
             if nums[middle] == target:
                 return middle
-            elif nums[middle] > target:
-                if nums[middle] <= nums[high] or nums[high] < target:
+            elif nums[middle] >= nums[low]:
+                if nums[low] <= target < nums[middle]:
                     high = middle - 1
                 else:
                     low = middle + 1
             else:
-                if nums[middle] >= nums[high] or nums[high] >= target:
+                if nums[middle] < target <= nums[high]:
                     low = middle + 1
                 else:
                     high = middle - 1
