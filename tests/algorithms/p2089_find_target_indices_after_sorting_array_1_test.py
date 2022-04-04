@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p2089_find_target_indices_after_sorting_array \
+from leetcode.algorithms.p2089_find_target_indices_after_sorting_array_1 \
     import Solution
 
 
