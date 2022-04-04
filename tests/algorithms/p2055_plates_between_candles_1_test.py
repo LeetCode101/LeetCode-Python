@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p2055_plates_between_candles import Solution
+from leetcode.algorithms.p2055_plates_between_candles_1 import Solution
 
 
 class TestPlatesBetweenCandles(unittest.TestCase):
