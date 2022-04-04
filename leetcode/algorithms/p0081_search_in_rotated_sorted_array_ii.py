@@ -10,8 +10,7 @@ class Solution:
 
             if nums[middle] == target:
                 return True
-
-            if nums[middle] > nums[low]:
+            elif nums[middle] > nums[low]:
                 if nums[low] <= target < nums[middle]:
                     high = middle - 1
                 else:
