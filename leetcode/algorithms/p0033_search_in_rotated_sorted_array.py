@@ -11,7 +11,7 @@ class Solution:
             if nums[middle] == target:
                 return middle
             elif nums[middle] > target:
-                if nums[middle] < nums[high] or nums[high] < target:
+                if nums[middle] <= nums[high] or nums[high] < target:
                     high = middle - 1
                 else:
                     low = middle + 1
