@@ -21,10 +21,10 @@ class Solution:
         pivot_value = int(nums[low])
 
         while i <= j:
-            if int(nums[j]) < pivot_value:
-                j -= 1
-            elif pivot_value < int(nums[i]):
+            if int(nums[i]) > pivot_value:
                 i += 1
+            elif int(nums[j]) < pivot_value:
+                j -= 1
             else:
                 nums[i], nums[j] = nums[j], nums[i]
                 i += 1
