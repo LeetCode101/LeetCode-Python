@@ -8,13 +8,14 @@ class Solution:
         lo, hi = 0, len(nums) - 1
 
         while lo <= hi:
-            mid = self._partition(nums, lo, hi)
-            if mid == k - 1:
-                return str(nums[mid])
-            elif mid < k - 1:
-                lo = mid + 1
+            p = self._partition(nums, lo, hi)
+
+            if p == k - 1:
+                return str(nums[p])
+            elif p < k - 1:
+                lo = p + 1
             else:
-                hi = mid - 1
+                hi = p - 1
 
     def _partition(self, nums, low, high):
         i, j = low, high - 1
