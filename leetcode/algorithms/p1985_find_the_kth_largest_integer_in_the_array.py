@@ -17,8 +17,10 @@ class Solution:
                 hi = mid - 1
 
     def _partition(self, nums, low, high):
-        i, j = low + 1, high
-        pivot_value = int(nums[low])
+        i, j = low, high - 1
+        pivot = low + (high - low) // 2
+        pivot_value = int(nums[pivot])
+        nums[pivot], nums[high] = nums[high], nums[pivot]
 
         while i <= j:
             if int(nums[i]) > pivot_value:
@@ -30,6 +32,6 @@ class Solution:
                 i += 1
                 j -= 1
 
-        nums[low], nums[j] = nums[j], nums[low]
+        nums[i], nums[high] = nums[high], nums[i]
 
-        return j
+        return i
