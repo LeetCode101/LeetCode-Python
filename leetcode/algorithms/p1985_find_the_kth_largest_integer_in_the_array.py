@@ -3,17 +3,17 @@ from typing import List
 
 class Solution:
     def kthLargestNumber(self, nums: List[str], k: int) -> str:
-        lo, hi = 0, len(nums) - 1
+        low, high = 0, len(nums) - 1
 
-        while lo <= hi:
-            p = self._partition(nums, lo, hi)
+        while low <= high:
+            p = self._partition(nums, low, high)
 
             if p == k - 1:
                 return str(nums[p])
             elif p < k - 1:
-                lo = p + 1
+                low = p + 1
             else:
-                hi = p - 1
+                high = p - 1
 
     def _partition(self, nums, low, high):
         i, j = low, high - 1
