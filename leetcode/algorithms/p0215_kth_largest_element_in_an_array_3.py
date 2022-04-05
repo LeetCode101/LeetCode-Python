@@ -5,7 +5,7 @@ class Solution:
     def findKthLargest(self, nums: List[int], k: int) -> int:
         low, high = 0, len(nums) - 1
 
-        while True:
+        while low <= high:
             p = self._partition(nums, low, high)
 
             if p == k - 1:
