@@ -1,10 +1,8 @@
-from random import shuffle
 from typing import List
 
 
 class Solution:
     def kthLargestNumber(self, nums: List[str], k: int) -> str:
-        shuffle(nums)
         lo, hi = 0, len(nums) - 1
 
         while lo <= hi:
