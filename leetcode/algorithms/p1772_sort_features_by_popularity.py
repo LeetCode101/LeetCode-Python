@@ -17,7 +17,7 @@ class Solution:
                     counter[feature] += 1
                     visited.add(feature)
 
-        sorted_features = [(-count, positions[f], f) for f, count in counter.items()]
+        sorted_features = [(-c, positions[f], f) for f, c in counter.items()]
         sorted_features.sort()
 
         return [x[2] for x in sorted_features]
