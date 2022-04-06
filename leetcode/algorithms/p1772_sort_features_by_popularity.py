@@ -14,7 +14,4 @@ class Solution:
                 if feature in feature_set:
                     counter[feature] += 1
 
-        sorted_features = [(-c, positions[f], f) for f, c in counter.items()]
-        sorted_features.sort()
-
-        return [x[2] for x in sorted_features]
+        return sorted(features, key=lambda x: (-counter[x], positions[x]))
