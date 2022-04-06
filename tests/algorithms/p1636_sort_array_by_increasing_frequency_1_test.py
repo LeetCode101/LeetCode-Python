@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1636_sort_array_by_increasing_frequency \
+from leetcode.algorithms.p1636_sort_array_by_increasing_frequency_1 \
     import Solution
 
 
