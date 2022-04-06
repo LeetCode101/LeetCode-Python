@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0451_sort_characters_by_frequency import Solution
+from leetcode.algorithms.p0451_sort_characters_by_frequency_1 import Solution
 
 
 class TestSortCharactersByFrequency(unittest.TestCase):
