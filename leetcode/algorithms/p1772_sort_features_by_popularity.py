@@ -10,12 +10,9 @@ class Solution:
         positions = {x: i for i, x in enumerate(features)}
 
         for response in responses:
-            visited = set()
-
-            for feature in response.split(' '):
-                if feature in feature_set and feature not in visited:
+            for feature in set(response.split(' ')):
+                if feature in feature_set:
                     counter[feature] += 1
-                    visited.add(feature)
 
         sorted_features = [(-c, positions[f], f) for f, c in counter.items()]
         sorted_features.sort()
