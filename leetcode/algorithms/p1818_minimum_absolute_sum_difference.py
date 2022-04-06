@@ -8,7 +8,7 @@ class Solution:
         sum_diff = 0
         n = len(nums1)
         mod = 1000000007
-        max_replace = 0
+        max_reduce = 0
 
         for i in range(n):
             diff = abs(nums1[i] - nums2[i])
@@ -17,10 +17,10 @@ class Solution:
 
             if j < n:
                 gap = sorted_nums1[j] - nums2[i]
-                max_replace = max(max_replace, diff - gap)
+                max_reduce = max(max_reduce, diff - gap)
 
             if j > 0:
                 gap = nums2[i] - sorted_nums1[j - 1]
-                max_replace = max(max_replace, diff - gap)
+                max_reduce = max(max_reduce, diff - gap)
 
-        return (sum_diff - max_replace) % mod
+        return (sum_diff - max_reduce) % mod
