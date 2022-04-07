@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0079_word_search_1 import Solution
+from leetcode.algorithms.p0079_word_search import Solution
 
 
 class TestWordSearch(unittest.TestCase):
