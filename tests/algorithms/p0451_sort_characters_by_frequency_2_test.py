@@ -10,4 +10,5 @@ class TestSortCharactersByFrequency(unittest.TestCase):
             solution.frequencySort('tree') in ['eetr', 'eert'])
         self.assertTrue(
             solution.frequencySort('cccaaa') in ['aaaccc', 'cccaaa'])
-        self.assertEqual('bbAa', solution.frequencySort('Aabb'))
+        self.assertTrue(
+            solution.frequencySort('Aabb') in ['bbAa', 'bbaA'])
