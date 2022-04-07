@@ -8,9 +8,10 @@ class Solution:
 
         for i in range(m):
             for j in range(n):
-                found = self._paint(grid, i, j) > 0
+                if grid[i][j] == 1:
+                    self._paint(grid, i, j)
+                    found = True
 
-                if found:
                     break
 
             if found:
