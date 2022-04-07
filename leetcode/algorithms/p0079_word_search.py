@@ -32,7 +32,8 @@ class Solution:
             if 0 <= next_row < m and 0 <= next_column < n \
                     and not visited[next_row][next_column] \
                     and board[next_row][next_column] == word[start + 1]:
-                found = self._dfs(board, next_row, next_column, word, start + 1, visited)
+                found = self._dfs(board, next_row, next_column,
+                                  word, start + 1, visited)
 
                 if found:
                     return True
