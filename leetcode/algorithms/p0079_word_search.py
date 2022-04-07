@@ -17,7 +17,7 @@ class Solution:
     def _dfs(self, board, row, column, word, start, visited):
         m, n = len(board), len(board[0])
 
-        if row < 0 or row == m or column < 0 or column == n or visited[row][column] or board[row][column] != word[start]:
+        if board[row][column] != word[start]:
             return False
 
         if start == len(word) - 1:
