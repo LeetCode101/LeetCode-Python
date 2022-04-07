@@ -16,8 +16,10 @@ class Solution:
         parents = {}
 
         for parent, child, is_left in descriptions:
-            child_node = TreeNode(child) if child not in nodes else nodes[child]
-            parent_node = TreeNode(parent) if parent not in nodes else nodes[parent]
+            child_node = TreeNode(child) if child not in nodes \
+                else nodes[child]
+            parent_node = TreeNode(parent) if parent not in nodes \
+                else nodes[parent]
 
             if is_left == 1:
                 parent_node.left = child_node
