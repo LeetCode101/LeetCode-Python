@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1146_snapshot_array import SnapshotArray
+from leetcode.algorithms.p1146_snapshot_array_1 import SnapshotArray
 
 
 class TestSnapshotArray(unittest.TestCase):
