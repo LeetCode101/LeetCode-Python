@@ -6,6 +6,8 @@ class TestTheKWeakestRowsInAMatrix(unittest.TestCase):
     def test_the_k_weakest_rows_in_a_matrix(self):
         solution = Solution()
 
+        self.assertListEqual([1, 0], solution.kWeakestRows(
+            [[1, 0], [0, 0], [1, 0]], 2))
         self.assertListEqual([2, 0, 3], solution.kWeakestRows(
             [[1, 1, 0, 0, 0],
              [1, 1, 1, 1, 0],

@@ -1,3 +1,4 @@
+import bisect
 from typing import List
 
 
@@ -7,16 +8,20 @@ class Solution:
         m, n = len(mat), len(mat[0])
 
         for i in range(m):
-            count = 0
+            low, high = 0, len(mat[i]) - 1
 
-            for j in range(n):
-                if mat[i][j] == 0:
-                    break
+            while low < high:
+                middle = low + (high - low) // 2 + 1
 
-                count += 1
+                if mat[i][middle] == 1:
+                    low = middle
+                else:
+                    high = middle - 1
+
+            count = low + 1 if mat[i][low] == 1 else 0
 
             rows.append((count, i))
 
-        rows.sort(key=lambda x: x[0])
+        rows.sort(key=lambda x: (x[0], x[1]))
 
         return [rows[i][1] for i in range(k)]
