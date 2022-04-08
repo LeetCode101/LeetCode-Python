@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0646_maximum_length_of_pair_chain import Solution
+from leetcode.algorithms.p0646_maximum_length_of_pair_chain_1 import Solution
 
 
 class TestMaximumLengthOfPairChain(unittest.TestCase):
