@@ -1,11 +1,10 @@
-import bisect
 from typing import List
 
 
 class Solution:
     def kWeakestRows(self, mat: List[List[int]], k: int) -> List[int]:
         rows = []
-        m, n = len(mat), len(mat[0])
+        m = len(mat)
 
         for i in range(m):
             low, high = 0, len(mat[i]) - 1
