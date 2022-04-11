@@ -13,13 +13,15 @@ class Solution:
         if len(permutation) == len(s):
             result.append(permutation)
 
-        for i in range(start, len(s)):
-            c = s[i]
+        if start == len(s):
+            return
 
-            self._search(s, i + 1, permutation + c, result)
+        c = s[start]
 
-            if c.isalpha():
-                if c.isupper():
-                    self._search(s, i + 1, permutation + c.lower(), result)
-                elif c.islower():
-                    self._search(s, i + 1, permutation + c.upper(), result)
+        self._search(s, start + 1, permutation + c, result)
+
+        if c.isalpha():
+            if c.isupper():
+                self._search(s, start + 1, permutation + c.lower(), result)
+            elif c.islower():
+                self._search(s, start + 1, permutation + c.upper(), result)
