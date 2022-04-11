@@ -14,5 +14,7 @@ class Solution:
 
         for i in range(start, len(nums)):
             subset.append(nums[i])
+
             self._search(nums, i + 1, subset, result)
+
             subset.pop()
