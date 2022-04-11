@@ -7,6 +7,6 @@ class TestMinimumCostToHireKWorkers(unittest.TestCase):
         solution = Solution()
 
         self.assertTrue(abs(solution.mincostToHireWorkers(
-            [10, 20, 5], [70, 50, 30], 2)) < 0.01)
+            [10, 20, 5], [70, 50, 30], 2) - 105) < 0.01)
         self.assertTrue(abs(solution.mincostToHireWorkers(
-            [3, 1, 10, 10, 1], [4, 8, 2, 2, 7], 3)) < 0.01)
+            [3, 1, 10, 10, 1], [4, 8, 2, 2, 7], 3) - 30.667) < 0.01)
