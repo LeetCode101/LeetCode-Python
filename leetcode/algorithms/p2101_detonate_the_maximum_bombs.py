@@ -15,11 +15,13 @@ class Solution:
                 x2, y2, r2 = bombs[j]
                 distance = math.sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2))
 
-                if distance < r1 + r2:
+                if distance <= r1:
                     graph[i].append(j)
+
+                if distance <= r2:
                     graph[j].append(i)
 
-        max_count = 0
+        max_count = 1
 
         for i in range(n):
             count = self._count(graph, i, set())
