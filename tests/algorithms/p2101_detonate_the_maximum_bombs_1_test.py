@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p2101_detonate_the_maximum_bombs import Solution
+from leetcode.algorithms.p2101_detonate_the_maximum_bombs_1 import Solution
 
 
 class TestDetonateTheMaximumBombs(unittest.TestCase):
