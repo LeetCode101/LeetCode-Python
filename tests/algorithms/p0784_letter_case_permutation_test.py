@@ -8,5 +8,5 @@ class TestLetterCasePermutation(unittest.TestCase):
 
         self.assertListEqual(
             sorted(['a1b2', 'a1B2', 'A1b2', 'A1B2']),
-            solution.letterCasePermutation('a1b2')
+            sorted(solution.letterCasePermutation('a1b2'))
         )
