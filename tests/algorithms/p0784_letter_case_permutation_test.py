@@ -10,3 +10,6 @@ class TestLetterCasePermutation(unittest.TestCase):
             sorted(['a1b2', 'a1B2', 'A1b2', 'A1B2']),
             sorted(solution.letterCasePermutation('a1b2'))
         )
+        self.assertListEqual(
+            sorted(['c', 'C']),
+            sorted(solution.letterCasePermutation('C')))
