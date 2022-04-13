@@ -7,6 +7,7 @@ class TestMinimumLengthOfStringAfterDeletingSimilarEnds(unittest.TestCase):
     def test_minimum_length_of_string_after_deleting_similar_ends(self):
         solution = Solution()
 
+        self.assertEqual(0, solution.minimumLength(''))
         self.assertEqual(1, solution.minimumLength(
             'bbbbbbbbbbbbbbbbbbbbbbbbbbbabbbbbbbbbbbbbbbccbcbcbccbbabbb'))
         self.assertEqual(2, solution.minimumLength('ca'))
