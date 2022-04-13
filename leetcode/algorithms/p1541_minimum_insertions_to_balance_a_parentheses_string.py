@@ -16,7 +16,7 @@ class Solution:
                     stack.pop()
                 else:
                     missing_left += 1
-                
+
                 if i + 1 < n and s[i + 1] == ')':
                     i += 1
                 else:
