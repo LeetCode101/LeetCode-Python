@@ -2,8 +2,8 @@ class Solution:
     def minimumLength(self, s: str) -> int:
         low, high = 0, len(s) - 1
 
-        while low < high:
-            if s[low] != s[high]:
+        while low <= high:
+            if s[low] != s[high] or low == high:
                 return high - low + 1
 
             i, j = low, high
@@ -20,4 +20,4 @@ class Solution:
             else:
                 return 0
 
-        return 1 if low == high else 0
+        return 0
