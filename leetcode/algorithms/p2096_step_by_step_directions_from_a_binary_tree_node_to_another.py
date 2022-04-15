@@ -29,7 +29,8 @@ class Solution:
                 graph[node.right.val].append((node.val, 'U'))
                 queue.append(node.right)
 
-        queue = collections.deque([(startValue, '')])
+        queue = collections.deque([(startValue, '')]) \
+            if graph[startValue] else collections.deque([])
         visited = {startValue}
 
         while queue:
