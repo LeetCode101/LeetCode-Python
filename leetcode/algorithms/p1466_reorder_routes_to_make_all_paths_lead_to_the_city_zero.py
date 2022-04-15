@@ -13,22 +13,18 @@ class Solution:
             direction[a][b] = True
 
         queue = collections.deque([0])
-        visited = set()
+        visited = {0}
         count = 0
 
         while queue:
             node = queue.popleft()
-
-            if node in visited:
-                continue
-
-            visited.add(node)
 
             for neighbour in graph[node]:
                 if neighbour not in visited:
                     if direction[node][neighbour]:
                         count += 1
 
+                    visited.add(neighbour)
                     queue.append(neighbour)
 
         return count
