@@ -14,4 +14,4 @@ class TestStepByStepDirectionsFromABinaryTreeNodeToAnother(unittest.TestCase):
         )
 
         self.assertEqual('UURL', solution.getDirections(root, 3, 6))
-        self.assertEqual('', solution.getDirections(root, 9, 9))
+        self.assertEqual('', solution.getDirections(TreeNode(1), 9, 9))
