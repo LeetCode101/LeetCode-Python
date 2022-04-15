@@ -4,11 +4,11 @@ class Solution:
 
         if n & 1 == 1:
             return False
-        
+
         balance = 0
 
         for i in range(n):
-            if locked[i] == '0' or s[i] == '(':
+            if s[i] == '(' or locked[i] == '0':
                 balance += 1
             else:
                 balance -= 1
@@ -19,7 +19,7 @@ class Solution:
         balance = 0
 
         for i in range(n - 1, -1, -1):
-            if locked[i] == '0' or s[i] == ')':
+            if s[i] == ')' or locked[i] == '0':
                 balance += 1
             else:
                 balance -= 1
