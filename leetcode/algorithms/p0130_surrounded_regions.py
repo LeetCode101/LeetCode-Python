@@ -23,7 +23,7 @@ class Solution:
                     board[row][column] = 'X'
 
     def _search(self, board, row, column, connected_with_board, visited):
-        if board[row][column] == 'X':
+        if board[row][column] == 'X' or visited[row][column]:
             return
 
         m, n = len(board), len(board[0])
