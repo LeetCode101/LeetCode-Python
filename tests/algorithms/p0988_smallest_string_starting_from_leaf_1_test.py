@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0988_smallest_string_starting_from_leaf \
+from leetcode.algorithms.p0988_smallest_string_starting_from_leaf_1 \
     import Solution, TreeNode
 
 
