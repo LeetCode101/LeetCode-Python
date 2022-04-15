@@ -12,7 +12,6 @@ class TreeNode:
 
 class Solution:
     def smallestFromLeaf(self, root: Optional[TreeNode]) -> str:
-        paths = []
         queue = collections.deque([(root, '')])
         min_path = ''
 
