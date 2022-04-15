@@ -14,7 +14,8 @@ class Solution:
         for row in range(m):
             for column in range(n):
                 if row == 0 or row == m - 1 or column == 0 or column == n - 1:
-                    self._search(board, row, column, connected_with_border, visited)
+                    self._search(board, row, column,
+                                 connected_with_border, visited)
 
         for row in range(m):
             for column in range(n):
