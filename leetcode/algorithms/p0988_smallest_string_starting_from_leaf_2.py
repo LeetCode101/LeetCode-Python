@@ -14,6 +14,7 @@ class Solution:
     def smallestFromLeaf(self, root: Optional[TreeNode]) -> str:
         paths = []
         queue = collections.deque([(root, '')])
+        min_path = ''
 
         while queue:
             node, path = queue.popleft()
@@ -26,6 +27,7 @@ class Solution:
                 queue.append((node.right, path))
 
             if not node.left and not node.right:
-                paths.append(path[::-1])
+                min_path = path[::-1] if not min_path \
+                    else min(min_path, path[::-1])
 
-        return sorted(paths)[0]
+        return min_path
