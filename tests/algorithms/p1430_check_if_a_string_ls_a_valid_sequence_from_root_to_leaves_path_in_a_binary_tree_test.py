@@ -15,3 +15,4 @@ class TestCheckIfAStringIsAValidSequenceFromRootToLeavesPathInABinaryTree(
         )
 
         self.assertTrue(solution.isValidSequence(root, [0, 1, 0, 1]))
+        self.assertFalse(solution.isValidSequence(root, [1]))
