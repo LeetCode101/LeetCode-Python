@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0529_minesweeper import Solution
+from leetcode.algorithms.p0529_minesweeper_1 import Solution
 
 
 class TestMinesweeper(unittest.TestCase):
