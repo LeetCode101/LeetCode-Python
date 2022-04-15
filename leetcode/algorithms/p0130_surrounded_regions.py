@@ -11,13 +11,10 @@ class Solution:
         connected_with_border = [[False] * n for _ in range(m)]
         visited = [[False] * n for _ in range(m)]
 
-        for column in range(n):
-            self._search(board, 0, column, connected_with_border, visited)
-            self._search(board, m - 1, column, connected_with_border, visited)
-
         for row in range(m):
-            self._search(board, row, 0, connected_with_border, visited)
-            self._search(board, row, n - 1, connected_with_border, visited)
+            for column in range(n):
+                if row == 0 or row == m - 1 or column == 0 or column == n - 1:
+                    self._search(board, row, column, connected_with_border, visited)
 
         for row in range(m):
             for column in range(n):
@@ -44,6 +41,8 @@ class Solution:
             for dx, dy in [(-1, 0), (0, -1), (1, 0), (0, 1)]:
                 next_row, next_column = row + dx, column + dy
 
-                if 0 <= next_row < m and 0 <= next_column < n and not visited[next_row][next_column] and board[next_row][next_column] == 'O':
+                if 0 <= next_row < m and 0 <= next_column < n \
+                        and not visited[next_row][next_column] \
+                        and board[next_row][next_column] == 'O':
                     connected_with_board[next_row][next_column] = True
                     queue.append((next_row, next_column))
