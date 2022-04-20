@@ -1,6 +1,6 @@
 import unittest
 from leetcode.algorithms \
-    .p1218_longest_arithmetic_subsequence_of_given_difference import Solution
+    .p1218_longest_arithmetic_subsequence_of_given_difference_1 import Solution
 
 
 class TestLongestArithmeticSubsequenceOfGivenDifference(unittest.TestCase):
