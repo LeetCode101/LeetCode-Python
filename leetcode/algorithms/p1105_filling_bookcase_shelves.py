@@ -11,13 +11,13 @@ class Solution:
             width_sum = 0
             height = 0
 
-            for j in range(i - 1, -1, -1):
-                width_sum += books[j][0]
+            for j in range(i, -1, -1):
+                width_sum += books[j - 1][0]
 
                 if width_sum > shelfWidth:
                     break
 
-                height = max(height, books[j][1])
-                dp[i] = min(dp[i], dp[j] + height)
+                height = max(height, books[j - 1][1])
+                dp[i] = min(dp[i], dp[j - 1] + height)
 
         return dp[-1]
