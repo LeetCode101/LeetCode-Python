@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p2244_minimum_rounds_to_complete_all_tasks \
+from leetcode.algorithms.p2244_minimum_rounds_to_complete_all_tasks_1 \
     import Solution
 
 
