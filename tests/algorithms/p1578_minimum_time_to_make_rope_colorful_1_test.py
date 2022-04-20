@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1578_minimum_time_to_make_rope_colorful \
+from leetcode.algorithms.p1578_minimum_time_to_make_rope_colorful_1 \
     import Solution
 
 
