@@ -14,9 +14,9 @@ class Solution:
             max_value = max(max_value, n)
             min_value = min(min_value, n)
 
-        prev, current = 0, 0
+        prev, prev_prev = 0, 0
 
         for i in range(min_value, max_value + 1):
-            prev, current = current, max(current, prev + counter[i] * i)
+            prev, prev_prev = max(prev, prev_prev + counter[i] * i), prev
 
-        return current
+        return prev
