@@ -11,6 +11,6 @@ class Solution:
         for _ in range(3, n + 1):
             same_color_count, different_color_count = \
                 different_color_count, \
-                (same_color_count + different_color_count) * (k - 1)
+                same_color_count * (k - 1) + different_color_count * (k - 1)
 
         return same_color_count + different_color_count
