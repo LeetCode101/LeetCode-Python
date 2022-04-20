@@ -27,6 +27,9 @@ class Solution:
         if n <= 4:
             return dp[n]
 
+        if dp[n] > 0:
+            return dp[n]
+
         for i in range(5, n + 1):
             dp[i] = 1 + min(dp[i - 2], dp[i - 3])
 
