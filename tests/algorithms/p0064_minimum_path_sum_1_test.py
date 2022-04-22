@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0064_minimum_path_sum import Solution
+from leetcode.algorithms.p0064_minimum_path_sum_1 import Solution
 
 
 class TestMinimumPathSum(unittest.TestCase):
