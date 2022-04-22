@@ -7,3 +7,4 @@ class TestArithmeticSlices(unittest.TestCase):
         solution = Solution()
 
         self.assertEqual(3, solution.numberOfArithmeticSlices([1, 2, 3, 4]))
+        self.assertEqual(1, solution.numberOfArithmeticSlices([1, 2, 3, 5]))
