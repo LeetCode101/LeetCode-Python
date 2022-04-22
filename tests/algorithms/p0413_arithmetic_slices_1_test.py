@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0413_arithmetic_slices import Solution
+from leetcode.algorithms.p0413_arithmetic_slices_1 import Solution
 
 
 class TestArithmeticSlices(unittest.TestCase):
