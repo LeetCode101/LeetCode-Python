@@ -9,9 +9,11 @@ class Solution:
 
         for i in range(m):
             for j in range(n):
-                left = dp[i][j - 1] if j - 1 >= 0 else sys.maxsize
-                up = dp[i - 1][j] if i - 1 >= 0 else sys.maxsize
-                lower = min(left, up)
-                dp[i][j] = grid[i][j] + (lower if lower != sys.maxsize else 0)
+                if i == 0 and j == 0:
+                    dp[i][j] = grid[i][j]
+                else:
+                    left = dp[i][j - 1] if j - 1 >= 0 else sys.maxsize
+                    up = dp[i - 1][j] if i - 1 >= 0 else sys.maxsize
+                    dp[i][j] = grid[i][j] + min(left, up)
 
         return dp[-1][-1]
