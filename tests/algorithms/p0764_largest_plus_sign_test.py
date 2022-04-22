@@ -8,3 +8,5 @@ class TestLargestPlusSign(unittest.TestCase):
 
         self.assertEqual(2, solution.orderOfLargestPlusSign(5, [[4, 2]]))
         self.assertEqual(0, solution.orderOfLargestPlusSign(1, [[0, 0]]))
+        self.assertEqual(1, solution.orderOfLargestPlusSign(
+            5, [[0, 0], [0, 3], [1, 1], [1, 4], [2, 3], [3, 0], [4, 2]]))
