@@ -16,7 +16,7 @@ class Solution:
 
     def _dfs(self, nums, sums, start, k, target):
         if start == len(nums):
-            return len(set(sums)) == 1
+            return True
 
         for i in range(k):
             sums[i] += nums[start]
