@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0698_partition_to_k_equal_sum_subsets import Solution
+from leetcode.algorithms.p0698_partition_to_k_equal_sum_subsets_1 import Solution
 
 
 class TestPartitionToKEqualSumSubsets(unittest.TestCase):
