@@ -30,7 +30,8 @@ class Solution:
 
             visited[i] = True
 
-            if self._dfs(nums, visited, i + 1, k, current_sum + nums[i], target):
+            if self._dfs(nums, visited, i + 1, k,
+                         current_sum + nums[i], target):
                 return True
 
             visited[i] = False
