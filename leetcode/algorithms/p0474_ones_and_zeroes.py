@@ -3,10 +3,10 @@ from typing import List
 
 class Solution:
     def findMaxForm(self, strs: List[str], m: int, n: int) -> int:
-        l = len(strs)
-        dp = [[[0] * (n + 1) for _ in range(m + 1)] for _ in range(l + 1)]
+        length = len(strs)
+        dp = [[[0] * (n + 1) for _ in range(m + 1)] for _ in range(length + 1)]
 
-        for i in range(1, l + 1):
+        for i in range(1, length + 1):
             zero_count, one_count = self._count(strs[i - 1])
 
             for j in range(m + 1):
@@ -18,7 +18,7 @@ class Solution:
                     else:
                         dp[i][j][k] = dp[i - 1][j][k]
 
-        return dp[l][m][n]
+        return dp[length][m][n]
 
     def _count(self, s):
         zero_count = 0
