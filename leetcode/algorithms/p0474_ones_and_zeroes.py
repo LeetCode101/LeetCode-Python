@@ -12,7 +12,9 @@ class Solution:
             for j in range(m + 1):
                 for k in range(n + 1):
                     if j >= zero_count and k >= one_count:
-                        dp[i][j][k] = max(dp[i - 1][j][k], dp[i - 1][j - zero_count][k - one_count] + 1)
+                        dp[i][j][k] = max(
+                            dp[i - 1][j][k],
+                            dp[i - 1][j - zero_count][k - one_count] + 1)
                     else:
                         dp[i][j][k] = dp[i - 1][j][k]
 
