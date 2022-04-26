@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p1749_maximum_absolute_sum_of_any_subarray \
+from leetcode.algorithms.p1749_maximum_absolute_sum_of_any_subarray_1 \
     import Solution
 
 
