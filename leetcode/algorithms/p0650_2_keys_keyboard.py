@@ -7,7 +7,7 @@ class Solution:
 
             for j in range(i - 1, 1, -1):
                 if i % j == 0:
-                    dp[i] = dp[j] + i // j
+                    dp[i] = dp[j] + 1 + (i // j - 1)
 
                     break
 
