@@ -6,6 +6,6 @@ class Solution:
             dp[i] = i
 
             for j in range(3, i):
-                dp[i] = max(dp[i], dp[i - j] * (j - 1))
+                dp[i] = max(dp[i], dp[j] * (i - j - 2 + 1))
 
         return dp[-1]
