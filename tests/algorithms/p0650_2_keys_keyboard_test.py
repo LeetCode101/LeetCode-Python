@@ -7,4 +7,5 @@ class Test2KeysKeyboard(unittest.TestCase):
         solution = Solution()
 
         self.assertEqual(3, solution.minSteps(3))
+        self.assertEqual(4, solution.minSteps(4))
         self.assertEqual(0, solution.minSteps(1))
