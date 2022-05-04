@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0046_permutations import Solution
+from leetcode.algorithms.p0046_permutations_1 import Solution
 
 
 class TestPermutations(unittest.TestCase):
