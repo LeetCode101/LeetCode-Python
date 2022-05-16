@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0128_longest_consecutive_sequence import Solution
+from leetcode.algorithms.p0128_longest_consecutive_sequence_1 import Solution
 
 
 class TestLongestConsecutiveSequence(unittest.TestCase):
