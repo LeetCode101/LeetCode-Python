@@ -6,22 +6,22 @@ class Solution:
         if not nums:
             return 0
 
-        lis = []
+        tails = []
 
         for number in nums:
-            if not lis or number > lis[-1]:
-                lis.append(number)
+            if not tails or number > tails[-1]:
+                tails.append(number)
             else:
-                low, high = 0, len(lis) - 1
+                low, high = 0, len(tails) - 1
 
                 while low <= high:
                     middle = (low + high) // 2
 
-                    if lis[middle] < number:
+                    if tails[middle] < number:
                         low = middle + 1
                     else:
                         high = middle - 1
 
-                lis[low] = number
+                tails[low] = number
 
-        return len(lis)
+        return len(tails)
