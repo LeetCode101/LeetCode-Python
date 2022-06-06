@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0538_convert_bst_to_greater_tree \
+from leetcode.algorithms.p0538_convert_bst_to_greater_tree_1 \
     import Solution, TreeNode
 
 
