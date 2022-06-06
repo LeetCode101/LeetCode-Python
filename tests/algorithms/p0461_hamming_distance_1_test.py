@@ -1,5 +1,5 @@
 import unittest
-from leetcode.algorithms.p0461_hamming_distance import Solution
+from leetcode.algorithms.p0461_hamming_distance_1 import Solution
 
 
 class TestHammingDistance(unittest.TestCase):
