@@ -7,3 +7,4 @@ class TestHammingDistance(unittest.TestCase):
         solution = Solution()
 
         self.assertEqual(2, solution.hammingDistance(1, 4))
+        self.assertEqual(2, solution.hammingDistance(4, 1))
